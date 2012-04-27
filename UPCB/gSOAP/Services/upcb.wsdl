@@ -1,0 +1,493 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" 
+xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" 
+xmlns:tns="http://tempuri.org/" xmlns:s="http://www.w3.org/2001/XMLSchema"
+ xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="http://tempuri.org/" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://tempuri.org/">
+      <s:element name="AddProgram">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="program" type="tns:SoapProgramDescriptor" />
+            <s:element minOccurs="0" maxOccurs="1" name="mapping" type="tns:SoapProgramMappingDescriptor" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="SoapProgramDescriptor">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:SoapBaseObject">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="Devices" type="tns:ArrayOfSoapDeviceDescriptor" />
+              <s:element minOccurs="0" maxOccurs="1" name="Wires" type="tns:ArrayOfSoapWireDescriptor" />
+              <s:element minOccurs="0" maxOccurs="1" name="PowerWire" type="tns:SoapWireDescriptor" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="SoapBaseObject">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Properties" type="tns:ArrayOfSoapPropertyDescriptor" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfSoapPropertyDescriptor">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="SoapPropertyDescriptor" nillable="true" type="tns:SoapPropertyDescriptor" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="SoapPropertyDescriptor">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DataType" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Value" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="SoapProgramMappingDescriptor">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:SoapBaseObject">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="PinoutMappings" type="tns:ArrayOfSoapPinoutDescriptor" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="ArrayOfSoapPinoutDescriptor">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="SoapPinoutDescriptor" nillable="true" type="tns:SoapPinoutDescriptor" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="SoapPinoutDescriptor">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:SoapBaseObject">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="SupportedCommands" type="tns:ArrayOfSoapCommandDescriptor" />
+              <s:element minOccurs="0" maxOccurs="1" name="SupportedEvents" type="tns:ArrayOfSoapEventDescriptor" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="ArrayOfSoapCommandDescriptor">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="SoapCommandDescriptor" nillable="true" type="tns:SoapCommandDescriptor" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="SoapCommandDescriptor">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:SoapBaseObject">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="CommandParameters" type="tns:ArrayOfSoapCommandParameterDescriptor" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="ArrayOfSoapCommandParameterDescriptor">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="SoapCommandParameterDescriptor" nillable="true" type="tns:SoapCommandParameterDescriptor" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="SoapCommandParameterDescriptor">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:SoapBaseObject" />
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="ArrayOfSoapEventDescriptor">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="SoapEventDescriptor" nillable="true" type="tns:SoapEventDescriptor" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="SoapEventDescriptor">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:SoapBaseObject">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="EventParameters" type="tns:ArrayOfSoapEventParameterDescriptor" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="ArrayOfSoapEventParameterDescriptor">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="SoapEventParameterDescriptor" nillable="true" type="tns:SoapEventParameterDescriptor" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="SoapEventParameterDescriptor">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:SoapBaseObject" />
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="SoapWireConnectionPointDescr">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:SoapBaseObject">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="DeviceDescriptorId" type="tns:SoapPropertyDescriptor" />
+              <s:element minOccurs="0" maxOccurs="1" name="ConnectionPointDescriptorId" type="tns:SoapPropertyDescriptor" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="SoapWireDescriptor">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:SoapBaseObject">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="WireConnectionPoints" type="tns:ArrayOfSoapWireConnectionPointDescr" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="ArrayOfSoapWireConnectionPointDescr">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="SoapWireConnectionPointDescr" nillable="true" type="tns:SoapWireConnectionPointDescr" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="SoapConnectionPointDescriptor">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:SoapBaseObject" />
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="SoapDeviceDescriptor">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:SoapBaseObject">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="DeviceConnectionPoints" type="tns:ArrayOfSoapConnectionPointDescriptor" />
+              <s:element minOccurs="0" maxOccurs="1" name="Pinouts" type="tns:ArrayOfSoapPinoutDescriptor" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="ArrayOfSoapConnectionPointDescriptor">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="SoapConnectionPointDescriptor" nillable="true" type="tns:SoapConnectionPointDescriptor" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfSoapDeviceDescriptor">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="SoapDeviceDescriptor" nillable="true" type="tns:SoapDeviceDescriptor" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfSoapWireDescriptor">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="SoapWireDescriptor" nillable="true" type="tns:SoapWireDescriptor" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="AddProgramResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="StartProgram">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="programName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="StartProgramResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="StopProgram">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="programName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="StopProgramResponse">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetBoardInfo">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetBoardInfoResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetBoardInfoResult" type="tns:ArrayOfSoapPropertyDescriptor" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDevices">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetDevicesResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetDevicesResult" type="tns:ArrayOfSoapDeviceDescriptor" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetDrivers">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetDriversResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetDriversResult" type="tns:ArrayOfSoapDriverDescriptor" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfSoapDriverDescriptor">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="SoapDriverDescriptor" nillable="true" type="tns:SoapDriverDescriptor" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="SoapDriverDescriptor">
+        <s:complexContent mixed="false">
+          <s:extension base="tns:SoapBaseObject">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="SupportedCommands" type="tns:ArrayOfSoapCommandDescriptor" />
+              <s:element minOccurs="0" maxOccurs="1" name="SupportedEvents" type="tns:ArrayOfSoapEventDescriptor" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:element name="GetPrograms">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetProgramsResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetProgramsResult" type="tns:ArrayOfSoapProgramDescriptor" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="ArrayOfSoapProgramDescriptor">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="SoapProgramDescriptor" nillable="true" type="tns:SoapProgramDescriptor" />
+        </s:sequence>
+      </s:complexType>
+      <s:element name="GetProgram">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="programName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetProgramResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetProgramResult" type="tns:SoapProgramDescriptor" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetProgramStatus">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="programName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetProgramStatusResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetProgramStatusResult" type="tns:SoapProgramDescriptor" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetRunningProgramsStatus">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetRunningProgramsStatusResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetRunningProgramsStatusResult" type="tns:ArrayOfSoapProgramDescriptor" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="AddProgramSoapIn">
+    <wsdl:part name="parameters" element="tns:AddProgram" />
+  </wsdl:message>
+  <wsdl:message name="AddProgramSoapOut">
+    <wsdl:part name="parameters" element="tns:AddProgramResponse" />
+  </wsdl:message>
+  <wsdl:message name="StartProgramSoapIn">
+    <wsdl:part name="parameters" element="tns:StartProgram" />
+  </wsdl:message>
+  <wsdl:message name="StartProgramSoapOut">
+    <wsdl:part name="parameters" element="tns:StartProgramResponse" />
+  </wsdl:message>
+  <wsdl:message name="StopProgramSoapIn">
+    <wsdl:part name="parameters" element="tns:StopProgram" />
+  </wsdl:message>
+  <wsdl:message name="StopProgramSoapOut">
+    <wsdl:part name="parameters" element="tns:StopProgramResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetBoardInfoSoapIn">
+    <wsdl:part name="parameters" element="tns:GetBoardInfo" />
+  </wsdl:message>
+  <wsdl:message name="GetBoardInfoSoapOut">
+    <wsdl:part name="parameters" element="tns:GetBoardInfoResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetDevicesSoapIn">
+    <wsdl:part name="parameters" element="tns:GetDevices" />
+  </wsdl:message>
+  <wsdl:message name="GetDevicesSoapOut">
+    <wsdl:part name="parameters" element="tns:GetDevicesResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetDriversSoapIn">
+    <wsdl:part name="parameters" element="tns:GetDrivers" />
+  </wsdl:message>
+  <wsdl:message name="GetDriversSoapOut">
+    <wsdl:part name="parameters" element="tns:GetDriversResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetProgramsSoapIn">
+    <wsdl:part name="parameters" element="tns:GetPrograms" />
+  </wsdl:message>
+  <wsdl:message name="GetProgramsSoapOut">
+    <wsdl:part name="parameters" element="tns:GetProgramsResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetProgramSoapIn">
+    <wsdl:part name="parameters" element="tns:GetProgram" />
+  </wsdl:message>
+  <wsdl:message name="GetProgramSoapOut">
+    <wsdl:part name="parameters" element="tns:GetProgramResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetProgramStatusSoapIn">
+    <wsdl:part name="parameters" element="tns:GetProgramStatus" />
+  </wsdl:message>
+  <wsdl:message name="GetProgramStatusSoapOut">
+    <wsdl:part name="parameters" element="tns:GetProgramStatusResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetRunningProgramsStatusSoapIn">
+    <wsdl:part name="parameters" element="tns:GetRunningProgramsStatus" />
+  </wsdl:message>
+  <wsdl:message name="GetRunningProgramsStatusSoapOut">
+    <wsdl:part name="parameters" element="tns:GetRunningProgramsStatusResponse" />
+  </wsdl:message>
+  <wsdl:portType name="UPCBWebServiceSoap">
+    <wsdl:operation name="AddProgram">
+      <wsdl:input message="tns:AddProgramSoapIn" />
+      <wsdl:output message="tns:AddProgramSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="StartProgram">
+      <wsdl:input message="tns:StartProgramSoapIn" />
+      <wsdl:output message="tns:StartProgramSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="StopProgram">
+      <wsdl:input message="tns:StopProgramSoapIn" />
+      <wsdl:output message="tns:StopProgramSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetBoardInfo">
+      <wsdl:input message="tns:GetBoardInfoSoapIn" />
+      <wsdl:output message="tns:GetBoardInfoSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDevices">
+      <wsdl:input message="tns:GetDevicesSoapIn" />
+      <wsdl:output message="tns:GetDevicesSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetDrivers">
+      <wsdl:input message="tns:GetDriversSoapIn" />
+      <wsdl:output message="tns:GetDriversSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetPrograms">
+      <wsdl:input message="tns:GetProgramsSoapIn" />
+      <wsdl:output message="tns:GetProgramsSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProgram">
+      <wsdl:input message="tns:GetProgramSoapIn" />
+      <wsdl:output message="tns:GetProgramSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetProgramStatus">
+      <wsdl:input message="tns:GetProgramStatusSoapIn" />
+      <wsdl:output message="tns:GetProgramStatusSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetRunningProgramsStatus">
+      <wsdl:input message="tns:GetRunningProgramsStatusSoapIn" />
+      <wsdl:output message="tns:GetRunningProgramsStatusSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="UPCBWebServiceSoap" type="tns:UPCBWebServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="AddProgram">
+      <soap:operation soapAction="http://tempuri.org/AddProgram" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="StartProgram">
+      <soap:operation soapAction="http://tempuri.org/StartProgram" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="StopProgram">
+      <soap:operation soapAction="http://tempuri.org/StopProgram" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetBoardInfo">
+      <soap:operation soapAction="http://tempuri.org/GetBoardInfo" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDevices">
+      <soap:operation soapAction="http://tempuri.org/GetDevices" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetDrivers">
+      <soap:operation soapAction="http://tempuri.org/GetDrivers" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetPrograms">
+      <soap:operation soapAction="http://tempuri.org/GetPrograms" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProgram">
+      <soap:operation soapAction="http://tempuri.org/GetProgram" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetProgramStatus">
+      <soap:operation soapAction="http://tempuri.org/GetProgramStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetRunningProgramsStatus">
+      <soap:operation soapAction="http://tempuri.org/GetRunningProgramsStatus" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="UPCBWebService">
+    <wsdl:port name="UPCBWebServiceSoap" binding="tns:UPCBWebServiceSoap">
+      <soap:address location="http://localhost:49865/UPCBWebService.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>
