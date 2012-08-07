@@ -1,0 +1,17 @@
+./TimerDevice/TimerDevice.o
+./ScreenButton/ScreenButton.o
+./Logical/AdnWidget.o
+./Logical/ComparatorWidget.o
+./Logical/ConstantWidget.o
+./Logical/CounterDevice.o
+./Logical/InverseDevice.o
+./Logical/OrDevice.o
+./Logical/RSTriggerDevice.o
+./Logical/SwitchBlock.o
+./Logical/XorDevice.o
+./GPOutputDevice/GPOutputDevice.o
+./GPInputDevice/GPIDevice.o
+./EntryPoint.o
+./DelayTimer/DelayTimer.o
+./ButtonDevice/ButtonDevice.o
+./ADCDevice/ADCDevice.o

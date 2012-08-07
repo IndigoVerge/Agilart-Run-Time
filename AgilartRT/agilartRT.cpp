@@ -48,7 +48,7 @@
 #include "DeviceParameter.h"
 
 #include "errno.h"
-#define CONFIG_FILE_PATH "/etc/upcb.conf"
+#define CONFIG_FILE_PATH "/etc/agilart.conf"
 
 using namespace std;
 
