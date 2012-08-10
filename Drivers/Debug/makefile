@@ -11,6 +11,7 @@ RM := rm -rf
 -include subdir.mk
 -include UltraHeatDriver/subdir.mk
 -include SysfsGenericGPIODriver/subdir.mk
+-include RaspiGPIO/subdir.mk
 -include GPIOLedDriver/subdir.mk
 -include GPIOKeyDriver/subdir.mk
 -include ADCDriver/subdir.mk
@@ -58,7 +59,7 @@ libDrivers.so: $(OBJS) $(USER_OBJS)
 # Other Targets
 clean:
 	-$(RM) $(C++_DEPS)$(C_DEPS)$(CC_DEPS)$(LIBRARIES)$(CPP_DEPS)$(CXX_DEPS)$(C_UPPER_DEPS)
-	-$(RM) "./UltraHeatDriver/UltraHeatDriver.o" "./SysfsGenericGPIODriver/SysfsGenericGPIODriver.o" "./GPIOLedDriver/GPIOLedDriver.o" "./GPIOKeyDriver/GPIOKeyDriver.o" "./EntryPoint.o" "./ADCDriver/ADCDriver.o"  libDrivers.so libDrivers.so
+	-$(RM) "./UltraHeatDriver/UltraHeatDriver.o" "./SysfsGenericGPIODriver/SysfsGenericGPIODriver.o" "./RaspiGPIO/RaspiGPInputDriver.o" "./RaspiGPIO/RaspiGPOutputDriver.o" "./GPIOLedDriver/GPIOLedDriver.o" "./GPIOKeyDriver/GPIOKeyDriver.o" "./EntryPoint.o" "./ADCDriver/ADCDriver.o"  libDrivers.so libDrivers.so
 .PHONY: all clean dependents
 .SECONDARY:
 

@@ -37,6 +37,8 @@
 #include "GPIOLedDriver/GPIOLedDriver.h"
 #include "ADCDriver/ADCDriver.h"
 #include "UltraHeatDriver/UltraHeatDriver.h"
+#include "RaspiGPIO/RaspiGPInputDriver.h"
+#include "RaspiGPIO/RaspiGPOutputDriver.h"
 
 using namespace std;
 
@@ -52,11 +54,17 @@ extern "C" list<BaseDriver*> CreateDrivers()
 	ADCDriver* adcDriver = new ADCDriver();
 	UltraHeatDriver* ultraHeatDriver = new UltraHeatDriver();
 
+	RaspiGPInputDriver* raspiGPInDriver = new RaspiGPInputDriver();
+	RaspiGPOutputDriver* raspiGPOutDriver = new RaspiGPOutputDriver();
+
 	drivers.push_back( gpioDriver );
 	drivers.push_back( sysfsDriver );
 	drivers.push_back( ledDriver );
 	drivers.push_back( ultraHeatDriver );
 	drivers.push_back( adcDriver );
+	drivers.push_back( raspiGPInDriver );
+	drivers.push_back( raspiGPOutDriver );
+
 
 	EventLogger::Instance()->WriteDebug( "CreateDrivers completed successfully!" );
 
