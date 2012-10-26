@@ -5,7 +5,7 @@ Agilart makes it easy to controll simple devices that you connect to a microcont
 
 ## Background
 
-After speniding an enormous amount of time on trying to set up a small DIY Home Automation system I thought that it should deffinitely be easier to define simple dependencies between the devices at home. Then we decide to make our own platform [Agilart](https://lockitron.com) that would not only help with Home Automation but would make all sorts of art project possible using all kind of electronics and sensors that you can think of. We've been absolutely blown away by the response. As a first step in what will hopefully be a long history of giving back, we have decided to open source and grow the platform even more. Please send questions, comments, or concerns to [team@agilart.com](mailto:team@agilart.com)!
+After speniding an enormous amount of time on trying to set up a small DIY Home Automation system I thought that it should deffinitely be easier to define simple dependencies between the devices at home. Then we decide to make our own platform [Agilart](http://www.agilart.com/) that would not only help with Home Automation but would make all sorts of art project possible using all kind of electronics and sensors that you can think of. We've been absolutely blown away by the response. As a first step in what will hopefully be a long history of giving back, we have decided to open source and grow the platform even more. Please send questions, comments, or concerns to [team@agilart.com](mailto:team@agilart.com)!
 
 Agilart is a starting point. We continue working on it and really want to see it grow on it's own. Here are the core elements:
 
