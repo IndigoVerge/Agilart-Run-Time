@@ -33,4 +33,5 @@ GPInputDevice \
 DelayTimer \
 ButtonDevice \
 ADCDevice \
+CosmDevice \
 

@@ -17,7 +17,7 @@ CPP_DEPS += \
 GPIOLedDriver/%.o: ../GPIOLedDriver/%.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: Sourcery CodeBench C++ Compiler'
-	arm-none-linux-gnueabi-g++ -I/usr/local/armboost/include -I"../../Common" -O0 -g3 -Wall -c -fmessage-length=0 -fPIC -fcommon -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -mcpu=arm1176jz-s -o "$@" "$<"
+	$(CC_PREFIX)g++ -I/usr/local/armboost/include -I"../../Common" -O0 -g3 -Wall -c -fmessage-length=0 -fPIC -fcommon -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" $(CFLAGS) -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 

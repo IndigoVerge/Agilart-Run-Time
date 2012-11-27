@@ -26,7 +26,7 @@ CPP_DEPS += \
 Logging/%.o: ../Logging/%.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: Sourcery CodeBench C++ Compiler'
-	arm-none-linux-gnueabi-g++ -O0 -g3 -Wall -c -fmessage-length=0 -fPIC -fcommon -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -mcpu=arm1176jz-s -o "$@" "$<"
+	$(CC_PREFIX)g++ -O0 -g3 -Wall -c -fmessage-length=0 -fPIC -fcommon -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" $(CFLAGS) -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 

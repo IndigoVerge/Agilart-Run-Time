@@ -15,3 +15,4 @@
 ./DelayTimer/DelayTimer.o
 ./ButtonDevice/ButtonDevice.o
 ./ADCDevice/ADCDevice.o
+./CosmDevice/CosmDevice.o

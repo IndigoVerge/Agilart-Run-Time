@@ -39,14 +39,14 @@ CPP_DEPS += \
 gSOAP/Services/%.o: ../gSOAP/Services/%.c
 	@echo 'Building file: $<'
 	@echo 'Invoking: Sourcery CodeBench C Compiler'
-	arm-none-linux-gnueabi-gcc -I"../../Drivers" -I"../../Devices" -I"../../Common" -O0 -g3 -Wall -c -fmessage-length=0 -fcommon -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -mcpu=arm1176jz-s -o "$@" "$<"
+	$(CC_PREFIX)gcc -I"../../Drivers" -I"../../Devices" -I"../../Common" -O0 -g3 -Wall -c -fmessage-length=0 -fcommon -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" $(CFLAGS) -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
 gSOAP/Services/%.o: ../gSOAP/Services/%.cpp
 	@echo 'Building file: $<'
 	@echo 'Invoking: Sourcery CodeBench C++ Compiler'
-	arm-none-linux-gnueabi-g++ -I"../../Drivers" -I"../../Devices" -I"../../Common" -O0 -g3 -Wall -c -fmessage-length=0 -fcommon -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" -mcpu=arm1176jz-s -o "$@" "$<"
+	$(CC_PREFIX)g++ -I"../../Drivers" -I"../../Devices" -I"../../Common" -O0 -g3 -Wall -c -fmessage-length=0 -fcommon -MMD -MP -MF"$(@:%.o=%.d)" -MT"$(@:%.o=%.d)" $(CFLAGS) -o "$@" "$<"
 	@echo 'Finished building: $<'
 	@echo ' '
 
