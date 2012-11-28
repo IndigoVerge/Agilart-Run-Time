@@ -3,6 +3,9 @@ all: agilart-runtime secondary-outputs
 CFLAGS := @CFLAGS@
 CC_PREFIX := @CC_PREFIX@
 
+export CFLAGS=@CFLAGS@
+export CC_PREFIX=@CC_PREFIX@
+
 # Tool invocations
 agilart-runtime: 
 	(cd ./Common/Debug && $(MAKE) clean all)
