@@ -26,6 +26,8 @@ C_UPPER_DEPS :=
 SUBDIRS := \
 UltraHeatDriver \
 SysfsGenericGPIODriver \
+SysFSInputDriver \
+SysFSOutputDriver \
 GPIOLedDriver \
 GPIOKeyDriver \
 . \

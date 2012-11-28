@@ -1,5 +1,7 @@
 ./UltraHeatDriver/UltraHeatDriver.o
 ./SysfsGenericGPIODriver/SysfsGenericGPIODriver.o
+./SysfsInputDriver/SysfsInputDriver.o
+./SysfsOutputDriver/SysfsOutputDriver.o
 ./GPIOLedDriver/GPIOLedDriver.o
 ./GPIOKeyDriver/GPIOKeyDriver.o
 ./EntryPoint.o

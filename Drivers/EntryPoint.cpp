@@ -37,8 +37,8 @@
 #include "GPIOLedDriver/GPIOLedDriver.h"
 #include "ADCDriver/ADCDriver.h"
 #include "UltraHeatDriver/UltraHeatDriver.h"
-#include "RaspiGPIO/RaspiGPInputDriver.h"
-#include "RaspiGPIO/RaspiGPOutputDriver.h"
+#include "SysfsInputDriver/SysfsInputDriver.h"
+#include "SysfsOutputDriver/SysfsOutputDriver.h"
 
 using namespace std;
 
@@ -53,17 +53,17 @@ extern "C" list<BaseDriver*> CreateDrivers()
 	GPIOLedDriver* ledDriver = new GPIOLedDriver();
 	ADCDriver* adcDriver = new ADCDriver();
 	UltraHeatDriver* ultraHeatDriver = new UltraHeatDriver();
+	SysfsInputDriver* sysfsIn = new SysfsInputDriver();
+	SysfsOutputDriver* sysfsOut = new SysfsOutputDriver();
 
-	RaspiGPInputDriver* raspiGPInDriver = new RaspiGPInputDriver();
-	RaspiGPOutputDriver* raspiGPOutDriver = new RaspiGPOutputDriver();
 
 	drivers.push_back( gpioDriver );
 	drivers.push_back( sysfsDriver );
 	drivers.push_back( ledDriver );
 	drivers.push_back( ultraHeatDriver );
 	drivers.push_back( adcDriver );
-	drivers.push_back( raspiGPInDriver );
-	drivers.push_back( raspiGPOutDriver );
+	drivers.push_back( sysfsIn );
+	drivers.push_back( sysfsOut );
 
 
 	EventLogger::Instance()->WriteDebug( "CreateDrivers completed successfully!" );
