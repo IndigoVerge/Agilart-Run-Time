@@ -7,9 +7,16 @@ CPP_SRCS += \
 ../RaspiGPIO/RaspiGPInputDriver.cpp \
 ../RaspiGPIO/RaspiGPOutputDriver.cpp 
 
+C_SRCS += \
+../RaspiGPIO/bcm2835.c 
+
 OBJS += \
 ./RaspiGPIO/RaspiGPInputDriver.o \
-./RaspiGPIO/RaspiGPOutputDriver.o 
+./RaspiGPIO/RaspiGPOutputDriver.o \
+./RaspiGPIO/bcm2835.o 
+
+C_DEPS += \
+./RaspiGPIO/bcm2835.d 
 
 CPP_DEPS += \
 ./RaspiGPIO/RaspiGPInputDriver.d \

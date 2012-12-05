@@ -17,6 +17,7 @@ RM := rm -rf
 -include DelayTimer/subdir.mk
 -include ButtonDevice/subdir.mk
 -include ADCDevice/subdir.mk
+-include CosmDevice/subdir.mk
 -include objects.mk
 
 ifneq ($(MAKECMDGOALS),clean)
@@ -57,14 +58,14 @@ dependents:
 libDevices.so: $(OBJS) $(USER_OBJS) ../../Common/Debug/libCommon.so
 	@echo 'Building target: $@'
 	@echo 'Invoking: Sourcery CodeBench C++ Linker'
-	arm-none-linux-gnueabi-g++ -L"../../Common/Debug" -shared -Xlinker -Map="libDevices.map" -mcpu=arm1176jz-s -o "libDevices.so" "@objs.rsp" "@user_objs.rsp" "@libs.rsp"
+	g++ -L"../../Common/Debug" -shared -Xlinker -Map="libDevices.map" -g -O2 -o "libDevices.so" "@objs.rsp" "@user_objs.rsp" "@libs.rsp"
 	@echo 'Finished building target: $@'
 	@echo ' '
 
 # Other Targets
 clean:
 	-$(RM) $(C++_DEPS)$(C_DEPS)$(CC_DEPS)$(LIBRARIES)$(CPP_DEPS)$(CXX_DEPS)$(C_UPPER_DEPS)
-	-$(RM) "./TimerDevice/TimerDevice.o" "./ScreenButton/ScreenButton.o" "./Logical/AdnWidget.o" "./Logical/ComparatorWidget.o" "./Logical/ConstantWidget.o" "./Logical/CounterDevice.o" "./Logical/InverseDevice.o" "./Logical/OrDevice.o" "./Logical/RSTriggerDevice.o" "./Logical/SwitchBlock.o" "./Logical/XorDevice.o" "./GPOutputDevice/GPOutputDevice.o" "./GPInputDevice/GPIDevice.o" "./EntryPoint.o" "./DelayTimer/DelayTimer.o" 
+	-$(RM) "./CosmDevice/CosmDevice.o" "./TimerDevice/TimerDevice.o" "./ScreenButton/ScreenButton.o" "./Logical/AdnWidget.o" "./Logical/ComparatorWidget.o" "./Logical/ConstantWidget.o" "./Logical/CounterDevice.o" "./Logical/InverseDevice.o" "./Logical/OrDevice.o" "./Logical/RSTriggerDevice.o" "./Logical/SwitchBlock.o" "./Logical/XorDevice.o" "./GPOutputDevice/GPOutputDevice.o" "./GPInputDevice/GPIDevice.o" "./EntryPoint.o" "./DelayTimer/DelayTimer.o" 
 	-$(RM) "./ButtonDevice/ButtonDevice.o" "./ADCDevice/ADCDevice.o"  libDevices.so libDevices.so
 .PHONY: all clean dependents
 .SECONDARY:

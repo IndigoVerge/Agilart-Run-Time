@@ -11,10 +11,12 @@ RM := rm -rf
 -include subdir.mk
 -include UltraHeatDriver/subdir.mk
 -include SysfsGenericGPIODriver/subdir.mk
--include RaspiGPIO/subdir.mk
+-include SysfsInputDriver/subdir.mk
+-include SysfsOutputDriver/subdir.mk
 -include GPIOLedDriver/subdir.mk
 -include GPIOKeyDriver/subdir.mk
 -include ADCDriver/subdir.mk
+-include RaspiGPIO/subdir.mk
 -include objects.mk
 
 ifneq ($(MAKECMDGOALS),clean)
@@ -52,14 +54,14 @@ all: libDrivers.so
 libDrivers.so: $(OBJS) $(USER_OBJS)
 	@echo 'Building target: $@'
 	@echo 'Invoking: Sourcery CodeBench C++ Linker'
-	arm-none-linux-gnueabi-g++ -L"../../Common/Debug" -shared -Xlinker -Map="libDrivers.map" -mcpu=arm1176jz-s -o "libDrivers.so" "@objs.rsp" "@user_objs.rsp" "@libs.rsp"
+	g++ -L"../../Common/Debug" -shared -Xlinker -Map="libDrivers.map" -g -O2 -o "libDrivers.so" "@objs.rsp" "@user_objs.rsp" "@libs.rsp"
 	@echo 'Finished building target: $@'
 	@echo ' '
 
 # Other Targets
 clean:
 	-$(RM) $(C++_DEPS)$(C_DEPS)$(CC_DEPS)$(LIBRARIES)$(CPP_DEPS)$(CXX_DEPS)$(C_UPPER_DEPS)
-	-$(RM) "./UltraHeatDriver/UltraHeatDriver.o" "./SysfsGenericGPIODriver/SysfsGenericGPIODriver.o" "./RaspiGPIO/RaspiGPInputDriver.o" "./RaspiGPIO/RaspiGPOutputDriver.o" "./GPIOLedDriver/GPIOLedDriver.o" "./GPIOKeyDriver/GPIOKeyDriver.o" "./EntryPoint.o" "./ADCDriver/ADCDriver.o"  libDrivers.so libDrivers.so
+	-$(RM) "./UltraHeatDriver/UltraHeatDriver.o" "./SysfsGenericGPIODriver/SysfsGenericGPIODriver.o" "SysfsInputDriver/SysfsInputDriver.o" "SysfsOutputDriver/SysfsOutputDriver.o" "./RaspiGPIO/RaspiGPInputDriver.o" "./RaspiGPIO/RaspiGPOutputDriver.o" "./GPIOLedDriver/GPIOLedDriver.o" "./GPIOKeyDriver/GPIOKeyDriver.o" "./EntryPoint.o" "./ADCDriver/ADCDriver.o"  libDrivers.so libDrivers.so
 .PHONY: all clean dependents
 .SECONDARY:
 

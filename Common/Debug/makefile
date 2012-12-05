@@ -47,7 +47,7 @@ all: libCommon.so
 libCommon.so: $(OBJS) $(USER_OBJS)
 	@echo 'Building target: $@'
 	@echo 'Invoking: Sourcery CodeBench C++ Linker'
-	arm-none-linux-gnueabi-g++ -shared -Xlinker -Map="libCommon.map" -mcpu=arm1176jz-s -o "libCommon.so" "@objs.rsp" "@user_objs.rsp" "@libs.rsp"
+	g++ -shared -Xlinker -Map="libCommon.map" -g -O2 -o "libCommon.so" "@objs.rsp" "@user_objs.rsp" "@libs.rsp"
 	@echo 'Finished building target: $@'
 	@echo ' '
 

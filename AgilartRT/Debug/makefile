@@ -58,7 +58,7 @@ dependents:
 agilart-runtime: $(OBJS) $(USER_OBJS) ../../Common/Debug/libCommon.so ../../Devices/Debug/libDevices.so ../../Drivers/Debug/libDrivers.so
 	@echo 'Building target: $@'
 	@echo 'Invoking: Sourcery CodeBench C++ Linker'
-	arm-none-linux-gnueabi-g++ -L"../../Drivers/Debug" -L"../../Devices/Debug" -L"../../Common/Debug" -pthread -ldl -Xlinker -Map="agilart-runtime.map" -mcpu=arm1176jz-s -o "agilart-runtime" "@objs.rsp" "@user_objs.rsp" "@libs.rsp"
+	g++ -L"../../Drivers/Debug" -L"../../Devices/Debug" -L"../../Common/Debug" -I"/usr/include" -pthread -ldl -lcurl -lpthread -lrt -Xlinker -Map="agilart-runtime.map" -g -O2 -o "agilart-runtime" "@objs.rsp" "@user_objs.rsp" "@libs.rsp"
 	@echo 'Finished building target: $@'
 	@echo ' '
 	$(MAKE) --no-print-directory post-build
@@ -69,8 +69,7 @@ clean:
 	-$(RM) "./agilartRT.o" "./gSOAP/DescriptorsUtil.o" "./gSOAP/WebServer.o" "./gSOAP/Services/httpform.o" "./gSOAP/Services/httpget.o" "./gSOAP/Services/soapC.o" "./gSOAP/Services/soapUPCBWebServiceSoapProxy.o" "./gSOAP/Services/soapUPCBWebServiceSoapService.o" "./gSOAP/Services/stdsoap2.o" "./gSOAP/Services/threads.o" "./DaemonUtils/DaemonService.o" "./Common/ProgramManager.o" "./Common/UpcbJsonParser.o" 
 	-$(RM) "./Common/Mappings/MappingManager.o" "./Common/Mappings/PinoutMapping.o" "./Common/Mappings/ProgramMapping.o" "./Common/Drivers/BaseDriversProvider.o" "./Common/Drivers/DriversManager.o" "./Common/Drivers/PluggableDriversProvider.o" "./Common/Devices/BaseDevicesProvider.o" "./Common/Devices/DeviceManager.o" "./Common/Devices/PluggableDevicesProvider.o"  agilart-runtime agilart-runtime
 post-build:
-	-arm-none-linux-gnueabi-size "agilart-runtime"
-	-@echo ' '
+	-@echo 'Im ready!'
 
 secondary-outputs:
 
