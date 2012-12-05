@@ -8,5 +8,4 @@
 ./ADCDriver/ADCDriver.o
 ./RaspiGPIO/RaspiGPInputDriver.o
 ./RaspiGPIO/RaspiGPOutputDriver.o
-./RaspiGPIO/RaspiGPOutputDriver.o
 ./RaspiGPIO/bcm2835.o
