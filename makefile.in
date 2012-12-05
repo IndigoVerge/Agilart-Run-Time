@@ -13,11 +13,15 @@ agilart-runtime:
 	(cd ./Drivers/Debug && $(MAKE) clean all)
 	(cd ./AgilartRT/Debug && $(MAKE) clean all)
 
+	cp ./Common/Debug/libCommon.so /usr/lib/
+	cp ./Devices/Debug/libDevices.so /usr/lib/
+	cp ./Drivers/Debug/libDrivers.so /usr/lib/
+	cp ./AgilartRT/agilart.conf /etc/
+
 	mkdir ./bin
-	cp ./Common/Debug/libCommon.so ./bin
-	cp ./Devices/Debug/libDevices.so ./bin
-	cp ./Drivers/Debug/libDrivers.so ./bin
 	cp ./AgilartRT/Debug/agilart-runtime ./bin
+	cp ./AgilartRT/clientaccesspolicy.xml ./bin
+	cp ./AgilartRT/crossdomain.xml ./bin
 
 # Other Targets
 clean:
