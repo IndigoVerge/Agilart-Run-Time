@@ -16,6 +16,7 @@ RM := rm -rf
 -include GPIOLedDriver/subdir.mk
 -include GPIOKeyDriver/subdir.mk
 -include ADCDriver/subdir.mk
+-include RaspiGPIO/subdir.mk
 -include objects.mk
 
 ifneq ($(MAKECMDGOALS),clean)

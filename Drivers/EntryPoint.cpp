@@ -39,6 +39,8 @@
 #include "UltraHeatDriver/UltraHeatDriver.h"
 #include "SysfsInputDriver/SysfsInputDriver.h"
 #include "SysfsOutputDriver/SysfsOutputDriver.h"
+#include "RaspiGPIO/RaspiGPInputDriver.h"
+#include "RaspiGPIO/RaspiGPOutputDriver.h"
 
 using namespace std;
 
@@ -55,6 +57,8 @@ extern "C" list<BaseDriver*> CreateDrivers()
 	UltraHeatDriver* ultraHeatDriver = new UltraHeatDriver();
 	SysfsInputDriver* sysfsIn = new SysfsInputDriver();
 	SysfsOutputDriver* sysfsOut = new SysfsOutputDriver();
+	RaspiGPInputDriver* raspiGPInDriver = new RaspiGPInputDriver();
+	RaspiGPOutputDriver* raspiGPOutDriver = new RaspiGPOutputDriver();
 
 
 	drivers.push_back( gpioDriver );
@@ -62,6 +66,8 @@ extern "C" list<BaseDriver*> CreateDrivers()
 	drivers.push_back( ledDriver );
 	drivers.push_back( ultraHeatDriver );
 	drivers.push_back( adcDriver );
+	drivers.push_back( raspiGPInDriver );
+	drivers.push_back( raspiGPOutDriver );
 	drivers.push_back( sysfsIn );
 	drivers.push_back( sysfsOut );
 

@@ -32,4 +32,5 @@ GPIOLedDriver \
 GPIOKeyDriver \
 . \
 ADCDriver \
+RaspiGPIO \
 

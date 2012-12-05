@@ -6,3 +6,5 @@
 ./GPIOKeyDriver/GPIOKeyDriver.o
 ./EntryPoint.o
 ./ADCDriver/ADCDriver.o
+./RaspiGPIO/RaspiGPInputDriver.o
+./RaspiGPIO/RaspiGPOutputDriver.o
