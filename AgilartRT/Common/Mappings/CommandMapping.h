@@ -29,7 +29,6 @@
 #include <list>
 
 #include "CommandParameterMapping.h"
-#include "UPCBDescriptors.h"
 #include "Logging/EventLogger.h"
 
 using namespace std;
@@ -55,23 +54,6 @@ class CommandMapping
 			this->source = source;
 			this->target = target;
 			this->parameters = new list<CommandParameterMapping*>();
-		}
-
-		CommandMapping( CommandDescriptor *mapping)
-		{
-			DescriptorsUtil::GetStringProperty( mapping->Properties,
-								"Source", &this->source );
-			DescriptorsUtil::GetStringProperty( mapping->Properties,
-								"Target", &this->target );
-
-			this->parameters = new list<CommandParameterMapping*>();
-
-			list<CommandParameterDescriptor>::iterator i;
-			for(i = mapping->CommandParameters.begin(); i != mapping->CommandParameters.end(); i++)
-			{
-				CommandParameterMapping* param = new CommandParameterMapping( &(*i) );
-				this->parameters->push_back( param );
-			}
 		}
 
 		CommandMapping( const CommandMapping& param )

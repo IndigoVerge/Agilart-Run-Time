@@ -27,7 +27,6 @@
 #include <string>
 #include <list>
 #include "EventParameterMapping.h"
-#include "UPCBDescriptors.h"
 
 using namespace std;
 
@@ -53,23 +52,6 @@ class EventMapping
 			this->source = source;
 			this->target = target;
 			this->parameters = new list<EventParameterMapping*>();
-		}
-
-		EventMapping( EventDescriptor *mapping)
-		{
-			DescriptorsUtil::GetStringProperty( mapping->Properties,
-								"Source", &this->source );
-			DescriptorsUtil::GetStringProperty( mapping->Properties,
-								"Target", &this->target );
-
-			this->parameters = new list<EventParameterMapping*>();
-
-			list<EventParameterDescriptor>::iterator i;
-			for(i = mapping->EventParameters.begin(); i != mapping->EventParameters.end(); i++)
-			{
-				EventParameterMapping* param = new EventParameterMapping( &(*i) );
-				this->parameters->push_back( param );
-			}
 		}
 
 		EventMapping( const EventMapping& param )

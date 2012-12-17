@@ -97,43 +97,6 @@ EventParameter Event::GetParameter( string paramName )
 	throw( "Parameter not found" );
 }
 
-EventDescriptor Event::GetDescriptor()
-{
-	EventDescriptor event;
-
-	PropertyDescriptor eventName( "Name", "string", this->name );
-	PropertyDescriptor eventDisplayName( "DisplayName", "string", this->name );
-	event.Properties.push_back( eventName );
-	event.Properties.push_back( eventDisplayName );
-
-	stringstream out;
-
-	if( this->parameters == NULL )
-		return event;
-
-	list<EventParameter>::iterator it;
-	for(it = this->parameters->begin(); it != this->parameters->end(); it++)
-	{
-		out.clear();
-		out << (*it).Value;
-
-		EventParameterDescriptor evParam;
-		PropertyDescriptor propKey( "Key", "string" , (string)(*it).Key );
-		PropertyDescriptor propName( "DisplayName", "string" , (string)(*it).Key );
-		PropertyDescriptor propType( "Type", "string", (string)(*it).Type );
-		PropertyDescriptor propValue( "Value", "string", out.str() );
-
-		evParam.Properties.push_back( propKey );
-		evParam.Properties.push_back( propName );
-		evParam.Properties.push_back( propType );
-		evParam.Properties.push_back( propValue );
-
-		event.EventParameters.push_back( evParam );
-	}
-
-	return event;
-}
-
 Event* Event::Clone()
 {
 	list<EventParameter>* params = new list<EventParameter> ();

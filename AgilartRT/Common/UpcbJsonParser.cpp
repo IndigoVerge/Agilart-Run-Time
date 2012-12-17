@@ -22,6 +22,8 @@
  * along with this program.  If not, see <http://www.gnu.org/licenses/>.
  *******************************************************************************/
 
+//#define PROFILE
+
 #include "UpcbJsonParser.h"
 #include "JsonParameters.h"
 #include "Mappings/CommandMapping.h"
@@ -53,19 +55,15 @@ UpcbJsonParser* UpcbJsonParser::Instance()
 ProgramMapping* UpcbJsonParser::ParseProgramMapping( string json )
 {
 	int i;
-	size_t programNameIndex;
-	size_t mappingsIndex;
-	size_t length = json.size();
-	size_t deviceIdIndex;
-	size_t driverTypeIndex;
-	size_t pinoutIdIndex;
-	size_t commandsIndex;
-	size_t eventsIndex;
 	size_t endIndex;
 
 	size_t startFrom = 0;
 	size_t start;
 	size_t end;
+
+	size_t temp;
+	size_t index;
+	int id;
 
 	string commandsArray;
 	string deviceId;
@@ -76,59 +74,62 @@ ProgramMapping* UpcbJsonParser::ParseProgramMapping( string json )
 	// Get Program Id
 	i = json.find( JsonParameters::ProgramId );
 	start = i + JsonParameters::ProgramId.size() + 2;
-	programNameIndex = json.find( JsonParameters::ProgramName );
-	mappingsIndex = json.find( JsonParameters::Mapping );
+	index = json.find( JsonParameters::ProgramName );
+	startFrom = json.find( JsonParameters::Mapping );
 
-	end = programNameIndex - 2;
-	string programId = json.substr( start, end - start );
-	int intId = atoi( programId.c_str() );
+	end = index - 2;
+	id = atoi( json.substr( start, end - start ).c_str() );
 
-	start = programNameIndex + JsonParameters::ProgramName.size() + 3;
-	end = mappingsIndex - 3;
-	string programName = json.substr( start, end - start );
+	start = index + JsonParameters::ProgramName.size() + 3;
+	end = startFrom - 3;
 
-	startFrom = mappingsIndex;
-	ProgramMapping* mapping = new ProgramMapping( intId, programName );
+#ifndef PROFILE
+	ProgramMapping* mapping = new ProgramMapping( id, json.substr( start, end - start ) );
+#else
+	ProgramMapping* mapping = NULL;
+#endif
 
 	while ( true )
 	{
-		commandsIndex = json.find( JsonParameters::Commands, startFrom );
-		if ( commandsIndex == string::npos)
+		index = json.find( JsonParameters::Commands, startFrom );
+		if ( index == string::npos)
 			break;
 
-		startFrom = commandsIndex + 1;
+		startFrom = index + 1;
 
-		deviceIdIndex = json.find( JsonParameters::DeviceId, startFrom );
-		driverTypeIndex = json.find( JsonParameters::Driver, startFrom );
-		eventsIndex = json.find( JsonParameters::Events, startFrom );
-		pinoutIdIndex = json.find( JsonParameters::PinoutId, startFrom );
-		endIndex = json.find( "}", pinoutIdIndex );
+		temp = json.find( JsonParameters::DeviceId, startFrom );
 
 		// commandsIndex + [CommandParamName]  + ":
-		start = commandsIndex + JsonParameters::Commands.size() + 2;
-		end = deviceIdIndex - 2;
+		start = index + JsonParameters::Commands.size() + 2;
+		end = temp - 2;
 		commandsArray = json.substr( start, end - start );
 
-		start = deviceIdIndex + JsonParameters::DeviceId.size() + 2;
-		end = driverTypeIndex - 2;
+		start = temp + JsonParameters::DeviceId.size() + 2;
+		temp = json.find( JsonParameters::Driver, startFrom );
+		end = temp - 2;
 		deviceId = json.substr( start, end - start );
 
-		start = driverTypeIndex + JsonParameters::DriverType.size() + 3; // ":"
-		end = eventsIndex - 3;
+		start = temp + JsonParameters::DriverType.size() + 3; // ":"
+		temp = json.find( JsonParameters::Events, startFrom );
+		end = temp - 3;
 		driverType = json.substr( start, end - start );
+		start = temp + JsonParameters::Events.size() + 2; // ":
 
-		start = eventsIndex + JsonParameters::Events.size() + 2; // ":
-		end = pinoutIdIndex - 2;
+
+		temp = json.find( JsonParameters::PinoutId, startFrom );
+		endIndex = json.find( "}", temp );
+		end = temp - 2;
 		eventsAray = json.substr( start, end - start );
 
-		start = pinoutIdIndex + JsonParameters::PinoutId.size() + 2;
+		start = temp + JsonParameters::PinoutId.size() + 2;
 		end = endIndex;
 		pinoutId = json.substr( start, end - start );
 
-		int pinId = atoi( pinoutId.c_str() );
-		int devId = atoi( deviceId.c_str() );
-
-		PinoutMapping* pinoutMapping = new PinoutMapping(pinId, devId, driverType);
+#ifndef PROFILE
+		PinoutMapping* pinoutMapping = new PinoutMapping(atoi( pinoutId.c_str() ), atoi( deviceId.c_str() ), driverType);
+#else
+		PinoutMapping* pinoutMapping = NULL;
+#endif
 
 		i = 0;
 
@@ -137,7 +138,9 @@ ProgramMapping* UpcbJsonParser::ParseProgramMapping( string json )
 		//Parse the events
 		this->ParseUpcbEvents( eventsAray, pinoutMapping );
 
+#ifndef PROFILE
 		mapping->PinoutMappings()->push_back( pinoutMapping );
+#endif
 	}
 
 	return mapping;
@@ -206,7 +209,12 @@ Program* UpcbJsonParser::ParseProgram( string json )
 	end = json.size() - 2;
 	wires = json.substr( start, end - start );
 
+#ifndef PROFILE
 	Program* program = new Program( atoi( id.c_str() ), name, programDescription );
+#else
+	Program* program = NULL;
+#endif
+
 	BaseDevice* device;
 	ConnectionPoint* connPoint;
 
@@ -227,7 +235,7 @@ Program* UpcbJsonParser::ParseProgram( string json )
 		start = devTypeIndex + JsonParameters::DeviceType.size() + 3;
 		end = devPropsIndex - 3;
 		deviceType = devices.substr( start, end - start );
-
+#ifndef PROFILE
 		device = DeviceManager::Instance()->GetDevice( deviceType.c_str() );
 		if( device == NULL )
 		{
@@ -237,7 +245,7 @@ Program* UpcbJsonParser::ParseProgram( string json )
 
 		device->SetId( atoi( id.c_str() ) );
 		program->AddDevice( device );
-
+#endif
 		start = devPropsIndex + JsonParameters::DeviceProperties.size() + 2;
 		end =  devices.find( ']', devPropsIndex ) + 1;
 		deviceProperties = devices.substr( start, end - start );
@@ -270,8 +278,10 @@ Program* UpcbJsonParser::ParseProgram( string json )
 			string * valueString = new string(propertyValue);
 
 			DeviceParameter* prop = new DeviceParameter( propertyKey, propertyType, propertyValue );
+#ifndef PROFILE
 			device->AddCustomProperty( prop );
 			device->SetParameter(propertyKey, (void *)valueString);
+#endif
 
 			startFrom = bracketIndex + 1;
 		}
@@ -282,42 +292,6 @@ Program* UpcbJsonParser::ParseProgram( string json )
 	string connPoints;
 	int cpIdIndex, deviceIdIndex;
 	string cpElement;
-
-//	startFrom = 0;
-//	cpArrayIndex = powerWire.find( JsonParameters::ConnectionPoints );
-//	start = cpArrayIndex + JsonParameters::ConnectionPoints.size() + 3;
-//	end = powerWire.size() - 1;
-//	connPoints = powerWire.substr( start, end - start );
-
-//	while (true)
-//	{
-//		bracketIndex = connPoints.find( '}', startFrom );
-//		if ( bracketIndex == string::npos )
-//			break;
-//
-//		cpElement = connPoints.substr( startFrom, bracketIndex - startFrom );
-//		startFrom = bracketIndex + 1;
-//
-//		cpIdIndex = cpElement.find( JsonParameters::ConnectionPointId );
-//		deviceIdIndex = cpElement.find( JsonParameters::DeviceId );
-//
-//		start = cpIdIndex + JsonParameters::ConnectionPointId.size() + 2;
-//		end = deviceIdIndex - 2;
-//		cpId = cpElement.substr( start, end - start );
-//
-//		start = deviceIdIndex + JsonParameters::DeviceId.size() + 2;
-//		end = cpElement.size();
-//		id = cpElement.substr( start, end - start );
-//
-//		device = program->GetDevice( atoi( id.c_str() ) );
-//		connPoint = device->GetConnectionPoint( atoi( cpId.c_str() ) );
-//
-//		InConnectionPoint* inConnectionPoint = (InConnectionPoint*) connPoint;
-//		int* startUpValue = new int(1);
-//		inConnectionPoint->SetValue( startUpValue );
-//
-//		program->PowerWire()->Attach( connPoint );
-//	}
 
 	//Resolve Wires
 	startIndex = 0;
@@ -333,8 +307,9 @@ Program* UpcbJsonParser::ParseProgram( string json )
 		end = wires.find( ']', startIndex );
 
 		connPoints = wires.substr( start, end - start );
+#ifndef PROFILE
 		Wire* wire = new Wire();
-
+#endif
 		while ( true )
 		{
 			bracketIndex = connPoints.find( '}', startFrom );
@@ -354,14 +329,16 @@ Program* UpcbJsonParser::ParseProgram( string json )
 			start = deviceIdIndex + JsonParameters::DeviceId.size() + 2;
 			end = cpElement.size();
 			id = cpElement.substr( start, end - start );
-
+#ifndef PROFILE
 			device = program->GetDevice( atoi( id.c_str() ) );
 			connPoint = device->GetConnectionPoint( atoi( cpId.c_str() ) );
 
 			wire->Attach( connPoint );
+#endif
 		}
-
+#ifndef PROFILE
 		program->Wires()->push_back( wire );
+#endif
 	}
 
 	return program;
@@ -419,6 +396,7 @@ BaseDevice* UpcbJsonParser::ParseCustomDevice( string json )
 	end = endIndex;
 	deviceProperties = json.substr( start, end - start );
 
+#ifndef PROFILE
 	BaseDevice* customDevice = DeviceManager::Instance()->GetDevice( deviceBaseType.c_str() );
 	if(customDevice == NULL)
 	{
@@ -428,6 +406,10 @@ BaseDevice* UpcbJsonParser::ParseCustomDevice( string json )
 
 	customDevice->SetId( atoi( deviceId.c_str() ) );
 	customDevice->SetName( deviceName );
+#else
+	BaseDevice* customDevice = NULL;
+#endif
+
 	offset = 0;
 
 	// get properties:
@@ -455,7 +437,9 @@ BaseDevice* UpcbJsonParser::ParseCustomDevice( string json )
 
 		DeviceParameter* property = new DeviceParameter(propertyKey, propertyType, propertyValue);
 
+#ifndef PROFILE
 		customDevice->AddCustomProperty( property );
+#endif
 		offset = bracketIndex + 1;
 	}
 
@@ -508,7 +492,9 @@ void UpcbJsonParser::ParseUpcbCommands( string commandsArray, PinoutMapping* pin
          target = commandsArray.substr( start, end - start );
 
          CommandMapping* cmdMapping = new CommandMapping( source, target );
+#ifndef PROFILE
          pinoutMapping->Commands()->push_back( cmdMapping );
+#endif
 
          parameterStartFrom = 0;
          while ( true )
@@ -613,7 +599,9 @@ void UpcbJsonParser::ParseUpcbEvents( string eventsArray, PinoutMapping* pinoutM
         target = eventsArray.substr( start, end - start );
 
         EventMapping* eventMapping = new EventMapping( source, target );
+#ifndef PROFILE
         pinoutMapping->Events()->push_back( eventMapping );
+#endif
 
         parameterStartFrom = 0;
         while ( true )

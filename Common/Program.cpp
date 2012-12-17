@@ -126,28 +126,3 @@ Wire* Program::PowerWire()
 	return this->powerWire;
 }
 
-
-ProgramDescriptor Program::GetDescriptor()
-{
-	ProgramDescriptor descriptor;
-
-	return descriptor;
-}
-
-ProgramDescriptor Program::GetStatusDescriptor()
-{
-	ProgramDescriptor descriptor;
-
-	char programId[21];
-	sprintf( programId, "%d", this->Id() );
-
-	descriptor.Properties.push_back( PropertyDescriptor( "Id", "int", (string)programId ));
-	descriptor.Properties.push_back( PropertyDescriptor( "Name", "string", this->Name() ));
-	descriptor.Properties.push_back( PropertyDescriptor( "Description", "string", this->Description() ));
-
-	list<BaseDevice*>::iterator it;
-	for( it = this->devices->begin(); it != this->devices->end(); it++ )
-		descriptor.Devices.push_back( (*it)->GetDescriptor() );
-
-	return descriptor;
-}

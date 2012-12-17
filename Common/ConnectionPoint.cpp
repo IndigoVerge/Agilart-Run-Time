@@ -89,25 +89,6 @@ bool ConnectionPoint::IsCalculated()
 	return this->isCalculated;
 }
 
-ConnectionPointDescriptor ConnectionPoint::GetDescriptor()
-{
-	ConnectionPointDescriptor connectionPoint;
-	stringstream ssId;
-	ssId << this->id;
-
-	string pinDirection;
-    if(this->direction == DIRECTION_IN)
-	   	pinDirection = "In";
-    else if(this->direction == DIRECTION_OUT)
-	   	pinDirection = "Out";
-
-    connectionPoint.Properties.push_back( PropertyDescriptor("Id", "int", ssId.str()) );
-	connectionPoint.Properties.push_back( PropertyDescriptor("Description", "string", this->description) );
-	connectionPoint.Properties.push_back( PropertyDescriptor("Direction", "string", pinDirection) );
-
-	return connectionPoint;
-}
-
 void ConnectionPoint::ConnectionPointInitialized()
 {
 	this->isCalculated = true;
@@ -147,7 +128,6 @@ void ConnectionPoint::SetValue( void* )
 {
 	// Implemented in the derived classes;
 }
-
 
 ConnectionPoint* ConnectionPoint::Clone()
 {

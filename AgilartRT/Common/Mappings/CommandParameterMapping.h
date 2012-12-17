@@ -25,8 +25,6 @@
 #define COMMANDPARAMETERMAPPING_H_
 
 #include <string>
-#include "UPCBDescriptors.h"
-#include "../../gSOAP/DescriptorsUtil.h"
 
 using namespace std;
 
@@ -55,39 +53,6 @@ class CommandParameterMapping
 			this->target = target;
 			this->defaultValue = value;
 			this->defaultType = type;
-		}
-
-		CommandParameterMapping( CommandParameterDescriptor* mapping )
-		{
-			string value;
-
-			DescriptorsUtil::GetStringProperty( mapping->Properties,
-											"Source", &this->source );
-			DescriptorsUtil::GetStringProperty( mapping->Properties,
-											"Target", &this->target );
-			DescriptorsUtil::GetStringProperty( mapping->Properties,
-											"Type", &this->defaultType );
-			DescriptorsUtil::GetStringProperty( mapping->Properties,
-											"Value", &value );
-
-
-			if( this->defaultType == "int" )
-			{
-				int* intValue = new int( atoi(value.c_str()));
-				this->defaultValue = intValue;
-
-				int x = *(int*)this->defaultValue;
-				cout<<x<<endl;
-			}
-			else
-			{
-				string* stringValue = new string();
-				stringValue->assign(value);
-				this->defaultValue = stringValue;
-
-				string y = *(string*)this->defaultValue;
-				cout<<y<<endl;
-			}
 		}
 
 		CommandParameterMapping( const CommandParameterMapping& param )

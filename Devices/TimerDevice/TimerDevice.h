@@ -34,7 +34,6 @@
 #include <fcntl.h>
 #include <stdlib.h>
 
-#include "UPCBDescriptors.h"
 #include "Logging/EventLogger.h"
 #include "BaseDevice.h"
 #include "OutConnectionPoint.h"
@@ -59,7 +58,7 @@ class TimerDevice: public BaseDevice
 		virtual BaseDevice* CreateInstance();
 
 
-		virtual void InitializeFromDescriptor( list<PropertyDescriptor> );
+		virtual void InitializeFromDescriptor( list<Property> );
 
 		virtual DeviceParameter GetParameter( string parameterName );
 		virtual void SetParameter( string parameterName, void* value );

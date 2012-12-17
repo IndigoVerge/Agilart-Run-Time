@@ -33,11 +33,10 @@
 #include "Common/Mappings/MappingManager.h"
 #include "Command.h"
 #include "Wire.h"
+
+#include "WebServer/WebServer.h"
+
 #include "Common/ProgramManager.h"
-
-#include "gSOAP/WebServer.h"
-#include "gSOAP/SoapServiceImplementation.h"
-
 #include "Common/Drivers/PluggableDriversProvider.h"
 #include "Common/Devices/PluggableDevicesProvider.h"
 #include "Common/Devices/DeviceManager.h"
@@ -61,7 +60,7 @@ int main( int argc, char* argv[] )
 	}
 
 	int port = atoi( argv[2] );
-	char* ip = argv[1];
+    char* ip = argv[1];
 
 	// Initialize the path to the config file:
 	Configuration::Initialize( CONFIG_FILE_PATH, NULL );
@@ -76,7 +75,7 @@ int main( int argc, char* argv[] )
 	deviceProvider->Initialize();
 	ProgramManager::Instance()->InitializePrograms();
 
-	WebServer::Instance()->Start( port, ip );
+	WebServer::Instance()->Start( argv[2], argv[1] );
 
 	string x;
 	cout << "Press any key to stop the Agilart run-time executable.\n";

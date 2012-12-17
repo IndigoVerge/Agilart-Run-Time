@@ -65,26 +65,6 @@ BaseDriver* DriversManager::GetDriver( const char *name )
 	return NULL;
 }
 
-list<DriverDescriptor>* DriversManager::GetDriverDescriptors()
-{
-	list<DriverDescriptor>* driverDescriptors = new list<DriverDescriptor> ;
-
-	list<BaseDriver*>::iterator i;
-	list<BaseDriversProvider*>::iterator providersIt;
-	list<BaseDriver*> drivers;
-
-	for ( providersIt = this->driverProviders.begin(); providersIt
-			!= this->driverProviders.end(); providersIt++ )
-	{
-		drivers = ( *providersIt )->Drivers();
-
-		for ( i = drivers.begin(); i != drivers.end(); i++ )
-			driverDescriptors->push_back( ( *i )->GetDescriptor() );
-	}
-
-	return driverDescriptors;
-}
-
 string DriversManager::GetDriversJsonDescription()
 {
 	list<BaseDriver*>::iterator it;

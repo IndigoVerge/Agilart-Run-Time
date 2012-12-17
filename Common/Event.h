@@ -29,7 +29,6 @@
 #include <list>
 
 #include "EventParameter.h"
-#include "UPCBDescriptors.h"
 
 using namespace std;
 
@@ -51,7 +50,6 @@ class Event
 
 		void AddParameter( EventParameter );
 		EventParameter GetParameter(string);
-		EventDescriptor GetDescriptor();
 		Event* Clone();
 
 		virtual string ToJson();

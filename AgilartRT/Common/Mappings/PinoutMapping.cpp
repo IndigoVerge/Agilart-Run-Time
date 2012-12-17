@@ -34,33 +34,6 @@ PinoutMapping::PinoutMapping( int pinoutId, int deviceId, string driverType )
 	this->events = new list<EventMapping*>();
 }
 
-PinoutMapping::PinoutMapping( PinoutMappingDescriptor* mappingDescriptor )
-{
-	DescriptorsUtil::GetIntProperty( mappingDescriptor->Properties,
-					"DeviceId", &this->deviceId );
-	DescriptorsUtil::GetIntProperty( mappingDescriptor->Properties,
-					"PinoutId", &this->pinoutId );
-	DescriptorsUtil::GetStringProperty( mappingDescriptor->Properties,
-					"DriverType", &this->driverType );
-
-	this->commands = new list<CommandMapping*>();
-	this->events = new list<EventMapping*>();
-
-	list<CommandDescriptor>::iterator i;
-	for ( i = mappingDescriptor->CommandMappings.begin(); i != mappingDescriptor->CommandMappings.end();  i++ )
-	{
-		CommandMapping* cm = new CommandMapping( &(*i) );
-		this->commands->push_back(cm);
-	}
-
-	list<EventDescriptor>::iterator j;
-	for ( j = mappingDescriptor->EventMappings.begin(); j != mappingDescriptor->EventMappings.end();  j++ )
-	{
-		EventMapping* event = new EventMapping( &(*j) );
-		this->events->push_back( event );
-	}
-}
-
 PinoutMapping::~PinoutMapping()
 {
 	if( this->commands != NULL )

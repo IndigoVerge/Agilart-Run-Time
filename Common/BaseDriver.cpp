@@ -48,28 +48,6 @@ BaseDriver::~BaseDriver()
 		delete this->supportedComands;
 }
 
-DriverDescriptor BaseDriver::GetDescriptor()
-{
-	DriverDescriptor driverDescriptor;
-
-
-	PropertyDescriptor nameProperty( "Name", "string", this->Type());
-	PropertyDescriptor displayNameProperty( "DisplayName", "string", this->Name());
-
-	driverDescriptor.Properties.push_back( nameProperty );
-	driverDescriptor.Properties.push_back( displayNameProperty );
-
-	list<Command>::iterator ci;
-	for(ci = this->supportedComands->begin(); ci != this->supportedComands->end(); ci++)
-		driverDescriptor.SupportedCommands.push_back((*ci).GetDescriptor());
-
-	list<Event>::iterator ei;
-	for(ei = this->suportedEvents->begin(); ei != this->suportedEvents->end(); ei++)
-		driverDescriptor.SupportedEvents.push_back((*ei).GetDescriptor());
-
-	return driverDescriptor;
-}
-
 string BaseDriver::ToJson()
 {
 	string jsonDescr = "{\"" + JsonParameters::Name + "\":\"" + this->Name() + "\",\""

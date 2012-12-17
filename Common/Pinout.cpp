@@ -98,35 +98,6 @@ list<Event> Pinout::SuportedEvents()
 	return *this->suportedEvents;
 }
 
-PinoutDescriptor Pinout::GetDecriptor()
-{
-	PinoutDescriptor pinoutDescriptor;
-
-	stringstream ssId;
-	ssId << this->id;
-
-	pinoutDescriptor.Properties.push_back(PropertyDescriptor("Id", "int", ssId.str()));
-	pinoutDescriptor.Properties.push_back(PropertyDescriptor("Name", "string", this->name));
-	pinoutDescriptor.Properties.push_back(PropertyDescriptor("Description", "string", this->description));
-
-	//TODO
-	if( this->supportedComands != NULL )
-	{
-		list<Command>::iterator ci;
-		for(ci = this->supportedComands->begin(); ci != this->supportedComands->end(); ci++)
-			pinoutDescriptor.SupportedCommands.push_back((*ci).GetDescriptor());
-	}
-
-	if( this->suportedEvents != NULL )
-	{
-		list<Event>::iterator ei;
-		for(ei = this->suportedEvents->begin(); ei != this->suportedEvents->end(); ei++)
-			pinoutDescriptor.SupportedEvents.push_back((*ei).GetDescriptor());
-	}
-
-	return pinoutDescriptor;
-}
-
 string Pinout::ToJson()
 {
 	char pinoutId[16];

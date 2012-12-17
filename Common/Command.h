@@ -30,7 +30,6 @@
 #include <string>
 
 #include "CommandParameter.h"
-#include "UPCBDescriptors.h"
 
 using namespace std;
 
@@ -67,7 +66,6 @@ class Command
 		void AddParameter( CommandParameter* );
 
 		CommandParameter* GetParameter( string );
-		CommandDescriptor GetDescriptor();
 		Command* Clone();
 
 		virtual string ToJson();

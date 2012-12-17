@@ -195,37 +195,10 @@ bool BaseDevice::AreAllINsInitialized()
 	return true;
 }
 
-DeviceDescriptor BaseDevice::GetDescriptor()
-{
-	DeviceDescriptor deviceDecriptor;
-
-	stringstream ssId;
-	ssId << this->id;
-	PropertyDescriptor idProperty = PropertyDescriptor("Id", "int", ssId.str());
-	deviceDecriptor.Properties.push_back( idProperty );
-
-	list<ConnectionPoint*>::iterator it;
-
-	for( it = this->connectionPoints->begin(); it != this->connectionPoints->end(); it++ )
-		deviceDecriptor.ConnectionPoints.push_back((*it)->GetDescriptor());
-
-	list<Pinout*>::iterator pinIt;
-
-	for( pinIt = this->pinouts->begin(); pinIt != this->pinouts->end(); pinIt++)
-		deviceDecriptor.Pinouts.push_back((*pinIt)->GetDecriptor());
-
-	return deviceDecriptor;
-}
-
 void BaseDevice::AddCustomProperty( DeviceParameter* property )
 {
 	if( this->properties != NULL )
 		this->properties->push_back( property );
-}
-
-void BaseDevice::InitializeFromDescriptor( list<PropertyDescriptor> properties )
-{
-	// Override in derived device widgets if required.
 }
 
 DeviceParameter BaseDevice::GetParameter( string parameterName )
@@ -415,4 +388,9 @@ void BaseDevice::RegisterErrorHandler( IErrorHandler* handler )
 {
 	this->ErrorHandler = &IErrorHandler::HandleError;
 	this->errorsHandler = handler;
+}
+
+void BaseDevice::InitializeFromDescriptor( list<Property> properties )
+{
+	// Override in derived device widgets if required.
 }

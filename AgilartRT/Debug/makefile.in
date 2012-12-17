@@ -9,8 +9,7 @@ RM := rm -rf
 # All of the sources participating in the build are defined here
 -include sources.mk
 -include subdir.mk
--include gSOAP/subdir.mk
--include gSOAP/Services/subdir.mk
+-include WebServer/subdir.mk
 -include DaemonUtils/subdir.mk
 -include Common/subdir.mk
 -include Common/Mappings/subdir.mk
@@ -66,7 +65,7 @@ agilart-runtime: $(OBJS) $(USER_OBJS) ../../Common/Debug/libCommon.so ../../Devi
 # Other Targets
 clean:
 	-$(RM) $(C++_DEPS)$(C_DEPS)$(CC_DEPS)$(CPP_DEPS)$(EXECUTABLES)$(CXX_DEPS)$(C_UPPER_DEPS)
-	-$(RM) "./agilartRT.o" "./gSOAP/DescriptorsUtil.o" "./gSOAP/WebServer.o" "./gSOAP/Services/httpform.o" "./gSOAP/Services/httpget.o" "./gSOAP/Services/soapC.o" "./gSOAP/Services/soapUPCBWebServiceSoapProxy.o" "./gSOAP/Services/soapUPCBWebServiceSoapService.o" "./gSOAP/Services/stdsoap2.o" "./gSOAP/Services/threads.o" "./DaemonUtils/DaemonService.o" "./Common/ProgramManager.o" "./Common/UpcbJsonParser.o" 
+	-$(RM) "./agilartRT.o" "./DaemonUtils/DaemonService.o" "./Common/ProgramManager.o" "./Common/UpcbJsonParser.o" 
 	-$(RM) "./Common/Mappings/MappingManager.o" "./Common/Mappings/PinoutMapping.o" "./Common/Mappings/ProgramMapping.o" "./Common/Drivers/BaseDriversProvider.o" "./Common/Drivers/DriversManager.o" "./Common/Drivers/PluggableDriversProvider.o" "./Common/Devices/BaseDevicesProvider.o" "./Common/Devices/DeviceManager.o" "./Common/Devices/PluggableDevicesProvider.o"  agilart-runtime agilart-runtime
 post-build:
 	-@echo 'Im ready!'

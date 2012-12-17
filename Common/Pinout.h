@@ -70,7 +70,6 @@ class Pinout
 		list<Command> SupportedComands();
 		list<Event> SuportedEvents();
 
-		PinoutDescriptor GetDecriptor();
 		string ToJson();
 };
 

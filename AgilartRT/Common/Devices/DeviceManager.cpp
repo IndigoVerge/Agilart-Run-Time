@@ -50,6 +50,7 @@ DeviceManager::~DeviceManager()
 	// TODO Auto-generated destructor stub
 }
 
+/*
 BaseDevice* DeviceManager::CreateFromDescriptor( DeviceDescriptor devDescriptor )
 {
 	string deviceType;
@@ -71,6 +72,7 @@ BaseDevice* DeviceManager::CreateFromDescriptor( DeviceDescriptor devDescriptor 
 
 	return device;
 }
+*/
 
 BaseDevice* DeviceManager::GetDevice( const char *name )
 {
@@ -114,26 +116,6 @@ void DeviceManager::UnregisterProvider( BaseDevicesProvider* provider )
 void DeviceManager::RegisterProvider( BaseDevicesProvider* provider )
 {
 	this->deviceProviders.push_back( provider );
-}
-
-list<DeviceDescriptor>* DeviceManager::GetDeviceDescriptors()
-{
-	list<DeviceDescriptor>* deviceDescriptors = new list<DeviceDescriptor> ;
-
-	list<BaseDevice*>::iterator i;
-	list<BaseDevicesProvider*>::iterator providersIt;
-	list<BaseDevice*> devices;
-
-	for ( providersIt = this->deviceProviders.begin(); providersIt
-			!= this->deviceProviders.end(); providersIt++ )
-	{
-		devices = ( *providersIt )->Devices();
-
-		for ( i = devices.begin(); i != devices.end(); i++ )
-			deviceDescriptors->push_back( ( *i )->GetDescriptor() );
-	}
-
-	return deviceDescriptors;
 }
 
 string DeviceManager::GetDevicesJsonDescription()

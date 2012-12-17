@@ -94,43 +94,6 @@ void Command::AddParameter( CommandParameter* param )
 	this->parameters->push_back( param );
 }
 
-CommandDescriptor Command::GetDescriptor()
-{
-	CommandDescriptor command;
-
-	PropertyDescriptor commandName( "Name", "string", this->name );
-	PropertyDescriptor commandDisplayName( "DisplayName", "string", this->name );
-	command.Properties.push_back(commandName);
-	command.Properties.push_back(commandDisplayName);
-
-	stringstream out;
-
-	if( this->parameters == NULL )
-		return command;
-
-	list<CommandParameter*>::iterator it;
-	for(it = this->parameters->begin(); it != this->parameters->end(); it++)
-	{
-		out.clear();
-		out << (*it)->Value;
-
-		CommandParameterDescriptor cmdParam;
-		PropertyDescriptor propKey( "Key", "string" , (string)(*it)->Key );
-		PropertyDescriptor propName( "DisplayName", "string" , (string)(*it)->Key );
-		PropertyDescriptor propType( "Type", "string", (string)(*it)->Type );
-		PropertyDescriptor propValue( "Value", "string", out.str() );
-
-		cmdParam.Properties.push_back( propKey );
-		cmdParam.Properties.push_back( propName );
-		cmdParam.Properties.push_back( propType );
-		cmdParam.Properties.push_back( propValue );
-
-		command.CommandParameters.push_back( cmdParam );
-	}
-
-	return command;
-}
-
 Command* Command::Clone()
 {
 	Command* clone = new Command( this->name );

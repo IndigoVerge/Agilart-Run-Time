@@ -30,10 +30,6 @@
 #include "UPCBDescriptors.h"
 #include <list>
 
-#include "../../gSOAP/Services/soapStub.h"
-#include "../../gSOAP/DescriptorsUtil.h"
-#include "../../gSOAP/Services/soapH.h"
-
 class DeviceManager
 {
 	private:
@@ -55,8 +51,7 @@ class DeviceManager
 		 */
 		void AddDevice( BaseDevice* );
 
-		BaseDevice* CreateFromDescriptor( DeviceDescriptor );
-		std::list<DeviceDescriptor>* GetDeviceDescriptors();
+		// BaseDevice* CreateFromDescriptor( DeviceDescriptor );
 
 		void RegisterProvider( BaseDevicesProvider* );
 		void UnregisterProvider( BaseDevicesProvider* );

@@ -27,7 +27,6 @@
 
 #include "BaseDriversProvider.h"
 #include "BaseDriver.h"
-#include "Logging/EventLogger.h"
 
 #include <stddef.h>
 #include <string.h>
@@ -36,6 +35,7 @@
 #include <dlfcn.h>
 #include <map>
 #include <list>
+#include <stdlib.h>
 
 class PluggableDriversProvider: public BaseDriversProvider
 {
@@ -45,6 +45,11 @@ class PluggableDriversProvider: public BaseDriversProvider
 
 		typedef std::map<const char*, BaseDriver*> DriversMap;
 		DriversMap drivers;
+
+		void AddDriver( const char*, BaseDriver* );
+		bool LoadSharedLibrary( string );
+
+		bool InitializeUploadedDrivers();
 
 	public:
 		PluggableDriversProvider();

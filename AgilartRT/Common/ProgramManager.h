@@ -79,14 +79,12 @@ class ProgramManager: public IErrorHandler
 		int StopProgram( int );
 		void DeleteProgram( int );
 
-		Program* CreateFromDescriptor( ProgramDescriptor* );
 		Program* GetRunningProgram( int );
 
 		list<string> GetAllPrograms();
 		string GetProgram( int programId );
 		string GetMapping( int programId );
 
-		list<ProgramDescriptor> GetRunningProgramsStatus();
 		string GetProcessStatus( int id, string serviceBaseAddress );
 
 		void SaveCustomDevice( string content );

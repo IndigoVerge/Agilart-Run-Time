@@ -52,32 +52,6 @@ class EventParameterMapping
 			this->defaultType = type;
 		}
 
-		EventParameterMapping( EventParameterDescriptor* mapping )
-		{
-			string value;
-
-			DescriptorsUtil::GetStringProperty( mapping->Properties,
-											"Source", &this->source );
-			DescriptorsUtil::GetStringProperty( mapping->Properties,
-											"Target", &this->target );
-			DescriptorsUtil::GetStringProperty( mapping->Properties,
-											"Type", &this->defaultType );
-			DescriptorsUtil::GetStringProperty( mapping->Properties,
-											"Value", &value );
-
-			if( this->defaultType == "int" )
-			{
-				int* intValue = new int( atoi(value.c_str()));
-				this->defaultValue = intValue;
-			}
-			else
-			{
-				string* stringValue = new string();
-				stringValue->assign(value);
-				this->defaultValue = stringValue;
-			}
-		}
-
 		EventParameterMapping( const EventParameterMapping& param )
 		{
 			this->source = param.source;

@@ -153,8 +153,8 @@ BaseDevice* DelayTimer::CreateInstance() {
 	return device;
 }
 
-void DelayTimer::InitializeFromDescriptor(list<PropertyDescriptor> properties) {
-	list<PropertyDescriptor>::iterator it;
+void DelayTimer::InitializeFromDescriptor(list<Property> properties) {
+	list<Property>::iterator it;
 
 	for (it = properties.begin(); it != properties.end(); it++) {
 		if ((*it).Name == TIMER_INTERVAL) {

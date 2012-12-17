@@ -190,8 +190,8 @@ BaseDevice* TimerDevice::CreateInstance() {
 	return device;
 }
 
-void TimerDevice::InitializeFromDescriptor(list<PropertyDescriptor> properties) {
-	list<PropertyDescriptor>::iterator it;
+void TimerDevice::InitializeFromDescriptor(list<Property> properties) {
+	list<Property>::iterator it;
 
 	for (it = properties.begin(); it != properties.end(); it++) {
 		if ((*it).Name == TIMER_INTERVAL) {

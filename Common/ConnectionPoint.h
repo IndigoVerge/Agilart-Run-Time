@@ -31,7 +31,6 @@
 
 #include "Enums.h"
 #include "delegate.h"
-#include "UPCBDescriptors.h"
 
 #include "IValueChanged.h"
 #include "IRefreshValue.h"
@@ -79,7 +78,6 @@ class ConnectionPoint
 		bool IsInitialized();
 		bool IsCalculated(); // used in the initialization phase
 
-		ConnectionPointDescriptor GetDescriptor();
 		void ConnectionPointInitialized();
 
 		void SetDataType( AgilartDataTypes );

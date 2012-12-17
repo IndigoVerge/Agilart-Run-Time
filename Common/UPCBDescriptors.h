@@ -33,7 +33,7 @@
 */
 using namespace std;
 //using boost::serialization::make_nvp;
-
+/*
 class PropertyDescriptor {
 public:
 	string Name;
@@ -177,6 +177,6 @@ class ProgramMappingDescriptor {
 public:
 	list<PinoutMappingDescriptor> PinoutMappings;
 
-};
+}; */
 
 #endif /* UPCBDESCRIPTORS_H_ */

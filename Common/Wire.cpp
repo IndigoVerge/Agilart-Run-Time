@@ -150,12 +150,6 @@ void Wire::Refresh( void* connPointPtr )
 	this->SetValue( value, senderType );
 }
 
-WireDescriptor Wire::GetDescriptor()
-{
-	WireDescriptor wire;
-	return wire;
-}
-
 Wire* Wire::Clone()
 {
 	Wire* clone = new Wire();

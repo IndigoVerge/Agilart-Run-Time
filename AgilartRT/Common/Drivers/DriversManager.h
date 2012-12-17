@@ -27,7 +27,6 @@
 
 #include "BaseDriver.h"
 #include "BaseDriversProvider.h"
-#include "UPCBDescriptors.h"
 #include <list>
 
 class DriversManager
@@ -45,7 +44,6 @@ class DriversManager
 		static DriversManager* Instance();
 
 		BaseDriver* GetDriver( const char * );
-		std::list<DriverDescriptor>* GetDriverDescriptors();
 		string GetDriversJsonDescription();
 
 		void RegisterProvider( BaseDriversProvider* );

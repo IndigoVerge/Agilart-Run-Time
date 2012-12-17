@@ -41,8 +41,8 @@
 #include "Consts.h"
 #include "Enums.h"
 #include "Event.h"
+#include "Property.h"
 #include "EventParameter.h"
-#include "UPCBDescriptors.h"
 #include "Logging/EventLogger.h"
 
 #include "ErrorItem.h"
@@ -135,14 +135,13 @@ class BaseDevice : public IValueChanged, public IRefreshValue
 
 		ConnectionPoint* GetConnectionPoint(int id);
 		virtual void ExecuteCommand( Command );
-		virtual DeviceDescriptor GetDescriptor();
 		string ToJson();
 
 		virtual DeviceParameter GetParameter( string parameterName );
 		virtual void SetParameter( string parameterName, void* value );
 
 		void AddCustomProperty( DeviceParameter* property );
-		virtual void InitializeFromDescriptor( list<PropertyDescriptor> );
+		virtual void InitializeFromDescriptor( list<Property> );
 
 		virtual void RegisterErrorHandler( IErrorHandler* handler );
 };

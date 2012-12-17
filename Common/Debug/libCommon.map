@@ -23,21 +23,9 @@ Discarded input sections
  .group         0x0000000000000000        0x8 ./BaseDevice.o
  .group         0x0000000000000000        0x8 ./BaseDevice.o
  .group         0x0000000000000000        0x8 ./BaseDevice.o
- .group         0x0000000000000000        0x8 ./BaseDevice.o
- .group         0x0000000000000000        0x8 ./BaseDevice.o
- .group         0x0000000000000000        0x8 ./BaseDevice.o
- .group         0x0000000000000000        0x8 ./BaseDevice.o
- .group         0x0000000000000000        0x8 ./BaseDevice.o
- .group         0x0000000000000000        0x8 ./BaseDevice.o
- .group         0x0000000000000000        0x8 ./BaseDevice.o
  .note.GNU-stack
                 0x0000000000000000        0x0 ./BaseDevice.o
  .group         0x0000000000000000        0xc ./BaseDriver.o
- .group         0x0000000000000000        0x8 ./BaseDriver.o
- .group         0x0000000000000000        0x8 ./BaseDriver.o
- .group         0x0000000000000000        0x8 ./BaseDriver.o
- .group         0x0000000000000000        0x8 ./BaseDriver.o
- .group         0x0000000000000000        0x8 ./BaseDriver.o
  .group         0x0000000000000000        0x8 ./BaseDriver.o
  .group         0x0000000000000000        0x8 ./BaseDriver.o
  .group         0x0000000000000000        0x8 ./BaseDriver.o
@@ -51,12 +39,6 @@ Discarded input sections
                 0x0000000000000000       0x95 ./BaseDriver.o
  .text._ZStplIcSt11char_traitsIcESaIcEESbIT_T0_T1_ERKS6_S8_
                 0x0000000000000000       0x49 ./BaseDriver.o
- .text._ZNSt10_List_baseI18PropertyDescriptorSaIS0_EED2Ev
-                0x0000000000000000       0xf9 ./BaseDriver.o
- .text._ZNSt10_List_baseI26CommandParameterDescriptorSaIS0_EED2Ev
-                0x0000000000000000      0x134 ./BaseDriver.o
- .text._ZNSt10_List_baseI24EventParameterDescriptorSaIS0_EED2Ev
-                0x0000000000000000      0x134 ./BaseDriver.o
  .data.DW.ref.__gxx_personality_v0
                 0x0000000000000000        0x8 ./BaseDriver.o
  .note.GNU-stack
@@ -67,17 +49,10 @@ Discarded input sections
  .group         0x0000000000000000        0x8 ./Command.o
  .group         0x0000000000000000        0x8 ./Command.o
  .group         0x0000000000000000        0x8 ./Command.o
- .group         0x0000000000000000        0x8 ./Command.o
- .group         0x0000000000000000        0x8 ./Command.o
- .group         0x0000000000000000        0x8 ./Command.o
  .text._ZStplIcSt11char_traitsIcESaIcEESbIT_T0_T1_EPKS3_RKS6_
                 0x0000000000000000       0x95 ./Command.o
  .text._ZStplIcSt11char_traitsIcESaIcEESbIT_T0_T1_ERKS6_S8_
                 0x0000000000000000       0x49 ./Command.o
- .text._ZNSt10_List_baseI18PropertyDescriptorSaIS0_EED2Ev
-                0x0000000000000000       0xf9 ./Command.o
- .text._ZNSsC2IPcEET_S1_RKSaIcE
-                0x0000000000000000       0xf0 ./Command.o
  .data.DW.ref.__gxx_personality_v0
                 0x0000000000000000        0x8 ./Command.o
  .note.GNU-stack
@@ -102,14 +77,8 @@ Discarded input sections
  .group         0x0000000000000000        0x8 ./ConnectionPoint.o
  .group         0x0000000000000000        0x8 ./ConnectionPoint.o
  .group         0x0000000000000000        0x8 ./ConnectionPoint.o
- .group         0x0000000000000000        0x8 ./ConnectionPoint.o
- .group         0x0000000000000000        0x8 ./ConnectionPoint.o
- .text._ZN18PropertyDescriptorD2Ev
-                0x0000000000000000       0xd8 ./ConnectionPoint.o
  .text._ZStplIcSt11char_traitsIcESaIcEESbIT_T0_T1_ERKS6_S8_
                 0x0000000000000000       0x49 ./ConnectionPoint.o
- .text._ZNSsC2IPcEET_S1_RKSaIcE
-                0x0000000000000000       0xf0 ./ConnectionPoint.o
  .data.DW.ref.__gxx_personality_v0
                 0x0000000000000000        0x8 ./ConnectionPoint.o
  .note.GNU-stack
@@ -133,19 +102,10 @@ Discarded input sections
  .group         0x0000000000000000        0x8 ./Event.o
  .group         0x0000000000000000        0x8 ./Event.o
  .group         0x0000000000000000        0x8 ./Event.o
- .group         0x0000000000000000        0x8 ./Event.o
- .group         0x0000000000000000        0x8 ./Event.o
- .group         0x0000000000000000        0x8 ./Event.o
- .text._ZN18PropertyDescriptorD2Ev
-                0x0000000000000000       0xd8 ./Event.o
  .text._ZStplIcSt11char_traitsIcESaIcEESbIT_T0_T1_EPKS3_RKS6_
                 0x0000000000000000       0x95 ./Event.o
  .text._ZStplIcSt11char_traitsIcESaIcEESbIT_T0_T1_ERKS6_S8_
                 0x0000000000000000       0x49 ./Event.o
- .text._ZNSt10_List_baseI18PropertyDescriptorSaIS0_EED2Ev
-                0x0000000000000000       0xf9 ./Event.o
- .text._ZNSsC2IPcEET_S1_RKSaIcE
-                0x0000000000000000       0xf0 ./Event.o
  .data.DW.ref.__gxx_personality_v0
                 0x0000000000000000        0x8 ./Event.o
  .note.GNU-stack
@@ -182,31 +142,10 @@ Discarded input sections
  .group         0x0000000000000000        0x8 ./Pinout.o
  .group         0x0000000000000000        0x8 ./Pinout.o
  .group         0x0000000000000000        0x8 ./Pinout.o
- .group         0x0000000000000000        0x8 ./Pinout.o
- .group         0x0000000000000000        0x8 ./Pinout.o
- .group         0x0000000000000000        0x8 ./Pinout.o
- .group         0x0000000000000000        0x8 ./Pinout.o
- .group         0x0000000000000000        0x8 ./Pinout.o
- .group         0x0000000000000000        0x8 ./Pinout.o
- .group         0x0000000000000000        0x8 ./Pinout.o
- .text._ZN18PropertyDescriptorD2Ev
-                0x0000000000000000       0xd8 ./Pinout.o
- .text._ZN17CommandDescriptorD2Ev
-                0x0000000000000000      0x261 ./Pinout.o
- .text._ZN15EventDescriptorD2Ev
-                0x0000000000000000      0x261 ./Pinout.o
  .text._ZStplIcSt11char_traitsIcESaIcEESbIT_T0_T1_EPKS3_RKS6_
                 0x0000000000000000       0x95 ./Pinout.o
  .text._ZStplIcSt11char_traitsIcESaIcEESbIT_T0_T1_ERKS6_S8_
                 0x0000000000000000       0x49 ./Pinout.o
- .text._ZNSt10_List_baseI18PropertyDescriptorSaIS0_EED2Ev
-                0x0000000000000000       0xf9 ./Pinout.o
- .text._ZNSt10_List_baseI26CommandParameterDescriptorSaIS0_EED2Ev
-                0x0000000000000000      0x134 ./Pinout.o
- .text._ZNSt10_List_baseI24EventParameterDescriptorSaIS0_EED2Ev
-                0x0000000000000000      0x134 ./Pinout.o
- .text._ZNSsC2IPcEET_S1_RKSaIcE
-                0x0000000000000000       0xf0 ./Pinout.o
  .data.DW.ref.__gxx_personality_v0
                 0x0000000000000000        0x8 ./Pinout.o
  .note.GNU-stack
@@ -235,29 +174,6 @@ Discarded input sections
  .group         0x0000000000000000        0x8 ./Program.o
  .group         0x0000000000000000        0x8 ./Program.o
  .group         0x0000000000000000        0x8 ./Program.o
- .group         0x0000000000000000        0x8 ./Program.o
- .group         0x0000000000000000        0x8 ./Program.o
- .group         0x0000000000000000        0x8 ./Program.o
- .group         0x0000000000000000        0x8 ./Program.o
- .group         0x0000000000000000        0x8 ./Program.o
- .group         0x0000000000000000        0x8 ./Program.o
- .group         0x0000000000000000        0x8 ./Program.o
- .group         0x0000000000000000        0x8 ./Program.o
- .group         0x0000000000000000        0x8 ./Program.o
- .group         0x0000000000000000        0x8 ./Program.o
- .group         0x0000000000000000        0x8 ./Program.o
- .text._ZN18PropertyDescriptorD2Ev
-                0x0000000000000000       0xd8 ./Program.o
- .text._ZNSt10_List_baseI18PropertyDescriptorSaIS0_EED2Ev
-                0x0000000000000000       0xf9 ./Program.o
- .text._ZNSt10_List_baseI17CommandDescriptorSaIS0_EED2Ev
-                0x0000000000000000      0x2e2 ./Program.o
- .text._ZNSt10_List_baseI15EventDescriptorSaIS0_EED2Ev
-                0x0000000000000000      0x2e2 ./Program.o
- .text._ZNSt10_List_baseI26CommandParameterDescriptorSaIS0_EED2Ev
-                0x0000000000000000      0x134 ./Program.o
- .text._ZNSt10_List_baseI24EventParameterDescriptorSaIS0_EED2Ev
-                0x0000000000000000      0x134 ./Program.o
  .data.DW.ref.__gxx_personality_v0
                 0x0000000000000000        0x8 ./Program.o
  .note.GNU-stack
@@ -380,33 +296,33 @@ LOAD /usr/lib/gcc/x86_64-linux-gnu/4.6/../../../x86_64-linux-gnu/crtn.o
 .hash
  *(.hash)
 
-.gnu.hash       0x00000000000001f0      0xdc8
+.gnu.hash       0x00000000000001f0      0xd30
  *(.gnu.hash)
- .gnu.hash      0x00000000000001f0      0xdc8 /usr/lib/gcc/x86_64-linux-gnu/4.6/../../../x86_64-linux-gnu/crti.o
+ .gnu.hash      0x00000000000001f0      0xd30 /usr/lib/gcc/x86_64-linux-gnu/4.6/../../../x86_64-linux-gnu/crti.o
 
-.dynsym         0x0000000000000fb8     0x3720
+.dynsym         0x0000000000000f20     0x3288
  *(.dynsym)
- .dynsym        0x0000000000000fb8     0x3720 /usr/lib/gcc/x86_64-linux-gnu/4.6/../../../x86_64-linux-gnu/crti.o
+ .dynsym        0x0000000000000f20     0x3288 /usr/lib/gcc/x86_64-linux-gnu/4.6/../../../x86_64-linux-gnu/crti.o
 
-.dynstr         0x00000000000046d8     0x46aa
+.dynstr         0x00000000000041a8     0x3f9a
  *(.dynstr)
- .dynstr        0x00000000000046d8     0x46aa /usr/lib/gcc/x86_64-linux-gnu/4.6/../../../x86_64-linux-gnu/crti.o
+ .dynstr        0x00000000000041a8     0x3f9a /usr/lib/gcc/x86_64-linux-gnu/4.6/../../../x86_64-linux-gnu/crti.o
 
-.gnu.version    0x0000000000008d82      0x498
+.gnu.version    0x0000000000008142      0x436
  *(.gnu.version)
- .gnu.version   0x0000000000008d82      0x498 /usr/lib/gcc/x86_64-linux-gnu/4.6/../../../x86_64-linux-gnu/crti.o
+ .gnu.version   0x0000000000008142      0x436 /usr/lib/gcc/x86_64-linux-gnu/4.6/../../../x86_64-linux-gnu/crti.o
 
-.gnu.version_d  0x0000000000009220        0x0
+.gnu.version_d  0x0000000000008578        0x0
  *(.gnu.version_d)
  .gnu.version_d
                 0x0000000000000000        0x0 /usr/lib/gcc/x86_64-linux-gnu/4.6/../../../x86_64-linux-gnu/crti.o
 
-.gnu.version_r  0x0000000000009220       0xd0
+.gnu.version_r  0x0000000000008578       0xc0
  *(.gnu.version_r)
  .gnu.version_r
-                0x0000000000009220       0xd0 /usr/lib/gcc/x86_64-linux-gnu/4.6/../../../x86_64-linux-gnu/crti.o
+                0x0000000000008578       0xc0 /usr/lib/gcc/x86_64-linux-gnu/4.6/../../../x86_64-linux-gnu/crti.o
 
-.rela.dyn       0x00000000000092f0     0x20e8
+.rela.dyn       0x0000000000008638     0x2070
  *(.rela.init)
  *(.rela.text .rela.text.* .rela.gnu.linkonce.t.*)
  .rela.text     0x0000000000000000        0x0 /usr/lib/gcc/x86_64-linux-gnu/4.6/../../../x86_64-linux-gnu/crti.o
@@ -414,108 +330,108 @@ LOAD /usr/lib/gcc/x86_64-linux-gnu/4.6/../../../x86_64-linux-gnu/crtn.o
  *(.rela.rodata .rela.rodata.* .rela.gnu.linkonce.r.*)
  *(.rela.data .rela.data.* .rela.gnu.linkonce.d.*)
  .rela.data.rel
-                0x00000000000092f0       0x18 /usr/lib/gcc/x86_64-linux-gnu/4.6/../../../x86_64-linux-gnu/crti.o
+                0x0000000000008638       0x18 /usr/lib/gcc/x86_64-linux-gnu/4.6/../../../x86_64-linux-gnu/crti.o
  .rela.data.rel.ro._ZTI10BaseDevice
-                0x0000000000009308       0x60 /usr/lib/gcc/x86_64-linux-gnu/4.6/../../../x86_64-linux-gnu/crti.o
+                0x0000000000008650       0x60 /usr/lib/gcc/x86_64-linux-gnu/4.6/../../../x86_64-linux-gnu/crti.o
  .rela.data.rel.ro._ZTV10BaseDevice
-                0x0000000000009368      0x258 /usr/lib/gcc/x86_64-linux-gnu/4.6/../../../x86_64-linux-gnu/crti.o
+                0x00000000000086b0      0x240 /usr/lib/gcc/x86_64-linux-gnu/4.6/../../../x86_64-linux-gnu/crti.o
  .rela.data.rel.ro._ZTV13IValueChanged
-                0x00000000000095c0       0x30 /usr/lib/gcc/x86_64-linux-gnu/4.6/../../../x86_64-linux-gnu/crti.o
+                0x00000000000088f0       0x30 /usr/lib/gcc/x86_64-linux-gnu/4.6/../../../x86_64-linux-gnu/crti.o
  .rela.data.rel.ro._ZTV13IRefreshValue
-                0x00000000000095f0       0x30 /usr/lib/gcc/x86_64-linux-gnu/4.6/../../../x86_64-linux-gnu/crti.o
+                0x0000000000008920       0x30 /usr/lib/gcc/x86_64-linux-gnu/4.6/../../../x86_64-linux-gnu/crti.o
  .rela.data.rel.ro._ZTI13IRefreshValue
-                0x0000000000009620       0x30 /usr/lib/gcc/x86_64-linux-gnu/4.6/../../../x86_64-linux-gnu/crti.o
+                0x0000000000008950       0x30 /usr/lib/gcc/x86_64-linux-gnu/4.6/../../../x86_64-linux-gnu/crti.o
  .rela.data.rel.ro._ZTI13IValueChanged
-                0x0000000000009650       0x30 /usr/lib/gcc/x86_64-linux-gnu/4.6/../../../x86_64-linux-gnu/crti.o
+                0x0000000000008980       0x30 /usr/lib/gcc/x86_64-linux-gnu/4.6/../../../x86_64-linux-gnu/crti.o
  .rela.data.rel.ro._ZTV9ErrorItem
-                0x0000000000009680       0x48 /usr/lib/gcc/x86_64-linux-gnu/4.6/../../../x86_64-linux-gnu/crti.o
+                0x00000000000089b0       0x48 /usr/lib/gcc/x86_64-linux-gnu/4.6/../../../x86_64-linux-gnu/crti.o
  .rela.data.rel.ro._ZTI9ErrorItem
-                0x00000000000096c8       0x30 /usr/lib/gcc/x86_64-linux-gnu/4.6/../../../x86_64-linux-gnu/crti.o
+                0x00000000000089f8       0x30 /usr/lib/gcc/x86_64-linux-gnu/4.6/../../../x86_64-linux-gnu/crti.o
  .rela.data.DW.ref.__gxx_personality_v0
-                0x00000000000096f8       0x18 /usr/lib/gcc/x86_64-linux-gnu/4.6/../../../x86_64-linux-gnu/crti.o
+                0x0000000000008a28       0x18 /usr/lib/gcc/x86_64-linux-gnu/4.6/../../../x86_64-linux-gnu/crti.o
  .rela.data.rel.ro._ZTI10BaseDriver
-                0x0000000000009710       0x48 /usr/lib/gcc/x86_64-linux-gnu/4.6/../../../x86_64-linux-gnu/crti.o
+                0x0000000000008a40       0x48 /usr/lib/gcc/x86_64-linux-gnu/4.6/../../../x86_64-linux-gnu/crti.o
  .rela.data.rel.ro._ZTV10BaseDriver
-                0x0000000000009758      0x150 /usr/lib/gcc/x86_64-linux-gnu/4.6/../../../x86_64-linux-gnu/crti.o
+                0x0000000000008a88      0x138 /usr/lib/gcc/x86_64-linux-gnu/4.6/../../../x86_64-linux-gnu/crti.o
  .rela.data.rel.ro._ZTV13DriverCommand
-                0x00000000000098a8       0x78 /usr/lib/gcc/x86_64-linux-gnu/4.6/../../../x86_64-linux-gnu/crti.o
+                0x0000000000008bc0       0x78 /usr/lib/gcc/x86_64-linux-gnu/4.6/../../../x86_64-linux-gnu/crti.o
  .rela.data.rel.ro._ZTI13DriverCommand
-                0x0000000000009920       0x30 /usr/lib/gcc/x86_64-linux-gnu/4.6/../../../x86_64-linux-gnu/crti.o
+                0x0000000000008c38       0x30 /usr/lib/gcc/x86_64-linux-gnu/4.6/../../../x86_64-linux-gnu/crti.o
  .rela.data.rel.ro._ZTI7Command
-                0x0000000000009950       0x30 /usr/lib/gcc/x86_64-linux-gnu/4.6/../../../x86_64-linux-gnu/crti.o
+                0x0000000000008c68       0x30 /usr/lib/gcc/x86_64-linux-gnu/4.6/../../../x86_64-linux-gnu/crti.o
  .rela.data.rel.ro._ZTV7Command
-                0x0000000000009980       0x60 /usr/lib/gcc/x86_64-linux-gnu/4.6/../../../x86_64-linux-gnu/crti.o
+                0x0000000000008c98       0x60 /usr/lib/gcc/x86_64-linux-gnu/4.6/../../../x86_64-linux-gnu/crti.o
  .rela.data.rel.ro._ZTI13Configuration
-                0x00000000000099e0       0x30 /usr/lib/gcc/x86_64-linux-gnu/4.6/../../../x86_64-linux-gnu/crti.o
+                0x0000000000008cf8       0x30 /usr/lib/gcc/x86_64-linux-gnu/4.6/../../../x86_64-linux-gnu/crti.o
  .rela.data.rel.ro._ZTV13Configuration
-                0x0000000000009a10       0x48 /usr/lib/gcc/x86_64-linux-gnu/4.6/../../../x86_64-linux-gnu/crti.o
+                0x0000000000008d28       0x48 /usr/lib/gcc/x86_64-linux-gnu/4.6/../../../x86_64-linux-gnu/crti.o
  .rela.data.rel.ro._ZTI15ConnectionPoint
-                0x0000000000009a58       0x30 /usr/lib/gcc/x86_64-linux-gnu/4.6/../../../x86_64-linux-gnu/crti.o
+                0x0000000000008d70       0x30 /usr/lib/gcc/x86_64-linux-gnu/4.6/../../../x86_64-linux-gnu/crti.o
  .rela.data.rel.ro._ZTV15ConnectionPoint
-                0x0000000000009a88       0xd8 /usr/lib/gcc/x86_64-linux-gnu/4.6/../../../x86_64-linux-gnu/crti.o
+                0x0000000000008da0       0xd8 /usr/lib/gcc/x86_64-linux-gnu/4.6/../../../x86_64-linux-gnu/crti.o
  .rela.data.rel.ro._ZTI24DataSerializationManager
-                0x0000000000009b60       0x30 /usr/lib/gcc/x86_64-linux-gnu/4.6/../../../x86_64-linux-gnu/crti.o
+                0x0000000000008e78       0x30 /usr/lib/gcc/x86_64-linux-gnu/4.6/../../../x86_64-linux-gnu/crti.o
  .rela.data.rel.ro._ZTV24DataSerializationManager
-                0x0000000000009b90       0x48 /usr/lib/gcc/x86_64-linux-gnu/4.6/../../../x86_64-linux-gnu/crti.o
+                0x0000000000008ea8       0x48 /usr/lib/gcc/x86_64-linux-gnu/4.6/../../../x86_64-linux-gnu/crti.o
  .rela.data.rel.ro._ZTI5Event
-                0x0000000000009bd8       0x30 /usr/lib/gcc/x86_64-linux-gnu/4.6/../../../x86_64-linux-gnu/crti.o
+                0x0000000000008ef0       0x30 /usr/lib/gcc/x86_64-linux-gnu/4.6/../../../x86_64-linux-gnu/crti.o
  .rela.data.rel.ro._ZTV5Event
-                0x0000000000009c08       0x60 /usr/lib/gcc/x86_64-linux-gnu/4.6/../../../x86_64-linux-gnu/crti.o
+                0x0000000000008f20       0x60 /usr/lib/gcc/x86_64-linux-gnu/4.6/../../../x86_64-linux-gnu/crti.o
  .rela.data.rel.ro._ZTI17InConnectionPoint
-                0x0000000000009c68       0x48 /usr/lib/gcc/x86_64-linux-gnu/4.6/../../../x86_64-linux-gnu/crti.o
+                0x0000000000008f80       0x48 /usr/lib/gcc/x86_64-linux-gnu/4.6/../../../x86_64-linux-gnu/crti.o
  .rela.data.rel.ro._ZTV17InConnectionPoint
-                0x0000000000009cb0       0xd8 /usr/lib/gcc/x86_64-linux-gnu/4.6/../../../x86_64-linux-gnu/crti.o
+                0x0000000000008fc8       0xd8 /usr/lib/gcc/x86_64-linux-gnu/4.6/../../../x86_64-linux-gnu/crti.o
  .rela.data.rel.ro._ZTI8LogEntry
-                0x0000000000009d88       0x30 /usr/lib/gcc/x86_64-linux-gnu/4.6/../../../x86_64-linux-gnu/crti.o
+                0x00000000000090a0       0x30 /usr/lib/gcc/x86_64-linux-gnu/4.6/../../../x86_64-linux-gnu/crti.o
  .rela.data.rel.ro._ZTV8LogEntry
-                0x0000000000009db8       0x48 /usr/lib/gcc/x86_64-linux-gnu/4.6/../../../x86_64-linux-gnu/crti.o
+                0x00000000000090d0       0x48 /usr/lib/gcc/x86_64-linux-gnu/4.6/../../../x86_64-linux-gnu/crti.o
  .rela.data.rel.ro._ZTI18OutConnectionPoint
-                0x0000000000009e00       0x48 /usr/lib/gcc/x86_64-linux-gnu/4.6/../../../x86_64-linux-gnu/crti.o
+                0x0000000000009118       0x48 /usr/lib/gcc/x86_64-linux-gnu/4.6/../../../x86_64-linux-gnu/crti.o
  .rela.data.rel.ro._ZTV18OutConnectionPoint
-                0x0000000000009e48       0xd8 /usr/lib/gcc/x86_64-linux-gnu/4.6/../../../x86_64-linux-gnu/crti.o
+                0x0000000000009160       0xd8 /usr/lib/gcc/x86_64-linux-gnu/4.6/../../../x86_64-linux-gnu/crti.o
  .rela.data.rel.ro._ZTI6Pinout
-                0x0000000000009f20       0x30 /usr/lib/gcc/x86_64-linux-gnu/4.6/../../../x86_64-linux-gnu/crti.o
+                0x0000000000009238       0x30 /usr/lib/gcc/x86_64-linux-gnu/4.6/../../../x86_64-linux-gnu/crti.o
  .rela.data.rel.ro._ZTV6Pinout
-                0x0000000000009f50       0x48 /usr/lib/gcc/x86_64-linux-gnu/4.6/../../../x86_64-linux-gnu/crti.o
+                0x0000000000009268       0x48 /usr/lib/gcc/x86_64-linux-gnu/4.6/../../../x86_64-linux-gnu/crti.o
  .rela.data.rel.ro._ZTI7Process
-                0x0000000000009f98       0x48 /usr/lib/gcc/x86_64-linux-gnu/4.6/../../../x86_64-linux-gnu/crti.o
+                0x00000000000092b0       0x48 /usr/lib/gcc/x86_64-linux-gnu/4.6/../../../x86_64-linux-gnu/crti.o
  .rela.data.rel.ro._ZTV7Process
-                0x0000000000009fe0       0x78 /usr/lib/gcc/x86_64-linux-gnu/4.6/../../../x86_64-linux-gnu/crti.o
+                0x00000000000092f8       0x78 /usr/lib/gcc/x86_64-linux-gnu/4.6/../../../x86_64-linux-gnu/crti.o
  .rela.data.rel.ro._ZTV13IErrorHandler
-                0x000000000000a058       0x30 /usr/lib/gcc/x86_64-linux-gnu/4.6/../../../x86_64-linux-gnu/crti.o
+                0x0000000000009370       0x30 /usr/lib/gcc/x86_64-linux-gnu/4.6/../../../x86_64-linux-gnu/crti.o
  .rela.data.rel.ro._ZTI13IErrorHandler
-                0x000000000000a088       0x30 /usr/lib/gcc/x86_64-linux-gnu/4.6/../../../x86_64-linux-gnu/crti.o
+                0x00000000000093a0       0x30 /usr/lib/gcc/x86_64-linux-gnu/4.6/../../../x86_64-linux-gnu/crti.o
  .rela.data.rel.ro._ZTI7Program
-                0x000000000000a0b8       0x30 /usr/lib/gcc/x86_64-linux-gnu/4.6/../../../x86_64-linux-gnu/crti.o
+                0x00000000000093d0       0x30 /usr/lib/gcc/x86_64-linux-gnu/4.6/../../../x86_64-linux-gnu/crti.o
  .rela.data.rel.ro._ZTV7Program
-                0x000000000000a0e8       0x48 /usr/lib/gcc/x86_64-linux-gnu/4.6/../../../x86_64-linux-gnu/crti.o
+                0x0000000000009400       0x48 /usr/lib/gcc/x86_64-linux-gnu/4.6/../../../x86_64-linux-gnu/crti.o
  .rela.data.rel.ro._ZTI4Wire
-                0x000000000000a130       0x60 /usr/lib/gcc/x86_64-linux-gnu/4.6/../../../x86_64-linux-gnu/crti.o
+                0x0000000000009448       0x60 /usr/lib/gcc/x86_64-linux-gnu/4.6/../../../x86_64-linux-gnu/crti.o
  .rela.data.rel.ro._ZTV4Wire
-                0x000000000000a190       0xa8 /usr/lib/gcc/x86_64-linux-gnu/4.6/../../../x86_64-linux-gnu/crti.o
+                0x00000000000094a8       0xa8 /usr/lib/gcc/x86_64-linux-gnu/4.6/../../../x86_64-linux-gnu/crti.o
  .rela.data.rel.ro._ZTI15BaseLogProvider
-                0x000000000000a238       0x30 /usr/lib/gcc/x86_64-linux-gnu/4.6/../../../x86_64-linux-gnu/crti.o
+                0x0000000000009550       0x30 /usr/lib/gcc/x86_64-linux-gnu/4.6/../../../x86_64-linux-gnu/crti.o
  .rela.data.rel.ro._ZTV15BaseLogProvider
-                0x000000000000a268      0x138 /usr/lib/gcc/x86_64-linux-gnu/4.6/../../../x86_64-linux-gnu/crti.o
+                0x0000000000009580      0x138 /usr/lib/gcc/x86_64-linux-gnu/4.6/../../../x86_64-linux-gnu/crti.o
  .rela.data.rel.ro._ZTI11EventLogger
-                0x000000000000a3a0       0x30 /usr/lib/gcc/x86_64-linux-gnu/4.6/../../../x86_64-linux-gnu/crti.o
+                0x00000000000096b8       0x30 /usr/lib/gcc/x86_64-linux-gnu/4.6/../../../x86_64-linux-gnu/crti.o
  .rela.data.rel.ro._ZTV11EventLogger
-                0x000000000000a3d0      0x108 /usr/lib/gcc/x86_64-linux-gnu/4.6/../../../x86_64-linux-gnu/crti.o
+                0x00000000000096e8      0x108 /usr/lib/gcc/x86_64-linux-gnu/4.6/../../../x86_64-linux-gnu/crti.o
  .rela.data.rel.ro._ZTI15JsonLogProvider
-                0x000000000000a4d8       0x48 /usr/lib/gcc/x86_64-linux-gnu/4.6/../../../x86_64-linux-gnu/crti.o
+                0x00000000000097f0       0x48 /usr/lib/gcc/x86_64-linux-gnu/4.6/../../../x86_64-linux-gnu/crti.o
  .rela.data.rel.ro._ZTV15JsonLogProvider
-                0x000000000000a520      0x138 /usr/lib/gcc/x86_64-linux-gnu/4.6/../../../x86_64-linux-gnu/crti.o
+                0x0000000000009838      0x138 /usr/lib/gcc/x86_64-linux-gnu/4.6/../../../x86_64-linux-gnu/crti.o
  .rela.data.rel.ro._ZTI14SysLogProvider
-                0x000000000000a658       0x48 /usr/lib/gcc/x86_64-linux-gnu/4.6/../../../x86_64-linux-gnu/crti.o
+                0x0000000000009970       0x48 /usr/lib/gcc/x86_64-linux-gnu/4.6/../../../x86_64-linux-gnu/crti.o
  .rela.data.rel.ro._ZTV14SysLogProvider
-                0x000000000000a6a0      0x150 /usr/lib/gcc/x86_64-linux-gnu/4.6/../../../x86_64-linux-gnu/crti.o
+                0x00000000000099b8      0x150 /usr/lib/gcc/x86_64-linux-gnu/4.6/../../../x86_64-linux-gnu/crti.o
  *(.rela.tdata .rela.tdata.* .rela.gnu.linkonce.td.*)
  *(.rela.tbss .rela.tbss.* .rela.gnu.linkonce.tb.*)
  *(.rela.ctors)
- .rela.ctors    0x000000000000a7f0      0x1c8 /usr/lib/gcc/x86_64-linux-gnu/4.6/../../../x86_64-linux-gnu/crti.o
+ .rela.ctors    0x0000000000009b08      0x1c8 /usr/lib/gcc/x86_64-linux-gnu/4.6/../../../x86_64-linux-gnu/crti.o
  *(.rela.dtors)
  *(.rela.got)
- .rela.got      0x000000000000a9b8      0xa20 /usr/lib/gcc/x86_64-linux-gnu/4.6/../../../x86_64-linux-gnu/crti.o
+ .rela.got      0x0000000000009cd0      0x9d8 /usr/lib/gcc/x86_64-linux-gnu/4.6/../../../x86_64-linux-gnu/crti.o
  *(.rela.bss .rela.bss.* .rela.gnu.linkonce.b.*)
  *(.rela.ldata .rela.ldata.* .rela.gnu.linkonce.l.*)
  *(.rela.lbss .rela.lbss.* .rela.gnu.linkonce.lb.*)
@@ -525,821 +441,726 @@ LOAD /usr/lib/gcc/x86_64-linux-gnu/4.6/../../../x86_64-linux-gnu/crtn.o
  .rela.eh_frame
                 0x0000000000000000        0x0 /usr/lib/gcc/x86_64-linux-gnu/4.6/../../../x86_64-linux-gnu/crti.o
 
-.rela.plt       0x000000000000b3d8     0x1200
+.rela.plt       0x000000000000a6a8      0xf48
  *(.rela.plt)
- .rela.plt      0x000000000000b3d8     0x1200 /usr/lib/gcc/x86_64-linux-gnu/4.6/../../../x86_64-linux-gnu/crti.o
+ .rela.plt      0x000000000000a6a8      0xf48 /usr/lib/gcc/x86_64-linux-gnu/4.6/../../../x86_64-linux-gnu/crti.o
  *(.rela.iplt)
 
-.init           0x000000000000c5d8       0x18
+.init           0x000000000000b5f0       0x18
  *(.init)
- .init          0x000000000000c5d8        0x9 /usr/lib/gcc/x86_64-linux-gnu/4.6/../../../x86_64-linux-gnu/crti.o
-                0x000000000000c5d8                _init
- .init          0x000000000000c5e1        0x5 /usr/lib/gcc/x86_64-linux-gnu/4.6/crtbeginS.o
- .init          0x000000000000c5e6        0x5 /usr/lib/gcc/x86_64-linux-gnu/4.6/crtendS.o
- .init          0x000000000000c5eb        0x5 /usr/lib/gcc/x86_64-linux-gnu/4.6/../../../x86_64-linux-gnu/crtn.o
+ .init          0x000000000000b5f0        0x9 /usr/lib/gcc/x86_64-linux-gnu/4.6/../../../x86_64-linux-gnu/crti.o
+                0x000000000000b5f0                _init
+ .init          0x000000000000b5f9        0x5 /usr/lib/gcc/x86_64-linux-gnu/4.6/crtbeginS.o
+ .init          0x000000000000b5fe        0x5 /usr/lib/gcc/x86_64-linux-gnu/4.6/crtendS.o
+ .init          0x000000000000b603        0x5 /usr/lib/gcc/x86_64-linux-gnu/4.6/../../../x86_64-linux-gnu/crtn.o
 
-.plt            0x000000000000c5f0      0xc10
+.plt            0x000000000000b610      0xa40
  *(.plt)
- .plt           0x000000000000c5f0      0xc10 /usr/lib/gcc/x86_64-linux-gnu/4.6/../../../x86_64-linux-gnu/crti.o
+ .plt           0x000000000000b610      0xa40 /usr/lib/gcc/x86_64-linux-gnu/4.6/../../../x86_64-linux-gnu/crti.o
  *(.iplt)
 
-.text           0x000000000000d200    0x228b8
+.text           0x000000000000c050    0x148b8
  *(.text.unlikely .text.*_unlikely)
  *(.text.exit .text.exit.*)
  *(.text.startup .text.startup.*)
- .text.startup  0x000000000000d200       0x2e ./BaseDevice.o
- *fill*         0x000000000000d22e        0x2 90909090
- .text.startup  0x000000000000d230       0x2e ./BaseDriver.o
- *fill*         0x000000000000d25e        0x2 90909090
- .text.startup  0x000000000000d260       0x2e ./Command.o
- *fill*         0x000000000000d28e        0x2 90909090
- .text.startup  0x000000000000d290       0x2e ./Configuration.o
- *fill*         0x000000000000d2be        0x2 90909090
- .text.startup  0x000000000000d2c0       0x2e ./ConnectionPoint.o
- *fill*         0x000000000000d2ee        0x2 90909090
- .text.startup  0x000000000000d2f0       0x2e ./Convert.o
- *fill*         0x000000000000d31e        0x2 90909090
- .text.startup  0x000000000000d320       0x2e ./DataSerializationManager.o
- *fill*         0x000000000000d34e        0x2 90909090
- .text.startup  0x000000000000d350       0x2e ./Event.o
- *fill*         0x000000000000d37e        0x2 90909090
- .text.startup  0x000000000000d380       0x2e ./InConnectionPoint.o
- *fill*         0x000000000000d3ae        0x2 90909090
- .text.startup  0x000000000000d3b0      0xab1 ./JsonParameters.o
- *fill*         0x000000000000de61        0xf 90909090
- .text.startup  0x000000000000de70       0x2e ./LogEntry.o
- *fill*         0x000000000000de9e        0x2 90909090
- .text.startup  0x000000000000dea0       0x2e ./OutConnectionPoint.o
- *fill*         0x000000000000dece        0x2 90909090
- .text.startup  0x000000000000ded0       0x2e ./Pinout.o
- *fill*         0x000000000000defe        0x2 90909090
- .text.startup  0x000000000000df00       0x2e ./Process.o
- *fill*         0x000000000000df2e        0x2 90909090
- .text.startup  0x000000000000df30       0x2e ./Program.o
- *fill*         0x000000000000df5e        0x2 90909090
- .text.startup  0x000000000000df60       0x2e ./Wire.o
- *fill*         0x000000000000df8e        0x2 90909090
- .text.startup  0x000000000000df90       0x2e ./Logging/EventLogger.o
- *fill*         0x000000000000dfbe        0x2 90909090
- .text.startup  0x000000000000dfc0       0x2e ./Logging/JsonLogProvider.o
- *fill*         0x000000000000dfee        0x2 90909090
- .text.startup  0x000000000000dff0       0x2e ./Logging/SysLogProvider.o
+ .text.startup  0x000000000000c050       0x2e ./BaseDevice.o
+ *fill*         0x000000000000c07e        0x2 90909090
+ .text.startup  0x000000000000c080       0x2e ./BaseDriver.o
+ *fill*         0x000000000000c0ae        0x2 90909090
+ .text.startup  0x000000000000c0b0       0x2e ./Command.o
+ *fill*         0x000000000000c0de        0x2 90909090
+ .text.startup  0x000000000000c0e0       0x2e ./Configuration.o
+ *fill*         0x000000000000c10e        0x2 90909090
+ .text.startup  0x000000000000c110       0x2e ./ConnectionPoint.o
+ *fill*         0x000000000000c13e        0x2 90909090
+ .text.startup  0x000000000000c140       0x2e ./Convert.o
+ *fill*         0x000000000000c16e        0x2 90909090
+ .text.startup  0x000000000000c170       0x2e ./DataSerializationManager.o
+ *fill*         0x000000000000c19e        0x2 90909090
+ .text.startup  0x000000000000c1a0       0x2e ./Event.o
+ *fill*         0x000000000000c1ce        0x2 90909090
+ .text.startup  0x000000000000c1d0       0x2e ./InConnectionPoint.o
+ *fill*         0x000000000000c1fe        0x2 90909090
+ .text.startup  0x000000000000c200      0xab1 ./JsonParameters.o
+ *fill*         0x000000000000ccb1        0xf 90909090
+ .text.startup  0x000000000000ccc0       0x2e ./LogEntry.o
+ *fill*         0x000000000000ccee        0x2 90909090
+ .text.startup  0x000000000000ccf0       0x2e ./OutConnectionPoint.o
+ *fill*         0x000000000000cd1e        0x2 90909090
+ .text.startup  0x000000000000cd20       0x2e ./Pinout.o
+ *fill*         0x000000000000cd4e        0x2 90909090
+ .text.startup  0x000000000000cd50       0x2e ./Process.o
+ *fill*         0x000000000000cd7e        0x2 90909090
+ .text.startup  0x000000000000cd80       0x2e ./Program.o
+ *fill*         0x000000000000cdae        0x2 90909090
+ .text.startup  0x000000000000cdb0       0x2e ./Wire.o
+ *fill*         0x000000000000cdde        0x2 90909090
+ .text.startup  0x000000000000cde0       0x2e ./Logging/EventLogger.o
+ *fill*         0x000000000000ce0e        0x2 90909090
+ .text.startup  0x000000000000ce10       0x2e ./Logging/JsonLogProvider.o
+ *fill*         0x000000000000ce3e        0x2 90909090
+ .text.startup  0x000000000000ce40       0x2e ./Logging/SysLogProvider.o
  *(.text.hot .text.hot.*)
  *(.text .stub .text.* .gnu.linkonce.t.*)
- *fill*         0x000000000000e01e        0x2 90909090
- .text          0x000000000000e020       0x17 /usr/lib/gcc/x86_64-linux-gnu/4.6/../../../x86_64-linux-gnu/crti.o
- *fill*         0x000000000000e037        0x9 90909090
- .text          0x000000000000e040       0xaa /usr/lib/gcc/x86_64-linux-gnu/4.6/crtbeginS.o
- *fill*         0x000000000000e0ea        0x6 90909090
- .text          0x000000000000e0f0     0x47ef ./BaseDevice.o
-                0x000000000000e0f0                _ZN10BaseDevice4NameEv
-                0x000000000000e100                _ZN10BaseDevice11DescriptionEv
-                0x000000000000e110                _ZN10BaseDevice9GroupNameEv
-                0x000000000000e120                _ZN10BaseDevice24InitializeFromDescriptorESt4listI18PropertyDescriptorSaIS1_EE
-                0x000000000000e130                _ZN10BaseDevice12SetParameterESsPv
-                0x000000000000e140                _ZN10BaseDevice14ExecuteCommandE7Command
-                0x000000000000e150                _ZN10BaseDevice14EventTriggeredESt4listI14EventParameterSaIS1_EE
-                0x000000000000e160                _ZN10BaseDevice16ReleaseResourcesEv
-                0x000000000000e170                _ZN10BaseDevice7OnErrorEP9ErrorItem
-                0x000000000000e1b0                _ZN10BaseDevice20RegisterErrorHandlerEP13IErrorHandler
-                0x000000000000e1d0                _ZN10BaseDevice7OnErrorEi
-                0x000000000000e220                _ZN10BaseDevice17WidgetInitializedEv
-                0x000000000000e2b0                _ZN10BaseDevice12GetParameterESs
-                0x000000000000e340                _ZN10BaseDeviceD1Ev
-                0x000000000000e340                _ZN10BaseDeviceD2Ev
-                0x000000000000e560                _ZN10BaseDeviceD0Ev
-                0x000000000000e580                _ZN10BaseDeviceC2Ev
-                0x000000000000e580                _ZN10BaseDeviceC1Ev
-                0x000000000000e660                _ZN10BaseDevice2IdEv
-                0x000000000000e670                _ZN10BaseDevice5SetIdEi
-                0x000000000000e680                _ZN10BaseDevice7SetNameESs
-                0x000000000000e690                _ZN10BaseDevice11SetIsCustomEb
-                0x000000000000e6a0                _ZN10BaseDevice11GetIsCustomEv
-                0x000000000000e6b0                _ZN10BaseDevice13SetIsUpdatingEb
-                0x000000000000e6c0                _ZN10BaseDevice13GetIsUpdatingEv
-                0x000000000000e6d0                _ZN10BaseDevice13IsInitializedEv
-                0x000000000000e6e0                _ZThn8_N10BaseDevice7RefreshEPv
-                0x000000000000e6f0                _ZN10BaseDevice7RefreshEPv
-                0x000000000000e7f0                _ZN10BaseDevice20InputPinValueChangedEPv
-                0x000000000000e920                _ZN10BaseDevice7PinoutsEv
-                0x000000000000e930                _ZN10BaseDevice16ConnectionPointsEv
-                0x000000000000e9b0                _ZN10BaseDevice18GetConnectionPointEi
-                0x000000000000ea00                _ZN10BaseDevice20AreAllINsInitializedEv
-                0x000000000000ea60                _ZN10BaseDevice17AddCustomPropertyEP15DeviceParameter
-                0x000000000000eac0                _ZN10BaseDevice6ToJsonEv
-                0x0000000000010e10                _ZN10BaseDevice13GetDescriptorEv
- *fill*         0x00000000000128df        0x1 90909090
+ *fill*         0x000000000000ce6e        0x2 90909090
+ .text          0x000000000000ce70       0x17 /usr/lib/gcc/x86_64-linux-gnu/4.6/../../../x86_64-linux-gnu/crti.o
+ *fill*         0x000000000000ce87        0x9 90909090
+ .text          0x000000000000ce90       0xaa /usr/lib/gcc/x86_64-linux-gnu/4.6/crtbeginS.o
+ *fill*         0x000000000000cf3a        0x6 90909090
+ .text          0x000000000000cf40     0x2d17 ./BaseDevice.o
+                0x000000000000cf40                _ZN10BaseDevice4NameEv
+                0x000000000000cf50                _ZN10BaseDevice11DescriptionEv
+                0x000000000000cf60                _ZN10BaseDevice9GroupNameEv
+                0x000000000000cf70                _ZN10BaseDevice12SetParameterESsPv
+                0x000000000000cf80                _ZN10BaseDevice14ExecuteCommandE7Command
+                0x000000000000cf90                _ZN10BaseDevice14EventTriggeredESt4listI14EventParameterSaIS1_EE
+                0x000000000000cfa0                _ZN10BaseDevice16ReleaseResourcesEv
+                0x000000000000cfb0                _ZN10BaseDevice7OnErrorEP9ErrorItem
+                0x000000000000cff0                _ZN10BaseDevice20RegisterErrorHandlerEP13IErrorHandler
+                0x000000000000d010                _ZN10BaseDevice24InitializeFromDescriptorESt4listI8PropertySaIS1_EE
+                0x000000000000d020                _ZN10BaseDevice7OnErrorEi
+                0x000000000000d070                _ZN10BaseDevice17WidgetInitializedEv
+                0x000000000000d100                _ZN10BaseDevice12GetParameterESs
+                0x000000000000d190                _ZN10BaseDeviceD1Ev
+                0x000000000000d190                _ZN10BaseDeviceD2Ev
+                0x000000000000d3b0                _ZN10BaseDeviceD0Ev
+                0x000000000000d3d0                _ZN10BaseDeviceC2Ev
+                0x000000000000d3d0                _ZN10BaseDeviceC1Ev
+                0x000000000000d4b0                _ZN10BaseDevice2IdEv
+                0x000000000000d4c0                _ZN10BaseDevice5SetIdEi
+                0x000000000000d4d0                _ZN10BaseDevice7SetNameESs
+                0x000000000000d4e0                _ZN10BaseDevice11SetIsCustomEb
+                0x000000000000d4f0                _ZN10BaseDevice11GetIsCustomEv
+                0x000000000000d500                _ZN10BaseDevice13SetIsUpdatingEb
+                0x000000000000d510                _ZN10BaseDevice13GetIsUpdatingEv
+                0x000000000000d520                _ZN10BaseDevice13IsInitializedEv
+                0x000000000000d530                _ZThn8_N10BaseDevice7RefreshEPv
+                0x000000000000d540                _ZN10BaseDevice7RefreshEPv
+                0x000000000000d640                _ZN10BaseDevice20InputPinValueChangedEPv
+                0x000000000000d770                _ZN10BaseDevice7PinoutsEv
+                0x000000000000d780                _ZN10BaseDevice16ConnectionPointsEv
+                0x000000000000d800                _ZN10BaseDevice18GetConnectionPointEi
+                0x000000000000d850                _ZN10BaseDevice20AreAllINsInitializedEv
+                0x000000000000d8b0                _ZN10BaseDevice17AddCustomPropertyEP15DeviceParameter
+                0x000000000000d910                _ZN10BaseDevice6ToJsonEv
+ *fill*         0x000000000000fc57        0x9 90909090
  .text._ZN9ErrorItemD2Ev
-                0x00000000000128e0       0x22 ./BaseDevice.o
-                0x00000000000128e0                _ZN9ErrorItemD1Ev
-                0x00000000000128e0                _ZN9ErrorItemD2Ev
- *fill*         0x0000000000012902        0xe 90909090
+                0x000000000000fc60       0x22 ./BaseDevice.o
+                0x000000000000fc60                _ZN9ErrorItemD1Ev
+                0x000000000000fc60                _ZN9ErrorItemD2Ev
+ *fill*         0x000000000000fc82        0xe 90909090
  .text._ZN9ErrorItemD0Ev
-                0x0000000000012910       0x2a ./BaseDevice.o
-                0x0000000000012910                _ZN9ErrorItemD0Ev
- *fill*         0x000000000001293a        0x6 90909090
- .text._ZN16PinoutDescriptorD2Ev
-                0x0000000000012940      0x706 ./BaseDevice.o
-                0x0000000000012940                _ZN16PinoutDescriptorD2Ev
-                0x0000000000012940                _ZN16PinoutDescriptorD1Ev
- *fill*         0x0000000000013046        0xa 90909090
+                0x000000000000fc90       0x2a ./BaseDevice.o
+                0x000000000000fc90                _ZN9ErrorItemD0Ev
+ *fill*         0x000000000000fcba        0x6 90909090
  .text._ZStplIcSt11char_traitsIcESaIcEESbIT_T0_T1_EPKS3_RKS6_
-                0x0000000000013050       0x95 ./BaseDevice.o
-                0x0000000000013050                _ZStplIcSt11char_traitsIcESaIcEESbIT_T0_T1_EPKS3_RKS6_
- *fill*         0x00000000000130e5        0xb 90909090
+                0x000000000000fcc0       0x95 ./BaseDevice.o
+                0x000000000000fcc0                _ZStplIcSt11char_traitsIcESaIcEESbIT_T0_T1_EPKS3_RKS6_
+ *fill*         0x000000000000fd55        0xb 90909090
  .text._ZStplIcSt11char_traitsIcESaIcEESbIT_T0_T1_ERKS6_S8_
-                0x00000000000130f0       0x49 ./BaseDevice.o
-                0x00000000000130f0                _ZStplIcSt11char_traitsIcESaIcEESbIT_T0_T1_ERKS6_S8_
- *fill*         0x0000000000013139        0x7 90909090
- .text._ZNSt10_List_baseI18PropertyDescriptorSaIS0_EED2Ev
-                0x0000000000013140       0xf9 ./BaseDevice.o
-                0x0000000000013140                _ZNSt10_List_baseI18PropertyDescriptorSaIS0_EED2Ev
-                0x0000000000013140                _ZNSt10_List_baseI18PropertyDescriptorSaIS0_EED1Ev
- *fill*         0x0000000000013239        0x7 90909090
- .text._ZNSt10_List_baseI17CommandDescriptorSaIS0_EED2Ev
-                0x0000000000013240      0x2e2 ./BaseDevice.o
-                0x0000000000013240                _ZNSt10_List_baseI17CommandDescriptorSaIS0_EED1Ev
-                0x0000000000013240                _ZNSt10_List_baseI17CommandDescriptorSaIS0_EED2Ev
- *fill*         0x0000000000013522        0xe 90909090
- .text._ZNSt10_List_baseI15EventDescriptorSaIS0_EED2Ev
-                0x0000000000013530      0x2e2 ./BaseDevice.o
-                0x0000000000013530                _ZNSt10_List_baseI15EventDescriptorSaIS0_EED1Ev
-                0x0000000000013530                _ZNSt10_List_baseI15EventDescriptorSaIS0_EED2Ev
- *fill*         0x0000000000013812        0xe 90909090
- .text._ZNSsC2IPcEET_S1_RKSaIcE
-                0x0000000000013820       0xf0 ./BaseDevice.o
-                0x0000000000013820                _ZNSsC2IPcEET_S1_RKSaIcE
-                0x0000000000013820                _ZNSsC1IPcEET_S1_RKSaIcE
- .text._ZNSt10_List_baseI26CommandParameterDescriptorSaIS0_EED2Ev
-                0x0000000000013910      0x134 ./BaseDevice.o
-                0x0000000000013910                _ZNSt10_List_baseI26CommandParameterDescriptorSaIS0_EED2Ev
-                0x0000000000013910                _ZNSt10_List_baseI26CommandParameterDescriptorSaIS0_EED1Ev
- *fill*         0x0000000000013a44        0xc 90909090
- .text._ZNSt10_List_baseI24EventParameterDescriptorSaIS0_EED2Ev
-                0x0000000000013a50      0x134 ./BaseDevice.o
-                0x0000000000013a50                _ZNSt10_List_baseI24EventParameterDescriptorSaIS0_EED2Ev
-                0x0000000000013a50                _ZNSt10_List_baseI24EventParameterDescriptorSaIS0_EED1Ev
- *fill*         0x0000000000013b84        0xc 90909090
- .text          0x0000000000013b90     0x1fa0 ./BaseDriver.o
-                0x0000000000013b90                _ZN10BaseDriverD2Ev
-                0x0000000000013b90                _ZN10BaseDriverD1Ev
-                0x0000000000013ca0                _ZN10BaseDriverD0Ev
-                0x0000000000013cc0                _ZN10BaseDriverC1Ev
-                0x0000000000013cc0                _ZN10BaseDriverC2Ev
-                0x0000000000013d30                _ZN10BaseDriver6ToJsonEv
-                0x00000000000147d0                _ZN10BaseDriver13GetDescriptorEv
+                0x000000000000fd60       0x49 ./BaseDevice.o
+                0x000000000000fd60                _ZStplIcSt11char_traitsIcESaIcEESbIT_T0_T1_ERKS6_S8_
+ *fill*         0x000000000000fda9        0x7 90909090
+ .text          0x000000000000fdb0      0xc3a ./BaseDriver.o
+                0x000000000000fdb0                _ZN10BaseDriverD2Ev
+                0x000000000000fdb0                _ZN10BaseDriverD1Ev
+                0x000000000000fec0                _ZN10BaseDriverD0Ev
+                0x000000000000fee0                _ZN10BaseDriverC1Ev
+                0x000000000000fee0                _ZN10BaseDriverC2Ev
+                0x000000000000ff50                _ZN10BaseDriver6ToJsonEv
+ *fill*         0x00000000000109ea        0x6 90909090
  .text._ZN13DriverCommandD2Ev
-                0x0000000000015b30        0xf ./BaseDriver.o
-                0x0000000000015b30                _ZN13DriverCommandD1Ev
-                0x0000000000015b30                _ZN13DriverCommandD2Ev
- *fill*         0x0000000000015b3f        0x1 90909090
+                0x00000000000109f0        0xf ./BaseDriver.o
+                0x00000000000109f0                _ZN13DriverCommandD1Ev
+                0x00000000000109f0                _ZN13DriverCommandD2Ev
+ *fill*         0x00000000000109ff        0x1 90909090
  .text._ZN13DriverCommandD0Ev
-                0x0000000000015b40       0x13 ./BaseDriver.o
-                0x0000000000015b40                _ZN13DriverCommandD0Ev
- *fill*         0x0000000000015b53        0xd 90909090
- .text._ZN17CommandDescriptorD2Ev
-                0x0000000000015b60      0x261 ./BaseDriver.o
-                0x0000000000015b60                _ZN17CommandDescriptorD1Ev
-                0x0000000000015b60                _ZN17CommandDescriptorD2Ev
- *fill*         0x0000000000015dc1        0xf 90909090
- .text._ZN15EventDescriptorD2Ev
-                0x0000000000015dd0      0x261 ./BaseDriver.o
-                0x0000000000015dd0                _ZN15EventDescriptorD2Ev
-                0x0000000000015dd0                _ZN15EventDescriptorD1Ev
- *fill*         0x0000000000016031        0xf 90909090
- .text          0x0000000000016040     0x3b9f ./Command.o
-                0x0000000000016040                _ZN7CommandD2Ev
-                0x0000000000016040                _ZN7CommandD1Ev
-                0x0000000000016110                _ZN7CommandD0Ev
-                0x0000000000016130                _ZN7CommandC1Ev
-                0x0000000000016130                _ZN7CommandC2Ev
-                0x00000000000161b0                _ZN7CommandC2ESs
-                0x00000000000161b0                _ZN7CommandC1ESs
-                0x0000000000016230                _ZN7CommandC1ESsPSt4listIP16CommandParameterSaIS2_EE
-                0x0000000000016230                _ZN7CommandC2ESsPSt4listIP16CommandParameterSaIS2_EE
-                0x00000000000162a0                _ZN7Command12GetParameterESs
-                0x0000000000016370                _ZN7Command4NameEv
-                0x0000000000016390                _ZN7Command10ParametersEv
-                0x00000000000163a0                _ZN7Command12AddParameterEP16CommandParameter
-                0x00000000000163f0                _ZN7Command5CloneEv
-                0x00000000000166c0                _ZN7Command6ToJsonEv
-                0x0000000000017e70                _ZN7Command13GetDescriptorEv
- *fill*         0x0000000000019bdf        0x1 90909090
- .text._ZN18PropertyDescriptorD2Ev
-                0x0000000000019be0       0xd8 ./Command.o
-                0x0000000000019be0                _ZN18PropertyDescriptorD2Ev
-                0x0000000000019be0                _ZN18PropertyDescriptorD1Ev
- *fill*         0x0000000000019cb8        0x8 90909090
- .text          0x0000000000019cc0     0x1a97 ./Configuration.o
-                0x0000000000019cc0                _ZN13ConfigurationC2Ev
-                0x0000000000019cc0                _ZN13ConfigurationC1Ev
-                0x0000000000019d00                _ZN13Configuration8InstanceEv
-                0x0000000000019d60                _ZN13Configuration26GetSettingsJsonDescriptionEv
-                0x000000000001a470                _ZN13Configuration16SaveToConfigFileEv
-                0x000000000001aa60                _ZN13ConfigurationD2Ev
-                0x000000000001aa60                _ZN13ConfigurationD1Ev
-                0x000000000001aa80                _ZN13ConfigurationD0Ev
-                0x000000000001aaa0                _ZN13Configuration8SetParamEPKcS1_
-                0x000000000001adf0                _ZN13Configuration10InitializeEPKcPFvSsE
-                0x000000000001b010                _ZN13Configuration12SaveSettingsESt3mapISsSsSt4lessISsESaISt4pairIKSsSsEEE
-                0x000000000001b380                _ZN13Configuration14GetStringParamESs
-                0x000000000001b660                _ZN13Configuration11GetIntParamESs
- *fill*         0x000000000001b757        0x9 90909090
+                0x0000000000010a00       0x13 ./BaseDriver.o
+                0x0000000000010a00                _ZN13DriverCommandD0Ev
+ *fill*         0x0000000000010a13        0xd 90909090
+ .text          0x0000000000010a20     0x1e26 ./Command.o
+                0x0000000000010a20                _ZN7CommandD2Ev
+                0x0000000000010a20                _ZN7CommandD1Ev
+                0x0000000000010af0                _ZN7CommandD0Ev
+                0x0000000000010b10                _ZN7CommandC1Ev
+                0x0000000000010b10                _ZN7CommandC2Ev
+                0x0000000000010b90                _ZN7CommandC2ESs
+                0x0000000000010b90                _ZN7CommandC1ESs
+                0x0000000000010c10                _ZN7CommandC1ESsPSt4listIP16CommandParameterSaIS2_EE
+                0x0000000000010c10                _ZN7CommandC2ESsPSt4listIP16CommandParameterSaIS2_EE
+                0x0000000000010c80                _ZN7Command12GetParameterESs
+                0x0000000000010d50                _ZN7Command4NameEv
+                0x0000000000010d70                _ZN7Command10ParametersEv
+                0x0000000000010d80                _ZN7Command12AddParameterEP16CommandParameter
+                0x0000000000010dd0                _ZN7Command5CloneEv
+                0x00000000000110a0                _ZN7Command6ToJsonEv
+ *fill*         0x0000000000012846        0xa 90909090
+ .text          0x0000000000012850     0x1a97 ./Configuration.o
+                0x0000000000012850                _ZN13ConfigurationC2Ev
+                0x0000000000012850                _ZN13ConfigurationC1Ev
+                0x0000000000012890                _ZN13Configuration8InstanceEv
+                0x00000000000128f0                _ZN13Configuration26GetSettingsJsonDescriptionEv
+                0x0000000000013000                _ZN13Configuration16SaveToConfigFileEv
+                0x00000000000135f0                _ZN13ConfigurationD2Ev
+                0x00000000000135f0                _ZN13ConfigurationD1Ev
+                0x0000000000013610                _ZN13ConfigurationD0Ev
+                0x0000000000013630                _ZN13Configuration8SetParamEPKcS1_
+                0x0000000000013980                _ZN13Configuration10InitializeEPKcPFvSsE
+                0x0000000000013ba0                _ZN13Configuration12SaveSettingsESt3mapISsSsSt4lessISsESaISt4pairIKSsSsEEE
+                0x0000000000013f10                _ZN13Configuration14GetStringParamESs
+                0x00000000000141f0                _ZN13Configuration11GetIntParamESs
+ *fill*         0x00000000000142e7        0x9 90909090
  .text._ZNSt8_Rb_treeISsSt4pairIKSsSsESt10_Select1stIS2_ESt4lessISsESaIS2_EE8_M_eraseEPSt13_Rb_tree_nodeIS2_E
-                0x000000000001b760       0xc3 ./Configuration.o
-                0x000000000001b760                _ZNSt8_Rb_treeISsSt4pairIKSsSsESt10_Select1stIS2_ESt4lessISsESaIS2_EE8_M_eraseEPSt13_Rb_tree_nodeIS2_E
- *fill*         0x000000000001b823        0xd 90909090
+                0x00000000000142f0       0xc3 ./Configuration.o
+                0x00000000000142f0                _ZNSt8_Rb_treeISsSt4pairIKSsSsESt10_Select1stIS2_ESt4lessISsESaIS2_EE8_M_eraseEPSt13_Rb_tree_nodeIS2_E
+ *fill*         0x00000000000143b3        0xd 90909090
  .text._ZNSt8_Rb_treeISsSt4pairIKSsSsESt10_Select1stIS2_ESt4lessISsESaIS2_EE10_M_insert_EPKSt18_Rb_tree_node_baseSB_RKS2_
-                0x000000000001b830      0x13d ./Configuration.o
-                0x000000000001b830                _ZNSt8_Rb_treeISsSt4pairIKSsSsESt10_Select1stIS2_ESt4lessISsESaIS2_EE10_M_insert_EPKSt18_Rb_tree_node_baseSB_RKS2_
- *fill*         0x000000000001b96d        0x3 90909090
+                0x00000000000143c0      0x13d ./Configuration.o
+                0x00000000000143c0                _ZNSt8_Rb_treeISsSt4pairIKSsSsESt10_Select1stIS2_ESt4lessISsESaIS2_EE10_M_insert_EPKSt18_Rb_tree_node_baseSB_RKS2_
+ *fill*         0x00000000000144fd        0x3 90909090
  .text._ZNSt8_Rb_treeISsSt4pairIKSsSsESt10_Select1stIS2_ESt4lessISsESaIS2_EE16_M_insert_uniqueERKS2_
-                0x000000000001b970      0x15c ./Configuration.o
-                0x000000000001b970                _ZNSt8_Rb_treeISsSt4pairIKSsSsESt10_Select1stIS2_ESt4lessISsESaIS2_EE16_M_insert_uniqueERKS2_
- *fill*         0x000000000001bacc        0x4 90909090
+                0x0000000000014500      0x15c ./Configuration.o
+                0x0000000000014500                _ZNSt8_Rb_treeISsSt4pairIKSsSsESt10_Select1stIS2_ESt4lessISsESaIS2_EE16_M_insert_uniqueERKS2_
+ *fill*         0x000000000001465c        0x4 90909090
  .text._ZNSt8_Rb_treeISsSt4pairIKSsSsESt10_Select1stIS2_ESt4lessISsESaIS2_EE17_M_insert_unique_ESt23_Rb_tree_const_iteratorIS2_ERKS2_
-                0x000000000001bad0      0x2c8 ./Configuration.o
-                0x000000000001bad0                _ZNSt8_Rb_treeISsSt4pairIKSsSsESt10_Select1stIS2_ESt4lessISsESaIS2_EE17_M_insert_unique_ESt23_Rb_tree_const_iteratorIS2_ERKS2_
- *fill*         0x000000000001bd98        0x8 90909090
- .text          0x000000000001bda0     0x1e19 ./ConnectionPoint.o
-                0x000000000001bda0                _ZN15ConnectionPoint8SetValueEPv
-                0x000000000001bdb0                _ZN15ConnectionPoint27RegisterValueChangedHandlerEP13IValueChanged
-                0x000000000001bdc0                _ZN15ConnectionPoint19TriggerValueChangedEv
-                0x000000000001bdd0                _ZN15ConnectionPoint22RegisterRefreshHandlerEP13IRefreshValue
-                0x000000000001bde0                _ZN15ConnectionPoint7RefreshEv
-                0x000000000001bdf0                _ZN15ConnectionPointD2Ev
-                0x000000000001bdf0                _ZN15ConnectionPointD1Ev
-                0x000000000001bea0                _ZN15ConnectionPointD0Ev
-                0x000000000001bec0                _ZN15ConnectionPointC2EiSs15PinoutDirectionSsSsPv
-                0x000000000001bec0                _ZN15ConnectionPointC1EiSs15PinoutDirectionSsSsPv
-                0x000000000001bff0                _ZN15ConnectionPointC1EiSs15PinoutDirectionSs16AgilartDataTypesPv
-                0x000000000001bff0                _ZN15ConnectionPointC2EiSs15PinoutDirectionSs16AgilartDataTypesPv
-                0x000000000001c0c0                _ZN15ConnectionPoint5CloneEv
-                0x000000000001c1d0                _ZN15ConnectionPoint4NameEv
-                0x000000000001c1f0                _ZN15ConnectionPoint2IdEv
-                0x000000000001c200                _ZN15ConnectionPoint8DataTypeEv
-                0x000000000001c210                _ZN15ConnectionPoint13IsInitializedEv
-                0x000000000001c220                _ZN15ConnectionPoint12IsCalculatedEv
-                0x000000000001c230                _ZN15ConnectionPoint26ConnectionPointInitializedEv
-                0x000000000001c240                _ZN15ConnectionPoint11SetDataTypeE16AgilartDataTypes
-                0x000000000001c250                _ZN15ConnectionPoint16SetIsInitializedEb
-                0x000000000001c260                _ZN15ConnectionPoint15SetIsCalculatedEb
-                0x000000000001c270                _ZN15ConnectionPoint9DirectionEv
-                0x000000000001c280                _ZN15ConnectionPoint11DescriptionEv
-                0x000000000001c2a0                _ZN15ConnectionPoint5ValueEv
-                0x000000000001c2b0                _ZN15ConnectionPoint8GetStateEv
-                0x000000000001c2c0                _ZN15ConnectionPoint8SetStateE8PinState
-                0x000000000001c2d0                _ZN15ConnectionPoint6ToJsonEv
-                0x000000000001cac0                _ZN15ConnectionPoint13GetDescriptorEv
- *fill*         0x000000000001dbb9        0x7 90909090
- .text          0x000000000001dbc0      0xb86 ./Convert.o
-                0x000000000001dbc0                _ZN7Convert6ToTypeESs
-                0x000000000001dc80                _ZN7Convert18SupportsConversionE16AgilartDataTypesS0_
-                0x000000000001dc90                _ZN7Convert8ToStringEPv16AgilartDataTypes
-                0x000000000001df50                _ZN7Convert8ToDoubleEPv16AgilartDataTypes
-                0x000000000001e0d0                _ZN7Convert7ToFloatEPv16AgilartDataTypes
-                0x000000000001e210                _ZN7Convert5ToIntEPv16AgilartDataTypes
-                0x000000000001e350                _ZN7Convert6ToBoolEPv16AgilartDataTypes
-                0x000000000001e480                _ZN7Convert8AreEqualEPvS0_16AgilartDataTypes
-                0x000000000001e5b0                _ZN7Convert14ToTypeInstanceEPv16AgilartDataTypesS1_
-                0x000000000001e6d0                _ZN7Convert11GetBaseTypeE16AgilartDataTypesS0_
- *fill*         0x000000000001e746        0xa 90909090
- .text          0x000000000001e750      0x766 ./DataSerializationManager.o
-                0x000000000001e750                _ZN24DataSerializationManagerD2Ev
-                0x000000000001e750                _ZN24DataSerializationManagerD1Ev
-                0x000000000001e760                _ZN24DataSerializationManagerD0Ev
-                0x000000000001e780                _ZN24DataSerializationManagerC1Ev
-                0x000000000001e780                _ZN24DataSerializationManagerC2Ev
-                0x000000000001e790                _ZN24DataSerializationManager10FileExistsEPKc
-                0x000000000001e7c0                _ZN24DataSerializationManager4SaveESsSs
-                0x000000000001ead0                _ZN24DataSerializationManager6DeleteESs
-                0x000000000001eae0                _ZN24DataSerializationManager4LoadESs
- *fill*         0x000000000001eeb6        0xa 90909090
- .text          0x000000000001eec0     0x3a6f ./Event.o
-                0x000000000001eec0                _ZN5EventD2Ev
-                0x000000000001eec0                _ZN5EventD1Ev
-                0x000000000001ef50                _ZN5EventD0Ev
-                0x000000000001ef70                _ZN5EventC1Ev
-                0x000000000001ef70                _ZN5EventC2Ev
-                0x000000000001eff0                _ZN5EventC1ESs
-                0x000000000001eff0                _ZN5EventC2ESs
-                0x000000000001f070                _ZN5EventC2ESsPSt4listI14EventParameterSaIS1_EE
-                0x000000000001f070                _ZN5EventC1ESsPSt4listI14EventParameterSaIS1_EE
-                0x000000000001f0e0                _ZN5EventC1ERKS_
-                0x000000000001f0e0                _ZN5EventC2ERKS_
-                0x000000000001f1d0                _ZN5Event4NameEv
-                0x000000000001f1f0                _ZN5Event10ParametersEv
-                0x000000000001f200                _ZN5Event12AddParameterE14EventParameter
-                0x000000000001f260                _ZN5Event12GetParameterESs
-                0x000000000001f2e0                _ZN5Event5CloneEv
-                0x000000000001f3f0                _ZN5Event6ToJsonEv
-                0x0000000000020bb0                _ZN5Event13GetDescriptorEv
- *fill*         0x000000000002292f        0x1 90909090
- .text          0x0000000000022930      0x68e ./InConnectionPoint.o
-                0x0000000000022930                _ZN17InConnectionPoint27RegisterValueChangedHandlerEP13IValueChanged
-                0x0000000000022950                _ZN17InConnectionPoint19TriggerValueChangedEv
-                0x0000000000022980                _ZN17InConnectionPoint22RegisterRefreshHandlerEP13IRefreshValue
-                0x00000000000229a0                _ZN17InConnectionPoint7RefreshEv
-                0x00000000000229d0                _ZN17InConnectionPointD1Ev
-                0x00000000000229d0                _ZN17InConnectionPointD2Ev
-                0x00000000000229f0                _ZN17InConnectionPointD0Ev
-                0x0000000000022a10                _ZN17InConnectionPoint8SetValueEPv
-                0x0000000000022a80                _ZN17InConnectionPointC2EiSsSsSsPv
-                0x0000000000022a80                _ZN17InConnectionPointC1EiSsSsSsPv
-                0x0000000000022c40                _ZN17InConnectionPointC2EiSsSs16AgilartDataTypesPv
-                0x0000000000022c40                _ZN17InConnectionPointC1EiSsSs16AgilartDataTypesPv
-                0x0000000000022d90                _ZN17InConnectionPoint5CloneEv
- *fill*         0x0000000000022fbe        0x2 90909090
- .text          0x0000000000022fc0        0x0 ./JsonParameters.o
- .text          0x0000000000022fc0      0x1e2 ./LogEntry.o
-                0x0000000000022fc0                _ZN8LogEntryD2Ev
-                0x0000000000022fc0                _ZN8LogEntryD1Ev
-                0x0000000000023070                _ZN8LogEntryD0Ev
-                0x0000000000023090                _ZN8LogEntryC1EiSsSs
-                0x0000000000023090                _ZN8LogEntryC2EiSsSs
-                0x0000000000023130                _ZN8LogEntry9ProcessIdEv
-                0x0000000000023140                _ZN8LogEntry5LevelEv
-                0x0000000000023160                _ZN8LogEntry7MessageEv
-                0x0000000000023180                _ZN8LogEntry6ToJsonEv
- *fill*         0x00000000000231a2        0xe 90909090
- .text          0x00000000000231b0      0x65b ./OutConnectionPoint.o
-                0x00000000000231b0                _ZN18OutConnectionPoint27RegisterValueChangedHandlerEP13IValueChanged
-                0x00000000000231d0                _ZN18OutConnectionPoint19TriggerValueChangedEv
-                0x0000000000023200                _ZN18OutConnectionPoint22RegisterRefreshHandlerEP13IRefreshValue
-                0x0000000000023220                _ZN18OutConnectionPoint7RefreshEv
-                0x0000000000023250                _ZN18OutConnectionPointD1Ev
-                0x0000000000023250                _ZN18OutConnectionPointD2Ev
-                0x0000000000023270                _ZN18OutConnectionPointD0Ev
-                0x0000000000023290                _ZN18OutConnectionPoint8SetValueEPv
-                0x0000000000023300                _ZN18OutConnectionPointC2EiSsSsSsPv
-                0x0000000000023300                _ZN18OutConnectionPointC1EiSsSsSsPv
-                0x00000000000234c0                _ZN18OutConnectionPointC2EiSsSs16AgilartDataTypesPv
-                0x00000000000234c0                _ZN18OutConnectionPointC1EiSsSs16AgilartDataTypesPv
-                0x0000000000023610                _ZN18OutConnectionPoint5CloneEv
- *fill*         0x000000000002380b        0x5 90909090
- .text          0x0000000000023810     0x32da ./Pinout.o
-                0x0000000000023810                _ZN6PinoutD1Ev
-                0x0000000000023810                _ZN6PinoutD2Ev
-                0x0000000000023950                _ZN6PinoutD0Ev
-                0x0000000000023970                _ZN6PinoutC2Ev
-                0x0000000000023970                _ZN6PinoutC1Ev
-                0x00000000000239f0                _ZN6PinoutC1ERKS_
-                0x00000000000239f0                _ZN6PinoutC2ERKS_
-                0x0000000000023a90                _ZN6PinoutC2EiSsSsPSt4listI7CommandSaIS1_EEPS0_I5EventSaIS5_EE
-                0x0000000000023a90                _ZN6PinoutC1EiSsSsPSt4listI7CommandSaIS1_EEPS0_I5EventSaIS5_EE
-                0x0000000000023b50                _ZN6Pinout2IdEv
-                0x0000000000023b60                _ZN6Pinout4NameEv
-                0x0000000000023b80                _ZN6Pinout11DescriptionEv
-                0x0000000000023ba0                _ZN6Pinout14ExecuteCommandE7Command
-                0x0000000000023e80                _ZN6Pinout14EventTriggeredEPvSt4listI14EventParameterSaIS2_EE
-                0x0000000000023f90                _ZN6Pinout16SupportedComandsEv
-                0x0000000000024310                _ZN6Pinout14SuportedEventsEv
-                0x00000000000243d0                _ZN6Pinout6ToJsonEv
-                0x0000000000024f30                _ZN6Pinout12GetDecriptorEv
- *fill*         0x0000000000026aea        0x6 90909090
- .text          0x0000000000026af0     0x26f7 ./Process.o
-                0x0000000000026af0                _ZN7Process20RegisterErrorHandlerEP13IErrorHandler
-                0x0000000000026b10                _ZN7Process11HandleErrorEPvP9ErrorItem
-                0x0000000000026b80                _ZN7ProcessD2Ev
-                0x0000000000026b80                _ZN7ProcessD1Ev
-                0x0000000000026ca0                _ZN7ProcessD0Ev
-                0x0000000000026cc0                _ZN7ProcessC1Ev
-                0x0000000000026cc0                _ZN7ProcessC2Ev
-                0x0000000000026cf0                _ZN7ProcessC1Ei
-                0x0000000000026cf0                _ZN7ProcessC2Ei
-                0x0000000000026d10                _ZN7Process5StartEP7Program
-                0x0000000000026e20                _ZN7Process4StopEv
-                0x0000000000026e60                _ZN7Process10GetProgramEv
-                0x0000000000026e70                _ZN7Process8GetStateEv
-                0x0000000000026e80                _ZN7Process2IdEv
-                0x0000000000026e90                _ZN7Process9GetStatusESs
- *fill*         0x00000000000291e7        0x9 90909090
+                0x0000000000014660      0x2c8 ./Configuration.o
+                0x0000000000014660                _ZNSt8_Rb_treeISsSt4pairIKSsSsESt10_Select1stIS2_ESt4lessISsESaIS2_EE17_M_insert_unique_ESt23_Rb_tree_const_iteratorIS2_ERKS2_
+ *fill*         0x0000000000014928        0x8 90909090
+ .text          0x0000000000014930      0xd13 ./ConnectionPoint.o
+                0x0000000000014930                _ZN15ConnectionPoint8SetValueEPv
+                0x0000000000014940                _ZN15ConnectionPoint27RegisterValueChangedHandlerEP13IValueChanged
+                0x0000000000014950                _ZN15ConnectionPoint19TriggerValueChangedEv
+                0x0000000000014960                _ZN15ConnectionPoint22RegisterRefreshHandlerEP13IRefreshValue
+                0x0000000000014970                _ZN15ConnectionPoint7RefreshEv
+                0x0000000000014980                _ZN15ConnectionPointD2Ev
+                0x0000000000014980                _ZN15ConnectionPointD1Ev
+                0x0000000000014a30                _ZN15ConnectionPointD0Ev
+                0x0000000000014a50                _ZN15ConnectionPointC2EiSs15PinoutDirectionSsSsPv
+                0x0000000000014a50                _ZN15ConnectionPointC1EiSs15PinoutDirectionSsSsPv
+                0x0000000000014b80                _ZN15ConnectionPointC1EiSs15PinoutDirectionSs16AgilartDataTypesPv
+                0x0000000000014b80                _ZN15ConnectionPointC2EiSs15PinoutDirectionSs16AgilartDataTypesPv
+                0x0000000000014c50                _ZN15ConnectionPoint5CloneEv
+                0x0000000000014d60                _ZN15ConnectionPoint4NameEv
+                0x0000000000014d80                _ZN15ConnectionPoint2IdEv
+                0x0000000000014d90                _ZN15ConnectionPoint8DataTypeEv
+                0x0000000000014da0                _ZN15ConnectionPoint13IsInitializedEv
+                0x0000000000014db0                _ZN15ConnectionPoint12IsCalculatedEv
+                0x0000000000014dc0                _ZN15ConnectionPoint26ConnectionPointInitializedEv
+                0x0000000000014dd0                _ZN15ConnectionPoint11SetDataTypeE16AgilartDataTypes
+                0x0000000000014de0                _ZN15ConnectionPoint16SetIsInitializedEb
+                0x0000000000014df0                _ZN15ConnectionPoint15SetIsCalculatedEb
+                0x0000000000014e00                _ZN15ConnectionPoint9DirectionEv
+                0x0000000000014e10                _ZN15ConnectionPoint11DescriptionEv
+                0x0000000000014e30                _ZN15ConnectionPoint5ValueEv
+                0x0000000000014e40                _ZN15ConnectionPoint8GetStateEv
+                0x0000000000014e50                _ZN15ConnectionPoint8SetStateE8PinState
+                0x0000000000014e60                _ZN15ConnectionPoint6ToJsonEv
+ *fill*         0x0000000000015643        0xd 90909090
+ .text          0x0000000000015650      0xb86 ./Convert.o
+                0x0000000000015650                _ZN7Convert6ToTypeESs
+                0x0000000000015710                _ZN7Convert18SupportsConversionE16AgilartDataTypesS0_
+                0x0000000000015720                _ZN7Convert8ToStringEPv16AgilartDataTypes
+                0x00000000000159e0                _ZN7Convert8ToDoubleEPv16AgilartDataTypes
+                0x0000000000015b60                _ZN7Convert7ToFloatEPv16AgilartDataTypes
+                0x0000000000015ca0                _ZN7Convert5ToIntEPv16AgilartDataTypes
+                0x0000000000015de0                _ZN7Convert6ToBoolEPv16AgilartDataTypes
+                0x0000000000015f10                _ZN7Convert8AreEqualEPvS0_16AgilartDataTypes
+                0x0000000000016040                _ZN7Convert14ToTypeInstanceEPv16AgilartDataTypesS1_
+                0x0000000000016160                _ZN7Convert11GetBaseTypeE16AgilartDataTypesS0_
+ *fill*         0x00000000000161d6        0xa 90909090
+ .text          0x00000000000161e0      0x766 ./DataSerializationManager.o
+                0x00000000000161e0                _ZN24DataSerializationManagerD2Ev
+                0x00000000000161e0                _ZN24DataSerializationManagerD1Ev
+                0x00000000000161f0                _ZN24DataSerializationManagerD0Ev
+                0x0000000000016210                _ZN24DataSerializationManagerC1Ev
+                0x0000000000016210                _ZN24DataSerializationManagerC2Ev
+                0x0000000000016220                _ZN24DataSerializationManager10FileExistsEPKc
+                0x0000000000016250                _ZN24DataSerializationManager4SaveESsSs
+                0x0000000000016560                _ZN24DataSerializationManager6DeleteESs
+                0x0000000000016570                _ZN24DataSerializationManager4LoadESs
+ *fill*         0x0000000000016946        0xa 90909090
+ .text          0x0000000000016950     0x1ce6 ./Event.o
+                0x0000000000016950                _ZN5EventD2Ev
+                0x0000000000016950                _ZN5EventD1Ev
+                0x00000000000169e0                _ZN5EventD0Ev
+                0x0000000000016a00                _ZN5EventC1Ev
+                0x0000000000016a00                _ZN5EventC2Ev
+                0x0000000000016a80                _ZN5EventC1ESs
+                0x0000000000016a80                _ZN5EventC2ESs
+                0x0000000000016b00                _ZN5EventC2ESsPSt4listI14EventParameterSaIS1_EE
+                0x0000000000016b00                _ZN5EventC1ESsPSt4listI14EventParameterSaIS1_EE
+                0x0000000000016b70                _ZN5EventC1ERKS_
+                0x0000000000016b70                _ZN5EventC2ERKS_
+                0x0000000000016c60                _ZN5Event4NameEv
+                0x0000000000016c80                _ZN5Event10ParametersEv
+                0x0000000000016c90                _ZN5Event12AddParameterE14EventParameter
+                0x0000000000016cf0                _ZN5Event12GetParameterESs
+                0x0000000000016d70                _ZN5Event5CloneEv
+                0x0000000000016e80                _ZN5Event6ToJsonEv
+ *fill*         0x0000000000018636        0xa 90909090
+ .text          0x0000000000018640      0x68e ./InConnectionPoint.o
+                0x0000000000018640                _ZN17InConnectionPoint27RegisterValueChangedHandlerEP13IValueChanged
+                0x0000000000018660                _ZN17InConnectionPoint19TriggerValueChangedEv
+                0x0000000000018690                _ZN17InConnectionPoint22RegisterRefreshHandlerEP13IRefreshValue
+                0x00000000000186b0                _ZN17InConnectionPoint7RefreshEv
+                0x00000000000186e0                _ZN17InConnectionPointD1Ev
+                0x00000000000186e0                _ZN17InConnectionPointD2Ev
+                0x0000000000018700                _ZN17InConnectionPointD0Ev
+                0x0000000000018720                _ZN17InConnectionPoint8SetValueEPv
+                0x0000000000018790                _ZN17InConnectionPointC2EiSsSsSsPv
+                0x0000000000018790                _ZN17InConnectionPointC1EiSsSsSsPv
+                0x0000000000018950                _ZN17InConnectionPointC2EiSsSs16AgilartDataTypesPv
+                0x0000000000018950                _ZN17InConnectionPointC1EiSsSs16AgilartDataTypesPv
+                0x0000000000018aa0                _ZN17InConnectionPoint5CloneEv
+ *fill*         0x0000000000018cce        0x2 90909090
+ .text          0x0000000000018cd0        0x0 ./JsonParameters.o
+ .text          0x0000000000018cd0      0x1e2 ./LogEntry.o
+                0x0000000000018cd0                _ZN8LogEntryD2Ev
+                0x0000000000018cd0                _ZN8LogEntryD1Ev
+                0x0000000000018d80                _ZN8LogEntryD0Ev
+                0x0000000000018da0                _ZN8LogEntryC1EiSsSs
+                0x0000000000018da0                _ZN8LogEntryC2EiSsSs
+                0x0000000000018e40                _ZN8LogEntry9ProcessIdEv
+                0x0000000000018e50                _ZN8LogEntry5LevelEv
+                0x0000000000018e70                _ZN8LogEntry7MessageEv
+                0x0000000000018e90                _ZN8LogEntry6ToJsonEv
+ *fill*         0x0000000000018eb2        0xe 90909090
+ .text          0x0000000000018ec0      0x65b ./OutConnectionPoint.o
+                0x0000000000018ec0                _ZN18OutConnectionPoint27RegisterValueChangedHandlerEP13IValueChanged
+                0x0000000000018ee0                _ZN18OutConnectionPoint19TriggerValueChangedEv
+                0x0000000000018f10                _ZN18OutConnectionPoint22RegisterRefreshHandlerEP13IRefreshValue
+                0x0000000000018f30                _ZN18OutConnectionPoint7RefreshEv
+                0x0000000000018f60                _ZN18OutConnectionPointD1Ev
+                0x0000000000018f60                _ZN18OutConnectionPointD2Ev
+                0x0000000000018f80                _ZN18OutConnectionPointD0Ev
+                0x0000000000018fa0                _ZN18OutConnectionPoint8SetValueEPv
+                0x0000000000019010                _ZN18OutConnectionPointC2EiSsSsSsPv
+                0x0000000000019010                _ZN18OutConnectionPointC1EiSsSsSsPv
+                0x00000000000191d0                _ZN18OutConnectionPointC2EiSsSs16AgilartDataTypesPv
+                0x00000000000191d0                _ZN18OutConnectionPointC1EiSsSs16AgilartDataTypesPv
+                0x0000000000019320                _ZN18OutConnectionPoint5CloneEv
+ *fill*         0x000000000001951b        0x5 90909090
+ .text          0x0000000000019520     0x171b ./Pinout.o
+                0x0000000000019520                _ZN6PinoutD1Ev
+                0x0000000000019520                _ZN6PinoutD2Ev
+                0x0000000000019660                _ZN6PinoutD0Ev
+                0x0000000000019680                _ZN6PinoutC2Ev
+                0x0000000000019680                _ZN6PinoutC1Ev
+                0x0000000000019700                _ZN6PinoutC1ERKS_
+                0x0000000000019700                _ZN6PinoutC2ERKS_
+                0x00000000000197a0                _ZN6PinoutC2EiSsSsPSt4listI7CommandSaIS1_EEPS0_I5EventSaIS5_EE
+                0x00000000000197a0                _ZN6PinoutC1EiSsSsPSt4listI7CommandSaIS1_EEPS0_I5EventSaIS5_EE
+                0x0000000000019860                _ZN6Pinout2IdEv
+                0x0000000000019870                _ZN6Pinout4NameEv
+                0x0000000000019890                _ZN6Pinout11DescriptionEv
+                0x00000000000198b0                _ZN6Pinout14ExecuteCommandE7Command
+                0x0000000000019b90                _ZN6Pinout14EventTriggeredEPvSt4listI14EventParameterSaIS2_EE
+                0x0000000000019ca0                _ZN6Pinout16SupportedComandsEv
+                0x000000000001a020                _ZN6Pinout14SuportedEventsEv
+                0x000000000001a0e0                _ZN6Pinout6ToJsonEv
+ *fill*         0x000000000001ac3b        0x5 90909090
+ .text          0x000000000001ac40     0x26f7 ./Process.o
+                0x000000000001ac40                _ZN7Process20RegisterErrorHandlerEP13IErrorHandler
+                0x000000000001ac60                _ZN7Process11HandleErrorEPvP9ErrorItem
+                0x000000000001acd0                _ZN7ProcessD2Ev
+                0x000000000001acd0                _ZN7ProcessD1Ev
+                0x000000000001adf0                _ZN7ProcessD0Ev
+                0x000000000001ae10                _ZN7ProcessC1Ev
+                0x000000000001ae10                _ZN7ProcessC2Ev
+                0x000000000001ae40                _ZN7ProcessC1Ei
+                0x000000000001ae40                _ZN7ProcessC2Ei
+                0x000000000001ae60                _ZN7Process5StartEP7Program
+                0x000000000001af70                _ZN7Process4StopEv
+                0x000000000001afb0                _ZN7Process10GetProgramEv
+                0x000000000001afc0                _ZN7Process8GetStateEv
+                0x000000000001afd0                _ZN7Process2IdEv
+                0x000000000001afe0                _ZN7Process9GetStatusESs
+ *fill*         0x000000000001d337        0x9 90909090
  .text._ZN15DeviceParameterD2Ev
-                0x00000000000291f0      0x127 ./Process.o
-                0x00000000000291f0                _ZN15DeviceParameterD2Ev
-                0x00000000000291f0                _ZN15DeviceParameterD1Ev
- *fill*         0x0000000000029317        0x9 90909090
+                0x000000000001d340      0x127 ./Process.o
+                0x000000000001d340                _ZN15DeviceParameterD2Ev
+                0x000000000001d340                _ZN15DeviceParameterD1Ev
+ *fill*         0x000000000001d467        0x9 90909090
  .text._ZNSt4listIP15ConnectionPointSaIS1_EED2Ev
-                0x0000000000029320       0x2f ./Process.o
-                0x0000000000029320                _ZNSt4listIP15ConnectionPointSaIS1_EED2Ev
-                0x0000000000029320                _ZNSt4listIP15ConnectionPointSaIS1_EED1Ev
- *fill*         0x000000000002934f        0x1 90909090
+                0x000000000001d470       0x2f ./Process.o
+                0x000000000001d470                _ZNSt4listIP15ConnectionPointSaIS1_EED2Ev
+                0x000000000001d470                _ZNSt4listIP15ConnectionPointSaIS1_EED1Ev
+ *fill*         0x000000000001d49f        0x1 90909090
  .text._ZNSt4listIP15ConnectionPointSaIS1_EEaSERKS3_
-                0x0000000000029350      0x12c ./Process.o
-                0x0000000000029350                _ZNSt4listIP15ConnectionPointSaIS1_EEaSERKS3_
- *fill*         0x000000000002947c        0x4 90909090
- .text          0x0000000000029480     0x1ac5 ./Program.o
-                0x0000000000029480                _ZN7ProgramD2Ev
-                0x0000000000029480                _ZN7ProgramD1Ev
-                0x0000000000029620                _ZN7ProgramD0Ev
-                0x0000000000029640                _ZN7ProgramC1Ev
-                0x0000000000029640                _ZN7ProgramC2Ev
-                0x00000000000296c0                _ZN7ProgramC1EiSsSs
-                0x00000000000296c0                _ZN7ProgramC2EiSsSs
-                0x00000000000297b0                _ZN7Program2IdEv
-                0x00000000000297c0                _ZN7Program4NameEv
-                0x00000000000297e0                _ZN7Program11DescriptionEv
-                0x0000000000029800                _ZN7Program7DevicesEv
-                0x0000000000029810                _ZN7Program9AddDeviceEP10BaseDevice
-                0x0000000000029860                _ZN7Program9GetDeviceEi
-                0x00000000000298b0                _ZN7Program5WiresEv
-                0x00000000000298c0                _ZN7Program7AddWireEP4Wire
-                0x0000000000029910                _ZN7Program9PowerWireEv
-                0x0000000000029920                _ZN7Program13GetDescriptorEv
-                0x0000000000029960                _ZN7Program19GetStatusDescriptorEv
- *fill*         0x000000000002af45        0xb 90909090
- .text._ZN14WireDescriptorD2Ev
-                0x000000000002af50      0x121 ./Program.o
-                0x000000000002af50                _ZN14WireDescriptorD1Ev
-                0x000000000002af50                _ZN14WireDescriptorD2Ev
- *fill*         0x000000000002b071        0xf 90909090
- .text._ZN16DeviceDescriptorD2Ev
-                0x000000000002b080      0x902 ./Program.o
-                0x000000000002b080                _ZN16DeviceDescriptorD2Ev
-                0x000000000002b080                _ZN16DeviceDescriptorD1Ev
- *fill*         0x000000000002b982        0xe 90909090
- .text._ZNSt10_List_baseI25ConnectionPointDescriptorSaIS0_EED2Ev
-                0x000000000002b990      0x134 ./Program.o
-                0x000000000002b990                _ZNSt10_List_baseI25ConnectionPointDescriptorSaIS0_EED1Ev
-                0x000000000002b990                _ZNSt10_List_baseI25ConnectionPointDescriptorSaIS0_EED2Ev
- *fill*         0x000000000002bac4        0xc 90909090
- .text._ZNSt10_List_baseI16PinoutDescriptorSaIS0_EED2Ev
-                0x000000000002bad0      0x6ee ./Program.o
-                0x000000000002bad0                _ZNSt10_List_baseI16PinoutDescriptorSaIS0_EED2Ev
-                0x000000000002bad0                _ZNSt10_List_baseI16PinoutDescriptorSaIS0_EED1Ev
- *fill*         0x000000000002c1be        0x2 90909090
- .text._ZNSt4listI16DeviceDescriptorSaIS0_EE14_M_create_nodeERKS0_
-                0x000000000002c1c0      0xa35 ./Program.o
-                0x000000000002c1c0                _ZNSt4listI16DeviceDescriptorSaIS0_EE14_M_create_nodeERKS0_
- *fill*         0x000000000002cbf5        0xb 90909090
- .text          0x000000000002cc00      0x4db ./Wire.o
-                0x000000000002cc00                _ZN4WireD2Ev
-                0x000000000002cc00                _ZN4WireD1Ev
-                0x000000000002cc90                _ZN4WireD0Ev
-                0x000000000002ccb0                _ZN4WireC1Ev
-                0x000000000002ccb0                _ZN4WireC2Ev
-                0x000000000002ccf0                _ZN4Wire16ConnectionPointsEv
-                0x000000000002cd00                _ZN4Wire6AttachEP15ConnectionPoint
-                0x000000000002cdb0                _ZN4Wire6DetachEP15ConnectionPoint
-                0x000000000002ce80                _ZN4Wire8SetValueEPv16AgilartDataTypes
-                0x000000000002cf10                _ZThn8_N4Wire7RefreshEPv
-                0x000000000002cf20                _ZN4Wire7RefreshEPv
-                0x000000000002cfd0                _ZN4Wire20InputPinValueChangedEPv
-                0x000000000002d050                _ZN4Wire13GetDescriptorEv
-                0x000000000002d070                _ZN4Wire5CloneEv
- *fill*         0x000000000002d0db        0x5 90909090
- .text          0x000000000002d0e0       0x3f ./Logging/BaseLogProvider.o
-                0x000000000002d0e0                _ZN15BaseLogProviderD1Ev
-                0x000000000002d0e0                _ZN15BaseLogProviderD2Ev
-                0x000000000002d0f0                _ZN15BaseLogProviderD0Ev
-                0x000000000002d110                _ZN15BaseLogProviderC2Ev
-                0x000000000002d110                _ZN15BaseLogProviderC1Ev
- *fill*         0x000000000002d11f        0x1 90909090
- .text          0x000000000002d120      0xfc9 ./Logging/EventLogger.o
-                0x000000000002d120                _ZN11EventLogger16WriteInformationEPKc
-                0x000000000002d160                _ZN11EventLogger11WriteNoticeEPKc
-                0x000000000002d1a0                _ZN11EventLogger12WriteWarningEPKc
-                0x000000000002d1e0                _ZN11EventLogger13WriteCriticalEPKc
-                0x000000000002d220                _ZN11EventLogger10WriteErrorEPKc
-                0x000000000002d260                _ZN11EventLogger14WriteEmergencyEPKc
-                0x000000000002d2a0                _ZN11EventLogger10WriteAlertEPKc
-                0x000000000002d2e0                _ZN11EventLogger10WriteDebugEPKc
-                0x000000000002d320                _ZN11EventLogger8RegisterEPv
-                0x000000000002d370                _ZN11EventLogger10UnregisterEv
-                0x000000000002d3b0                _ZN11EventLogger6ToJsonEv
-                0x000000000002d3f0                _ZN11EventLogger12WriteVerboseEPKcz
-                0x000000000002d510                _ZN11EventLoggerD1Ev
-                0x000000000002d510                _ZN11EventLoggerD2Ev
-                0x000000000002d5d0                _ZN11EventLoggerD0Ev
-                0x000000000002d5f0                _ZN11EventLogger15GetErrorMessageEi
-                0x000000000002d7a0                _ZN11EventLoggerC2Ev
-                0x000000000002d7a0                _ZN11EventLoggerC1Ev
-                0x000000000002e020                _ZN11EventLogger8InstanceEv
- *fill*         0x000000000002e0e9        0x7 90909090
+                0x000000000001d4a0      0x12c ./Process.o
+                0x000000000001d4a0                _ZNSt4listIP15ConnectionPointSaIS1_EEaSERKS3_
+ *fill*         0x000000000001d5cc        0x4 90909090
+ .text          0x000000000001d5d0      0x495 ./Program.o
+                0x000000000001d5d0                _ZN7ProgramD2Ev
+                0x000000000001d5d0                _ZN7ProgramD1Ev
+                0x000000000001d770                _ZN7ProgramD0Ev
+                0x000000000001d790                _ZN7ProgramC1Ev
+                0x000000000001d790                _ZN7ProgramC2Ev
+                0x000000000001d810                _ZN7ProgramC1EiSsSs
+                0x000000000001d810                _ZN7ProgramC2EiSsSs
+                0x000000000001d900                _ZN7Program2IdEv
+                0x000000000001d910                _ZN7Program4NameEv
+                0x000000000001d930                _ZN7Program11DescriptionEv
+                0x000000000001d950                _ZN7Program7DevicesEv
+                0x000000000001d960                _ZN7Program9AddDeviceEP10BaseDevice
+                0x000000000001d9b0                _ZN7Program9GetDeviceEi
+                0x000000000001da00                _ZN7Program5WiresEv
+                0x000000000001da10                _ZN7Program7AddWireEP4Wire
+                0x000000000001da60                _ZN7Program9PowerWireEv
+ *fill*         0x000000000001da65        0xb 90909090
+ .text          0x000000000001da70      0x4bb ./Wire.o
+                0x000000000001da70                _ZN4WireD2Ev
+                0x000000000001da70                _ZN4WireD1Ev
+                0x000000000001db00                _ZN4WireD0Ev
+                0x000000000001db20                _ZN4WireC1Ev
+                0x000000000001db20                _ZN4WireC2Ev
+                0x000000000001db60                _ZN4Wire16ConnectionPointsEv
+                0x000000000001db70                _ZN4Wire6AttachEP15ConnectionPoint
+                0x000000000001dc20                _ZN4Wire6DetachEP15ConnectionPoint
+                0x000000000001dcf0                _ZN4Wire8SetValueEPv16AgilartDataTypes
+                0x000000000001dd80                _ZThn8_N4Wire7RefreshEPv
+                0x000000000001dd90                _ZN4Wire7RefreshEPv
+                0x000000000001de40                _ZN4Wire20InputPinValueChangedEPv
+                0x000000000001dec0                _ZN4Wire5CloneEv
+ *fill*         0x000000000001df2b        0x5 90909090
+ .text          0x000000000001df30       0x3f ./Logging/BaseLogProvider.o
+                0x000000000001df30                _ZN15BaseLogProviderD1Ev
+                0x000000000001df30                _ZN15BaseLogProviderD2Ev
+                0x000000000001df40                _ZN15BaseLogProviderD0Ev
+                0x000000000001df60                _ZN15BaseLogProviderC2Ev
+                0x000000000001df60                _ZN15BaseLogProviderC1Ev
+ *fill*         0x000000000001df6f        0x1 90909090
+ .text          0x000000000001df70      0xfc9 ./Logging/EventLogger.o
+                0x000000000001df70                _ZN11EventLogger16WriteInformationEPKc
+                0x000000000001dfb0                _ZN11EventLogger11WriteNoticeEPKc
+                0x000000000001dff0                _ZN11EventLogger12WriteWarningEPKc
+                0x000000000001e030                _ZN11EventLogger13WriteCriticalEPKc
+                0x000000000001e070                _ZN11EventLogger10WriteErrorEPKc
+                0x000000000001e0b0                _ZN11EventLogger14WriteEmergencyEPKc
+                0x000000000001e0f0                _ZN11EventLogger10WriteAlertEPKc
+                0x000000000001e130                _ZN11EventLogger10WriteDebugEPKc
+                0x000000000001e170                _ZN11EventLogger8RegisterEPv
+                0x000000000001e1c0                _ZN11EventLogger10UnregisterEv
+                0x000000000001e200                _ZN11EventLogger6ToJsonEv
+                0x000000000001e240                _ZN11EventLogger12WriteVerboseEPKcz
+                0x000000000001e360                _ZN11EventLoggerD1Ev
+                0x000000000001e360                _ZN11EventLoggerD2Ev
+                0x000000000001e420                _ZN11EventLoggerD0Ev
+                0x000000000001e440                _ZN11EventLogger15GetErrorMessageEi
+                0x000000000001e5f0                _ZN11EventLoggerC2Ev
+                0x000000000001e5f0                _ZN11EventLoggerC1Ev
+                0x000000000001ee70                _ZN11EventLogger8InstanceEv
+ *fill*         0x000000000001ef39        0x7 90909090
  .text._ZNSt8_Rb_treeIiSt4pairIKiSsESt10_Select1stIS2_ESt4lessIiESaIS2_EE8_M_eraseEPSt13_Rb_tree_nodeIS2_E
-                0x000000000002e0f0       0x87 ./Logging/EventLogger.o
-                0x000000000002e0f0                _ZNSt8_Rb_treeIiSt4pairIKiSsESt10_Select1stIS2_ESt4lessIiESaIS2_EE8_M_eraseEPSt13_Rb_tree_nodeIS2_E
- *fill*         0x000000000002e177        0x9 90909090
+                0x000000000001ef40       0x87 ./Logging/EventLogger.o
+                0x000000000001ef40                _ZNSt8_Rb_treeIiSt4pairIKiSsESt10_Select1stIS2_ESt4lessIiESaIS2_EE8_M_eraseEPSt13_Rb_tree_nodeIS2_E
+ *fill*         0x000000000001efc7        0x9 90909090
  .text._ZNSt8_Rb_treeIiSt4pairIKiSsESt10_Select1stIS2_ESt4lessIiESaIS2_EE10_M_insert_EPKSt18_Rb_tree_node_baseSB_RKS2_
-                0x000000000002e180       0xc9 ./Logging/EventLogger.o
-                0x000000000002e180                _ZNSt8_Rb_treeIiSt4pairIKiSsESt10_Select1stIS2_ESt4lessIiESaIS2_EE10_M_insert_EPKSt18_Rb_tree_node_baseSB_RKS2_
- *fill*         0x000000000002e249        0x7 90909090
+                0x000000000001efd0       0xc9 ./Logging/EventLogger.o
+                0x000000000001efd0                _ZNSt8_Rb_treeIiSt4pairIKiSsESt10_Select1stIS2_ESt4lessIiESaIS2_EE10_M_insert_EPKSt18_Rb_tree_node_baseSB_RKS2_
+ *fill*         0x000000000001f099        0x7 90909090
  .text._ZNSt8_Rb_treeIiSt4pairIKiSsESt10_Select1stIS2_ESt4lessIiESaIS2_EE16_M_insert_uniqueERKS2_
-                0x000000000002e250       0xa5 ./Logging/EventLogger.o
-                0x000000000002e250                _ZNSt8_Rb_treeIiSt4pairIKiSsESt10_Select1stIS2_ESt4lessIiESaIS2_EE16_M_insert_uniqueERKS2_
- *fill*         0x000000000002e2f5        0xb 90909090
+                0x000000000001f0a0       0xa5 ./Logging/EventLogger.o
+                0x000000000001f0a0                _ZNSt8_Rb_treeIiSt4pairIKiSsESt10_Select1stIS2_ESt4lessIiESaIS2_EE16_M_insert_uniqueERKS2_
+ *fill*         0x000000000001f145        0xb 90909090
  .text._ZNSt8_Rb_treeIiSt4pairIKiSsESt10_Select1stIS2_ESt4lessIiESaIS2_EE17_M_insert_unique_ESt23_Rb_tree_const_iteratorIS2_ERKS2_
-                0x000000000002e300      0x155 ./Logging/EventLogger.o
-                0x000000000002e300                _ZNSt8_Rb_treeIiSt4pairIKiSsESt10_Select1stIS2_ESt4lessIiESaIS2_EE17_M_insert_unique_ESt23_Rb_tree_const_iteratorIS2_ERKS2_
- *fill*         0x000000000002e455        0xb 90909090
- .text          0x000000000002e460     0x1427 ./Logging/JsonLogProvider.o
-                0x000000000002e460                _ZN15JsonLogProvider7OpenLogEv
-                0x000000000002e470                _ZN15JsonLogProvider8CloseLogEv
-                0x000000000002e480                _ZN15JsonLogProviderD2Ev
-                0x000000000002e480                _ZN15JsonLogProviderD1Ev
-                0x000000000002e530                _ZN15JsonLogProviderD0Ev
-                0x000000000002e550                _ZN15JsonLogProviderC2Ev
-                0x000000000002e550                _ZN15JsonLogProviderC1Ev
-                0x000000000002e640                _ZN15JsonLogProvider6ToJsonEv
-                0x000000000002e750                _ZN15JsonLogProvider12WriteMessageESsSs
-                0x000000000002f110                _ZN15JsonLogProvider10WriteDebugEPKc
-                0x000000000002f200                _ZN15JsonLogProvider10WriteAlertEPKc
-                0x000000000002f2f0                _ZN15JsonLogProvider14WriteEmergencyEPKc
-                0x000000000002f3e0                _ZN15JsonLogProvider10WriteErrorEPKc
-                0x000000000002f4d0                _ZN15JsonLogProvider13WriteCriticalEPKc
-                0x000000000002f5c0                _ZN15JsonLogProvider12WriteWarningEPKc
-                0x000000000002f6b0                _ZN15JsonLogProvider11WriteNoticeEPKc
-                0x000000000002f7a0                _ZN15JsonLogProvider16WriteInformationEPKc
- *fill*         0x000000000002f887        0x9 90909090
- .text          0x000000000002f890      0x1ea ./Logging/SysLogProvider.o
-                0x000000000002f890                _ZN14SysLogProvider16WriteInformationEPKc
-                0x000000000002f8b0                _ZN14SysLogProvider11WriteNoticeEPKc
-                0x000000000002f8d0                _ZN14SysLogProvider12WriteWarningEPKc
-                0x000000000002f8f0                _ZN14SysLogProvider13WriteCriticalEPKc
-                0x000000000002f910                _ZN14SysLogProvider10WriteErrorEPKc
-                0x000000000002f930                _ZN14SysLogProvider14WriteEmergencyEPKc
-                0x000000000002f950                _ZN14SysLogProvider10WriteAlertEPKc
-                0x000000000002f970                _ZN14SysLogProvider10WriteDebugEPKc
-                0x000000000002f990                _ZN14SysLogProvider8ClearLogEv
-                0x000000000002f9d0                _ZN14SysLogProvider8CloseLogEv
-                0x000000000002f9e0                _ZN14SysLogProvider7OpenLogEv
-                0x000000000002fa00                _ZN14SysLogProviderD2Ev
-                0x000000000002fa00                _ZN14SysLogProviderD1Ev
-                0x000000000002fa20                _ZN14SysLogProviderD0Ev
-                0x000000000002fa40                _ZN14SysLogProviderC1EPKc
-                0x000000000002fa40                _ZN14SysLogProviderC2EPKc
- *fill*         0x000000000002fa7a        0x6 90909090
- .text          0x000000000002fa80       0x36 /usr/lib/gcc/x86_64-linux-gnu/4.6/crtendS.o
- *fill*         0x000000000002fab6        0x2 90909090
- .text          0x000000000002fab8        0x0 /usr/lib/gcc/x86_64-linux-gnu/4.6/../../../x86_64-linux-gnu/crtn.o
+                0x000000000001f150      0x155 ./Logging/EventLogger.o
+                0x000000000001f150                _ZNSt8_Rb_treeIiSt4pairIKiSsESt10_Select1stIS2_ESt4lessIiESaIS2_EE17_M_insert_unique_ESt23_Rb_tree_const_iteratorIS2_ERKS2_
+ *fill*         0x000000000001f2a5        0xb 90909090
+ .text          0x000000000001f2b0     0x1427 ./Logging/JsonLogProvider.o
+                0x000000000001f2b0                _ZN15JsonLogProvider7OpenLogEv
+                0x000000000001f2c0                _ZN15JsonLogProvider8CloseLogEv
+                0x000000000001f2d0                _ZN15JsonLogProviderD2Ev
+                0x000000000001f2d0                _ZN15JsonLogProviderD1Ev
+                0x000000000001f380                _ZN15JsonLogProviderD0Ev
+                0x000000000001f3a0                _ZN15JsonLogProviderC2Ev
+                0x000000000001f3a0                _ZN15JsonLogProviderC1Ev
+                0x000000000001f490                _ZN15JsonLogProvider6ToJsonEv
+                0x000000000001f5a0                _ZN15JsonLogProvider12WriteMessageESsSs
+                0x000000000001ff60                _ZN15JsonLogProvider10WriteDebugEPKc
+                0x0000000000020050                _ZN15JsonLogProvider10WriteAlertEPKc
+                0x0000000000020140                _ZN15JsonLogProvider14WriteEmergencyEPKc
+                0x0000000000020230                _ZN15JsonLogProvider10WriteErrorEPKc
+                0x0000000000020320                _ZN15JsonLogProvider13WriteCriticalEPKc
+                0x0000000000020410                _ZN15JsonLogProvider12WriteWarningEPKc
+                0x0000000000020500                _ZN15JsonLogProvider11WriteNoticeEPKc
+                0x00000000000205f0                _ZN15JsonLogProvider16WriteInformationEPKc
+ *fill*         0x00000000000206d7        0x9 90909090
+ .text          0x00000000000206e0      0x1ea ./Logging/SysLogProvider.o
+                0x00000000000206e0                _ZN14SysLogProvider16WriteInformationEPKc
+                0x0000000000020700                _ZN14SysLogProvider11WriteNoticeEPKc
+                0x0000000000020720                _ZN14SysLogProvider12WriteWarningEPKc
+                0x0000000000020740                _ZN14SysLogProvider13WriteCriticalEPKc
+                0x0000000000020760                _ZN14SysLogProvider10WriteErrorEPKc
+                0x0000000000020780                _ZN14SysLogProvider14WriteEmergencyEPKc
+                0x00000000000207a0                _ZN14SysLogProvider10WriteAlertEPKc
+                0x00000000000207c0                _ZN14SysLogProvider10WriteDebugEPKc
+                0x00000000000207e0                _ZN14SysLogProvider8ClearLogEv
+                0x0000000000020820                _ZN14SysLogProvider8CloseLogEv
+                0x0000000000020830                _ZN14SysLogProvider7OpenLogEv
+                0x0000000000020850                _ZN14SysLogProviderD2Ev
+                0x0000000000020850                _ZN14SysLogProviderD1Ev
+                0x0000000000020870                _ZN14SysLogProviderD0Ev
+                0x0000000000020890                _ZN14SysLogProviderC1EPKc
+                0x0000000000020890                _ZN14SysLogProviderC2EPKc
+ *fill*         0x00000000000208ca        0x6 90909090
+ .text          0x00000000000208d0       0x36 /usr/lib/gcc/x86_64-linux-gnu/4.6/crtendS.o
+ *fill*         0x0000000000020906        0x2 90909090
+ .text          0x0000000000020908        0x0 /usr/lib/gcc/x86_64-linux-gnu/4.6/../../../x86_64-linux-gnu/crtn.o
  *(.gnu.warning)
 
-.fini           0x000000000002fab8        0xe
+.fini           0x0000000000020908        0xe
  *(.fini)
- .fini          0x000000000002fab8        0x4 /usr/lib/gcc/x86_64-linux-gnu/4.6/../../../x86_64-linux-gnu/crti.o
-                0x000000000002fab8                _fini
- .fini          0x000000000002fabc        0x5 /usr/lib/gcc/x86_64-linux-gnu/4.6/crtbeginS.o
- .fini          0x000000000002fac1        0x5 /usr/lib/gcc/x86_64-linux-gnu/4.6/../../../x86_64-linux-gnu/crtn.o
-                0x000000000002fac6                PROVIDE (__etext, .)
-                0x000000000002fac6                PROVIDE (_etext, .)
-                0x000000000002fac6                PROVIDE (etext, .)
+ .fini          0x0000000000020908        0x4 /usr/lib/gcc/x86_64-linux-gnu/4.6/../../../x86_64-linux-gnu/crti.o
+                0x0000000000020908                _fini
+ .fini          0x000000000002090c        0x5 /usr/lib/gcc/x86_64-linux-gnu/4.6/crtbeginS.o
+ .fini          0x0000000000020911        0x5 /usr/lib/gcc/x86_64-linux-gnu/4.6/../../../x86_64-linux-gnu/crtn.o
+                0x0000000000020916                PROVIDE (__etext, .)
+                0x0000000000020916                PROVIDE (_etext, .)
+                0x0000000000020916                PROVIDE (etext, .)
 
-.rodata         0x000000000002fad0      0x8e1
+.rodata         0x0000000000020920      0x881
  *(.rodata .rodata.* .gnu.linkonce.r.*)
  .rodata.str1.8
-                0x000000000002fad0       0x52 ./BaseDevice.o
+                0x0000000000020920       0x25 ./BaseDevice.o
  .rodata.str1.1
-                0x000000000002fb22       0x49 ./BaseDevice.o
-                                         0x5b (size before relaxing)
+                0x0000000000020945       0x45 ./BaseDevice.o
+                                         0x54 (size before relaxing)
  .rodata._ZTS10BaseDevice
-                0x000000000002fb6b        0xd ./BaseDevice.o
-                0x000000000002fb6b                _ZTS10BaseDevice
- *fill*         0x000000000002fb78        0x8 00
+                0x000000000002098a        0xd ./BaseDevice.o
+                0x000000000002098a                _ZTS10BaseDevice
+ *fill*         0x0000000000020997        0x9 00
  .rodata._ZTS13IRefreshValue
-                0x000000000002fb80       0x10 ./BaseDevice.o
-                0x000000000002fb80                _ZTS13IRefreshValue
+                0x00000000000209a0       0x10 ./BaseDevice.o
+                0x00000000000209a0                _ZTS13IRefreshValue
  .rodata._ZTS13IValueChanged
-                0x000000000002fb90       0x10 ./BaseDevice.o
-                0x000000000002fb90                _ZTS13IValueChanged
+                0x00000000000209b0       0x10 ./BaseDevice.o
+                0x00000000000209b0                _ZTS13IValueChanged
  .rodata._ZTS9ErrorItem
-                0x000000000002fba0        0xb ./BaseDevice.o
-                0x000000000002fba0                _ZTS9ErrorItem
+                0x00000000000209c0        0xb ./BaseDevice.o
+                0x00000000000209c0                _ZTS9ErrorItem
  .rodata.str1.1
-                0x000000000002fbab       0x16 ./BaseDriver.o
-                                         0x31 (size before relaxing)
+                0x00000000000209cb        0x3 ./BaseDriver.o
+                                         0x19 (size before relaxing)
  .rodata._ZTS10BaseDriver
-                0x000000000002fbc1        0xd ./BaseDriver.o
-                0x000000000002fbc1                _ZTS10BaseDriver
- *fill*         0x000000000002fbce        0x2 00
+                0x00000000000209ce        0xd ./BaseDriver.o
+                0x00000000000209ce                _ZTS10BaseDriver
+ *fill*         0x00000000000209db        0x5 00
  .rodata._ZTS13DriverCommand
-                0x000000000002fbd0       0x10 ./BaseDriver.o
-                0x000000000002fbd0                _ZTS13DriverCommand
+                0x00000000000209e0       0x10 ./BaseDriver.o
+                0x00000000000209e0                _ZTS13DriverCommand
  .rodata.str1.1
-                0x000000000002fbe0       0x37 ./Command.o
-                                         0x78 (size before relaxing)
- *fill*         0x000000000002fc17        0x1 00
+                0x00000000000209f0       0x38 ./Command.o
+                                         0x58 (size before relaxing)
  .rodata.str1.8
-                0x000000000002fc18       0x2a ./Command.o
-                                         0x5a (size before relaxing)
+                0x0000000000020a28       0x2a ./Command.o
  .rodata._ZTS7Command
-                0x000000000002fc42        0x9 ./Command.o
-                0x000000000002fc42                _ZTS7Command
+                0x0000000000020a52        0x9 ./Command.o
+                0x0000000000020a52                _ZTS7Command
  .rodata.str1.1
-                0x000000000002fc4b       0x24 ./Configuration.o
+                0x0000000000020a5b       0x24 ./Configuration.o
                                          0x41 (size before relaxing)
- *fill*         0x000000000002fc6f        0x1 00
+ *fill*         0x0000000000020a7f        0x1 00
  .rodata.str1.8
-                0x000000000002fc70       0x32 ./Configuration.o
- *fill*         0x000000000002fca2        0xe 00
+                0x0000000000020a80       0x32 ./Configuration.o
+ *fill*         0x0000000000020ab2        0xe 00
  .rodata._ZTS13Configuration
-                0x000000000002fcb0       0x10 ./Configuration.o
-                0x000000000002fcb0                _ZTS13Configuration
+                0x0000000000020ac0       0x10 ./Configuration.o
+                0x0000000000020ac0                _ZTS13Configuration
  .rodata.str1.1
-                0x000000000002fcc0       0x1d ./ConnectionPoint.o
-                                         0x3e (size before relaxing)
- .rodata.str1.8
-                0x0000000000000000       0x2a ./ConnectionPoint.o
- *fill*         0x000000000002fcdd        0x3 00
+                0x0000000000000000       0x13 ./ConnectionPoint.o
  .rodata._ZTS15ConnectionPoint
-                0x000000000002fce0       0x12 ./ConnectionPoint.o
-                0x000000000002fce0                _ZTS15ConnectionPoint
+                0x0000000000020ad0       0x12 ./ConnectionPoint.o
+                0x0000000000020ad0                _ZTS15ConnectionPoint
  .rodata.str1.1
-                0x000000000002fcf2       0x2f ./Convert.o
+                0x0000000000020ae2       0x2f ./Convert.o
                                          0x43 (size before relaxing)
- *fill*         0x000000000002fd21        0x3 00
- .rodata        0x000000000002fd24       0x38 ./Convert.o
- *fill*         0x000000000002fd5c        0x4 00
- .rodata.cst8   0x000000000002fd60        0x8 ./Convert.o
- .rodata.cst4   0x000000000002fd68        0x4 ./Convert.o
+ *fill*         0x0000000000020b11        0x3 00
+ .rodata        0x0000000000020b14       0x38 ./Convert.o
+ *fill*         0x0000000000020b4c        0x4 00
+ .rodata.cst8   0x0000000000020b50        0x8 ./Convert.o
+ .rodata.cst4   0x0000000000020b58        0x4 ./Convert.o
  .rodata.str1.1
                 0x0000000000000000        0x1 ./DataSerializationManager.o
- *fill*         0x000000000002fd6c        0x4 00
+ *fill*         0x0000000000020b5c        0x4 00
  .rodata._ZTS24DataSerializationManager
-                0x000000000002fd70       0x1b ./DataSerializationManager.o
-                0x000000000002fd70                _ZTS24DataSerializationManager
+                0x0000000000020b60       0x1b ./DataSerializationManager.o
+                0x0000000000020b60                _ZTS24DataSerializationManager
  .rodata.str1.1
-                0x000000000002fd8b       0x14 ./Event.o
-                                         0x5f (size before relaxing)
- .rodata.str1.8
-                0x0000000000000000       0x2a ./Event.o
+                0x0000000000020b7b       0x14 ./Event.o
+                                         0x38 (size before relaxing)
  .rodata._ZTS5Event
-                0x000000000002fd9f        0x7 ./Event.o
-                0x000000000002fd9f                _ZTS5Event
- *fill*         0x000000000002fda6        0xa 00
+                0x0000000000020b8f        0x7 ./Event.o
+                0x0000000000020b8f                _ZTS5Event
+ *fill*         0x0000000000020b96        0xa 00
  .rodata._ZTS17InConnectionPoint
-                0x000000000002fdb0       0x14 ./InConnectionPoint.o
-                0x000000000002fdb0                _ZTS17InConnectionPoint
+                0x0000000000020ba0       0x14 ./InConnectionPoint.o
+                0x0000000000020ba0                _ZTS17InConnectionPoint
  .rodata.str1.1
-                0x000000000002fdc4      0x18c ./JsonParameters.o
+                0x0000000000020bb4      0x192 ./JsonParameters.o
                                         0x1d1 (size before relaxing)
  .rodata.str1.1
-                0x000000000002ff50       0x10 ./LogEntry.o
+                0x0000000000020d46       0x10 ./LogEntry.o
  .rodata._ZTS8LogEntry
-                0x000000000002ff60        0xa ./LogEntry.o
-                0x000000000002ff60                _ZTS8LogEntry
- *fill*         0x000000000002ff6a        0x6 00
+                0x0000000000020d56        0xa ./LogEntry.o
+                0x0000000000020d56                _ZTS8LogEntry
  .rodata._ZTS18OutConnectionPoint
-                0x000000000002ff70       0x15 ./OutConnectionPoint.o
-                0x000000000002ff70                _ZTS18OutConnectionPoint
+                0x0000000000020d60       0x15 ./OutConnectionPoint.o
+                0x0000000000020d60                _ZTS18OutConnectionPoint
  .rodata.str1.1
-                0x000000000002ff85       0x17 ./Pinout.o
-                                         0x56 (size before relaxing)
- .rodata.str1.8
-                0x0000000000000000       0x2a ./Pinout.o
+                0x0000000000020d75       0x17 ./Pinout.o
+                                         0x42 (size before relaxing)
  .rodata._ZTS6Pinout
-                0x000000000002ff9c        0x8 ./Pinout.o
-                0x000000000002ff9c                _ZTS6Pinout
- *fill*         0x000000000002ffa4        0x4 00
+                0x0000000000020d8c        0x8 ./Pinout.o
+                0x0000000000020d8c                _ZTS6Pinout
+ *fill*         0x0000000000020d94        0x4 00
  .rodata.str1.8
-                0x000000000002ffa8       0xc7 ./Process.o
+                0x0000000000020d98       0xc7 ./Process.o
  .rodata.str1.1
-                0x000000000003006f       0xb9 ./Process.o
+                0x0000000000020e5f       0xb9 ./Process.o
                                          0xf1 (size before relaxing)
  .rodata._ZTS7Process
-                0x0000000000030128        0x9 ./Process.o
-                0x0000000000030128                _ZTS7Process
- *fill*         0x0000000000030131        0xf 00
+                0x0000000000020f18        0x9 ./Process.o
+                0x0000000000020f18                _ZTS7Process
+ *fill*         0x0000000000020f21        0xf 00
  .rodata._ZTS13IErrorHandler
-                0x0000000000030140       0x10 ./Process.o
-                0x0000000000030140                _ZTS13IErrorHandler
- .rodata.str1.1
-                0x0000000000000000       0x22 ./Program.o
+                0x0000000000020f30       0x10 ./Process.o
+                0x0000000000020f30                _ZTS13IErrorHandler
  .rodata._ZTS7Program
-                0x0000000000030150        0x9 ./Program.o
-                0x0000000000030150                _ZTS7Program
+                0x0000000000020f40        0x9 ./Program.o
+                0x0000000000020f40                _ZTS7Program
  .rodata.str1.1
-                0x0000000000030159       0x35 ./Wire.o
- *fill*         0x000000000003018e        0x2 00
+                0x0000000000020f49       0x35 ./Wire.o
+ *fill*         0x0000000000020f7e        0x2 00
  .rodata.str1.8
-                0x0000000000030190       0x43 ./Wire.o
+                0x0000000000020f80       0x43 ./Wire.o
  .rodata._ZTS4Wire
-                0x00000000000301d3        0x6 ./Wire.o
-                0x00000000000301d3                _ZTS4Wire
- *fill*         0x00000000000301d9        0x7 00
+                0x0000000000020fc3        0x6 ./Wire.o
+                0x0000000000020fc3                _ZTS4Wire
+ *fill*         0x0000000000020fc9        0x7 00
  .rodata._ZTS15BaseLogProvider
-                0x00000000000301e0       0x12 ./Logging/BaseLogProvider.o
-                0x00000000000301e0                _ZTS15BaseLogProvider
+                0x0000000000020fd0       0x12 ./Logging/BaseLogProvider.o
+                0x0000000000020fd0                _ZTS15BaseLogProvider
  .rodata.str1.1
-                0x00000000000301f2       0x55 ./Logging/EventLogger.o
+                0x0000000000020fe2       0x55 ./Logging/EventLogger.o
                                          0x56 (size before relaxing)
- *fill*         0x0000000000030247        0x1 00
+ *fill*         0x0000000000021037        0x1 00
  .rodata.str1.8
-                0x0000000000030248       0xc0 ./Logging/EventLogger.o
+                0x0000000000021038       0xc0 ./Logging/EventLogger.o
  .rodata._ZTS11EventLogger
-                0x0000000000030308        0xe ./Logging/EventLogger.o
-                0x0000000000030308                _ZTS11EventLogger
+                0x00000000000210f8        0xe ./Logging/EventLogger.o
+                0x00000000000210f8                _ZTS11EventLogger
  .rodata.str1.1
-                0x0000000000030316       0x65 ./Logging/JsonLogProvider.o
+                0x0000000000021106       0x65 ./Logging/JsonLogProvider.o
                                          0x76 (size before relaxing)
- *fill*         0x000000000003037b        0x5 00
+ *fill*         0x000000000002116b        0x5 00
  .rodata._ZTS15JsonLogProvider
-                0x0000000000030380       0x12 ./Logging/JsonLogProvider.o
-                0x0000000000030380                _ZTS15JsonLogProvider
+                0x0000000000021170       0x12 ./Logging/JsonLogProvider.o
+                0x0000000000021170                _ZTS15JsonLogProvider
  .rodata.str1.1
-                0x0000000000030392        0x3 ./Logging/SysLogProvider.o
- *fill*         0x0000000000030395        0xb 00
+                0x0000000000021182        0x3 ./Logging/SysLogProvider.o
+ *fill*         0x0000000000021185        0xb 00
  .rodata._ZTS14SysLogProvider
-                0x00000000000303a0       0x11 ./Logging/SysLogProvider.o
-                0x00000000000303a0                _ZTS14SysLogProvider
+                0x0000000000021190       0x11 ./Logging/SysLogProvider.o
+                0x0000000000021190                _ZTS14SysLogProvider
 
 .rodata1
  *(.rodata1)
 
-.eh_frame_hdr   0x00000000000303b4      0x964
+.eh_frame_hdr   0x00000000000211a4      0x8a4
  *(.eh_frame_hdr)
- .eh_frame_hdr  0x00000000000303b4      0x964 /usr/lib/gcc/x86_64-linux-gnu/4.6/../../../x86_64-linux-gnu/crti.o
+ .eh_frame_hdr  0x00000000000211a4      0x8a4 /usr/lib/gcc/x86_64-linux-gnu/4.6/../../../x86_64-linux-gnu/crti.o
 
-.eh_frame       0x0000000000030d18     0x31ec
+.eh_frame       0x0000000000021a48     0x2b14
  *(.eh_frame)
- .eh_frame      0x0000000000030d18       0x40 /usr/lib/gcc/x86_64-linux-gnu/4.6/../../../x86_64-linux-gnu/crti.o
- .eh_frame      0x0000000000030d58      0x7b0 ./BaseDevice.o
-                                        0x730 (size before relaxing)
- .eh_frame      0x0000000000031508      0x220 ./BaseDriver.o
-                                        0x358 (size before relaxing)
- .eh_frame      0x0000000000031728      0x2c0 ./Command.o
-                                        0x380 (size before relaxing)
- .eh_frame      0x00000000000319e8      0x398 ./Configuration.o
+ .eh_frame      0x0000000000021a48       0x40 /usr/lib/gcc/x86_64-linux-gnu/4.6/../../../x86_64-linux-gnu/crti.o
+ .eh_frame      0x0000000000021a88      0x560 ./BaseDevice.o
+                                        0x4f8 (size before relaxing)
+ .eh_frame      0x0000000000021fe8      0x128 ./BaseDriver.o
+                                        0x198 (size before relaxing)
+ .eh_frame      0x0000000000022110      0x248 ./Command.o
+                                        0x2a8 (size before relaxing)
+ .eh_frame      0x0000000000022358      0x398 ./Configuration.o
                                         0x3c8 (size before relaxing)
- .eh_frame      0x0000000000031d80      0x360 ./ConnectionPoint.o
-                                        0x3a8 (size before relaxing)
- .eh_frame      0x00000000000320e0      0x188 ./Convert.o
+ .eh_frame      0x00000000000226f0      0x308 ./ConnectionPoint.o
+                                        0x310 (size before relaxing)
+ .eh_frame      0x00000000000229f8      0x188 ./Convert.o
                                         0x1b8 (size before relaxing)
- .eh_frame      0x0000000000032268      0x120 ./DataSerializationManager.o
+ .eh_frame      0x0000000000022b80      0x120 ./DataSerializationManager.o
                                         0x148 (size before relaxing)
- .eh_frame      0x0000000000032388      0x2d0 ./Event.o
-                                        0x3b8 (size before relaxing)
- .eh_frame      0x0000000000032658      0x160 ./InConnectionPoint.o
+ .eh_frame      0x0000000000022ca0      0x278 ./Event.o
+                                        0x2e0 (size before relaxing)
+ .eh_frame      0x0000000000022f18      0x160 ./InConnectionPoint.o
                                         0x178 (size before relaxing)
- .eh_frame      0x00000000000327b8       0x38 ./JsonParameters.o
+ .eh_frame      0x0000000000023078       0x38 ./JsonParameters.o
                                          0x50 (size before relaxing)
- .eh_frame      0x00000000000327f0       0xf8 ./LogEntry.o
+ .eh_frame      0x00000000000230b0       0xf8 ./LogEntry.o
                                         0x120 (size before relaxing)
- .eh_frame      0x00000000000328e8      0x170 ./OutConnectionPoint.o
+ .eh_frame      0x00000000000231a8      0x170 ./OutConnectionPoint.o
                                         0x188 (size before relaxing)
- .eh_frame      0x0000000000032a58      0x338 ./Pinout.o
-                                        0x550 (size before relaxing)
- .eh_frame      0x0000000000032d90      0x2a8 ./Process.o
+ .eh_frame      0x0000000000023318      0x2e0 ./Pinout.o
+                                        0x348 (size before relaxing)
+ .eh_frame      0x00000000000235f8      0x2a8 ./Process.o
                                         0x308 (size before relaxing)
- .eh_frame      0x0000000000033038      0x3d8 ./Program.o
-                                        0x568 (size before relaxing)
- .eh_frame      0x0000000000033410      0x218 ./Wire.o
-                                        0x230 (size before relaxing)
- .eh_frame      0x0000000000033628       0x50 ./Logging/BaseLogProvider.o
+ .eh_frame      0x00000000000238a0      0x1e0 ./Program.o
+                                        0x1f8 (size before relaxing)
+ .eh_frame      0x0000000000023a80      0x200 ./Wire.o
+                                        0x218 (size before relaxing)
+ .eh_frame      0x0000000000023c80       0x50 ./Logging/BaseLogProvider.o
                                          0x60 (size before relaxing)
- .eh_frame      0x0000000000033678      0x438 ./Logging/EventLogger.o
+ .eh_frame      0x0000000000023cd0      0x438 ./Logging/EventLogger.o
                                         0x428 (size before relaxing)
- .eh_frame      0x0000000000033ab0      0x2d8 ./Logging/JsonLogProvider.o
+ .eh_frame      0x0000000000024108      0x2d8 ./Logging/JsonLogProvider.o
                                         0x320 (size before relaxing)
- .eh_frame      0x0000000000033d88      0x178 ./Logging/SysLogProvider.o
+ .eh_frame      0x00000000000243e0      0x178 ./Logging/SysLogProvider.o
                                         0x160 (size before relaxing)
- .eh_frame      0x0000000000033f00        0x4 /usr/lib/gcc/x86_64-linux-gnu/4.6/crtendS.o
+ .eh_frame      0x0000000000024558        0x4 /usr/lib/gcc/x86_64-linux-gnu/4.6/crtendS.o
 
 .gcc_except_table
-                0x0000000000033f04     0x1da4
+                0x000000000002455c     0x12e8
  *(.gcc_except_table .gcc_except_table.*)
  .gcc_except_table
-                0x0000000000033f04      0x420 ./BaseDevice.o
+                0x000000000002455c      0x296 ./BaseDevice.o
  .gcc_except_table
-                0x0000000000034324      0x240 ./BaseDriver.o
+                0x00000000000247f2      0x10b ./BaseDriver.o
  .gcc_except_table
-                0x0000000000034564      0x394 ./Command.o
+                0x00000000000248fd      0x1e0 ./Command.o
+ *fill*         0x0000000000024add        0x3 00
  .gcc_except_table
-                0x00000000000348f8      0x1f6 ./Configuration.o
- *fill*         0x0000000000034aee        0x2 00
+                0x0000000000024ae0      0x1f6 ./Configuration.o
  .gcc_except_table
-                0x0000000000034af0      0x1c4 ./ConnectionPoint.o
+                0x0000000000024cd6       0xd3 ./ConnectionPoint.o
  .gcc_except_table
-                0x0000000000034cb4       0xa3 ./Convert.o
+                0x0000000000024da9       0xa3 ./Convert.o
  .gcc_except_table
-                0x0000000000034d57       0x96 ./DataSerializationManager.o
- *fill*         0x0000000000034ded        0x3 00
+                0x0000000000024e4c       0x96 ./DataSerializationManager.o
  .gcc_except_table
-                0x0000000000034df0      0x398 ./Event.o
+                0x0000000000024ee2      0x1e4 ./Event.o
  .gcc_except_table
-                0x0000000000035188       0x5e ./InConnectionPoint.o
+                0x00000000000250c6       0x5e ./InConnectionPoint.o
  .gcc_except_table
-                0x00000000000351e6        0xd ./LogEntry.o
+                0x0000000000025124        0xd ./LogEntry.o
  .gcc_except_table
-                0x00000000000351f3       0x5b ./OutConnectionPoint.o
- *fill*         0x000000000003524e        0x2 00
+                0x0000000000025131       0x5b ./OutConnectionPoint.o
  .gcc_except_table
-                0x0000000000035250      0x370 ./Pinout.o
+                0x000000000002518c      0x1cf ./Pinout.o
  .gcc_except_table
-                0x00000000000355c0      0x238 ./Process.o
+                0x000000000002535b      0x238 ./Process.o
  .gcc_except_table
-                0x00000000000357f8      0x230 ./Program.o
+                0x0000000000025593       0x2f ./Program.o
  .gcc_except_table
-                0x0000000000035a28       0x10 ./Wire.o
+                0x00000000000255c2       0x10 ./Wire.o
+ *fill*         0x00000000000255d2        0x2 00
  .gcc_except_table
-                0x0000000000035a38       0xc6 ./Logging/EventLogger.o
- *fill*         0x0000000000035afe        0x2 00
+                0x00000000000255d4       0xc6 ./Logging/EventLogger.o
+ *fill*         0x000000000002569a        0x2 00
  .gcc_except_table
-                0x0000000000035b00      0x1a8 ./Logging/JsonLogProvider.o
+                0x000000000002569c      0x1a8 ./Logging/JsonLogProvider.o
 
 .exception_ranges
  *(.exception_ranges .exception_ranges*)
-                0x0000000000035ca8                . = (ALIGN (0x200000) - ((0x200000 - .) & 0x1fffff))
-                0x00000000002360d8                . = DATA_SEGMENT_ALIGN (0x200000, 0x1000)
+                0x0000000000025844                . = (ALIGN (0x200000) - ((0x200000 - .) & 0x1fffff))
+                0x00000000002260ec                . = DATA_SEGMENT_ALIGN (0x200000, 0x1000)
 
 .eh_frame
  *(.eh_frame)
@@ -1360,411 +1181,411 @@ LOAD /usr/lib/gcc/x86_64-linux-gnu/4.6/../../../x86_64-linux-gnu/crtn.o
 .preinit_array
  *(.preinit_array)
 
-.init_array     0x00000000002360d8       0x98
+.init_array     0x00000000002260f0       0x98
  *(SORT(.init_array.*) SORT(.ctors.*))
  *(.init_array)
  *(EXCLUDE_FILE(*crtend?.o *crtend.o *crtbegin?.o *crtbegin.o) .ctors)
- .ctors         0x00000000002360d8        0x8 ./BaseDevice.o
- .ctors         0x00000000002360e0        0x8 ./BaseDriver.o
- .ctors         0x00000000002360e8        0x8 ./Command.o
- .ctors         0x00000000002360f0        0x8 ./Configuration.o
- .ctors         0x00000000002360f8        0x8 ./ConnectionPoint.o
- .ctors         0x0000000000236100        0x8 ./Convert.o
- .ctors         0x0000000000236108        0x8 ./DataSerializationManager.o
- .ctors         0x0000000000236110        0x8 ./Event.o
- .ctors         0x0000000000236118        0x8 ./InConnectionPoint.o
- .ctors         0x0000000000236120        0x8 ./JsonParameters.o
- .ctors         0x0000000000236128        0x8 ./LogEntry.o
- .ctors         0x0000000000236130        0x8 ./OutConnectionPoint.o
- .ctors         0x0000000000236138        0x8 ./Pinout.o
- .ctors         0x0000000000236140        0x8 ./Process.o
- .ctors         0x0000000000236148        0x8 ./Program.o
- .ctors         0x0000000000236150        0x8 ./Wire.o
- .ctors         0x0000000000236158        0x8 ./Logging/EventLogger.o
- .ctors         0x0000000000236160        0x8 ./Logging/JsonLogProvider.o
- .ctors         0x0000000000236168        0x8 ./Logging/SysLogProvider.o
+ .ctors         0x00000000002260f0        0x8 ./BaseDevice.o
+ .ctors         0x00000000002260f8        0x8 ./BaseDriver.o
+ .ctors         0x0000000000226100        0x8 ./Command.o
+ .ctors         0x0000000000226108        0x8 ./Configuration.o
+ .ctors         0x0000000000226110        0x8 ./ConnectionPoint.o
+ .ctors         0x0000000000226118        0x8 ./Convert.o
+ .ctors         0x0000000000226120        0x8 ./DataSerializationManager.o
+ .ctors         0x0000000000226128        0x8 ./Event.o
+ .ctors         0x0000000000226130        0x8 ./InConnectionPoint.o
+ .ctors         0x0000000000226138        0x8 ./JsonParameters.o
+ .ctors         0x0000000000226140        0x8 ./LogEntry.o
+ .ctors         0x0000000000226148        0x8 ./OutConnectionPoint.o
+ .ctors         0x0000000000226150        0x8 ./Pinout.o
+ .ctors         0x0000000000226158        0x8 ./Process.o
+ .ctors         0x0000000000226160        0x8 ./Program.o
+ .ctors         0x0000000000226168        0x8 ./Wire.o
+ .ctors         0x0000000000226170        0x8 ./Logging/EventLogger.o
+ .ctors         0x0000000000226178        0x8 ./Logging/JsonLogProvider.o
+ .ctors         0x0000000000226180        0x8 ./Logging/SysLogProvider.o
 
 .fini_array
  *(SORT(.fini_array.*) SORT(.dtors.*))
  *(.fini_array)
  *(EXCLUDE_FILE(*crtend?.o *crtend.o *crtbegin?.o *crtbegin.o) .dtors)
 
-.ctors          0x0000000000236170       0x10
+.ctors          0x0000000000226188       0x10
  *crtbegin.o(.ctors)
  *crtbegin?.o(.ctors)
- .ctors         0x0000000000236170        0x8 /usr/lib/gcc/x86_64-linux-gnu/4.6/crtbeginS.o
+ .ctors         0x0000000000226188        0x8 /usr/lib/gcc/x86_64-linux-gnu/4.6/crtbeginS.o
  *(EXCLUDE_FILE(*crtend?.o *crtend.o) .ctors)
  *(SORT(.ctors.*))
  *(.ctors)
- .ctors         0x0000000000236178        0x8 /usr/lib/gcc/x86_64-linux-gnu/4.6/crtendS.o
+ .ctors         0x0000000000226190        0x8 /usr/lib/gcc/x86_64-linux-gnu/4.6/crtendS.o
 
-.dtors          0x0000000000236180       0x10
+.dtors          0x0000000000226198       0x10
  *crtbegin.o(.dtors)
  *crtbegin?.o(.dtors)
- .dtors         0x0000000000236180        0x8 /usr/lib/gcc/x86_64-linux-gnu/4.6/crtbeginS.o
+ .dtors         0x0000000000226198        0x8 /usr/lib/gcc/x86_64-linux-gnu/4.6/crtbeginS.o
  *(EXCLUDE_FILE(*crtend?.o *crtend.o) .dtors)
  *(SORT(.dtors.*))
  *(.dtors)
- .dtors         0x0000000000236188        0x8 /usr/lib/gcc/x86_64-linux-gnu/4.6/crtendS.o
-                0x0000000000236188                __DTOR_END__
+ .dtors         0x00000000002261a0        0x8 /usr/lib/gcc/x86_64-linux-gnu/4.6/crtendS.o
+                0x00000000002261a0                __DTOR_END__
 
-.jcr            0x0000000000236190        0x8
+.jcr            0x00000000002261a8        0x8
  *(.jcr)
- .jcr           0x0000000000236190        0x0 /usr/lib/gcc/x86_64-linux-gnu/4.6/crtbeginS.o
- .jcr           0x0000000000236190        0x8 /usr/lib/gcc/x86_64-linux-gnu/4.6/crtendS.o
+ .jcr           0x00000000002261a8        0x0 /usr/lib/gcc/x86_64-linux-gnu/4.6/crtbeginS.o
+ .jcr           0x00000000002261a8        0x8 /usr/lib/gcc/x86_64-linux-gnu/4.6/crtendS.o
 
-.data.rel.ro    0x00000000002361a0      0x918
+.data.rel.ro    0x00000000002261c0      0x918
  *(.data.rel.ro.local* .gnu.linkonce.d.rel.ro.local.*)
  *(.data.rel.ro* .gnu.linkonce.d.rel.ro.*)
  .data.rel.ro._ZTI10BaseDevice
-                0x00000000002361a0       0x38 ./BaseDevice.o
-                0x00000000002361a0                _ZTI10BaseDevice
- *fill*         0x00000000002361d8        0x8 00
+                0x00000000002261c0       0x38 ./BaseDevice.o
+                0x00000000002261c0                _ZTI10BaseDevice
+ *fill*         0x00000000002261f8        0x8 00
  .data.rel.ro._ZTV10BaseDevice
-                0x00000000002361e0       0xd8 ./BaseDevice.o
-                0x00000000002361e0                _ZTV10BaseDevice
- *fill*         0x00000000002362b8        0x8 00
+                0x0000000000226200       0xd0 ./BaseDevice.o
+                0x0000000000226200                _ZTV10BaseDevice
  .data.rel.ro._ZTV13IValueChanged
-                0x00000000002362c0       0x18 ./BaseDevice.o
-                0x00000000002362c0                _ZTV13IValueChanged
- *fill*         0x00000000002362d8        0x8 00
+                0x00000000002262d0       0x18 ./BaseDevice.o
+                0x00000000002262d0                _ZTV13IValueChanged
+ *fill*         0x00000000002262e8        0x8 00
  .data.rel.ro._ZTV13IRefreshValue
-                0x00000000002362e0       0x18 ./BaseDevice.o
-                0x00000000002362e0                _ZTV13IRefreshValue
- *fill*         0x00000000002362f8        0x8 00
+                0x00000000002262f0       0x18 ./BaseDevice.o
+                0x00000000002262f0                _ZTV13IRefreshValue
+ *fill*         0x0000000000226308        0x8 00
  .data.rel.ro._ZTI13IRefreshValue
-                0x0000000000236300       0x10 ./BaseDevice.o
-                0x0000000000236300                _ZTI13IRefreshValue
+                0x0000000000226310       0x10 ./BaseDevice.o
+                0x0000000000226310                _ZTI13IRefreshValue
  .data.rel.ro._ZTI13IValueChanged
-                0x0000000000236310       0x10 ./BaseDevice.o
-                0x0000000000236310                _ZTI13IValueChanged
+                0x0000000000226320       0x10 ./BaseDevice.o
+                0x0000000000226320                _ZTI13IValueChanged
+ *fill*         0x0000000000226330       0x10 00
  .data.rel.ro._ZTV9ErrorItem
-                0x0000000000236320       0x20 ./BaseDevice.o
-                0x0000000000236320                _ZTV9ErrorItem
+                0x0000000000226340       0x20 ./BaseDevice.o
+                0x0000000000226340                _ZTV9ErrorItem
  .data.rel.ro._ZTI9ErrorItem
-                0x0000000000236340       0x10 ./BaseDevice.o
-                0x0000000000236340                _ZTI9ErrorItem
+                0x0000000000226360       0x10 ./BaseDevice.o
+                0x0000000000226360                _ZTI9ErrorItem
  .data.rel.ro._ZTI10BaseDriver
-                0x0000000000236350       0x18 ./BaseDriver.o
-                0x0000000000236350                _ZTI10BaseDriver
- *fill*         0x0000000000236368       0x18 00
+                0x0000000000226370       0x18 ./BaseDriver.o
+                0x0000000000226370                _ZTI10BaseDriver
+ *fill*         0x0000000000226388       0x18 00
  .data.rel.ro._ZTV10BaseDriver
-                0x0000000000236380       0x78 ./BaseDriver.o
-                0x0000000000236380                _ZTV10BaseDriver
- *fill*         0x00000000002363f8        0x8 00
+                0x00000000002263a0       0x70 ./BaseDriver.o
+                0x00000000002263a0                _ZTV10BaseDriver
+ *fill*         0x0000000000226410       0x10 00
  .data.rel.ro._ZTV13DriverCommand
-                0x0000000000236400       0x30 ./BaseDriver.o
-                0x0000000000236400                _ZTV13DriverCommand
+                0x0000000000226420       0x30 ./BaseDriver.o
+                0x0000000000226420                _ZTV13DriverCommand
  .data.rel.ro._ZTI13DriverCommand
-                0x0000000000236430       0x10 ./BaseDriver.o
-                0x0000000000236430                _ZTI13DriverCommand
+                0x0000000000226450       0x10 ./BaseDriver.o
+                0x0000000000226450                _ZTI13DriverCommand
  .data.rel.ro._ZTI7Command
-                0x0000000000236440       0x10 ./Command.o
-                0x0000000000236440                _ZTI7Command
- *fill*         0x0000000000236450       0x10 00
+                0x0000000000226460       0x10 ./Command.o
+                0x0000000000226460                _ZTI7Command
+ *fill*         0x0000000000226470       0x10 00
  .data.rel.ro._ZTV7Command
-                0x0000000000236460       0x28 ./Command.o
-                0x0000000000236460                _ZTV7Command
- *fill*         0x0000000000236488        0x8 00
+                0x0000000000226480       0x28 ./Command.o
+                0x0000000000226480                _ZTV7Command
+ *fill*         0x00000000002264a8        0x8 00
  .data.rel.ro._ZTI13Configuration
-                0x0000000000236490       0x10 ./Configuration.o
-                0x0000000000236490                _ZTI13Configuration
+                0x00000000002264b0       0x10 ./Configuration.o
+                0x00000000002264b0                _ZTI13Configuration
  .data.rel.ro._ZTV13Configuration
-                0x00000000002364a0       0x20 ./Configuration.o
-                0x00000000002364a0                _ZTV13Configuration
+                0x00000000002264c0       0x20 ./Configuration.o
+                0x00000000002264c0                _ZTV13Configuration
  .data.rel.ro._ZTI15ConnectionPoint
-                0x00000000002364c0       0x10 ./ConnectionPoint.o
-                0x00000000002364c0                _ZTI15ConnectionPoint
- *fill*         0x00000000002364d0       0x10 00
+                0x00000000002264e0       0x10 ./ConnectionPoint.o
+                0x00000000002264e0                _ZTI15ConnectionPoint
+ *fill*         0x00000000002264f0       0x10 00
  .data.rel.ro._ZTV15ConnectionPoint
-                0x00000000002364e0       0x50 ./ConnectionPoint.o
-                0x00000000002364e0                _ZTV15ConnectionPoint
+                0x0000000000226500       0x50 ./ConnectionPoint.o
+                0x0000000000226500                _ZTV15ConnectionPoint
  .data.rel.ro._ZTI24DataSerializationManager
-                0x0000000000236530       0x10 ./DataSerializationManager.o
-                0x0000000000236530                _ZTI24DataSerializationManager
+                0x0000000000226550       0x10 ./DataSerializationManager.o
+                0x0000000000226550                _ZTI24DataSerializationManager
  .data.rel.ro._ZTV24DataSerializationManager
-                0x0000000000236540       0x20 ./DataSerializationManager.o
-                0x0000000000236540                _ZTV24DataSerializationManager
+                0x0000000000226560       0x20 ./DataSerializationManager.o
+                0x0000000000226560                _ZTV24DataSerializationManager
  .data.rel.ro._ZTI5Event
-                0x0000000000236560       0x10 ./Event.o
-                0x0000000000236560                _ZTI5Event
- *fill*         0x0000000000236570       0x10 00
+                0x0000000000226580       0x10 ./Event.o
+                0x0000000000226580                _ZTI5Event
+ *fill*         0x0000000000226590       0x10 00
  .data.rel.ro._ZTV5Event
-                0x0000000000236580       0x28 ./Event.o
-                0x0000000000236580                _ZTV5Event
- *fill*         0x00000000002365a8        0x8 00
+                0x00000000002265a0       0x28 ./Event.o
+                0x00000000002265a0                _ZTV5Event
+ *fill*         0x00000000002265c8        0x8 00
  .data.rel.ro._ZTI17InConnectionPoint
-                0x00000000002365b0       0x18 ./InConnectionPoint.o
-                0x00000000002365b0                _ZTI17InConnectionPoint
- *fill*         0x00000000002365c8       0x18 00
+                0x00000000002265d0       0x18 ./InConnectionPoint.o
+                0x00000000002265d0                _ZTI17InConnectionPoint
+ *fill*         0x00000000002265e8       0x18 00
  .data.rel.ro._ZTV17InConnectionPoint
-                0x00000000002365e0       0x50 ./InConnectionPoint.o
-                0x00000000002365e0                _ZTV17InConnectionPoint
+                0x0000000000226600       0x50 ./InConnectionPoint.o
+                0x0000000000226600                _ZTV17InConnectionPoint
  .data.rel.ro._ZTI8LogEntry
-                0x0000000000236630       0x10 ./LogEntry.o
-                0x0000000000236630                _ZTI8LogEntry
+                0x0000000000226650       0x10 ./LogEntry.o
+                0x0000000000226650                _ZTI8LogEntry
  .data.rel.ro._ZTV8LogEntry
-                0x0000000000236640       0x20 ./LogEntry.o
-                0x0000000000236640                _ZTV8LogEntry
+                0x0000000000226660       0x20 ./LogEntry.o
+                0x0000000000226660                _ZTV8LogEntry
  .data.rel.ro._ZTI18OutConnectionPoint
-                0x0000000000236660       0x18 ./OutConnectionPoint.o
-                0x0000000000236660                _ZTI18OutConnectionPoint
- *fill*         0x0000000000236678        0x8 00
+                0x0000000000226680       0x18 ./OutConnectionPoint.o
+                0x0000000000226680                _ZTI18OutConnectionPoint
+ *fill*         0x0000000000226698        0x8 00
  .data.rel.ro._ZTV18OutConnectionPoint
-                0x0000000000236680       0x50 ./OutConnectionPoint.o
-                0x0000000000236680                _ZTV18OutConnectionPoint
+                0x00000000002266a0       0x50 ./OutConnectionPoint.o
+                0x00000000002266a0                _ZTV18OutConnectionPoint
  .data.rel.ro._ZTI6Pinout
-                0x00000000002366d0       0x10 ./Pinout.o
-                0x00000000002366d0                _ZTI6Pinout
+                0x00000000002266f0       0x10 ./Pinout.o
+                0x00000000002266f0                _ZTI6Pinout
  .data.rel.ro._ZTV6Pinout
-                0x00000000002366e0       0x20 ./Pinout.o
-                0x00000000002366e0                _ZTV6Pinout
+                0x0000000000226700       0x20 ./Pinout.o
+                0x0000000000226700                _ZTV6Pinout
  .data.rel.ro._ZTI7Process
-                0x0000000000236700       0x18 ./Process.o
-                0x0000000000236700                _ZTI7Process
- *fill*         0x0000000000236718        0x8 00
+                0x0000000000226720       0x18 ./Process.o
+                0x0000000000226720                _ZTI7Process
+ *fill*         0x0000000000226738        0x8 00
  .data.rel.ro._ZTV7Process
-                0x0000000000236720       0x30 ./Process.o
-                0x0000000000236720                _ZTV7Process
+                0x0000000000226740       0x30 ./Process.o
+                0x0000000000226740                _ZTV7Process
  .data.rel.ro._ZTV13IErrorHandler
-                0x0000000000236750       0x18 ./Process.o
-                0x0000000000236750                _ZTV13IErrorHandler
- *fill*         0x0000000000236768        0x8 00
+                0x0000000000226770       0x18 ./Process.o
+                0x0000000000226770                _ZTV13IErrorHandler
+ *fill*         0x0000000000226788        0x8 00
  .data.rel.ro._ZTI13IErrorHandler
-                0x0000000000236770       0x10 ./Process.o
-                0x0000000000236770                _ZTI13IErrorHandler
+                0x0000000000226790       0x10 ./Process.o
+                0x0000000000226790                _ZTI13IErrorHandler
  .data.rel.ro._ZTI7Program
-                0x0000000000236780       0x10 ./Program.o
-                0x0000000000236780                _ZTI7Program
- *fill*         0x0000000000236790       0x10 00
+                0x00000000002267a0       0x10 ./Program.o
+                0x00000000002267a0                _ZTI7Program
+ *fill*         0x00000000002267b0       0x10 00
  .data.rel.ro._ZTV7Program
-                0x00000000002367a0       0x20 ./Program.o
-                0x00000000002367a0                _ZTV7Program
+                0x00000000002267c0       0x20 ./Program.o
+                0x00000000002267c0                _ZTV7Program
  .data.rel.ro._ZTI4Wire
-                0x00000000002367c0       0x38 ./Wire.o
-                0x00000000002367c0                _ZTI4Wire
- *fill*         0x00000000002367f8        0x8 00
+                0x00000000002267e0       0x38 ./Wire.o
+                0x00000000002267e0                _ZTI4Wire
+ *fill*         0x0000000000226818        0x8 00
  .data.rel.ro._ZTV4Wire
-                0x0000000000236800       0x48 ./Wire.o
-                0x0000000000236800                _ZTV4Wire
- *fill*         0x0000000000236848        0x8 00
+                0x0000000000226820       0x48 ./Wire.o
+                0x0000000000226820                _ZTV4Wire
+ *fill*         0x0000000000226868        0x8 00
  .data.rel.ro._ZTI15BaseLogProvider
-                0x0000000000236850       0x10 ./Logging/BaseLogProvider.o
-                0x0000000000236850                _ZTI15BaseLogProvider
+                0x0000000000226870       0x10 ./Logging/BaseLogProvider.o
+                0x0000000000226870                _ZTI15BaseLogProvider
  .data.rel.ro._ZTV15BaseLogProvider
-                0x0000000000236860       0x70 ./Logging/BaseLogProvider.o
-                0x0000000000236860                _ZTV15BaseLogProvider
+                0x0000000000226880       0x70 ./Logging/BaseLogProvider.o
+                0x0000000000226880                _ZTV15BaseLogProvider
  .data.rel.ro._ZTI11EventLogger
-                0x00000000002368d0       0x10 ./Logging/EventLogger.o
-                0x00000000002368d0                _ZTI11EventLogger
+                0x00000000002268f0       0x10 ./Logging/EventLogger.o
+                0x00000000002268f0                _ZTI11EventLogger
  .data.rel.ro._ZTV11EventLogger
-                0x00000000002368e0       0x60 ./Logging/EventLogger.o
-                0x00000000002368e0                _ZTV11EventLogger
+                0x0000000000226900       0x60 ./Logging/EventLogger.o
+                0x0000000000226900                _ZTV11EventLogger
  .data.rel.ro._ZTI15JsonLogProvider
-                0x0000000000236940       0x28 ./Logging/JsonLogProvider.o
-                0x0000000000236940                _ZTI15JsonLogProvider
- *fill*         0x0000000000236968       0x18 00
+                0x0000000000226960       0x28 ./Logging/JsonLogProvider.o
+                0x0000000000226960                _ZTI15JsonLogProvider
+ *fill*         0x0000000000226988       0x18 00
  .data.rel.ro._ZTV15JsonLogProvider
-                0x0000000000236980       0x70 ./Logging/JsonLogProvider.o
-                0x0000000000236980                _ZTV15JsonLogProvider
- *fill*         0x00000000002369f0       0x10 00
+                0x00000000002269a0       0x70 ./Logging/JsonLogProvider.o
+                0x00000000002269a0                _ZTV15JsonLogProvider
+ *fill*         0x0000000000226a10       0x10 00
  .data.rel.ro._ZTI14SysLogProvider
-                0x0000000000236a00       0x28 ./Logging/SysLogProvider.o
-                0x0000000000236a00                _ZTI14SysLogProvider
- *fill*         0x0000000000236a28       0x18 00
+                0x0000000000226a20       0x28 ./Logging/SysLogProvider.o
+                0x0000000000226a20                _ZTI14SysLogProvider
+ *fill*         0x0000000000226a48       0x18 00
  .data.rel.ro._ZTV14SysLogProvider
-                0x0000000000236a40       0x78 ./Logging/SysLogProvider.o
-                0x0000000000236a40                _ZTV14SysLogProvider
+                0x0000000000226a60       0x78 ./Logging/SysLogProvider.o
+                0x0000000000226a60                _ZTV14SysLogProvider
 
-.dynamic        0x0000000000236ab8      0x1c0
+.dynamic        0x0000000000226ad8      0x1c0
  *(.dynamic)
- .dynamic       0x0000000000236ab8      0x1c0 /usr/lib/gcc/x86_64-linux-gnu/4.6/../../../x86_64-linux-gnu/crti.o
-                0x0000000000236ab8                _DYNAMIC
+ .dynamic       0x0000000000226ad8      0x1c0 /usr/lib/gcc/x86_64-linux-gnu/4.6/../../../x86_64-linux-gnu/crti.o
+                0x0000000000226ad8                _DYNAMIC
 
-.got            0x0000000000236c78      0x360
+.got            0x0000000000226c98      0x348
  *(.got)
- .got           0x0000000000236c78      0x360 /usr/lib/gcc/x86_64-linux-gnu/4.6/../../../x86_64-linux-gnu/crti.o
+ .got           0x0000000000226c98      0x348 /usr/lib/gcc/x86_64-linux-gnu/4.6/../../../x86_64-linux-gnu/crti.o
  *(.igot)
-                0x0000000000236fe8                . = DATA_SEGMENT_RELRO_END (., 0x18)
+                0x0000000000226fe8                . = DATA_SEGMENT_RELRO_END (., 0x18)
 
-.got.plt        0x0000000000236fe8      0x618
+.got.plt        0x0000000000226fe8      0x530
  *(.got.plt)
- .got.plt       0x0000000000236fe8      0x618 /usr/lib/gcc/x86_64-linux-gnu/4.6/../../../x86_64-linux-gnu/crti.o
-                0x0000000000236fe8                _GLOBAL_OFFSET_TABLE_
+ .got.plt       0x0000000000226fe8      0x530 /usr/lib/gcc/x86_64-linux-gnu/4.6/../../../x86_64-linux-gnu/crti.o
+                0x0000000000226fe8                _GLOBAL_OFFSET_TABLE_
  *(.igot.plt)
 
-.data           0x0000000000237600       0x10
+.data           0x0000000000227518       0x10
  *(.data .data.* .gnu.linkonce.d.*)
- .data          0x0000000000237600        0x0 /usr/lib/gcc/x86_64-linux-gnu/4.6/../../../x86_64-linux-gnu/crti.o
- .data          0x0000000000237600        0x0 /usr/lib/gcc/x86_64-linux-gnu/4.6/crtbeginS.o
- .data.rel      0x0000000000237600        0x8 /usr/lib/gcc/x86_64-linux-gnu/4.6/crtbeginS.o
-                0x0000000000237600                __dso_handle
- .data          0x0000000000237608        0x0 ./BaseDevice.o
+ .data          0x0000000000227518        0x0 /usr/lib/gcc/x86_64-linux-gnu/4.6/../../../x86_64-linux-gnu/crti.o
+ .data          0x0000000000227518        0x0 /usr/lib/gcc/x86_64-linux-gnu/4.6/crtbeginS.o
+ .data.rel      0x0000000000227518        0x8 /usr/lib/gcc/x86_64-linux-gnu/4.6/crtbeginS.o
+                0x0000000000227518                __dso_handle
+ .data          0x0000000000227520        0x0 ./BaseDevice.o
  .data.DW.ref.__gxx_personality_v0
-                0x0000000000237608        0x8 ./BaseDevice.o
-                0x0000000000237608                DW.ref.__gxx_personality_v0
- .data          0x0000000000237610        0x0 ./BaseDriver.o
- .data          0x0000000000237610        0x0 ./Command.o
- .data          0x0000000000237610        0x0 ./Configuration.o
- .data          0x0000000000237610        0x0 ./ConnectionPoint.o
- .data          0x0000000000237610        0x0 ./Convert.o
- .data          0x0000000000237610        0x0 ./DataSerializationManager.o
- .data          0x0000000000237610        0x0 ./Event.o
- .data          0x0000000000237610        0x0 ./InConnectionPoint.o
- .data          0x0000000000237610        0x0 ./JsonParameters.o
- .data          0x0000000000237610        0x0 ./LogEntry.o
- .data          0x0000000000237610        0x0 ./OutConnectionPoint.o
- .data          0x0000000000237610        0x0 ./Pinout.o
- .data          0x0000000000237610        0x0 ./Process.o
- .data          0x0000000000237610        0x0 ./Program.o
- .data          0x0000000000237610        0x0 ./Wire.o
- .data          0x0000000000237610        0x0 ./Logging/BaseLogProvider.o
- .data          0x0000000000237610        0x0 ./Logging/EventLogger.o
- .data          0x0000000000237610        0x0 ./Logging/JsonLogProvider.o
- .data          0x0000000000237610        0x0 ./Logging/SysLogProvider.o
- .data          0x0000000000237610        0x0 /usr/lib/gcc/x86_64-linux-gnu/4.6/crtendS.o
- .data          0x0000000000237610        0x0 /usr/lib/gcc/x86_64-linux-gnu/4.6/../../../x86_64-linux-gnu/crtn.o
+                0x0000000000227520        0x8 ./BaseDevice.o
+                0x0000000000227520                DW.ref.__gxx_personality_v0
+ .data          0x0000000000227528        0x0 ./BaseDriver.o
+ .data          0x0000000000227528        0x0 ./Command.o
+ .data          0x0000000000227528        0x0 ./Configuration.o
+ .data          0x0000000000227528        0x0 ./ConnectionPoint.o
+ .data          0x0000000000227528        0x0 ./Convert.o
+ .data          0x0000000000227528        0x0 ./DataSerializationManager.o
+ .data          0x0000000000227528        0x0 ./Event.o
+ .data          0x0000000000227528        0x0 ./InConnectionPoint.o
+ .data          0x0000000000227528        0x0 ./JsonParameters.o
+ .data          0x0000000000227528        0x0 ./LogEntry.o
+ .data          0x0000000000227528        0x0 ./OutConnectionPoint.o
+ .data          0x0000000000227528        0x0 ./Pinout.o
+ .data          0x0000000000227528        0x0 ./Process.o
+ .data          0x0000000000227528        0x0 ./Program.o
+ .data          0x0000000000227528        0x0 ./Wire.o
+ .data          0x0000000000227528        0x0 ./Logging/BaseLogProvider.o
+ .data          0x0000000000227528        0x0 ./Logging/EventLogger.o
+ .data          0x0000000000227528        0x0 ./Logging/JsonLogProvider.o
+ .data          0x0000000000227528        0x0 ./Logging/SysLogProvider.o
+ .data          0x0000000000227528        0x0 /usr/lib/gcc/x86_64-linux-gnu/4.6/crtendS.o
+ .data          0x0000000000227528        0x0 /usr/lib/gcc/x86_64-linux-gnu/4.6/../../../x86_64-linux-gnu/crtn.o
 
 .data1
  *(.data1)
-                0x0000000000237610                _edata = .
-                0x0000000000237610                PROVIDE (edata, .)
-                0x0000000000237610                __bss_start = .
+                0x0000000000227528                _edata = .
+                0x0000000000227528                PROVIDE (edata, .)
+                0x0000000000227528                __bss_start = .
 
-.bss            0x0000000000237610      0x280
+.bss            0x0000000000227528      0x280
  *(.dynbss)
  .dynbss        0x0000000000000000        0x0 /usr/lib/gcc/x86_64-linux-gnu/4.6/../../../x86_64-linux-gnu/crti.o
  *(.bss .bss.* .gnu.linkonce.b.*)
- .bss           0x0000000000237610        0x0 /usr/lib/gcc/x86_64-linux-gnu/4.6/../../../x86_64-linux-gnu/crti.o
- .bss           0x0000000000237610       0x10 /usr/lib/gcc/x86_64-linux-gnu/4.6/crtbeginS.o
- .bss           0x0000000000237620        0x1 ./BaseDevice.o
- *fill*         0x0000000000237621        0x3 00
- .bss           0x0000000000237624        0x1 ./BaseDriver.o
- *fill*         0x0000000000237625        0x3 00
- .bss           0x0000000000237628        0x1 ./Command.o
- *fill*         0x0000000000237629        0x7 00
- .bss           0x0000000000237630        0x9 ./Configuration.o
-                0x0000000000237630                _ZN13Configuration8instanceE
- *fill*         0x0000000000237639        0x3 00
- .bss           0x000000000023763c        0x1 ./ConnectionPoint.o
- *fill*         0x000000000023763d        0x3 00
- .bss           0x0000000000237640        0x1 ./Convert.o
- *fill*         0x0000000000237641        0x3 00
- .bss           0x0000000000237644        0x1 ./DataSerializationManager.o
- *fill*         0x0000000000237645        0x3 00
- .bss           0x0000000000237648        0x1 ./Event.o
- *fill*         0x0000000000237649        0x3 00
- .bss           0x000000000023764c        0x1 ./InConnectionPoint.o
- *fill*         0x000000000023764d        0x3 00
- .bss           0x0000000000237650      0x210 ./JsonParameters.o
-                0x0000000000237650                _ZN14JsonParameters12SettingValueE
-                0x0000000000237658                _ZN14JsonParameters15SettingDataTypeE
-                0x0000000000237660                _ZN14JsonParameters11SettingNameE
-                0x0000000000237668                _ZN14JsonParameters12ErrorMessageE
-                0x0000000000237670                _ZN14JsonParameters9ErrorCodeE
-                0x0000000000237678                _ZN14JsonParameters15OperationStatusE
-                0x0000000000237680                _ZN14JsonParameters22CustomDeviceAddOnPropsE
-                0x0000000000237688                _ZN14JsonParameters20CustomDeviceBaseTypeE
-                0x0000000000237690                _ZN14JsonParameters16CustomDeviceNameE
-                0x0000000000237698                _ZN14JsonParameters12CustomDeviceE
-                0x00000000002376a0                _ZN14JsonParameters14ConnPointLabelE
-                0x00000000002376a8                _ZN14JsonParameters25DevicePropertyDescriptionE
-                0x00000000002376b0                _ZN14JsonParameters18DevicePropertyTypeE
-                0x00000000002376b8                _ZN14JsonParameters19DevicePropertyValueE
-                0x00000000002376c0                _ZN14JsonParameters17DevicePropertyKeyE
-                0x00000000002376c8                _ZN14JsonParameters16DevicePropertiesE
-                0x00000000002376d0                _ZN14JsonParameters21OutConnPointDirectionE
-                0x00000000002376d8                _ZN14JsonParameters20InConnPointDirectionE
-                0x00000000002376e0                _ZN14JsonParameters11DescriptionE
-                0x00000000002376e8                _ZN14JsonParameters9ParameterE
-                0x00000000002376f0                _ZN14JsonParameters6PinoutE
-                0x00000000002376f8                _ZN14JsonParameters7PinoutsE
-                0x0000000000237700                _ZN14JsonParameters9DirectionE
-                0x0000000000237708                _ZN14JsonParameters20ConnectionPointValueE
-                0x0000000000237710                _ZN14JsonParameters15ConnectionPointE
-                0x0000000000237718                _ZN14JsonParameters22DeviceConnectionPointsE
-                0x0000000000237720                _ZN14JsonParameters16ProgramIsRunningE
-                0x0000000000237728                _ZN14JsonParameters16ProgramAutoStartE
-                0x0000000000237730                _ZN14JsonParameters9ProgramIdE
-                0x0000000000237738                _ZN14JsonParameters11ProgramNameE
-                0x0000000000237740                _ZN14JsonParameters15ParameterTargetE
-                0x0000000000237748                _ZN14JsonParameters15ParameterSourceE
-                0x0000000000237750                _ZN14JsonParameters17ConnectionPointIdE
-                0x0000000000237758                _ZN14JsonParameters8DeviceIdE
-                0x0000000000237760                _ZN14JsonParameters8PinoutIdE
-                0x0000000000237768                _ZN14JsonParameters10DriverTypeE
-                0x0000000000237770                _ZN14JsonParameters10ParametersE
-                0x0000000000237778                _ZN14JsonParameters6TargetE
-                0x0000000000237780                _ZN14JsonParameters6SourceE
-                0x0000000000237788                _ZN14JsonParameters12EventMappingE
-                0x0000000000237790                _ZN14JsonParameters14CommandMappingE
-                0x0000000000237798                _ZN14JsonParameters18ProgramDescriptionE
-                0x00000000002377a0                _ZN14JsonParameters9ProjectIdE
-                0x00000000002377a8                _ZN14JsonParameters2IdE
-                0x00000000002377b0                _ZN14JsonParameters23UpcbWireConnectionPointE
-                0x00000000002377b8                _ZN14JsonParameters16ConnectionPointsE
-                0x00000000002377c0                _ZN14JsonParameters9PowerWireE
-                0x00000000002377c8                _ZN14JsonParameters10DeviceTypeE
-                0x00000000002377d0                _ZN14JsonParameters6DeviceE
-                0x00000000002377d8                _ZN14JsonParameters7DevicesE
-                0x00000000002377e0                _ZN14JsonParameters4WireE
-                0x00000000002377e8                _ZN14JsonParameters5WiresE
-                0x00000000002377f0                _ZN14JsonParameters7MappingE
-                0x00000000002377f8                _ZN14JsonParameters7ProgramE
-                0x0000000000237800                _ZN14JsonParameters6DriverE
-                0x0000000000237808                _ZN14JsonParameters5ValueE
-                0x0000000000237810                _ZN14JsonParameters8DataTypeE
-                0x0000000000237818                _ZN14JsonParameters3KeyE
-                0x0000000000237820                _ZN14JsonParameters15EventParametersE
-                0x0000000000237828                _ZN14JsonParameters6EventsE
-                0x0000000000237830                _ZN14JsonParameters5EventE
-                0x0000000000237838                _ZN14JsonParameters8CommandsE
-                0x0000000000237840                _ZN14JsonParameters7CommandE
-                0x0000000000237848                _ZN14JsonParameters13CmdParametersE
-                0x0000000000237850                _ZN14JsonParameters11DisplayNameE
-                0x0000000000237858                _ZN14JsonParameters4NameE
- .bss           0x0000000000237860        0x1 ./LogEntry.o
- *fill*         0x0000000000237861        0x3 00
- .bss           0x0000000000237864        0x1 ./OutConnectionPoint.o
- *fill*         0x0000000000237865        0x3 00
- .bss           0x0000000000237868        0x1 ./Pinout.o
- *fill*         0x0000000000237869        0x3 00
- .bss           0x000000000023786c        0x1 ./Process.o
- *fill*         0x000000000023786d        0x3 00
- .bss           0x0000000000237870        0x1 ./Program.o
- *fill*         0x0000000000237871        0x3 00
- .bss           0x0000000000237874        0x1 ./Wire.o
- *fill*         0x0000000000237875        0x3 00
- .bss           0x0000000000237878        0x0 ./Logging/BaseLogProvider.o
- .bss           0x0000000000237878        0x9 ./Logging/EventLogger.o
-                0x0000000000237878                _ZN11EventLogger8instanceE
- *fill*         0x0000000000237881        0x3 00
- .bss           0x0000000000237884        0x1 ./Logging/JsonLogProvider.o
- *fill*         0x0000000000237885        0x3 00
- .bss           0x0000000000237888        0x1 ./Logging/SysLogProvider.o
- *fill*         0x0000000000237889        0x3 00
- .bss           0x000000000023788c        0x0 /usr/lib/gcc/x86_64-linux-gnu/4.6/crtendS.o
- .bss           0x000000000023788c        0x0 /usr/lib/gcc/x86_64-linux-gnu/4.6/../../../x86_64-linux-gnu/crtn.o
+ .bss           0x0000000000227528        0x0 /usr/lib/gcc/x86_64-linux-gnu/4.6/../../../x86_64-linux-gnu/crti.o
+ .bss           0x0000000000227528       0x10 /usr/lib/gcc/x86_64-linux-gnu/4.6/crtbeginS.o
+ .bss           0x0000000000227538        0x1 ./BaseDevice.o
+ *fill*         0x0000000000227539        0x3 00
+ .bss           0x000000000022753c        0x1 ./BaseDriver.o
+ *fill*         0x000000000022753d        0x3 00
+ .bss           0x0000000000227540        0x1 ./Command.o
+ *fill*         0x0000000000227541        0x7 00
+ .bss           0x0000000000227548        0x9 ./Configuration.o
+                0x0000000000227548                _ZN13Configuration8instanceE
+ *fill*         0x0000000000227551        0x3 00
+ .bss           0x0000000000227554        0x1 ./ConnectionPoint.o
+ *fill*         0x0000000000227555        0x3 00
+ .bss           0x0000000000227558        0x1 ./Convert.o
+ *fill*         0x0000000000227559        0x3 00
+ .bss           0x000000000022755c        0x1 ./DataSerializationManager.o
+ *fill*         0x000000000022755d        0x3 00
+ .bss           0x0000000000227560        0x1 ./Event.o
+ *fill*         0x0000000000227561        0x3 00
+ .bss           0x0000000000227564        0x1 ./InConnectionPoint.o
+ *fill*         0x0000000000227565        0x3 00
+ .bss           0x0000000000227568      0x210 ./JsonParameters.o
+                0x0000000000227568                _ZN14JsonParameters12SettingValueE
+                0x0000000000227570                _ZN14JsonParameters15SettingDataTypeE
+                0x0000000000227578                _ZN14JsonParameters11SettingNameE
+                0x0000000000227580                _ZN14JsonParameters12ErrorMessageE
+                0x0000000000227588                _ZN14JsonParameters9ErrorCodeE
+                0x0000000000227590                _ZN14JsonParameters15OperationStatusE
+                0x0000000000227598                _ZN14JsonParameters22CustomDeviceAddOnPropsE
+                0x00000000002275a0                _ZN14JsonParameters20CustomDeviceBaseTypeE
+                0x00000000002275a8                _ZN14JsonParameters16CustomDeviceNameE
+                0x00000000002275b0                _ZN14JsonParameters12CustomDeviceE
+                0x00000000002275b8                _ZN14JsonParameters14ConnPointLabelE
+                0x00000000002275c0                _ZN14JsonParameters25DevicePropertyDescriptionE
+                0x00000000002275c8                _ZN14JsonParameters18DevicePropertyTypeE
+                0x00000000002275d0                _ZN14JsonParameters19DevicePropertyValueE
+                0x00000000002275d8                _ZN14JsonParameters17DevicePropertyKeyE
+                0x00000000002275e0                _ZN14JsonParameters16DevicePropertiesE
+                0x00000000002275e8                _ZN14JsonParameters21OutConnPointDirectionE
+                0x00000000002275f0                _ZN14JsonParameters20InConnPointDirectionE
+                0x00000000002275f8                _ZN14JsonParameters11DescriptionE
+                0x0000000000227600                _ZN14JsonParameters9ParameterE
+                0x0000000000227608                _ZN14JsonParameters6PinoutE
+                0x0000000000227610                _ZN14JsonParameters7PinoutsE
+                0x0000000000227618                _ZN14JsonParameters9DirectionE
+                0x0000000000227620                _ZN14JsonParameters20ConnectionPointValueE
+                0x0000000000227628                _ZN14JsonParameters15ConnectionPointE
+                0x0000000000227630                _ZN14JsonParameters22DeviceConnectionPointsE
+                0x0000000000227638                _ZN14JsonParameters16ProgramIsRunningE
+                0x0000000000227640                _ZN14JsonParameters16ProgramAutoStartE
+                0x0000000000227648                _ZN14JsonParameters9ProgramIdE
+                0x0000000000227650                _ZN14JsonParameters11ProgramNameE
+                0x0000000000227658                _ZN14JsonParameters15ParameterTargetE
+                0x0000000000227660                _ZN14JsonParameters15ParameterSourceE
+                0x0000000000227668                _ZN14JsonParameters17ConnectionPointIdE
+                0x0000000000227670                _ZN14JsonParameters8DeviceIdE
+                0x0000000000227678                _ZN14JsonParameters8PinoutIdE
+                0x0000000000227680                _ZN14JsonParameters10DriverTypeE
+                0x0000000000227688                _ZN14JsonParameters10ParametersE
+                0x0000000000227690                _ZN14JsonParameters6TargetE
+                0x0000000000227698                _ZN14JsonParameters6SourceE
+                0x00000000002276a0                _ZN14JsonParameters12EventMappingE
+                0x00000000002276a8                _ZN14JsonParameters14CommandMappingE
+                0x00000000002276b0                _ZN14JsonParameters18ProgramDescriptionE
+                0x00000000002276b8                _ZN14JsonParameters9ProjectIdE
+                0x00000000002276c0                _ZN14JsonParameters2IdE
+                0x00000000002276c8                _ZN14JsonParameters23UpcbWireConnectionPointE
+                0x00000000002276d0                _ZN14JsonParameters16ConnectionPointsE
+                0x00000000002276d8                _ZN14JsonParameters9PowerWireE
+                0x00000000002276e0                _ZN14JsonParameters10DeviceTypeE
+                0x00000000002276e8                _ZN14JsonParameters6DeviceE
+                0x00000000002276f0                _ZN14JsonParameters7DevicesE
+                0x00000000002276f8                _ZN14JsonParameters4WireE
+                0x0000000000227700                _ZN14JsonParameters5WiresE
+                0x0000000000227708                _ZN14JsonParameters7MappingE
+                0x0000000000227710                _ZN14JsonParameters7ProgramE
+                0x0000000000227718                _ZN14JsonParameters6DriverE
+                0x0000000000227720                _ZN14JsonParameters5ValueE
+                0x0000000000227728                _ZN14JsonParameters8DataTypeE
+                0x0000000000227730                _ZN14JsonParameters3KeyE
+                0x0000000000227738                _ZN14JsonParameters15EventParametersE
+                0x0000000000227740                _ZN14JsonParameters6EventsE
+                0x0000000000227748                _ZN14JsonParameters5EventE
+                0x0000000000227750                _ZN14JsonParameters8CommandsE
+                0x0000000000227758                _ZN14JsonParameters7CommandE
+                0x0000000000227760                _ZN14JsonParameters13CmdParametersE
+                0x0000000000227768                _ZN14JsonParameters11DisplayNameE
+                0x0000000000227770                _ZN14JsonParameters4NameE
+ .bss           0x0000000000227778        0x1 ./LogEntry.o
+ *fill*         0x0000000000227779        0x3 00
+ .bss           0x000000000022777c        0x1 ./OutConnectionPoint.o
+ *fill*         0x000000000022777d        0x3 00
+ .bss           0x0000000000227780        0x1 ./Pinout.o
+ *fill*         0x0000000000227781        0x3 00
+ .bss           0x0000000000227784        0x1 ./Process.o
+ *fill*         0x0000000000227785        0x3 00
+ .bss           0x0000000000227788        0x1 ./Program.o
+ *fill*         0x0000000000227789        0x3 00
+ .bss           0x000000000022778c        0x1 ./Wire.o
+ *fill*         0x000000000022778d        0x3 00
+ .bss           0x0000000000227790        0x0 ./Logging/BaseLogProvider.o
+ .bss           0x0000000000227790        0x9 ./Logging/EventLogger.o
+                0x0000000000227790                _ZN11EventLogger8instanceE
+ *fill*         0x0000000000227799        0x3 00
+ .bss           0x000000000022779c        0x1 ./Logging/JsonLogProvider.o
+ *fill*         0x000000000022779d        0x3 00
+ .bss           0x00000000002277a0        0x1 ./Logging/SysLogProvider.o
+ *fill*         0x00000000002277a1        0x3 00
+ .bss           0x00000000002277a4        0x0 /usr/lib/gcc/x86_64-linux-gnu/4.6/crtendS.o
+ .bss           0x00000000002277a4        0x0 /usr/lib/gcc/x86_64-linux-gnu/4.6/../../../x86_64-linux-gnu/crtn.o
  *(COMMON)
-                0x0000000000237890                . = ALIGN ((. != 0x0)?0x8:0x1)
- *fill*         0x000000000023788c        0x4 00
+                0x00000000002277a8                . = ALIGN ((. != 0x0)?0x8:0x1)
+ *fill*         0x00000000002277a4        0x4 00
 
 .lbss
  *(.dynlbss)
  *(.lbss .lbss.* .gnu.linkonce.lb.*)
  *(LARGE_COMMON)
-                0x0000000000237890                . = ALIGN (0x8)
+                0x00000000002277a8                . = ALIGN (0x8)
 
 .lrodata
  *(.lrodata .lrodata.* .gnu.linkonce.lr.*)
 
-.ldata          0x0000000000637890        0x0
+.ldata          0x00000000006277a8        0x0
  *(.ldata .ldata.* .gnu.linkonce.l.*)
-                0x0000000000637890                . = ALIGN ((. != 0x0)?0x8:0x1)
-                0x0000000000637890                . = ALIGN (0x8)
-                0x0000000000637890                _end = .
-                0x0000000000637890                PROVIDE (end, .)
-                0x0000000000637890                . = DATA_SEGMENT_END (.)
+                0x00000000006277a8                . = ALIGN ((. != 0x0)?0x8:0x1)
+                0x00000000006277a8                . = ALIGN (0x8)
+                0x00000000006277a8                _end = .
+                0x00000000006277a8                PROVIDE (end, .)
+                0x00000000006277a8                . = DATA_SEGMENT_END (.)
 
 .stab
  *(.stab)
@@ -1822,232 +1643,232 @@ LOAD /usr/lib/gcc/x86_64-linux-gnu/4.6/../../../x86_64-linux-gnu/crtn.o
 .debug_sfnames
  *(.debug_sfnames)
 
-.debug_aranges  0x0000000000000000      0x920
+.debug_aranges  0x0000000000000000      0x6c0
  *(.debug_aranges)
  .debug_aranges
-                0x0000000000000000       0xf0 ./BaseDevice.o
+                0x0000000000000000       0x80 ./BaseDevice.o
  .debug_aranges
-                0x00000000000000f0       0xd0 ./BaseDriver.o
+                0x0000000000000080       0x80 ./BaseDriver.o
  .debug_aranges
-                0x00000000000001c0       0x90 ./Command.o
+                0x0000000000000100       0x60 ./Command.o
  .debug_aranges
-                0x0000000000000250       0x90 ./Configuration.o
+                0x0000000000000160       0x90 ./Configuration.o
  .debug_aranges
-                0x00000000000002e0       0x70 ./ConnectionPoint.o
+                0x00000000000001f0       0x50 ./ConnectionPoint.o
  .debug_aranges
-                0x0000000000000350       0x40 ./Convert.o
+                0x0000000000000240       0x40 ./Convert.o
  .debug_aranges
-                0x0000000000000390       0x40 ./DataSerializationManager.o
+                0x0000000000000280       0x40 ./DataSerializationManager.o
  .debug_aranges
-                0x00000000000003d0       0x90 ./Event.o
+                0x00000000000002c0       0x60 ./Event.o
  .debug_aranges
-                0x0000000000000460       0x40 ./InConnectionPoint.o
+                0x0000000000000320       0x40 ./InConnectionPoint.o
  .debug_aranges
-                0x00000000000004a0       0x30 ./JsonParameters.o
+                0x0000000000000360       0x30 ./JsonParameters.o
  .debug_aranges
-                0x00000000000004d0       0x40 ./LogEntry.o
+                0x0000000000000390       0x40 ./LogEntry.o
  .debug_aranges
-                0x0000000000000510       0x40 ./OutConnectionPoint.o
+                0x00000000000003d0       0x40 ./OutConnectionPoint.o
  .debug_aranges
-                0x0000000000000550       0xd0 ./Pinout.o
+                0x0000000000000410       0x60 ./Pinout.o
  .debug_aranges
-                0x0000000000000620       0x90 ./Process.o
+                0x0000000000000470       0x90 ./Process.o
  .debug_aranges
-                0x00000000000006b0       0xf0 ./Program.o
+                0x0000000000000500       0x40 ./Program.o
  .debug_aranges
-                0x00000000000007a0       0x40 ./Wire.o
+                0x0000000000000540       0x40 ./Wire.o
  .debug_aranges
-                0x00000000000007e0       0x30 ./Logging/BaseLogProvider.o
+                0x0000000000000580       0x30 ./Logging/BaseLogProvider.o
  .debug_aranges
-                0x0000000000000810       0x80 ./Logging/EventLogger.o
+                0x00000000000005b0       0x80 ./Logging/EventLogger.o
  .debug_aranges
-                0x0000000000000890       0x50 ./Logging/JsonLogProvider.o
+                0x0000000000000630       0x50 ./Logging/JsonLogProvider.o
  .debug_aranges
-                0x00000000000008e0       0x40 ./Logging/SysLogProvider.o
+                0x0000000000000680       0x40 ./Logging/SysLogProvider.o
 
 .debug_pubnames
  *(.debug_pubnames)
 
-.debug_info     0x0000000000000000   0x1108d9
+.debug_info     0x0000000000000000    0x9c664
  *(.debug_info .gnu.linkonce.wi.*)
- .debug_info    0x0000000000000000    0x2831a ./BaseDevice.o
- .debug_info    0x000000000002831a    0x17757 ./BaseDriver.o
- .debug_info    0x000000000003fa71    0x149ee ./Command.o
- .debug_info    0x000000000005445f     0xd2ae ./Configuration.o
- .debug_info    0x000000000006170d     0xbe8d ./ConnectionPoint.o
- .debug_info    0x000000000006d59a     0x4b4d ./Convert.o
- .debug_info    0x00000000000720e7     0x54ce ./DataSerializationManager.o
- .debug_info    0x00000000000775b5    0x14410 ./Event.o
- .debug_info    0x000000000008b9c5     0x41f2 ./InConnectionPoint.o
- .debug_info    0x000000000008fbb7     0x369d ./JsonParameters.o
- .debug_info    0x0000000000093254     0x3806 ./LogEntry.o
- .debug_info    0x0000000000096a5a     0x420b ./OutConnectionPoint.o
- .debug_info    0x000000000009ac65    0x202ed ./Pinout.o
- .debug_info    0x00000000000baf52    0x10218 ./Process.o
- .debug_info    0x00000000000cb16a    0x26e3c ./Program.o
- .debug_info    0x00000000000f1fa6     0x8e15 ./Wire.o
- .debug_info    0x00000000000fadbb      0x335 ./Logging/BaseLogProvider.o
- .debug_info    0x00000000000fb0f0     0xb087 ./Logging/EventLogger.o
- .debug_info    0x0000000000106177     0x8c64 ./Logging/JsonLogProvider.o
- .debug_info    0x000000000010eddb     0x1afe ./Logging/SysLogProvider.o
+ .debug_info    0x0000000000000000    0x12d40 ./BaseDevice.o
+ .debug_info    0x0000000000012d40     0x910d ./BaseDriver.o
+ .debug_info    0x000000000001be4d     0xa39e ./Command.o
+ .debug_info    0x00000000000261eb     0xd2ae ./Configuration.o
+ .debug_info    0x0000000000033499     0x5c1e ./ConnectionPoint.o
+ .debug_info    0x00000000000390b7     0x4b4d ./Convert.o
+ .debug_info    0x000000000003dc04     0x54ce ./DataSerializationManager.o
+ .debug_info    0x00000000000430d2     0x9e9a ./Event.o
+ .debug_info    0x000000000004cf6c     0x41eb ./InConnectionPoint.o
+ .debug_info    0x0000000000051157     0x369d ./JsonParameters.o
+ .debug_info    0x00000000000547f4     0x3806 ./LogEntry.o
+ .debug_info    0x0000000000057ffa     0x4204 ./OutConnectionPoint.o
+ .debug_info    0x000000000005c1fe     0xeac3 ./Pinout.o
+ .debug_info    0x000000000006acc1    0x10218 ./Process.o
+ .debug_info    0x000000000007aed9     0x7b5f ./Program.o
+ .debug_info    0x0000000000082a38     0x410e ./Wire.o
+ .debug_info    0x0000000000086b46      0x335 ./Logging/BaseLogProvider.o
+ .debug_info    0x0000000000086e7b     0xb087 ./Logging/EventLogger.o
+ .debug_info    0x0000000000091f02     0x8c64 ./Logging/JsonLogProvider.o
+ .debug_info    0x000000000009ab66     0x1afe ./Logging/SysLogProvider.o
 
-.debug_abbrev   0x0000000000000000     0xa889
+.debug_abbrev   0x0000000000000000     0xa27a
  *(.debug_abbrev)
- .debug_abbrev  0x0000000000000000      0xb4a ./BaseDevice.o
- .debug_abbrev  0x0000000000000b4a      0x916 ./BaseDriver.o
- .debug_abbrev  0x0000000000001460      0x9f9 ./Command.o
- .debug_abbrev  0x0000000000001e59      0xa2a ./Configuration.o
- .debug_abbrev  0x0000000000002883      0x9d6 ./ConnectionPoint.o
- .debug_abbrev  0x0000000000003259      0x7da ./Convert.o
- .debug_abbrev  0x0000000000003a33      0x871 ./DataSerializationManager.o
- .debug_abbrev  0x00000000000042a4      0x9cc ./Event.o
- .debug_abbrev  0x0000000000004c70      0x7bc ./InConnectionPoint.o
- .debug_abbrev  0x000000000000542c      0x56e ./JsonParameters.o
- .debug_abbrev  0x000000000000599a      0x750 ./LogEntry.o
- .debug_abbrev  0x00000000000060ea      0x7d4 ./OutConnectionPoint.o
- .debug_abbrev  0x00000000000068be      0xa0d ./Pinout.o
- .debug_abbrev  0x00000000000072cb      0xa73 ./Process.o
- .debug_abbrev  0x0000000000007d3e      0x9d2 ./Program.o
- .debug_abbrev  0x0000000000008710      0x953 ./Wire.o
- .debug_abbrev  0x0000000000009063      0x158 ./Logging/BaseLogProvider.o
- .debug_abbrev  0x00000000000091bb      0x9a9 ./Logging/EventLogger.o
- .debug_abbrev  0x0000000000009b64      0x8c5 ./Logging/JsonLogProvider.o
- .debug_abbrev  0x000000000000a429      0x460 ./Logging/SysLogProvider.o
+ .debug_abbrev  0x0000000000000000      0xaf4 ./BaseDevice.o
+ .debug_abbrev  0x0000000000000af4      0x890 ./BaseDriver.o
+ .debug_abbrev  0x0000000000001384      0x940 ./Command.o
+ .debug_abbrev  0x0000000000001cc4      0xa2a ./Configuration.o
+ .debug_abbrev  0x00000000000026ee      0x8b5 ./ConnectionPoint.o
+ .debug_abbrev  0x0000000000002fa3      0x7da ./Convert.o
+ .debug_abbrev  0x000000000000377d      0x871 ./DataSerializationManager.o
+ .debug_abbrev  0x0000000000003fee      0x8f1 ./Event.o
+ .debug_abbrev  0x00000000000048df      0x7bc ./InConnectionPoint.o
+ .debug_abbrev  0x000000000000509b      0x56e ./JsonParameters.o
+ .debug_abbrev  0x0000000000005609      0x750 ./LogEntry.o
+ .debug_abbrev  0x0000000000005d59      0x7d4 ./OutConnectionPoint.o
+ .debug_abbrev  0x000000000000652d      0x991 ./Pinout.o
+ .debug_abbrev  0x0000000000006ebe      0xa73 ./Process.o
+ .debug_abbrev  0x0000000000007931      0x92a ./Program.o
+ .debug_abbrev  0x000000000000825b      0x7f9 ./Wire.o
+ .debug_abbrev  0x0000000000008a54      0x158 ./Logging/BaseLogProvider.o
+ .debug_abbrev  0x0000000000008bac      0x9a9 ./Logging/EventLogger.o
+ .debug_abbrev  0x0000000000009555      0x8c5 ./Logging/JsonLogProvider.o
+ .debug_abbrev  0x0000000000009e1a      0x460 ./Logging/SysLogProvider.o
 
-.debug_line     0x0000000000000000    0x196c4
+.debug_line     0x0000000000000000    0x12619
  *(.debug_line)
- .debug_line    0x0000000000000000     0x2da4 ./BaseDevice.o
- .debug_line    0x0000000000002da4     0x1a5d ./BaseDriver.o
- .debug_line    0x0000000000004801     0x20c6 ./Command.o
- .debug_line    0x00000000000068c7     0x1767 ./Configuration.o
- .debug_line    0x000000000000802e     0x161d ./ConnectionPoint.o
- .debug_line    0x000000000000964b      0xce4 ./Convert.o
- .debug_line    0x000000000000a32f      0xbd4 ./DataSerializationManager.o
- .debug_line    0x000000000000af03     0x1f5c ./Event.o
- .debug_line    0x000000000000ce5f      0xc32 ./InConnectionPoint.o
- .debug_line    0x000000000000da91      0x6f7 ./JsonParameters.o
- .debug_line    0x000000000000e188      0x819 ./LogEntry.o
- .debug_line    0x000000000000e9a1      0xc2c ./OutConnectionPoint.o
- .debug_line    0x000000000000f5cd     0x24a8 ./Pinout.o
- .debug_line    0x0000000000011a75     0x1b15 ./Process.o
- .debug_line    0x000000000001358a     0x293a ./Program.o
- .debug_line    0x0000000000015ec4      0xc4d ./Wire.o
- .debug_line    0x0000000000016b11       0x72 ./Logging/BaseLogProvider.o
- .debug_line    0x0000000000016b83     0x11a6 ./Logging/EventLogger.o
- .debug_line    0x0000000000017d29     0x109a ./Logging/JsonLogProvider.o
- .debug_line    0x0000000000018dc3      0x901 ./Logging/SysLogProvider.o
+ .debug_line    0x0000000000000000     0x19e1 ./BaseDevice.o
+ .debug_line    0x00000000000019e1      0xd76 ./BaseDriver.o
+ .debug_line    0x0000000000002757     0x1334 ./Command.o
+ .debug_line    0x0000000000003a8b     0x1767 ./Configuration.o
+ .debug_line    0x00000000000051f2      0xe6b ./ConnectionPoint.o
+ .debug_line    0x000000000000605d      0xce4 ./Convert.o
+ .debug_line    0x0000000000006d41      0xbd4 ./DataSerializationManager.o
+ .debug_line    0x0000000000007915     0x11dc ./Event.o
+ .debug_line    0x0000000000008af1      0xc1d ./InConnectionPoint.o
+ .debug_line    0x000000000000970e      0x6f7 ./JsonParameters.o
+ .debug_line    0x0000000000009e05      0x819 ./LogEntry.o
+ .debug_line    0x000000000000a61e      0xc17 ./OutConnectionPoint.o
+ .debug_line    0x000000000000b235     0x134a ./Pinout.o
+ .debug_line    0x000000000000c57f     0x1b23 ./Process.o
+ .debug_line    0x000000000000e0a2      0xda8 ./Program.o
+ .debug_line    0x000000000000ee4a      0xc1c ./Wire.o
+ .debug_line    0x000000000000fa66       0x72 ./Logging/BaseLogProvider.o
+ .debug_line    0x000000000000fad8     0x11a6 ./Logging/EventLogger.o
+ .debug_line    0x0000000000010c7e     0x109a ./Logging/JsonLogProvider.o
+ .debug_line    0x0000000000011d18      0x901 ./Logging/SysLogProvider.o
 
 .debug_frame
  *(.debug_frame)
 
-.debug_str      0x0000000000000000    0x29cae
+.debug_str      0x0000000000000000    0x1bee6
  *(.debug_str)
- .debug_str     0x0000000000000000    0x1254d ./BaseDevice.o
-                                      0x12e91 (size before relaxing)
- .debug_str     0x000000000001254d     0x2450 ./BaseDriver.o
-                                       0xbfee (size before relaxing)
- .debug_str     0x000000000001499d     0x1981 ./Command.o
-                                       0x7baa (size before relaxing)
- .debug_str     0x000000000001631e     0x4b24 ./Configuration.o
-                                       0x741d (size before relaxing)
- .debug_str     0x000000000001ae42      0x4bf ./ConnectionPoint.o
-                                       0x4d81 (size before relaxing)
- .debug_str     0x000000000001b301      0x2c8 ./Convert.o
-                                       0x25aa (size before relaxing)
- .debug_str     0x000000000001b5c9      0x404 ./DataSerializationManager.o
-                                       0x2ebe (size before relaxing)
- .debug_str     0x000000000001b9cd      0x4e6 ./Event.o
-                                       0x7775 (size before relaxing)
- .debug_str     0x000000000001beb3      0x18e ./InConnectionPoint.o
-                                       0x24a8 (size before relaxing)
- .debug_str     0x000000000001c041      0xb78 ./JsonParameters.o
-                                       0x2a8d (size before relaxing)
- .debug_str     0x000000000001cbb9       0xc8 ./LogEntry.o
-                                       0x215b (size before relaxing)
- .debug_str     0x000000000001cc81      0x190 ./OutConnectionPoint.o
-                                       0x24ba (size before relaxing)
- .debug_str     0x000000000001ce11      0x27e ./Pinout.o
-                                       0xf4ad (size before relaxing)
- .debug_str     0x000000000001d08f     0x25f7 ./Process.o
-                                       0x6899 (size before relaxing)
- .debug_str     0x000000000001f686     0x5458 ./Program.o
-                                      0x1312a (size before relaxing)
- .debug_str     0x0000000000024ade      0x266 ./Wire.o
-                                       0x6f00 (size before relaxing)
- .debug_str     0x0000000000024d44      0x236 ./Logging/BaseLogProvider.o
-                                        0x2ad (size before relaxing)
- .debug_str     0x0000000000024f7a     0x45c3 ./Logging/EventLogger.o
-                                       0x7154 (size before relaxing)
- .debug_str     0x000000000002953d      0x577 ./Logging/JsonLogProvider.o
-                                       0x3ddb (size before relaxing)
- .debug_str     0x0000000000029ab4      0x1fa ./Logging/SysLogProvider.o
-                                        0xcec (size before relaxing)
+ .debug_str     0x0000000000000000     0x8b8e ./BaseDevice.o
+                                       0x9166 (size before relaxing)
+ .debug_str     0x0000000000008b8e     0x23f4 ./BaseDriver.o
+                                       0x4c40 (size before relaxing)
+ .debug_str     0x000000000000af82     0x196d ./Command.o
+                                       0x414a (size before relaxing)
+ .debug_str     0x000000000000c8ef     0x4be8 ./Configuration.o
+                                       0x7415 (size before relaxing)
+ .debug_str     0x00000000000114d7      0x47c ./ConnectionPoint.o
+                                       0x2885 (size before relaxing)
+ .debug_str     0x0000000000011953      0x2c8 ./Convert.o
+                                       0x25a2 (size before relaxing)
+ .debug_str     0x0000000000011c1b      0x440 ./DataSerializationManager.o
+                                       0x2eb6 (size before relaxing)
+ .debug_str     0x000000000001205b      0x4a2 ./Event.o
+                                       0x3da7 (size before relaxing)
+ .debug_str     0x00000000000124fd      0x18e ./InConnectionPoint.o
+                                       0x24a0 (size before relaxing)
+ .debug_str     0x000000000001268b      0xb94 ./JsonParameters.o
+                                       0x2a85 (size before relaxing)
+ .debug_str     0x000000000001321f       0xc8 ./LogEntry.o
+                                       0x2153 (size before relaxing)
+ .debug_str     0x00000000000132e7      0x190 ./OutConnectionPoint.o
+                                       0x24b2 (size before relaxing)
+ .debug_str     0x0000000000013477      0x245 ./Pinout.o
+                                       0x76f2 (size before relaxing)
+ .debug_str     0x00000000000136bc     0x25fd ./Process.o
+                                       0x6891 (size before relaxing)
+ .debug_str     0x0000000000015cb9     0x1067 ./Program.o
+                                       0x4a10 (size before relaxing)
+ .debug_str     0x0000000000016d20      0x25c ./Wire.o
+                                       0x2841 (size before relaxing)
+ .debug_str     0x0000000000016f7c      0x236 ./Logging/BaseLogProvider.o
+                                        0x2a5 (size before relaxing)
+ .debug_str     0x00000000000171b2     0x45c3 ./Logging/EventLogger.o
+                                       0x714c (size before relaxing)
+ .debug_str     0x000000000001b775      0x577 ./Logging/JsonLogProvider.o
+                                       0x3dd3 (size before relaxing)
+ .debug_str     0x000000000001bcec      0x1fa ./Logging/SysLogProvider.o
+                                        0xce4 (size before relaxing)
 
-.debug_loc      0x0000000000000000   0x112405
+.debug_loc      0x0000000000000000    0x899cc
  *(.debug_loc)
- .debug_loc     0x0000000000000000    0x315d7 ./BaseDevice.o
- .debug_loc     0x00000000000315d7    0x14bf3 ./BaseDriver.o
- .debug_loc     0x00000000000461ca    0x1e634 ./Command.o
- .debug_loc     0x00000000000647fe     0xd6d6 ./Configuration.o
- .debug_loc     0x0000000000071ed4    0x140a5 ./ConnectionPoint.o
- .debug_loc     0x0000000000085f79     0x29ce ./Convert.o
- .debug_loc     0x0000000000088947     0x141b ./DataSerializationManager.o
- .debug_loc     0x0000000000089d62    0x1ec23 ./Event.o
- .debug_loc     0x00000000000a8985     0x19b6 ./InConnectionPoint.o
- .debug_loc     0x00000000000aa33b       0xc5 ./JsonParameters.o
- .debug_loc     0x00000000000aa400      0x970 ./LogEntry.o
- .debug_loc     0x00000000000aad70     0x19c9 ./OutConnectionPoint.o
- .debug_loc     0x00000000000ac739    0x1ea9f ./Pinout.o
- .debug_loc     0x00000000000cb1d8    0x143a8 ./Process.o
- .debug_loc     0x00000000000df580    0x22995 ./Program.o
- .debug_loc     0x0000000000101f15     0x13f5 ./Wire.o
- .debug_loc     0x000000000010330a       0x95 ./Logging/BaseLogProvider.o
- .debug_loc     0x000000000010339f     0x7146 ./Logging/EventLogger.o
- .debug_loc     0x000000000010a4e5     0x79d3 ./Logging/JsonLogProvider.o
- .debug_loc     0x0000000000111eb8      0x54d ./Logging/SysLogProvider.o
+ .debug_loc     0x0000000000000000    0x1c47a ./BaseDevice.o
+ .debug_loc     0x000000000001c47a     0x5f6d ./BaseDriver.o
+ .debug_loc     0x00000000000223e7     0xe580 ./Command.o
+ .debug_loc     0x0000000000030967     0xd6d6 ./Configuration.o
+ .debug_loc     0x000000000003e03d     0x4b89 ./ConnectionPoint.o
+ .debug_loc     0x0000000000042bc6     0x29ce ./Convert.o
+ .debug_loc     0x0000000000045594     0x142e ./DataSerializationManager.o
+ .debug_loc     0x00000000000469c2     0xed17 ./Event.o
+ .debug_loc     0x00000000000556d9     0x19b6 ./InConnectionPoint.o
+ .debug_loc     0x000000000005708f       0xc5 ./JsonParameters.o
+ .debug_loc     0x0000000000057154      0x970 ./LogEntry.o
+ .debug_loc     0x0000000000057ac4     0x19c9 ./OutConnectionPoint.o
+ .debug_loc     0x000000000005948d     0xa770 ./Pinout.o
+ .debug_loc     0x0000000000063bfd    0x143a8 ./Process.o
+ .debug_loc     0x0000000000077fa5     0x1501 ./Program.o
+ .debug_loc     0x00000000000794a6     0x142b ./Wire.o
+ .debug_loc     0x000000000007a8d1       0x95 ./Logging/BaseLogProvider.o
+ .debug_loc     0x000000000007a966     0x7146 ./Logging/EventLogger.o
+ .debug_loc     0x0000000000081aac     0x79d3 ./Logging/JsonLogProvider.o
+ .debug_loc     0x000000000008947f      0x54d ./Logging/SysLogProvider.o
 
-.debug_macinfo  0x0000000000000000   0x1235c0
+.debug_macinfo  0x0000000000000000   0x123527
  *(.debug_macinfo)
  .debug_macinfo
-                0x0000000000000000    0x1085a ./BaseDevice.o
+                0x0000000000000000    0x1086e ./BaseDevice.o
  .debug_macinfo
-                0x000000000001085a     0xe5b1 ./BaseDriver.o
+                0x000000000001086e     0xe597 ./BaseDriver.o
  .debug_macinfo
-                0x000000000001ee0b     0xedca ./Command.o
+                0x000000000001ee05     0xedb0 ./Command.o
  .debug_macinfo
-                0x000000000002dbd5     0xf996 ./Configuration.o
+                0x000000000002dbb5     0xf996 ./Configuration.o
  .debug_macinfo
-                0x000000000003d56b    0x10011 ./ConnectionPoint.o
+                0x000000000003d54b     0xfff6 ./ConnectionPoint.o
  .debug_macinfo
-                0x000000000004d57c     0xf498 ./Convert.o
+                0x000000000004d541     0xf498 ./Convert.o
  .debug_macinfo
-                0x000000000005ca14     0xf8d7 ./DataSerializationManager.o
+                0x000000000005c9d9     0xf8d7 ./DataSerializationManager.o
  .debug_macinfo
-                0x000000000006c2eb     0xe7aa ./Event.o
+                0x000000000006c2b0     0xe790 ./Event.o
  .debug_macinfo
-                0x000000000007aa95    0x1001b ./InConnectionPoint.o
+                0x000000000007aa40    0x10000 ./InConnectionPoint.o
  .debug_macinfo
-                0x000000000008aab0     0xd030 ./JsonParameters.o
+                0x000000000008aa40     0xd030 ./JsonParameters.o
  .debug_macinfo
-                0x0000000000097ae0     0xd3dc ./LogEntry.o
+                0x0000000000097a70     0xd3dc ./LogEntry.o
  .debug_macinfo
-                0x00000000000a4ebc    0x10033 ./OutConnectionPoint.o
+                0x00000000000a4e4c    0x10018 ./OutConnectionPoint.o
  .debug_macinfo
-                0x00000000000b4eef     0xee51 ./Pinout.o
+                0x00000000000b4e64     0xee36 ./Pinout.o
  .debug_macinfo
-                0x00000000000c3d40    0x10a0e ./Process.o
+                0x00000000000c3c9a    0x10a22 ./Process.o
  .debug_macinfo
-                0x00000000000d474e    0x109e7 ./Program.o
+                0x00000000000d46bc    0x109fb ./Program.o
  .debug_macinfo
-                0x00000000000e5135    0x102fb ./Wire.o
+                0x00000000000e50b7    0x102e0 ./Wire.o
  .debug_macinfo
-                0x00000000000f5430     0x1848 ./Logging/BaseLogProvider.o
+                0x00000000000f5397     0x1848 ./Logging/BaseLogProvider.o
  .debug_macinfo
-                0x00000000000f6c78     0xecb3 ./Logging/EventLogger.o
+                0x00000000000f6bdf     0xecb3 ./Logging/EventLogger.o
  .debug_macinfo
-                0x000000000010592b     0xf327 ./Logging/JsonLogProvider.o
+                0x0000000000105892     0xf327 ./Logging/JsonLogProvider.o
  .debug_macinfo
-                0x0000000000114c52     0xe96e ./Logging/SysLogProvider.o
+                0x0000000000114bb9     0xe96e ./Logging/SysLogProvider.o
 
 .debug_weaknames
  *(.debug_weaknames)
@@ -2064,27 +1885,27 @@ LOAD /usr/lib/gcc/x86_64-linux-gnu/4.6/../../../x86_64-linux-gnu/crtn.o
 .debug_pubtypes
  *(.debug_pubtypes)
 
-.debug_ranges   0x0000000000000000    0x509a0
+.debug_ranges   0x0000000000000000    0x1cd70
  *(.debug_ranges)
- .debug_ranges  0x0000000000000000     0xef00 ./BaseDevice.o
- .debug_ranges  0x000000000000ef00     0x7670 ./BaseDriver.o
- .debug_ranges  0x0000000000016570     0x7420 ./Command.o
- .debug_ranges  0x000000000001d990     0x3f00 ./Configuration.o
- .debug_ranges  0x0000000000021890     0x3640 ./ConnectionPoint.o
- .debug_ranges  0x0000000000024ed0      0xaf0 ./Convert.o
- .debug_ranges  0x00000000000259c0      0x7c0 ./DataSerializationManager.o
- .debug_ranges  0x0000000000026180     0x74c0 ./Event.o
- .debug_ranges  0x000000000002d640      0x5e0 ./InConnectionPoint.o
- .debug_ranges  0x000000000002dc20       0x80 ./JsonParameters.o
- .debug_ranges  0x000000000002dca0      0x220 ./LogEntry.o
- .debug_ranges  0x000000000002dec0      0x5e0 ./OutConnectionPoint.o
- .debug_ranges  0x000000000002e4a0     0x9c20 ./Pinout.o
- .debug_ranges  0x00000000000380c0     0x3b90 ./Process.o
- .debug_ranges  0x000000000003bc50    0x10460 ./Program.o
- .debug_ranges  0x000000000004c0b0      0x5d0 ./Wire.o
- .debug_ranges  0x000000000004c680     0x1e50 ./Logging/EventLogger.o
- .debug_ranges  0x000000000004e4d0     0x22b0 ./Logging/JsonLogProvider.o
- .debug_ranges  0x0000000000050780      0x220 ./Logging/SysLogProvider.o
+ .debug_ranges  0x0000000000000000     0x3ee0 ./BaseDevice.o
+ .debug_ranges  0x0000000000003ee0     0x11c0 ./BaseDriver.o
+ .debug_ranges  0x00000000000050a0     0x2c80 ./Command.o
+ .debug_ranges  0x0000000000007d20     0x3f00 ./Configuration.o
+ .debug_ranges  0x000000000000bc20     0x11e0 ./ConnectionPoint.o
+ .debug_ranges  0x000000000000ce00      0xaf0 ./Convert.o
+ .debug_ranges  0x000000000000d8f0      0x7c0 ./DataSerializationManager.o
+ .debug_ranges  0x000000000000e0b0     0x2d50 ./Event.o
+ .debug_ranges  0x0000000000010e00      0x5e0 ./InConnectionPoint.o
+ .debug_ranges  0x00000000000113e0       0x80 ./JsonParameters.o
+ .debug_ranges  0x0000000000011460      0x220 ./LogEntry.o
+ .debug_ranges  0x0000000000011680      0x5e0 ./OutConnectionPoint.o
+ .debug_ranges  0x0000000000011c60     0x27c0 ./Pinout.o
+ .debug_ranges  0x0000000000014420     0x3b90 ./Process.o
+ .debug_ranges  0x0000000000017fb0      0x5c0 ./Program.o
+ .debug_ranges  0x0000000000018570      0x4e0 ./Wire.o
+ .debug_ranges  0x0000000000018a50     0x1e50 ./Logging/EventLogger.o
+ .debug_ranges  0x000000000001a8a0     0x22b0 ./Logging/JsonLogProvider.o
+ .debug_ranges  0x000000000001cb50      0x220 ./Logging/SysLogProvider.o
 
 .gnu.attributes
  *(.gnu.attributes)

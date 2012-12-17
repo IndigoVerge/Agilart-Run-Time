@@ -67,8 +67,6 @@ void ProgramManager::AddProgram( string json )
 
 	this->availablePrograms[program->Id()] = json;
 
-	//delete program;
-
 	//Save Program & Mapping:
 	string storageFolderPath = Configuration::Instance()->GetStringParam( PROGRAMS_STORAGE_DIR );
 
@@ -78,6 +76,8 @@ void ProgramManager::AddProgram( string json )
 
 	string programSavePath = storageFolderPath + "/" + program->Name() + ".xml";
 	DataSerializationManager::Save( json, programSavePath.c_str() );
+
+	// delete program;
 }
 
 void ProgramManager::AddProgramMapping( string json )
@@ -213,74 +213,6 @@ void ProgramManager::DeleteProgram( int programId )
 
 	DataSerializationManager::Delete( mappingSavePath.c_str() );
 	DataSerializationManager::Delete( programSavePath.c_str() );
-}
-
-Program* ProgramManager::CreateFromDescriptor( ProgramDescriptor* descriptor )
-{
-	int id;
-	string name;
-	string description;
-
-	DescriptorsUtil::GetIntProperty( descriptor->Properties, "Id", &id );
-	DescriptorsUtil::GetStringProperty( descriptor->Properties, "Name", &name );
-	DescriptorsUtil::GetStringProperty( descriptor->Properties, "Description",
-			&description );
-
-	Program* program = new Program( id, name, description );
-	string deviceType;
-	// ------ Initialize Devices:
-	list<DeviceDescriptor>::iterator deviceIt;
-	for ( deviceIt = descriptor->Devices.begin(); deviceIt
-			!= descriptor->Devices.end(); deviceIt++ )
-	{
-		BaseDevice* device = DeviceManager::Instance()->CreateFromDescriptor(
-				*deviceIt );
-
-		if( device == NULL )
-			return NULL;
-
-		program->AddDevice( device );
-	}
-	// ------- Initialize Wires:
-	list<WireDescriptor>::iterator wireIt;
-	list<WireConnectionPointDescriptor>::iterator cpIt; //connectionPointsIt
-
-	for ( wireIt = descriptor->Wires.begin(); wireIt != descriptor->Wires.end(); wireIt++ )
-	{
-		Wire* wire = new Wire();
-
-		for ( cpIt = ( *wireIt ).WireConnectionPoints.begin(); cpIt
-				!= ( *wireIt ).WireConnectionPoints.end(); cpIt++ )
-		{
-			BaseDevice* device = program->GetDevice(
-					( *cpIt ).DeviceDescriptorId );
-			ConnectionPoint* cp = device->GetConnectionPoint(
-					( *cpIt ).ConnectionPointDescriptorId );
-
-			wire->Attach( cp );
-		}
-
-		program->AddWire( wire );
-	}
-
-	// ------ Initialize the program's Power Wire:
-	list<WireConnectionPointDescriptor>* stratupPoints =
-			&descriptor->PowerWire.WireConnectionPoints;
-	for ( cpIt = stratupPoints->begin(); cpIt != stratupPoints->end(); cpIt++ )
-	{
-		int* startUpValue = new int( 1 );
-
-		BaseDevice* device = program->GetDevice( ( *cpIt ).DeviceDescriptorId );
-		ConnectionPoint* cp = device->GetConnectionPoint(
-				( *cpIt ).ConnectionPointDescriptorId );
-
-		InConnectionPoint* inConnectionPoint = (InConnectionPoint*) cp;
-		inConnectionPoint->SetValue( startUpValue );
-
-		program->PowerWire()->Attach( inConnectionPoint );
-	}
-
-	return program;
 }
 
 Program* ProgramManager::GetRunningProgram( int programId )
@@ -467,24 +399,6 @@ string ProgramManager::GetMapping( int programId )
 	string programMapping = this->programMappings[programId];
 
 	return programMapping;
-}
-
-list<ProgramDescriptor> ProgramManager::GetRunningProgramsStatus()
-{
-	map<int, Program*>::iterator i;
-	list<ProgramDescriptor> programs;
-/*
-	for ( i = this->runningPrograms.begin(); i != this->runningPrograms.end(); i++ )
-	{
-		Program* program = ((*i).second);
-		if( program != NULL )
-		{
-			ProgramDescriptor descriptor = program->GetStatusDescriptor();
-			programs.push_back( descriptor );
-		}
-	}*/
-
-	return programs;
 }
 
 string ProgramManager::GetProcessStatus( int id, string serviceBaseAddress )

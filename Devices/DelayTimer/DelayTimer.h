@@ -35,7 +35,6 @@
 #include <fcntl.h>
 #include <stdlib.h>
 
-#include "UPCBDescriptors.h"
 #include "Logging/EventLogger.h"
 #include "BaseDevice.h"
 #include "OutConnectionPoint.h"
@@ -59,7 +58,7 @@ class DelayTimer: public BaseDevice
 
 		virtual BaseDevice* CreateInstance();
 
-		virtual void InitializeFromDescriptor( list<PropertyDescriptor> );
+		virtual void InitializeFromDescriptor( list<Property> );
 		virtual void SetParameter( string parameterName, void* value );
 		DeviceParameter GetParameter( string parameterName );
 
@@ -69,8 +68,8 @@ class DelayTimer: public BaseDevice
 		virtual void CalculateOutputs();
 
 	private:
-		int interval; // In secconds
-		int timeLeft; // In secconds
+		int interval; // In seconds
+		int timeLeft; // In seconds
 		InConnectionPoint* inConnPoint;
 		OutConnectionPoint* outConnPoint;
 

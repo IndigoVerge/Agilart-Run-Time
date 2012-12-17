@@ -30,7 +30,6 @@
 
 #include "BaseDevice.h"
 #include "Wire.h"
-#include "UPCBDescriptors.h"
 
 using namespace std;
 
@@ -62,9 +61,6 @@ class Program
 		void AddWire( Wire* );
 		list<Wire*>* Wires();
 		Wire* PowerWire();
-
-		ProgramDescriptor GetDescriptor();
-		ProgramDescriptor GetStatusDescriptor();
 };
 
 #endif /* PROGRAM_H_ */

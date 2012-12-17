@@ -31,9 +31,6 @@
 #include "CommandMapping.h"
 #include "EventMapping.h"
 
-#include "../../gSOAP/DescriptorsUtil.h"
-#include "UPCBDescriptors.h"
-
 using namespace std;
 
 class PinoutMapping
@@ -48,7 +45,6 @@ class PinoutMapping
 
 	public:
 		PinoutMapping( int, int, string );
-		PinoutMapping( PinoutMappingDescriptor* );
 		PinoutMapping( const PinoutMapping& param )
 		{
 			this->driverType = param.driverType;

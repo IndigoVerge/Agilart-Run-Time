@@ -24,6 +24,14 @@
 #include <iostream>
 #include <sstream>
 #include "PluggableDriversProvider.h"
+#include "Logging/EventLogger.h"
+#include "Configuration.h"
+#include "Consts.h"
+#include "DataSerializationManager.h"
+#include "../UpcbJsonParser.h"
+
+#define CONFIG_Drivers_DIR "drivers"
+#define DRIVERS_ENTYPOINT_SMBNAME "CreateDrivers"
 
 using namespace std;
 
@@ -81,6 +89,88 @@ int PluggableDriversProvider::GetDlError( const char *message )
 	return 1;
 }
 
+bool PluggableDriversProvider::InitializeUploadedDrivers()
+{
+	string storageDir = Configuration::Instance()->GetStringParam(CONFIG_STORAGE_DIR);
+	string driversDir = storageDir + "/" + CONFIG_Drivers_DIR;
+	string libraryName;
+
+	DIR *dir;
+	struct dirent *ent;
+	dir = opendir ( driversDir.c_str() );
+
+	string homeDir = ".";
+	string parentDir = "..";
+
+	if (dir == NULL)
+	{
+		EventLogger::Instance()->WriteVerbose( "Could not open directory: %s.", driversDir.c_str() );
+		perror ("Could not open directory." );
+		return false;
+	}
+
+	/* go through the files and directories within the storage directory */
+	while ((ent = readdir (dir)) != NULL)
+	{
+		if( !strcmp(ent->d_name, homeDir.c_str()) || !strcmp(ent->d_name, parentDir.c_str()) )
+			continue;
+
+		libraryName = driversDir + "/" + (string)(ent->d_name);
+		this->LoadSharedLibrary( libraryName );
+	}
+
+	closedir (dir);
+
+	return true;
+}
+
+void PluggableDriversProvider::AddDriver( const char* key, BaseDriver* driver )
+{
+	map<const char*, BaseDriver*>::iterator it;
+
+	for( it = this->drivers.begin(); it != this->drivers.end(); it++ )
+	{
+		if( !strcmp((it)->first, key) )
+		{
+			EventLogger::Instance()->WriteVerbose(
+				"Adding the %s driver didn't succeed because a device with the same name already exists in the Pluggable Drivers Provider.", key );
+			return;
+		}
+	}
+
+	this->drivers[key] = driver;
+}
+
+bool PluggableDriversProvider::LoadSharedLibrary( string path )
+{
+	list<BaseDriver*> driversList;
+	void* driverLib = dlopen( path.c_str(), RTLD_LAZY );
+
+	if ( !driverLib )
+	{
+		this->GetDlError( "Cannot load library" );
+		return false;
+	}
+
+	create_drivers* create = (create_drivers*) dlsym( driverLib, DRIVERS_ENTYPOINT_SMBNAME );
+
+	if ( !create )
+	{
+		this->GetDlError( "Cannot load symbols" );
+		return false;
+	}
+
+	driversList = create();
+	list<BaseDriver*>::iterator it;
+
+	for ( it = driversList.begin(); it != driversList.end(); it++ )
+	{
+		this->AddDriver( ( *it )->Name(), *it );
+	}
+
+	return true;
+}
+
 bool PluggableDriversProvider::Initialize()
 {
 	string driversLocation = "libDrivers.so"; // use "man dlopen" to check where to put the file
@@ -110,6 +200,7 @@ bool PluggableDriversProvider::Initialize()
 		this->drivers[( *it )->Name()] = ( *it );
 	}
 
+	this->InitializeUploadedDrivers();
 	return true;
 }
 

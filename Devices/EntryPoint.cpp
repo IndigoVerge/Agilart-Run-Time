@@ -70,6 +70,7 @@ extern "C" list<BaseDevice*> CreateDevices()
 	ConstantDevice* constDev = new ConstantDevice();
 	ComparatorDevice* compDev = new ComparatorDevice();
 	CounterDevice* counterDevice = new CounterDevice();
+
 	CosmDevice* cosm = new CosmDevice();
 
 	devices.push_back( gpiDevice );

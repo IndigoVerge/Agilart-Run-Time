@@ -64,7 +64,6 @@ class Wire : IValueChanged, IRefreshValue
 		void Attach(ConnectionPoint *);
 		void Detach(ConnectionPoint *);
 
-		WireDescriptor GetDescriptor();
 		Wire* Clone();
 };
 

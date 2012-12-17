@@ -28,7 +28,6 @@
 #include "Command.h"
 #include "Event.h"
 #include "DriverCommand.h"
-#include "UPCBDescriptors.h"
 #include <list>
 
 using namespace std;
@@ -54,7 +53,6 @@ class BaseDriver : public DriverCommand
 		virtual std::list<Command> Commands() = 0;
 
 		virtual BaseDriver* Clone() = 0;
-		virtual DriverDescriptor GetDescriptor();
 		virtual string ToJson();
 };
 
