@@ -119,7 +119,7 @@ int SysfsInputDriver::GetGpioValue()
 		throw "Error in Sysfs GPIO get value";
 	}
 
-	return statusResult;
+	return newStatus;
 }
 
 void SysfsInputDriver::SignalPortstatusChanged()
@@ -135,7 +135,7 @@ void SysfsInputDriver::SignalPortstatusChanged()
 	sprintf( numstr, "%d", curStaus );
 	string curStausString = numstr;
 
-	string logMessage = "SysfsGenericGPIODriver - SignalPortstatusChanged Port: " + portNumberString +
+	string logMessage = "SysfsInputDriver - SignalPortstatusChanged Port: " + portNumberString +
 			" Status: " + curStausString;
 	EventLogger::Instance()->WriteInformation( logMessage.c_str() );
 
@@ -155,7 +155,7 @@ void SysfsInputDriver::StartPoolingForStatus()
 
 	if ( returnStatus != 0 )
 	{
-		cout << "Error creating SysfsGenericGPIODriver driver Common Resources Mutex!";
+		cout << "Error creating SysfsInputDriver driver Common Resources Mutex!";
 		return;
 	}
 
@@ -164,7 +164,7 @@ void SysfsInputDriver::StartPoolingForStatus()
 
 	if ( returnStatus != 0 )
 	{
-		cout << "Error creating SysfsGenericGPIODriver status update thread!";
+		cout << "Error creating SysfsInputDriver status update thread!";
 		return;
 	}
 }
@@ -176,19 +176,19 @@ void SysfsInputDriver::StopPoolingForStatus()
 	pthread_mutex_unlock( &this->commonResourcesMutex );
 
 	this->ClosePort( this->portNumber );
-	EventLogger::Instance()->WriteVerbose( "SysfsGenericGPIODriver - Stop thread succeeded. " );
+	EventLogger::Instance()->WriteVerbose( "SysfsInputDriver - Stop thread succeeded. " );
 }
 
 void SysfsInputDriver::ExecuteCommand( Command command )
 {
-	string logMessage = "SysfsGenericGPIODriver - Execute Command " + command.Name();
+	string logMessage = "SysfsInputDriver - Execute Command " + command.Name();
 	EventLogger::Instance()->WriteInformation( logMessage.c_str() );
 
 	if ( !strcmp( command.Name().c_str(), INIT_CMD ) )
 	{
 		int outFlag = 0;
 
-		CommandParameter* portnumberParam =	command.GetParameter( PORTNUMBER_KEY );
+		CommandParameter* portnumberParam =	command.GetParameter( GPIO_NUMBER_PARAM );
 
 		if ( this->portNumber != 0 )
 			this->ClosePort( this->portNumber );
@@ -243,6 +243,8 @@ Command* SysfsInputDriver::GetCommand( const char* name )
 
 int SysfsInputDriver::OpenPort( int portnumber, int isOutFlag )
 {
+	cout<<"OPEN PORT: "<<portnumber<<" isOut: "<<isOutFlag<<endl;
+
 	int exportResult =  0; // this->gpio_export( portnumber );
 
 	// if ( exportResult < 0 )
@@ -251,7 +253,8 @@ int SysfsInputDriver::OpenPort( int portnumber, int isOutFlag )
 	exportResult = this->gpio_set_dir( portnumber, isOutFlag );
 
 	if ( exportResult < 0 )
-		throw "Cannot set gpio direction";
+		cout<<"gpio_set_dir did not work!\n";
+		// throw "Cannot set gpio direction";
 
 	int fd, len;
 	char buf[MAX_BUF];
@@ -264,6 +267,8 @@ int SysfsInputDriver::OpenPort( int portnumber, int isOutFlag )
 		throw "Cannot access value";
 
 	this->gpioFD = fd;
+
+	cout<<"FD: "<<fd<<endl;
 
 	return 0;
 }
@@ -465,3 +470,4 @@ int SysfsInputDriver::gpio_fd_close( int fd )
 {
 	return close( fd );
 }
+
