@@ -26,8 +26,6 @@
 #define DATASERIALIZATIONMANAGER_H_
 
 #include <fstream>
-//#include <boost/archive/xml_oarchive.hpp>
-//#include <boost/archive/xml_iarchive.hpp>
 #include <string>
 
 #include "UPCBDescriptors.h"
@@ -39,12 +37,6 @@ public:
 
 	DataSerializationManager();
 	virtual ~DataSerializationManager();
-
-//	static void SaveProgram( const ProgramDescriptor&, const char* );
-//	static void LoadProgram( ProgramDescriptor&, const char*  );
-//
-//	static void SaveMapping( const ProgramMappingDescriptor&, const char* );
-//	static void LoadMapping( ProgramMappingDescriptor&, const char* );
 
 	static bool FileExists( const char* );
 

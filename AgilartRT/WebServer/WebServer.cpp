@@ -87,9 +87,7 @@ void WebServer::Stop()
 void* CallbackHandler(enum mg_event event, struct mg_connection *conn)
 {
   const struct mg_request_info *request_info = mg_get_request_info(conn);
-  EventLogger::Instance()->WriteVerbose("Executing: %s %s\n", request_info->request_method, request_info->uri);
-
-  // cout<< event <<" " << request_info->request_method <<endl;
+  // EventLogger::Instance()->WriteVerbose("Executing: %s %s\n", request_info->request_method, request_info->uri);
 
   if( event == MG_HTTP_ERROR ) {
 	  int http_reply_status_code = (long) request_info->ev_data;
@@ -99,11 +97,16 @@ void* CallbackHandler(enum mg_event event, struct mg_connection *conn)
 
 	  if( (string)request_info->request_method == "GET") {
 
+		  string url = (string)request_info->uri;
+		  if( url == "" || url == "/" )
+			  return NULL; // the request won't be handled - let mongoose find another way to handle it
+
 		  string query = "";
 		  if(request_info->query_string != NULL)
 			  query = (string)request_info->query_string;
 
-		  HttpGetHandler((string)request_info->uri, query, conn);
+		  if(HttpGetHandler((string)request_info->uri, query, conn) == 404)
+			  return NULL; // the request won't be handled - let mongoose find another way to handle it
 
 	  } else if( (string)request_info->request_method == "POST" || (string)request_info->request_method == "PUT" ) {
 
@@ -114,10 +117,10 @@ void* CallbackHandler(enum mg_event event, struct mg_connection *conn)
 		  }
 
 		  if(length != -1 ) {
-			  char* post_data = new char[length];
-			  int post_data_len =  mg_read(conn, post_data, length);
+			  char* post_data = new char[length+1];
+			  mg_read(conn, post_data, length);
 
-			  // cout<<"Data Red Length: "<<post_data_len<<endl<<"Content: "<<(string)post_data<<endl;
+			  post_data[length] = '\0';
 			  HttpPostHandler((string)request_info->uri, (string)post_data, conn);
 		  }
 	  } else if( (string)request_info->request_method == "DELETE") {
@@ -295,89 +298,60 @@ void SaveBoardSettings( string jsonDescription )
 
 	Configuration::Instance()->SaveSettings( settings );
 }
-/*
-int UpdateStatus()
+
+string GetDevicePropery( string query )
 {
-	char buf[256];
-
 	string result = "";
-	//char *s = strchr( soap->path, '?' );
-	// char *key = strtok( s, "=" );
-	char *value = strtok( NULL, ";" );
 
-	char* programName;
-	int deviceId;
-	char* propertyName;
-
-	programName = strtok( value, "." );
-	deviceId = atoi( strtok( NULL, "." ) );
-	propertyName = strtok( NULL, "." );
+	int programId = atoi( strtok( (char*)query.c_str(), "." ) );
+	int deviceId = atoi( strtok( NULL, "." ) );
+	char* propertyName = strtok( NULL, "." );
 
 	string propertyValue = "";
 
-	while ( value )
+	Program* program = ProgramManager::Instance()->GetRunningProgram( programId );
+	if ( program == NULL )
 	{
-		//TODO - get by id
-		Program* program = ProgramManager::Instance()->GetRunningProgram( 5 ); // programName );
-		if ( program == NULL )
-		{
-			sprintf( buf, "%s", "Program not started." );
-			// SEND
-			// soap_send( soap, buf );
+		cout<< "Program with id: "<<programId<<" is not started.\n";
+		EventLogger::Instance()->WriteVerbose( "Program with id: %d is not started.", programId );
 
-			return 200;
-		}
-
-		list<BaseDevice*>::iterator it;
-
-		for ( it = program->Devices()->begin(); it != program->Devices()->end(); it++ )
-		{
-			if ( ( *it )->Id() == deviceId )
-			{
-				//we have found the device we want -> set the Property we need
-				DeviceParameter value = ( *it )->GetParameter( propertyName );
-
-				if( value.IsInitialized() == true )
-				{
-					propertyValue = Convert::ToString( value.Value(), value.AgilartType() );
-				}
-				else
-				{
-					propertyValue = "0";
-				}
-
-				if ( result != "" )
-					result += "-";
-
-				result += propertyValue;
-
-				break;
-			}
-		}
-
-		programName = strtok( NULL, "." );
-		if ( programName == NULL )
-			break;
-		deviceId = atoi( strtok( NULL, "." ) );
-		propertyName = strtok( NULL, "." );
+		return "";
 	}
 
-	sprintf( buf, "%s", result.c_str() );
-	// SEND
-	// soap_response( soap, SOAP_HTML );
-	// soap_send( soap, buf );
-	// soap_end_send( soap );
-	return SOAP_OK;
+	list<BaseDevice*>::iterator it;
+
+	for ( it = program->Devices()->begin(); it != program->Devices()->end(); it++ )
+	{
+		if ( ( *it )->Id() == deviceId )
+		{
+			//we have found the device we want -> set the Property we need
+			DeviceParameter value = ( *it )->GetParameter( propertyName );
+
+			if( value.IsInitialized() == true )
+			{
+				propertyValue = Convert::ToString( value.Value(), value.AgilartType() );
+			}
+			else
+			{
+				propertyValue = "0";
+			}
+
+			if ( result != "" )
+				result += "-";
+
+			result += propertyValue;
+
+			break;
+		}
+	}
+
+	return result;
 }
 
-int SetScreenDeviceStatus( struct soap *soap )
+void SetScreenDeviceStatus( string query )
 {
-	char buf[256];
-
-	char *s = strchr( soap->path, '?' );
-
-	char *key = query_key( soap, &s );
-	char *value = query_val( soap, &s );
+	char *key = strtok( (char*)query.c_str(), "=" );
+	char *value = strtok( NULL, ";" );
 
 	int programId = atoi( strtok( key, "." ) );
 	int deviceId = atoi( strtok( NULL, "." ) );
@@ -388,12 +362,10 @@ int SetScreenDeviceStatus( struct soap *soap )
 	Program* program = ProgramManager::Instance()->GetRunningProgram( programId );
 	if ( program == NULL )
 	{
-		soap_response( soap, SOAP_HTML );
-		sprintf( buf, "%s", "Program not started." );
-		soap_send( soap, buf );
-		soap_end_send( soap );
+		cout<< "Program with id: "<<programId<<" is not started.\n";
+		EventLogger::Instance()->WriteVerbose("Program with id: %d is not started.", programId );
 
-		return SOAP_OK;
+		return;
 	}
 
 	list<BaseDevice*>::iterator it;
@@ -411,49 +383,12 @@ int SetScreenDeviceStatus( struct soap *soap )
 		}
 	}
 
-	soap_response( soap, SOAP_HTML );
-	sprintf( buf, "%s", "" );
-
 	if ( isFound == false )
-		sprintf( buf, "%s", "Device not found in the program definition." );
-
-	soap_send( soap, buf );
-	soap_end_send( soap );
-
-	return SOAP_OK;
-}
-
-
-int CopyFile( struct soap *soap, const char *name, const char *type )
-{
-	FILE *fd;
-	size_t r;
-	fd = fopen( name, "rb" );
-	if ( !fd )
-		return 404;
-	soap->http_content = type;
-	if ( soap_response( soap, SOAP_FILE ) )
 	{
-		soap_end_send( soap );
-		fclose( fd );
-		return soap->error;
+		cout<< "Device with id: "<<deviceId<<" is not available in program with id: "<<programId<<endl;
+		EventLogger::Instance()->WriteVerbose("Device with id: %d is not available in program with id: %d", deviceId, programId );
 	}
-	for ( ;; )
-	{
-		r = fread( soap->tmpbuf, 1, sizeof( soap->tmpbuf ), fd );
-		if ( !r )
-			break;
-		if ( soap_send_raw( soap, soap->tmpbuf, r ) )
-		{
-			soap_end_send( soap );
-			fclose( fd );
-			return soap->error;
-		}
-	}
-	fclose( fd );
-	return soap_end_send( soap );
 }
-*/
 
 string GetLogItems()
 {
@@ -564,7 +499,7 @@ string DeleteProgram( string id )
 
 string GetProcessStatus( string query, string id )
 {
-	string programName = GetRequestProgramName( query );
+	// string programName = GetRequestProgramName( query );
 	Program* program = ProgramManager::Instance()->GetRunningProgram( atoi( id.c_str() ) );
 	string jsonDescr;
 
@@ -692,34 +627,22 @@ int HttpGetHandler( string url, string query, struct mg_connection *conn )
 	string response = "";
 	string response_type = "application/x-javascript; charset=utf-8";
 
-	if ( url == "/GetStatus" )
-	{
-		// TODO return UpdateStatus();
-	}
-	else if ( url == "/SetStatus" )
-	{
-		// TODO return SetScreenDeviceStatus( soap );
-	}
-	else if( url == "/favicon.ico" )
-	{
-		return 403;
-	}
-
-	/*string request = soap->path;
-	string backup = soap->path;
-
-	request = request.substr( 1 ); // the request starts with a slash (/)
-
-	// requestUrl?paramName=paramValue
-	size_t parametersIndex = request.find('?');
-
-	if( parametersIndex != string::npos )
-		request = request.substr( 0, parametersIndex ); */
-
 	vector<string> urlParts;
 	SplitString( urlParts, url, '/');
 
-	if( urlParts[0] == ListLogItemsOperation )
+	if ( urlParts[0] == "SetStatus" )
+	{
+		SetScreenDeviceStatus( query );
+	}
+	else if( urlParts[0] == "favicon.ico" )
+	{
+		return 403;
+	}
+	else if ( urlParts[0] == "GetStatus" )
+	{
+		response = GetDevicePropery( query );
+	}
+	else if( urlParts[0] == ListLogItemsOperation )
 	{
 		response = GetLogItems();
 	}
@@ -763,37 +686,34 @@ int HttpGetHandler( string url, string query, struct mg_connection *conn )
 	{
 		response = GetDeviceSettings();
 	}
+	else if( urlParts[0] == "About" )
+	{
+		char buffer[512];
+		sprintf(buffer, "Server IP: %s Port Number: %d", WebServer::Instance()->Ip().c_str(), WebServer::Instance()->Port());
+		response = (string)buffer;
+	}
 	else if( urlParts[0] == "clientaccesspolicy.xml" )
 	{
-		response_type = "text/xml";
-		response = "<?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n"
-				"<access-policy>\r\n"
-				"  <cross-domain-access>\r\n"
-				"    <policy>\r\n"
-				"      <allow-from http-methods=\"*\" http-request-headers=\"*\">\r\n"
-				"        <domain uri=\"*\"/>\r\n"
-				"      </allow-from>\r\n"
-				"      <grant-to>\r\n"
-				"        <resource path=\"/\" include-subpaths=\"true\"/>\r\n"
-				"      </grant-to>\r\n"
-				"    </policy>\r\n"
-				"  </cross-domain-access>\r\n"
-				"</access-policy>\r\n";
+		return 404;
 	}
 	else
 	{
-		cout <<"GET Request for "<< url << " is not available!"<<endl;
+		EventLogger::Instance()->WriteVerbose("GET Request for %s is not available!\n", urlParts[0].c_str() );
+		return 404;
 	}
 
 	int length = response.length();
 
-    mg_printf(conn,
-              "HTTP/1.1 200 OK\r\n"
-              "Content-Type: %s\r\n"
-              "Content-Length: %d\r\n"        // Always set Content-Length
-              "\r\n"
-              "%s",
-              response_type.c_str(), length, response.c_str());
+	if(length != 0)
+	{
+		mg_printf(conn,
+				  "HTTP/1.1 200 OK\r\n"
+				  "Content-Type: %s\r\n"
+				  "Content-Length: %d\r\n"        // Always set Content-Length
+				  "\r\n"
+				  "%s",
+				  response_type.c_str(), length, response.c_str());
+	}
 
 	return 200;
 }

@@ -71,11 +71,11 @@ class EventLogger
 		virtual void WriteEmergency( const char * );
 		virtual void WriteAlert( const char * );
 		virtual void WriteCritical( const char * );
-		virtual void WriteError( const char * );
+		virtual void WriteError( const char *message, ... );
 		virtual void WriteWarning( const char * );
 		virtual void WriteNotice( const char * );
 		virtual void WriteInformation( const char * );
-		virtual void WriteDebug( const char * );
+		virtual void WriteDebug( const char *message, ... );
 
 		void WriteVerbose( const char *message, ... );
 

@@ -50,7 +50,7 @@ EventLogger* EventLogger::Instance()
 	{
 		instance = new EventLogger();
 
-		SysLogProvider *mySysLog = new SysLogProvider( "UPCB" );
+		SysLogProvider *mySysLog = new SysLogProvider( "Agilart" );
 		instance->jsonLog = new JsonLogProvider();
 
 		instance->Register( mySysLog );
@@ -156,16 +156,24 @@ void EventLogger::WriteCritical( const char *message )
 	}
 }
 
-void EventLogger::WriteError( const char *message )
+void EventLogger::WriteError( const char *format, ... )
 {
 	list<void*>::iterator iterator;
 	BaseLogProvider* baselog;
 
+	va_list args;
+	va_start( args, format );
+
+	char buffer[256];
+	vsprintf( buffer, format, args );
+
 	for ( iterator = this->loggers.begin(); iterator != this->loggers.end(); iterator++ )
 	{
 		baselog = (BaseLogProvider *) ( *iterator );
-		baselog->WriteError( message );
+		baselog->WriteError( buffer );
 	}
+
+	va_end( args );
 }
 
 void EventLogger::WriteEmergency( const char *message )
@@ -192,16 +200,24 @@ void EventLogger::WriteAlert( const char *message )
 	}
 }
 
-void EventLogger::WriteDebug( const char *message )
+void EventLogger::WriteDebug( const char *format, ... )
 {
 	list<void*>::iterator iterator;
 	BaseLogProvider* baselog;
 
+	va_list args;
+	va_start( args, format );
+
+	char buffer[256];
+	vsprintf( buffer, format, args );
+
 	for ( iterator = this->loggers.begin(); iterator != this->loggers.end(); iterator++ )
 	{
 		baselog = (BaseLogProvider *) ( *iterator );
-		baselog->WriteDebug( message );
+		baselog->WriteDebug( buffer );
 	}
+
+	va_end( args );
 }
 
 std::string EventLogger::GetErrorMessage( int code )

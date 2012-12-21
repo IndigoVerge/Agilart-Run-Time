@@ -42,54 +42,6 @@ DataSerializationManager::~DataSerializationManager() {
 	// TODO Auto-generated destructor stub
 }
 
-//void DataSerializationManager::SaveProgram( const ProgramDescriptor& descriptor, const char* file_name )
-//{
-//	ofstream ofs( file_name );
-//	boost::archive::xml_oarchive xml( ofs );
-//	xml << BOOST_SERIALIZATION_NVP( descriptor );
-//
-//	ofs.close();
-//}
-//
-//void DataSerializationManager::LoadProgram( ProgramDescriptor& descriptor, const char* file_name )
-//{
-//	if( DataSerializationManager::FileExists( file_name ) == false )
-//	{
-//		EventLogger::Instance()->WriteVerbose( "Load program source file not found: %s", file_name );
-//		return;
-//	}
-//
-//	ifstream ifs( file_name );
-//	boost::archive::xml_iarchive xml( ifs );
-//	xml >> BOOST_SERIALIZATION_NVP( descriptor );
-//
-//	ifs.close();
-//}
-//
-//void DataSerializationManager::SaveMapping( const ProgramMappingDescriptor& descriptor, const char* file_name )
-//{
-//	ofstream ofs( file_name );
-//	boost::archive::xml_oarchive xml( ofs );
-//	xml << BOOST_SERIALIZATION_NVP( descriptor );
-//
-//	ofs.close();
-//}
-//
-//void DataSerializationManager::LoadMapping( ProgramMappingDescriptor& descriptor, const char* file_name )
-//{
-//	if( DataSerializationManager::FileExists( file_name ) == false )
-//	{
-//		EventLogger::Instance()->WriteVerbose( "Load program mappings source file not found: %s", file_name );
-//		return;
-//	}
-//
-//	ifstream ifs( file_name );
-//	boost::archive::xml_iarchive xml( ifs );
-//	xml >> BOOST_SERIALIZATION_NVP( descriptor );
-//
-//	ifs.close();
-//}
-
 bool DataSerializationManager::FileExists( const char* fileName )
 {
 	struct stat buf;
@@ -102,7 +54,7 @@ bool DataSerializationManager::FileExists( const char* fileName )
 
 void DataSerializationManager::Save( string content, string filename )
 {
-	ofstream ofs( filename.c_str() );
+	ofstream ofs( filename.c_str(), ios::trunc );
 	ofs << content;
 	ofs.close();
 }
@@ -114,12 +66,6 @@ void DataSerializationManager::Delete( string filename )
 
 string DataSerializationManager::Load( string filename )
 {
-//	if( DataSerializationManager::FileExists( filename.c_str() ) == false )
-//	{
-//		EventLogger::Instance()->WriteVerbose( "Cannot find file with name: %s", filename.c_str() );
-//		return "";
-//	}
-
 	ifstream ifs( filename.c_str() );
 	string content = "";
 	string line;

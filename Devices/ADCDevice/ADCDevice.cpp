@@ -89,7 +89,7 @@ void ADCDevice::ReleaseResources()
 void ADCDevice::CalculateOutputs()
 {
 	EventLogger::Instance()->WriteVerbose(
-			"Button Device(%d) - LogicalInValueChanged", this->Id() );
+			"ADC Device(%d) - LogicalInValueChanged", this->Id() );
 
 	void* resultPointer = new float( this->currentPinoutValue );
 	this->outPoint->SetValue( resultPointer );
@@ -122,7 +122,7 @@ void ADCDevice::EventTriggered( list<EventParameter> parameters )
 
 void ADCDevice::ExecuteCommand( Command command )
 {
-	string logMessage = "Button Device - Executing Command "
+	string logMessage = "ADC Device - Executing Command "
 			+ (string) command.Name();
 	EventLogger::Instance()->WriteInformation( logMessage.c_str() );
 

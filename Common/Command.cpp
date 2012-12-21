@@ -74,7 +74,6 @@ CommandParameter* Command::GetParameter( string key )
 	}
 
 	EventLogger::Instance()->WriteVerbose( "Parameter with key - %s is not available!", key.c_str() );
-	cout << "Parameter with key - " << key << " is not available!";
 
 	return NULL;
 }

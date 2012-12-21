@@ -55,7 +55,6 @@ class WebServer
 		virtual ~WebServer();
 		static WebServer* Instance();
 
-//		int HttpPostHandler( string, string, struct mg_connection* );
 		friend string ProcessClientRequest( string, string );
 
 		void Start( char*, char* );

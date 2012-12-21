@@ -172,6 +172,12 @@ void ADCDriver::ClosePort()
 
 void ADCDriver::SetCurrentValue( int newValue )
 {
+	if(this->shouldStop == true)
+	{
+		EventLogger::Instance()->WriteVerbose( "ADCDriver - SetCurrentValue bug !", newValue );
+		return;
+	}
+
 	list<EventParameter>* parameters = new list<EventParameter>();
 	parameters->push_back( EventParameter( ADCDriver_VALUE, newValue, INT_TYPE ) );
 
@@ -199,7 +205,11 @@ void* ReadADCValueThreadRun( void* param )
 
 		pthread_mutex_lock( &driver->commonResourcesMutex );
 		if(driver->shouldStop == true)
+		{
+			EventLogger::Instance()->WriteVerbose( "ADCDriver - Exiting thread" );
 			break;
+		}
+
 		pthread_mutex_unlock( &driver->commonResourcesMutex );
 
 		driver->SetCurrentValue( newValue );
@@ -207,6 +217,7 @@ void* ReadADCValueThreadRun( void* param )
 
 		while (clock() < endwait) {
 			// wait
+			sleep(1);
 		}
 	}
 
@@ -242,16 +253,14 @@ void ADCDriver::StopReadingKeyThread()
 
 	this->ClosePort();
 
-	//pthread_join( this->readKeyThread, NULL );
-
-	string logMessage = "ADCDriver - Stop thread succeeded. ";
-	EventLogger::Instance()->WriteInformation( logMessage.c_str() );
+	// pthread_join( this->readKeyThread, NULL );
+	EventLogger::Instance()->WriteVerbose( "ADC Driver - Stop thread succeeded. " );
 }
 
 void ADCDriver::UpdateInitialState()
 {
 	// Get ADC current value
-	EventLogger::Instance()->WriteVerbose( "ADCDriver - Initialization" );
+	EventLogger::Instance()->WriteVerbose( "ADC Driver - Initialization" );
 	this->SetCurrentValue( this->minValue );
 }
 
