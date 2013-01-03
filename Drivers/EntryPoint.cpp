@@ -40,6 +40,9 @@
 #include "RaspiGPIO/RaspiGPInputDriver.h"
 #include "RaspiGPIO/RaspiGPOutputDriver.h"
 
+#include "SysfsInputDriver/SysfsInputDriver.h"
+#include "SysfsOutputDriver/SysfsOutputDriver.h"
+
 using namespace std;
 
 extern "C" list<BaseDriver*> CreateDrivers()
@@ -57,6 +60,9 @@ extern "C" list<BaseDriver*> CreateDrivers()
 	RaspiGPInputDriver* raspiGPInDriver = new RaspiGPInputDriver();
 	RaspiGPOutputDriver* raspiGPOutDriver = new RaspiGPOutputDriver();
 
+	SysfsInputDriver* sysfsInput = new SysfsInputDriver();
+	SysfsOutputDriver* sysfsOutput = new SysfsOutputDriver();
+
 	drivers.push_back( gpioDriver );
 	drivers.push_back( sysfsDriver );
 	drivers.push_back( ledDriver );
@@ -64,6 +70,9 @@ extern "C" list<BaseDriver*> CreateDrivers()
 	drivers.push_back( adcDriver );
 	drivers.push_back( raspiGPInDriver );
 	drivers.push_back( raspiGPOutDriver );
+
+	drivers.push_back( sysfsInput );
+	drivers.push_back( sysfsOutput );
 
 	EventLogger::Instance()->WriteDebug( "CreateDrivers completed successfully!" );
 
