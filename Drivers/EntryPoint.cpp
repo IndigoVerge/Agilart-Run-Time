@@ -39,9 +39,10 @@
 #include "UltraHeatDriver/UltraHeatDriver.h"
 #include "RaspiGPIO/RaspiGPInputDriver.h"
 #include "RaspiGPIO/RaspiGPOutputDriver.h"
-
-#include "SysfsInputDriver/SysfsInputDriver.h"
-#include "SysfsOutputDriver/SysfsOutputDriver.h"
+#include "SysFSInputDriver/SysfsInputDriver.h"
+#include "SysFSOutputDriver/SysfsOutputDriver.h"
+//#include "ZWaveSwitchDriver/ZWaveSwitchDriver.h"
+#include "FeedSocketDriver/FeedSocketDriver.h"
 
 using namespace std;
 
@@ -63,6 +64,9 @@ extern "C" list<BaseDriver*> CreateDrivers()
 	SysfsInputDriver* sysfsInput = new SysfsInputDriver();
 	SysfsOutputDriver* sysfsOutput = new SysfsOutputDriver();
 
+	//ZWaveSwitchDriver* switchDriver = new ZWaveSwitchDriver();
+	FeedSocketDriver* feed = new FeedSocketDriver();
+
 	drivers.push_back( gpioDriver );
 	drivers.push_back( sysfsDriver );
 	drivers.push_back( ledDriver );
@@ -73,6 +77,9 @@ extern "C" list<BaseDriver*> CreateDrivers()
 
 	drivers.push_back( sysfsInput );
 	drivers.push_back( sysfsOutput );
+
+	//drivers.push_back( switchDriver );
+	drivers.push_back( feed );
 
 	EventLogger::Instance()->WriteDebug( "CreateDrivers completed successfully!" );
 

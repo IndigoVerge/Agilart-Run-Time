@@ -18,6 +18,7 @@ RM := rm -rf
 -include ADCDriver/subdir.mk
 -include RaspiGPIO/subdir.mk
 -include objects.mk
+-include FeedSocketDriver/subdir.mk
 
 ifneq ($(MAKECMDGOALS),clean)
 ifneq ($(strip $(C++_DEPS)),)

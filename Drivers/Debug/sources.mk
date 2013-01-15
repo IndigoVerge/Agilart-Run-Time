@@ -33,4 +33,5 @@ GPIOKeyDriver \
 . \
 ADCDriver \
 RaspiGPIO \
+FeedSocketDriver \
 

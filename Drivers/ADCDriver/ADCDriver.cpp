@@ -23,6 +23,7 @@
  *******************************************************************************/
 
 #include <errno.h>
+#include <time.h>
 #include <iostream>
 
 #include "ADCDriver.h"

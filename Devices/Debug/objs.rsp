@@ -16,3 +16,4 @@
 ./ButtonDevice/ButtonDevice.o
 ./ADCDevice/ADCDevice.o
 ./CosmDevice/CosmDevice.o
+./FeedDevice/FeedDevice.o

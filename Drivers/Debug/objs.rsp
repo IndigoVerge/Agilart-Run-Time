@@ -9,3 +9,5 @@
 ./RaspiGPIO/RaspiGPInputDriver.o
 ./RaspiGPIO/RaspiGPOutputDriver.o
 ./RaspiGPIO/bcm2835.o
+./FeedSocketDriver/FeedSocketDriver.o
+./FeedSocketDriver/FeedsSocketClient.o

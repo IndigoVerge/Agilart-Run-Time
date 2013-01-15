@@ -527,19 +527,15 @@ void UpcbJsonParser::ParseUpcbCommands( string commandsArray, PinoutMapping* pin
              cmdValue = parameters.substr( start, end - start );
 
              void* cmdValuePointer = NULL;
-             if( dataType == "string ")
+             if( dataType == STRING_TYPE)
              {
-            	 string* stringValue = new string();
-            	 stringValue->append( cmdValue );
-            	 cmdValuePointer = stringValue;
-
+            	 cmdValuePointer = new string( cmdValue );
              }
-             else if( dataType == "int" )
+             else if( dataType == INT_TYPE )
              {
-            	 int value = atoi( cmdValue.c_str() );
-            	 cmdValuePointer = new int( value );
+            	 cmdValuePointer = new int( atoi( cmdValue.c_str() ) );
              }
-             else if( dataType == "float" )
+             else if( dataType == FLOAT_TYPE )
              {
             	 float value = atof( cmdValue.c_str() );
             	 cmdValuePointer = new float( value );

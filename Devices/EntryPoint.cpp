@@ -43,6 +43,7 @@
 #include "Logical/ComparatorWidget.h"
 #include "Logical/XorDevice.h"
 #include "CosmDevice/CosmDevice.h"
+#include "FeedDevice/FeedDevice.h"
 
 using namespace std;
 
@@ -72,6 +73,7 @@ extern "C" list<BaseDevice*> CreateDevices()
 	CounterDevice* counterDevice = new CounterDevice();
 
 	CosmDevice* cosm = new CosmDevice();
+	FeedDevice* feed = new FeedDevice();
 
 	devices.push_back( gpiDevice );
 	devices.push_back( gpoDevice );
@@ -94,6 +96,7 @@ extern "C" list<BaseDevice*> CreateDevices()
 	devices.push_back( counterDevice );
 	devices.push_back( constDev );
 	devices.push_back( cosm );
+	devices.push_back( feed );
 
 	EventLogger::Instance()->WriteDebug( "CreateDevices completed successfully!" );
 

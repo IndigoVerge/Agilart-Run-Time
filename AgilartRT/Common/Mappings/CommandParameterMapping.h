@@ -63,15 +63,11 @@ class CommandParameterMapping
 
 			if( this->defaultType == "int" )
 			{
-				int* intValue = (int*)param.defaultValue;
-				this->defaultValue = new int(*intValue);
+				this->defaultValue = new int(*(int*)param.defaultValue);
 			}
-			else
+			else if( this->defaultType == "string" )
 			{
-				string* stringValue = (string*)param.defaultValue;
-				string* defaultString = new string();
-				defaultString->assign(*stringValue);
-				this->defaultValue = defaultString;
+				this->defaultValue = new string(*(string*)param.defaultValue);
 			}
 		}
 

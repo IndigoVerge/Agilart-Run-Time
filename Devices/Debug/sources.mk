@@ -34,4 +34,5 @@ DelayTimer \
 ButtonDevice \
 ADCDevice \
 CosmDevice \
+FeedDevice \
 

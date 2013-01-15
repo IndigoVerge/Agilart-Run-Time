@@ -76,6 +76,8 @@ ADCDevice::~ADCDevice()
 
 void ADCDevice::WidgetInitialized()
 {
+	BaseDevice::WidgetInitialized();
+
 	Command c( INIT_CMD );
 	this->ExecuteCommand( c );
 }

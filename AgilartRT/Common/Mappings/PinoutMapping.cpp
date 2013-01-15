@@ -119,6 +119,6 @@ EventMapping* PinoutMapping::GetEventMapping( string sourceName )
 		}
 	}
 
-	cout<<"Event with name "<<sourceName<< " is not available!\n";
+	cout<<"Event with name "<<sourceName<<" is not available!\n";
 	return NULL;
 }
