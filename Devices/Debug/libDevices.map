@@ -1,3 +1,7 @@
+Archive member included because of file (symbol)
+
+/usr/lib/gcc/arm-linux-gnueabihf/4.6/libgcc.a(linux-atomic.o)
+                              ./FeedDevice/FeedDevice.o (__sync_fetch_and_add_4)
 
 Discarded input sections
 
@@ -136,6 +140,17 @@ Discarded input sections
                 0x00000000        0x8 ./CosmDevice/CosmDevice.o
  .note.GNU-stack
                 0x00000000        0x0 ./CosmDevice/CosmDevice.o
+ .group         0x00000000       0x10 ./FeedDevice/FeedDevice.o
+ .text._ZN15DeviceParameterD2Ev
+                0x00000000      0x184 ./FeedDevice/FeedDevice.o
+ .ARM.extab.text._ZN15DeviceParameterD2Ev
+                0x00000000        0x0 ./FeedDevice/FeedDevice.o
+ .ARM.exidx.text._ZN15DeviceParameterD2Ev
+                0x00000000        0x8 ./FeedDevice/FeedDevice.o
+ .note.GNU-stack
+                0x00000000        0x0 ./FeedDevice/FeedDevice.o
+ .note.GNU-stack
+                0x00000000        0x0 /usr/lib/gcc/arm-linux-gnueabihf/4.6/libgcc.a(linux-atomic.o)
  .note.GNU-stack
                 0x00000000        0x0 /usr/lib/gcc/arm-linux-gnueabihf/4.6/crtendS.o
  .note.GNU-stack
@@ -170,6 +185,7 @@ LOAD ./DelayTimer/DelayTimer.o
 LOAD ./ButtonDevice/ButtonDevice.o
 LOAD ./ADCDevice/ADCDevice.o
 LOAD ./CosmDevice/CosmDevice.o
+LOAD ./FeedDevice/FeedDevice.o
 LOAD ../../Common/Debug/libCommon.so
 LOAD /usr/lib/gcc/arm-linux-gnueabihf/4.6/libstdc++.so
 LOAD /usr/lib/gcc/arm-linux-gnueabihf/4.6/../../../arm-linux-gnueabihf/libm.so
@@ -199,37 +215,37 @@ LOAD /usr/lib/gcc/arm-linux-gnueabihf/4.6/../../../arm-linux-gnueabihf/crtn.o
  .note.gnu.build-id
                 0x000000f4       0x24 linker stubs
 
-.hash           0x00000118      0xa68
+.hash           0x00000118      0xab8
  *(.hash)
- .hash          0x00000118      0xa68 /usr/lib/gcc/arm-linux-gnueabihf/4.6/../../../arm-linux-gnueabihf/crti.o
+ .hash          0x00000118      0xab8 /usr/lib/gcc/arm-linux-gnueabihf/4.6/../../../arm-linux-gnueabihf/crti.o
 
-.gnu.hash       0x00000b80      0x9e8
+.gnu.hash       0x00000bd0      0xa34
  *(.gnu.hash)
- .gnu.hash      0x00000b80      0x9e8 /usr/lib/gcc/arm-linux-gnueabihf/4.6/../../../arm-linux-gnueabihf/crti.o
+ .gnu.hash      0x00000bd0      0xa34 /usr/lib/gcc/arm-linux-gnueabihf/4.6/../../../arm-linux-gnueabihf/crti.o
 
-.dynsym         0x00001568     0x1910
+.dynsym         0x00001604     0x1a50
  *(.dynsym)
- .dynsym        0x00001568     0x1910 /usr/lib/gcc/arm-linux-gnueabihf/4.6/../../../arm-linux-gnueabihf/crti.o
+ .dynsym        0x00001604     0x1a50 /usr/lib/gcc/arm-linux-gnueabihf/4.6/../../../arm-linux-gnueabihf/crti.o
 
-.dynstr         0x00002e78     0x2a26
+.dynstr         0x00003054     0x2c53
  *(.dynstr)
- .dynstr        0x00002e78     0x2a26 /usr/lib/gcc/arm-linux-gnueabihf/4.6/../../../arm-linux-gnueabihf/crti.o
+ .dynstr        0x00003054     0x2c53 /usr/lib/gcc/arm-linux-gnueabihf/4.6/../../../arm-linux-gnueabihf/crti.o
 
-.gnu.version    0x0000589e      0x322
+.gnu.version    0x00005ca8      0x34a
  *(.gnu.version)
- .gnu.version   0x0000589e      0x322 /usr/lib/gcc/arm-linux-gnueabihf/4.6/../../../arm-linux-gnueabihf/crti.o
+ .gnu.version   0x00005ca8      0x34a /usr/lib/gcc/arm-linux-gnueabihf/4.6/../../../arm-linux-gnueabihf/crti.o
 
-.gnu.version_d  0x00005bc0        0x0
+.gnu.version_d  0x00005ff4        0x0
  *(.gnu.version_d)
  .gnu.version_d
                 0x00000000        0x0 /usr/lib/gcc/arm-linux-gnueabihf/4.6/../../../arm-linux-gnueabihf/crti.o
 
-.gnu.version_r  0x00005bc0       0x90
+.gnu.version_r  0x00005ff4       0x90
  *(.gnu.version_r)
  .gnu.version_r
-                0x00005bc0       0x90 /usr/lib/gcc/arm-linux-gnueabihf/4.6/../../../arm-linux-gnueabihf/crti.o
+                0x00005ff4       0x90 /usr/lib/gcc/arm-linux-gnueabihf/4.6/../../../arm-linux-gnueabihf/crti.o
 
-.rel.dyn        0x00005c50      0xfe8
+.rel.dyn        0x00006084     0x10d0
  *(.rel.init)
  *(.rel.text .rel.text.* .rel.gnu.linkonce.t.*)
  .rel.text      0x00000000        0x0 /usr/lib/gcc/arm-linux-gnueabihf/4.6/../../../arm-linux-gnueabihf/crti.o
@@ -237,22 +253,22 @@ LOAD /usr/lib/gcc/arm-linux-gnueabihf/4.6/../../../arm-linux-gnueabihf/crtn.o
  *(.rel.rodata .rel.rodata.* .rel.gnu.linkonce.r.*)
  *(.rel.data.rel.ro* .rel.gnu.linkonce.d.rel.ro.*)
  .rel.data.rel.ro
-                0x00005c50      0xe58 /usr/lib/gcc/arm-linux-gnueabihf/4.6/../../../arm-linux-gnueabihf/crti.o
+                0x00006084      0xf30 /usr/lib/gcc/arm-linux-gnueabihf/4.6/../../../arm-linux-gnueabihf/crti.o
  *(.rel.data .rel.data.* .rel.gnu.linkonce.d.*)
- .rel.data.rel  0x00006aa8        0x8 /usr/lib/gcc/arm-linux-gnueabihf/4.6/../../../arm-linux-gnueabihf/crti.o
+ .rel.data.rel  0x00006fb4        0x8 /usr/lib/gcc/arm-linux-gnueabihf/4.6/../../../arm-linux-gnueabihf/crti.o
  *(.rel.tdata .rel.tdata.* .rel.gnu.linkonce.td.*)
  *(.rel.tbss .rel.tbss.* .rel.gnu.linkonce.tb.*)
  *(.rel.ctors)
  *(.rel.dtors)
  *(.rel.got)
- .rel.got       0x00006ab0       0xe8 /usr/lib/gcc/arm-linux-gnueabihf/4.6/../../../arm-linux-gnueabihf/crti.o
+ .rel.got       0x00006fbc       0xf0 /usr/lib/gcc/arm-linux-gnueabihf/4.6/../../../arm-linux-gnueabihf/crti.o
  *(.rel.bss .rel.bss.* .rel.gnu.linkonce.b.*)
  *(.rel.iplt)
  .rel.iplt      0x00000000        0x0 /usr/lib/gcc/arm-linux-gnueabihf/4.6/../../../arm-linux-gnueabihf/crti.o
  .rel.init_array
-                0x00006b98       0x98 /usr/lib/gcc/arm-linux-gnueabihf/4.6/../../../arm-linux-gnueabihf/crti.o
+                0x000070ac       0xa0 /usr/lib/gcc/arm-linux-gnueabihf/4.6/../../../arm-linux-gnueabihf/crti.o
  .rel.fini_array
-                0x00006c30        0x8 /usr/lib/gcc/arm-linux-gnueabihf/4.6/../../../arm-linux-gnueabihf/crti.o
+                0x0000714c        0x8 /usr/lib/gcc/arm-linux-gnueabihf/4.6/../../../arm-linux-gnueabihf/crti.o
 
 .rela.dyn
  *(.rela.init)
@@ -268,320 +284,388 @@ LOAD /usr/lib/gcc/arm-linux-gnueabihf/4.6/../../../arm-linux-gnueabihf/crtn.o
  *(.rela.bss .rela.bss.* .rela.gnu.linkonce.b.*)
  *(.rela.iplt)
 
-.rel.plt        0x00006c38      0x390
+.rel.plt        0x00007154      0x3a8
  *(.rel.plt)
- .rel.plt       0x00006c38      0x390 /usr/lib/gcc/arm-linux-gnueabihf/4.6/../../../arm-linux-gnueabihf/crti.o
+ .rel.plt       0x00007154      0x3a8 /usr/lib/gcc/arm-linux-gnueabihf/4.6/../../../arm-linux-gnueabihf/crti.o
 
 .rela.plt
  *(.rela.plt)
 
-.init           0x00006fc8        0xc
+.init           0x000074fc        0xc
  *(.init)
- .init          0x00006fc8        0x8 /usr/lib/gcc/arm-linux-gnueabihf/4.6/../../../arm-linux-gnueabihf/crti.o
-                0x00006fc8                _init
- .init          0x00006fd0        0x4 /usr/lib/gcc/arm-linux-gnueabihf/4.6/../../../arm-linux-gnueabihf/crtn.o
+ .init          0x000074fc        0x8 /usr/lib/gcc/arm-linux-gnueabihf/4.6/../../../arm-linux-gnueabihf/crti.o
+                0x000074fc                _init
+ .init          0x00007504        0x4 /usr/lib/gcc/arm-linux-gnueabihf/4.6/../../../arm-linux-gnueabihf/crtn.o
 
-.plt            0x00006fd4      0x56c
+.plt            0x00007508      0x590
  *(.plt)
- .plt           0x00006fd4      0x56c /usr/lib/gcc/arm-linux-gnueabihf/4.6/../../../arm-linux-gnueabihf/crti.o
+ .plt           0x00007508      0x590 /usr/lib/gcc/arm-linux-gnueabihf/4.6/../../../arm-linux-gnueabihf/crti.o
 
-.iplt           0x00007540        0x0
+.iplt           0x00007a98        0x0
  *(.iplt)
  .iplt          0x00000000        0x0 /usr/lib/gcc/arm-linux-gnueabihf/4.6/../../../arm-linux-gnueabihf/crti.o
 
-.text           0x00007540    0x17c04
+.text           0x00007a98    0x1b290
  *(.text.unlikely .text.*_unlikely)
  *(.text.exit .text.exit.*)
  *(.text.startup .text.startup.*)
- .text.startup  0x00007540       0x48 ./TimerDevice/TimerDevice.o
- .text.startup  0x00007588       0x48 ./ScreenButton/ScreenButton.o
- .text.startup  0x000075d0       0x48 ./Logical/AdnWidget.o
- .text.startup  0x00007618       0x48 ./Logical/ComparatorWidget.o
- .text.startup  0x00007660       0x48 ./Logical/ConstantWidget.o
- .text.startup  0x000076a8       0x48 ./Logical/CounterDevice.o
- .text.startup  0x000076f0       0x48 ./Logical/InverseDevice.o
- .text.startup  0x00007738       0x48 ./Logical/OrDevice.o
- .text.startup  0x00007780       0x48 ./Logical/RSTriggerDevice.o
- .text.startup  0x000077c8       0x48 ./Logical/SwitchBlock.o
- .text.startup  0x00007810       0x48 ./Logical/XorDevice.o
- .text.startup  0x00007858       0x48 ./GPOutputDevice/GPOutputDevice.o
- .text.startup  0x000078a0       0x48 ./GPInputDevice/GPIDevice.o
- .text.startup  0x000078e8       0x48 ./EntryPoint.o
- .text.startup  0x00007930       0x48 ./DelayTimer/DelayTimer.o
- .text.startup  0x00007978       0x48 ./ButtonDevice/ButtonDevice.o
- .text.startup  0x000079c0       0x48 ./ADCDevice/ADCDevice.o
- .text.startup  0x00007a08       0x48 ./CosmDevice/CosmDevice.o
+ .text.startup  0x00007a98       0x48 ./TimerDevice/TimerDevice.o
+ .text.startup  0x00007ae0       0x48 ./ScreenButton/ScreenButton.o
+ .text.startup  0x00007b28       0x48 ./Logical/AdnWidget.o
+ .text.startup  0x00007b70       0x48 ./Logical/ComparatorWidget.o
+ .text.startup  0x00007bb8       0x48 ./Logical/ConstantWidget.o
+ .text.startup  0x00007c00       0x48 ./Logical/CounterDevice.o
+ .text.startup  0x00007c48       0x48 ./Logical/InverseDevice.o
+ .text.startup  0x00007c90       0x48 ./Logical/OrDevice.o
+ .text.startup  0x00007cd8       0x48 ./Logical/RSTriggerDevice.o
+ .text.startup  0x00007d20       0x48 ./Logical/SwitchBlock.o
+ .text.startup  0x00007d68       0x48 ./Logical/XorDevice.o
+ .text.startup  0x00007db0       0x48 ./GPOutputDevice/GPOutputDevice.o
+ .text.startup  0x00007df8       0x48 ./GPInputDevice/GPIDevice.o
+ .text.startup  0x00007e40       0x48 ./EntryPoint.o
+ .text.startup  0x00007e88       0x48 ./DelayTimer/DelayTimer.o
+ .text.startup  0x00007ed0       0x48 ./ButtonDevice/ButtonDevice.o
+ .text.startup  0x00007f18       0x48 ./ADCDevice/ADCDevice.o
+ .text.startup  0x00007f60       0x48 ./CosmDevice/CosmDevice.o
+ .text.startup  0x00007fa8       0x48 ./FeedDevice/FeedDevice.o
  *(.text.hot .text.hot.*)
  *(.text .stub .text.* .gnu.linkonce.t.*)
- .text          0x00007a50       0x24 /usr/lib/gcc/arm-linux-gnueabihf/4.6/../../../arm-linux-gnueabihf/crti.o
- .text          0x00007a74       0xa8 /usr/lib/gcc/arm-linux-gnueabihf/4.6/crtbeginS.o
- .text          0x00007b1c     0x16fc ./TimerDevice/TimerDevice.o
-                0x00007b1c                _ZN11TimerDevice4TypeEv
-                0x00007b2c                _ZN11TimerDevice7VersionEv
-                0x00007b3c                _ZN11TimerDevice11DescriptionEv
-                0x00007b4c                _ZN11TimerDevice9GroupNameEv
-                0x00007b5c                _ZN11TimerDevice24InitializeFromDescriptorESt4listI8PropertySaIS1_EE
-                0x00007bb4                _Z14TimerThreadRunPv
-                0x00007cac                _ZN11TimerDevice17WidgetInitializedEv
-                0x00007ccc                _ZN11TimerDeviceD2Ev
-                0x00007ccc                _ZN11TimerDeviceD1Ev
-                0x00007d04                _ZN11TimerDeviceD0Ev
-                0x00007d20                _ZN11TimerDevice12SetParameterESsPv
-                0x00007e1c                _ZN11TimerDevice12GetParameterESs
-                0x000084d8                _ZN11TimerDeviceC1Ev
-                0x000084d8                _ZN11TimerDeviceC2Ev
-                0x00008fa0                _ZN11TimerDevice14CreateInstanceEv
-                0x00008fc8                _ZN11TimerDevice11StartThreadEv
-                0x000090c4                _ZN11TimerDevice16CalculateOutputsEv
-                0x000091d0                _ZN11TimerDevice10StopThreadEv
-                0x00009214                _ZN11TimerDevice16ReleaseResourcesEv
+ .text          0x00007ff0       0x24 /usr/lib/gcc/arm-linux-gnueabihf/4.6/../../../arm-linux-gnueabihf/crti.o
+ .text          0x00008014       0xa8 /usr/lib/gcc/arm-linux-gnueabihf/4.6/crtbeginS.o
+ .text          0x000080bc     0x16fc ./TimerDevice/TimerDevice.o
+                0x000080bc                _ZN11TimerDevice4TypeEv
+                0x000080cc                _ZN11TimerDevice7VersionEv
+                0x000080dc                _ZN11TimerDevice11DescriptionEv
+                0x000080ec                _ZN11TimerDevice9GroupNameEv
+                0x000080fc                _ZN11TimerDevice24InitializeFromDescriptorESt4listI8PropertySaIS1_EE
+                0x00008154                _Z14TimerThreadRunPv
+                0x0000824c                _ZN11TimerDevice17WidgetInitializedEv
+                0x0000826c                _ZN11TimerDeviceD2Ev
+                0x0000826c                _ZN11TimerDeviceD1Ev
+                0x000082a4                _ZN11TimerDeviceD0Ev
+                0x000082c0                _ZN11TimerDevice12SetParameterESsPv
+                0x000083bc                _ZN11TimerDevice12GetParameterESs
+                0x00008a78                _ZN11TimerDeviceC1Ev
+                0x00008a78                _ZN11TimerDeviceC2Ev
+                0x00009540                _ZN11TimerDevice14CreateInstanceEv
+                0x00009568                _ZN11TimerDevice11StartThreadEv
+                0x00009664                _ZN11TimerDevice16CalculateOutputsEv
+                0x00009770                _ZN11TimerDevice10StopThreadEv
+                0x000097b4                _ZN11TimerDevice16ReleaseResourcesEv
  .text._ZN15DeviceParameterD2Ev
-                0x00009218      0x1e4 ./TimerDevice/TimerDevice.o
-                0x00009218                _ZN15DeviceParameterD2Ev
-                0x00009218                _ZN15DeviceParameterD1Ev
- .text          0x000093fc      0xba8 ./ScreenButton/ScreenButton.o
-                0x000093fc                _ZN12ScreenButton4TypeEv
-                0x0000940c                _ZN12ScreenButton7VersionEv
-                0x0000941c                _ZN12ScreenButton11DescriptionEv
-                0x0000942c                _ZN12ScreenButton9GroupNameEv
-                0x0000943c                _ZN12ScreenButton16CalculateOutputsEv
-                0x00009498                _ZN12ScreenButtonD2Ev
-                0x00009498                _ZN12ScreenButtonD1Ev
-                0x000094d0                _ZN12ScreenButtonD0Ev
-                0x000094ec                _ZN12ScreenButton12SetParameterESsPv
-                0x00009558                _ZN12ScreenButton12GetParameterESs
-                0x00009c14                _ZN12ScreenButtonC1Ev
-                0x00009c14                _ZN12ScreenButtonC2Ev
-                0x00009f7c                _ZN12ScreenButton14CreateInstanceEv
- .text          0x00009fa4      0xde8 ./Logical/AdnWidget.o
-                0x00009fa4                _ZN9AndWidget4TypeEv
-                0x00009fb4                _ZN9AndWidget7VersionEv
-                0x00009fc4                _ZN9AndWidget11DescriptionEv
-                0x00009fd4                _ZN9AndWidget9GroupNameEv
-                0x00009fe4                _ZN9AndWidget16CalculateOutputsEv
-                0x0000a040                _ZN9AndWidgetD1Ev
-                0x0000a040                _ZN9AndWidgetD2Ev
-                0x0000a078                _ZN9AndWidgetD0Ev
-                0x0000a094                _ZN9AndWidget12GetParameterESs
-                0x0000a750                _ZN9AndWidgetC1Ev
-                0x0000a750                _ZN9AndWidgetC2Ev
-                0x0000ad64                _ZN9AndWidget14CreateInstanceEv
- .text          0x0000ad8c     0x1424 ./Logical/ComparatorWidget.o
-                0x0000ad8c                _ZN16ComparatorDevice4TypeEv
-                0x0000ad9c                _ZN16ComparatorDevice7VersionEv
-                0x0000adac                _ZN16ComparatorDevice11DescriptionEv
-                0x0000adbc                _ZN16ComparatorDevice9GroupNameEv
-                0x0000adcc                _ZN16ComparatorDeviceD1Ev
-                0x0000adcc                _ZN16ComparatorDeviceD2Ev
-                0x0000ae04                _ZN16ComparatorDeviceD0Ev
-                0x0000ae20                _ZN16ComparatorDevice12GetParameterESs
-                0x0000b4dc                _ZN16ComparatorDeviceC2Ev
-                0x0000b4dc                _ZN16ComparatorDeviceC1Ev
-                0x0000bd4c                _ZN16ComparatorDevice14CreateInstanceEv
-                0x0000bd74                _ZN16ComparatorDevice12GetOperationESs
-                0x0000be20                _ZN16ComparatorDevice12SetParameterESsPv
-                0x0000bfa8                _ZN16ComparatorDevice19GetComparisonResultEv
-                0x0000c174                _ZN16ComparatorDevice16CalculateOutputsEv
- .text          0x0000c1b0     0x11e0 ./Logical/ConstantWidget.o
-                0x0000c1b0                _ZN14ConstantDevice16CalculateOutputsEv
-                0x0000c1d0                _ZN14ConstantDevice4TypeEv
-                0x0000c1e0                _ZN14ConstantDevice7VersionEv
-                0x0000c1f0                _ZN14ConstantDevice11DescriptionEv
-                0x0000c200                _ZN14ConstantDevice9GroupNameEv
-                0x0000c210                _ZN14ConstantDevice17WidgetInitializedEv
-                0x0000c214                _ZN14ConstantDeviceD2Ev
-                0x0000c214                _ZN14ConstantDeviceD1Ev
-                0x0000c24c                _ZN14ConstantDeviceD0Ev
-                0x0000c268                _ZN14ConstantDevice12SetParameterESsPv
-                0x0000c44c                _ZN14ConstantDevice12GetParameterESs
-                0x0000caf4                _ZN14ConstantDeviceC2Ev
-                0x0000caf4                _ZN14ConstantDeviceC1Ev
-                0x0000d34c                _ZN14ConstantDevice14CreateInstanceEv
-                0x0000d374                _ZN14ConstantDevice26UpdateOutconnectionsValuesEPv
- .text          0x0000d390     0x1920 ./Logical/CounterDevice.o
-                0x0000d390                _ZN13CounterDevice4TypeEv
-                0x0000d3a0                _ZN13CounterDevice7VersionEv
-                0x0000d3b0                _ZN13CounterDevice11DescriptionEv
-                0x0000d3c0                _ZN13CounterDevice9GroupNameEv
-                0x0000d3d0                _ZN13CounterDevice12SetParameterESsPv
-                0x0000d500                _ZN13CounterDevice16CalculateOutputsEv
-                0x0000d62c                _ZN13CounterDeviceD1Ev
-                0x0000d62c                _ZN13CounterDeviceD2Ev
-                0x0000d664                _ZN13CounterDeviceD0Ev
-                0x0000d680                _ZN13CounterDevice12GetParameterESs
-                0x0000dd3c                _ZN13CounterDeviceC2Ev
-                0x0000dd3c                _ZN13CounterDeviceC1Ev
-                0x0000ec88                _ZN13CounterDevice14CreateInstanceEv
- .text          0x0000ecb0      0xc74 ./Logical/InverseDevice.o
-                0x0000ecb0                _ZN13InverseDevice4TypeEv
-                0x0000ecc0                _ZN13InverseDevice7VersionEv
-                0x0000ecd0                _ZN13InverseDevice11DescriptionEv
-                0x0000ece0                _ZN13InverseDevice9GroupNameEv
-                0x0000ecf0                _ZN13InverseDevice16CalculateOutputsEv
-                0x0000ed68                _ZN13InverseDeviceD2Ev
-                0x0000ed68                _ZN13InverseDeviceD1Ev
-                0x0000eda0                _ZN13InverseDeviceD0Ev
-                0x0000edbc                _ZN13InverseDevice12GetParameterESs
-                0x0000f478                _ZN13InverseDeviceC1Ev
-                0x0000f478                _ZN13InverseDeviceC2Ev
-                0x0000f8fc                _ZN13InverseDevice14CreateInstanceEv
- .text          0x0000f924      0xde8 ./Logical/OrDevice.o
-                0x0000f924                _ZN8OrDevice4TypeEv
-                0x0000f934                _ZN8OrDevice7VersionEv
-                0x0000f944                _ZN8OrDevice11DescriptionEv
-                0x0000f954                _ZN8OrDevice9GroupNameEv
-                0x0000f964                _ZN8OrDevice16CalculateOutputsEv
-                0x0000f9c0                _ZN8OrDeviceD2Ev
-                0x0000f9c0                _ZN8OrDeviceD1Ev
-                0x0000f9f8                _ZN8OrDeviceD0Ev
-                0x0000fa14                _ZN8OrDevice12GetParameterESs
-                0x000100d0                _ZN8OrDeviceC1Ev
-                0x000100d0                _ZN8OrDeviceC2Ev
-                0x000106e4                _ZN8OrDevice14CreateInstanceEv
- .text          0x0001070c      0x8e4 ./Logical/RSTriggerDevice.o
-                0x0001070c                _ZN15RSTriggerDevice4TypeEv
-                0x0001071c                _ZN15RSTriggerDevice7VersionEv
-                0x0001072c                _ZN15RSTriggerDevice11DescriptionEv
-                0x0001073c                _ZN15RSTriggerDevice9GroupNameEv
-                0x0001074c                _ZN15RSTriggerDevice16CalculateOutputsEv
-                0x000107ac                _ZN15RSTriggerDeviceD1Ev
-                0x000107ac                _ZN15RSTriggerDeviceD2Ev
-                0x000107e4                _ZN15RSTriggerDeviceD0Ev
-                0x00010800                _ZN15RSTriggerDeviceC2Ev
-                0x00010800                _ZN15RSTriggerDeviceC1Ev
-                0x00010fc8                _ZN15RSTriggerDevice14CreateInstanceEv
- .text          0x00010ff0      0x8dc ./Logical/SwitchBlock.o
-                0x00010ff0                _ZN11SwitchBlock4TypeEv
-                0x00011000                _ZN11SwitchBlock7VersionEv
-                0x00011010                _ZN11SwitchBlock11DescriptionEv
-                0x00011020                _ZN11SwitchBlock9GroupNameEv
-                0x00011030                _ZN11SwitchBlock16CalculateOutputsEv
-                0x00011088                _ZN11SwitchBlockD1Ev
-                0x00011088                _ZN11SwitchBlockD2Ev
-                0x000110c0                _ZN11SwitchBlockD0Ev
-                0x000110dc                _ZN11SwitchBlockC2Ev
-                0x000110dc                _ZN11SwitchBlockC1Ev
-                0x000118a4                _ZN11SwitchBlock14CreateInstanceEv
- .text          0x000118cc      0x718 ./Logical/XorDevice.o
-                0x000118cc                _ZN9XorDevice4TypeEv
-                0x000118dc                _ZN9XorDevice7VersionEv
-                0x000118ec                _ZN9XorDevice11DescriptionEv
-                0x000118fc                _ZN9XorDevice9GroupNameEv
-                0x0001190c                _ZN9XorDevice16CalculateOutputsEv
-                0x0001195c                _ZN9XorDeviceD2Ev
-                0x0001195c                _ZN9XorDeviceD1Ev
-                0x00011994                _ZN9XorDeviceD0Ev
-                0x000119b0                _ZN9XorDeviceC1Ev
-                0x000119b0                _ZN9XorDeviceC2Ev
-                0x00011fbc                _ZN9XorDevice14CreateInstanceEv
- .text          0x00011fe4     0x3878 ./GPOutputDevice/GPOutputDevice.o
-                0x00011fe4                _ZN14GPOutputDevice4TypeEv
-                0x00011ff4                _ZN14GPOutputDevice7VersionEv
-                0x00012004                _ZN14GPOutputDevice11DescriptionEv
-                0x00012014                _ZN14GPOutputDevice9GroupNameEv
-                0x00012024                _ZN14GPOutputDevice17WidgetInitializedEv
-                0x00012028                _ZN14GPOutputDeviceD1Ev
-                0x00012028                _ZN14GPOutputDeviceD2Ev
-                0x00012060                _ZN14GPOutputDeviceD0Ev
-                0x0001207c                _ZN14GPOutputDevice14ExecuteCommandE7Command
-                0x00012514                _ZN14GPOutputDevice12SetParameterESsPv
-                0x00012c30                _ZN14GPOutputDevice14EventTriggeredESt4listI14EventParameterSaIS1_EE
-                0x000131a4                _ZN14GPOutputDevice16ReleaseResourcesEv
-                0x00013548                _ZN14GPOutputDevice16CalculateOutputsEv
-                0x00013e40                _ZN14GPOutputDevice12GetParameterESs
-                0x00014548                _ZN14GPOutputDeviceC2Ev
-                0x00014548                _ZN14GPOutputDeviceC1Ev
-                0x0001582c                _ZN14GPOutputDevice14CreateInstanceEv
-                0x00015854                _ZN14GPOutputDevice13SetPortNumberEi
- .text          0x0001585c     0x268c ./GPInputDevice/GPIDevice.o
-                0x0001585c                _ZN9GPIDevice4TypeEv
-                0x0001586c                _ZN9GPIDevice7VersionEv
-                0x0001587c                _ZN9GPIDevice11DescriptionEv
-                0x0001588c                _ZN9GPIDevice9GroupNameEv
-                0x0001589c                _ZN9GPIDevice16CalculateOutputsEv
-                0x000158d0                _ZN9GPIDeviceD2Ev
-                0x000158d0                _ZN9GPIDeviceD1Ev
-                0x00015930                _ZN9GPIDeviceD0Ev
-                0x0001594c                _ZN9GPIDevice12SetParameterESsPv
-                0x000159a8                _ZN9GPIDevice14EventTriggeredESt4listI14EventParameterSaIS1_EE
-                0x00015b40                _ZN9GPIDevice14ExecuteCommandE7Command
-                0x00015fd8                _ZN9GPIDevice16ReleaseResourcesEv
-                0x0001637c                _ZN9GPIDevice17WidgetInitializedEv
-                0x00016724                _ZN9GPIDevice12GetParameterESs
-                0x00016e44                _ZN9GPIDeviceC2Ev
-                0x00016e44                _ZN9GPIDeviceC1Ev
-                0x00017ec0                _ZN9GPIDevice14CreateInstanceEv
- .text          0x00017ee8      0x3dc ./EntryPoint.o
-                0x00017ee8                CreateDevices
- .text          0x000182c4     0x15f4 ./DelayTimer/DelayTimer.o
-                0x000182c4                _ZN10DelayTimer4TypeEv
-                0x000182d4                _ZN10DelayTimer7VersionEv
-                0x000182e4                _ZN10DelayTimer11DescriptionEv
-                0x000182f4                _ZN10DelayTimer9GroupNameEv
-                0x00018304                _ZN10DelayTimer24InitializeFromDescriptorESt4listI8PropertySaIS1_EE
-                0x0001835c                _Z19DelayTimerThreadRunPv
-                0x00018410                _ZN10DelayTimerD1Ev
-                0x00018410                _ZN10DelayTimerD2Ev
-                0x00018448                _ZN10DelayTimerD0Ev
-                0x00018464                _ZN10DelayTimer12SetParameterESsPv
-                0x00018560                _ZN10DelayTimer12GetParameterESs
-                0x00018c1c                _ZN10DelayTimerC2Ev
-                0x00018c1c                _ZN10DelayTimerC1Ev
-                0x000196e8                _ZN10DelayTimer14CreateInstanceEv
-                0x00019710                _ZN10DelayTimer11StartThreadEv
-                0x00019804                _ZN10DelayTimer16CalculateOutputsEv
-                0x00019890                _ZN10DelayTimer10StopThreadEv
- .text          0x000198b8     0x110c ./ButtonDevice/ButtonDevice.o
-                0x000198b8                _ZN12ButtonDevice4TypeEv
-                0x000198c8                _ZN12ButtonDevice7VersionEv
-                0x000198d8                _ZN12ButtonDevice11DescriptionEv
-                0x000198e8                _ZN12ButtonDevice9GroupNameEv
-                0x000198f8                _ZN12ButtonDevice16CalculateOutputsEv
-                0x00019980                _ZN12ButtonDeviceD2Ev
-                0x00019980                _ZN12ButtonDeviceD1Ev
-                0x000199b8                _ZN12ButtonDeviceD0Ev
-                0x000199d4                _ZN12ButtonDevice12GetParameterESs
-                0x0001a0dc                _ZN12ButtonDeviceC1Ev
-                0x0001a0dc                _ZN12ButtonDeviceC2Ev
-                0x0001a8ac                _ZN12ButtonDevice14CreateInstanceEv
-                0x0001a8d4                _Z20PinoutEventTriggeredPvSt4listI14EventParameterSaIS1_EE
- .text          0x0001a9c4     0x2300 ./ADCDevice/ADCDevice.o
-                0x0001a9c4                _ZN9ADCDevice4TypeEv
-                0x0001a9d4                _ZN9ADCDevice7VersionEv
-                0x0001a9e4                _ZN9ADCDevice11DescriptionEv
-                0x0001a9f4                _ZN9ADCDevice9GroupNameEv
-                0x0001aa04                _ZN9ADCDevice16CalculateOutputsEv
-                0x0001aa64                _ZN9ADCDeviceD1Ev
-                0x0001aa64                _ZN9ADCDeviceD2Ev
-                0x0001aa9c                _ZN9ADCDeviceD0Ev
-                0x0001aab8                _ZN9ADCDevice14EventTriggeredESt4listI14EventParameterSaIS1_EE
-                0x0001ac2c                _ZN9ADCDevice14ExecuteCommandE7Command
-                0x0001b0c4                _ZN9ADCDevice16ReleaseResourcesEv
-                0x0001b468                _ZN9ADCDevice17WidgetInitializedEv
-                0x0001b80c                _ZN9ADCDevice12GetParameterESs
-                0x0001bec8                _ZN9ADCDeviceC1Ev
-                0x0001bec8                _ZN9ADCDeviceC2Ev
-                0x0001cc9c                _ZN9ADCDevice14CreateInstanceEv
- .text          0x0001ccc4     0x2400 ./CosmDevice/CosmDevice.o
-                0x0001ccc4                _ZN10CosmDevice4TypeEv
-                0x0001ccd4                _ZN10CosmDevice7VersionEv
-                0x0001cce4                _ZN10CosmDevice11DescriptionEv
-                0x0001ccf4                _ZN10CosmDevice9GroupNameEv
-                0x0001cd04                _ZN10CosmDeviceD2Ev
-                0x0001cd04                _ZN10CosmDeviceD1Ev
-                0x0001ced0                _ZN10CosmDeviceD0Ev
-                0x0001ceec                _ZN10CosmDevice12GetParameterESs
-                0x0001d5f4                _ZN10CosmDeviceC2Ev
-                0x0001d5f4                _ZN10CosmDeviceC1Ev
-                0x0001e60c                _ZN10CosmDevice14CreateInstanceEv
-                0x0001e634                _ZN10CosmDevice20SendCosmNotificationESsSsSsSs
-                0x0001eabc                _ZN10CosmDevice16CalculateOutputsEv
-                0x0001eda8                _ZN10CosmDevice12SetParameterESsPv
+                0x000097b8      0x1e4 ./TimerDevice/TimerDevice.o
+                0x000097b8                _ZN15DeviceParameterD2Ev
+                0x000097b8                _ZN15DeviceParameterD1Ev
+ .text          0x0000999c      0xba8 ./ScreenButton/ScreenButton.o
+                0x0000999c                _ZN12ScreenButton4TypeEv
+                0x000099ac                _ZN12ScreenButton7VersionEv
+                0x000099bc                _ZN12ScreenButton11DescriptionEv
+                0x000099cc                _ZN12ScreenButton9GroupNameEv
+                0x000099dc                _ZN12ScreenButton16CalculateOutputsEv
+                0x00009a38                _ZN12ScreenButtonD2Ev
+                0x00009a38                _ZN12ScreenButtonD1Ev
+                0x00009a70                _ZN12ScreenButtonD0Ev
+                0x00009a8c                _ZN12ScreenButton12SetParameterESsPv
+                0x00009af8                _ZN12ScreenButton12GetParameterESs
+                0x0000a1b4                _ZN12ScreenButtonC1Ev
+                0x0000a1b4                _ZN12ScreenButtonC2Ev
+                0x0000a51c                _ZN12ScreenButton14CreateInstanceEv
+ .text          0x0000a544      0xde8 ./Logical/AdnWidget.o
+                0x0000a544                _ZN9AndWidget4TypeEv
+                0x0000a554                _ZN9AndWidget7VersionEv
+                0x0000a564                _ZN9AndWidget11DescriptionEv
+                0x0000a574                _ZN9AndWidget9GroupNameEv
+                0x0000a584                _ZN9AndWidget16CalculateOutputsEv
+                0x0000a5e0                _ZN9AndWidgetD1Ev
+                0x0000a5e0                _ZN9AndWidgetD2Ev
+                0x0000a618                _ZN9AndWidgetD0Ev
+                0x0000a634                _ZN9AndWidget12GetParameterESs
+                0x0000acf0                _ZN9AndWidgetC1Ev
+                0x0000acf0                _ZN9AndWidgetC2Ev
+                0x0000b304                _ZN9AndWidget14CreateInstanceEv
+ .text          0x0000b32c     0x1424 ./Logical/ComparatorWidget.o
+                0x0000b32c                _ZN16ComparatorDevice4TypeEv
+                0x0000b33c                _ZN16ComparatorDevice7VersionEv
+                0x0000b34c                _ZN16ComparatorDevice11DescriptionEv
+                0x0000b35c                _ZN16ComparatorDevice9GroupNameEv
+                0x0000b36c                _ZN16ComparatorDeviceD1Ev
+                0x0000b36c                _ZN16ComparatorDeviceD2Ev
+                0x0000b3a4                _ZN16ComparatorDeviceD0Ev
+                0x0000b3c0                _ZN16ComparatorDevice12GetParameterESs
+                0x0000ba7c                _ZN16ComparatorDeviceC2Ev
+                0x0000ba7c                _ZN16ComparatorDeviceC1Ev
+                0x0000c2ec                _ZN16ComparatorDevice14CreateInstanceEv
+                0x0000c314                _ZN16ComparatorDevice12GetOperationESs
+                0x0000c3c0                _ZN16ComparatorDevice12SetParameterESsPv
+                0x0000c548                _ZN16ComparatorDevice19GetComparisonResultEv
+                0x0000c714                _ZN16ComparatorDevice16CalculateOutputsEv
+ .text          0x0000c750     0x11e0 ./Logical/ConstantWidget.o
+                0x0000c750                _ZN14ConstantDevice16CalculateOutputsEv
+                0x0000c770                _ZN14ConstantDevice4TypeEv
+                0x0000c780                _ZN14ConstantDevice7VersionEv
+                0x0000c790                _ZN14ConstantDevice11DescriptionEv
+                0x0000c7a0                _ZN14ConstantDevice9GroupNameEv
+                0x0000c7b0                _ZN14ConstantDevice17WidgetInitializedEv
+                0x0000c7b4                _ZN14ConstantDeviceD2Ev
+                0x0000c7b4                _ZN14ConstantDeviceD1Ev
+                0x0000c7ec                _ZN14ConstantDeviceD0Ev
+                0x0000c808                _ZN14ConstantDevice12SetParameterESsPv
+                0x0000c9ec                _ZN14ConstantDevice12GetParameterESs
+                0x0000d094                _ZN14ConstantDeviceC2Ev
+                0x0000d094                _ZN14ConstantDeviceC1Ev
+                0x0000d8ec                _ZN14ConstantDevice14CreateInstanceEv
+                0x0000d914                _ZN14ConstantDevice26UpdateOutconnectionsValuesEPv
+ .text          0x0000d930     0x1920 ./Logical/CounterDevice.o
+                0x0000d930                _ZN13CounterDevice4TypeEv
+                0x0000d940                _ZN13CounterDevice7VersionEv
+                0x0000d950                _ZN13CounterDevice11DescriptionEv
+                0x0000d960                _ZN13CounterDevice9GroupNameEv
+                0x0000d970                _ZN13CounterDevice12SetParameterESsPv
+                0x0000daa0                _ZN13CounterDevice16CalculateOutputsEv
+                0x0000dbcc                _ZN13CounterDeviceD1Ev
+                0x0000dbcc                _ZN13CounterDeviceD2Ev
+                0x0000dc04                _ZN13CounterDeviceD0Ev
+                0x0000dc20                _ZN13CounterDevice12GetParameterESs
+                0x0000e2dc                _ZN13CounterDeviceC2Ev
+                0x0000e2dc                _ZN13CounterDeviceC1Ev
+                0x0000f228                _ZN13CounterDevice14CreateInstanceEv
+ .text          0x0000f250      0xc74 ./Logical/InverseDevice.o
+                0x0000f250                _ZN13InverseDevice4TypeEv
+                0x0000f260                _ZN13InverseDevice7VersionEv
+                0x0000f270                _ZN13InverseDevice11DescriptionEv
+                0x0000f280                _ZN13InverseDevice9GroupNameEv
+                0x0000f290                _ZN13InverseDevice16CalculateOutputsEv
+                0x0000f308                _ZN13InverseDeviceD2Ev
+                0x0000f308                _ZN13InverseDeviceD1Ev
+                0x0000f340                _ZN13InverseDeviceD0Ev
+                0x0000f35c                _ZN13InverseDevice12GetParameterESs
+                0x0000fa18                _ZN13InverseDeviceC1Ev
+                0x0000fa18                _ZN13InverseDeviceC2Ev
+                0x0000fe9c                _ZN13InverseDevice14CreateInstanceEv
+ .text          0x0000fec4      0xde8 ./Logical/OrDevice.o
+                0x0000fec4                _ZN8OrDevice4TypeEv
+                0x0000fed4                _ZN8OrDevice7VersionEv
+                0x0000fee4                _ZN8OrDevice11DescriptionEv
+                0x0000fef4                _ZN8OrDevice9GroupNameEv
+                0x0000ff04                _ZN8OrDevice16CalculateOutputsEv
+                0x0000ff60                _ZN8OrDeviceD2Ev
+                0x0000ff60                _ZN8OrDeviceD1Ev
+                0x0000ff98                _ZN8OrDeviceD0Ev
+                0x0000ffb4                _ZN8OrDevice12GetParameterESs
+                0x00010670                _ZN8OrDeviceC1Ev
+                0x00010670                _ZN8OrDeviceC2Ev
+                0x00010c84                _ZN8OrDevice14CreateInstanceEv
+ .text          0x00010cac      0x8e4 ./Logical/RSTriggerDevice.o
+                0x00010cac                _ZN15RSTriggerDevice4TypeEv
+                0x00010cbc                _ZN15RSTriggerDevice7VersionEv
+                0x00010ccc                _ZN15RSTriggerDevice11DescriptionEv
+                0x00010cdc                _ZN15RSTriggerDevice9GroupNameEv
+                0x00010cec                _ZN15RSTriggerDevice16CalculateOutputsEv
+                0x00010d4c                _ZN15RSTriggerDeviceD1Ev
+                0x00010d4c                _ZN15RSTriggerDeviceD2Ev
+                0x00010d84                _ZN15RSTriggerDeviceD0Ev
+                0x00010da0                _ZN15RSTriggerDeviceC2Ev
+                0x00010da0                _ZN15RSTriggerDeviceC1Ev
+                0x00011568                _ZN15RSTriggerDevice14CreateInstanceEv
+ .text          0x00011590      0x8dc ./Logical/SwitchBlock.o
+                0x00011590                _ZN11SwitchBlock4TypeEv
+                0x000115a0                _ZN11SwitchBlock7VersionEv
+                0x000115b0                _ZN11SwitchBlock11DescriptionEv
+                0x000115c0                _ZN11SwitchBlock9GroupNameEv
+                0x000115d0                _ZN11SwitchBlock16CalculateOutputsEv
+                0x00011628                _ZN11SwitchBlockD1Ev
+                0x00011628                _ZN11SwitchBlockD2Ev
+                0x00011660                _ZN11SwitchBlockD0Ev
+                0x0001167c                _ZN11SwitchBlockC2Ev
+                0x0001167c                _ZN11SwitchBlockC1Ev
+                0x00011e44                _ZN11SwitchBlock14CreateInstanceEv
+ .text          0x00011e6c      0x718 ./Logical/XorDevice.o
+                0x00011e6c                _ZN9XorDevice4TypeEv
+                0x00011e7c                _ZN9XorDevice7VersionEv
+                0x00011e8c                _ZN9XorDevice11DescriptionEv
+                0x00011e9c                _ZN9XorDevice9GroupNameEv
+                0x00011eac                _ZN9XorDevice16CalculateOutputsEv
+                0x00011efc                _ZN9XorDeviceD2Ev
+                0x00011efc                _ZN9XorDeviceD1Ev
+                0x00011f34                _ZN9XorDeviceD0Ev
+                0x00011f50                _ZN9XorDeviceC1Ev
+                0x00011f50                _ZN9XorDeviceC2Ev
+                0x0001255c                _ZN9XorDevice14CreateInstanceEv
+ .text          0x00012584     0x3878 ./GPOutputDevice/GPOutputDevice.o
+                0x00012584                _ZN14GPOutputDevice4TypeEv
+                0x00012594                _ZN14GPOutputDevice7VersionEv
+                0x000125a4                _ZN14GPOutputDevice11DescriptionEv
+                0x000125b4                _ZN14GPOutputDevice9GroupNameEv
+                0x000125c4                _ZN14GPOutputDevice17WidgetInitializedEv
+                0x000125c8                _ZN14GPOutputDeviceD1Ev
+                0x000125c8                _ZN14GPOutputDeviceD2Ev
+                0x00012600                _ZN14GPOutputDeviceD0Ev
+                0x0001261c                _ZN14GPOutputDevice14ExecuteCommandE7Command
+                0x00012ab4                _ZN14GPOutputDevice12SetParameterESsPv
+                0x000131d0                _ZN14GPOutputDevice14EventTriggeredESt4listI14EventParameterSaIS1_EE
+                0x00013744                _ZN14GPOutputDevice16ReleaseResourcesEv
+                0x00013ae8                _ZN14GPOutputDevice16CalculateOutputsEv
+                0x000143e0                _ZN14GPOutputDevice12GetParameterESs
+                0x00014ae8                _ZN14GPOutputDeviceC2Ev
+                0x00014ae8                _ZN14GPOutputDeviceC1Ev
+                0x00015dcc                _ZN14GPOutputDevice14CreateInstanceEv
+                0x00015df4                _ZN14GPOutputDevice13SetPortNumberEi
+ .text          0x00015dfc     0x268c ./GPInputDevice/GPIDevice.o
+                0x00015dfc                _ZN9GPIDevice4TypeEv
+                0x00015e0c                _ZN9GPIDevice7VersionEv
+                0x00015e1c                _ZN9GPIDevice11DescriptionEv
+                0x00015e2c                _ZN9GPIDevice9GroupNameEv
+                0x00015e3c                _ZN9GPIDevice16CalculateOutputsEv
+                0x00015e70                _ZN9GPIDeviceD2Ev
+                0x00015e70                _ZN9GPIDeviceD1Ev
+                0x00015ed0                _ZN9GPIDeviceD0Ev
+                0x00015eec                _ZN9GPIDevice12SetParameterESsPv
+                0x00015f48                _ZN9GPIDevice14EventTriggeredESt4listI14EventParameterSaIS1_EE
+                0x000160e0                _ZN9GPIDevice14ExecuteCommandE7Command
+                0x00016578                _ZN9GPIDevice16ReleaseResourcesEv
+                0x0001691c                _ZN9GPIDevice17WidgetInitializedEv
+                0x00016cc4                _ZN9GPIDevice12GetParameterESs
+                0x000173e4                _ZN9GPIDeviceC2Ev
+                0x000173e4                _ZN9GPIDeviceC1Ev
+                0x00018460                _ZN9GPIDevice14CreateInstanceEv
+ .text          0x00018488      0x414 ./EntryPoint.o
+                0x00018488                CreateDevices
+ .text          0x0001889c     0x15f4 ./DelayTimer/DelayTimer.o
+                0x0001889c                _ZN10DelayTimer4TypeEv
+                0x000188ac                _ZN10DelayTimer7VersionEv
+                0x000188bc                _ZN10DelayTimer11DescriptionEv
+                0x000188cc                _ZN10DelayTimer9GroupNameEv
+                0x000188dc                _ZN10DelayTimer24InitializeFromDescriptorESt4listI8PropertySaIS1_EE
+                0x00018934                _Z19DelayTimerThreadRunPv
+                0x000189e8                _ZN10DelayTimerD1Ev
+                0x000189e8                _ZN10DelayTimerD2Ev
+                0x00018a20                _ZN10DelayTimerD0Ev
+                0x00018a3c                _ZN10DelayTimer12SetParameterESsPv
+                0x00018b38                _ZN10DelayTimer12GetParameterESs
+                0x000191f4                _ZN10DelayTimerC2Ev
+                0x000191f4                _ZN10DelayTimerC1Ev
+                0x00019cc0                _ZN10DelayTimer14CreateInstanceEv
+                0x00019ce8                _ZN10DelayTimer11StartThreadEv
+                0x00019ddc                _ZN10DelayTimer16CalculateOutputsEv
+                0x00019e68                _ZN10DelayTimer10StopThreadEv
+ .text          0x00019e90     0x110c ./ButtonDevice/ButtonDevice.o
+                0x00019e90                _ZN12ButtonDevice4TypeEv
+                0x00019ea0                _ZN12ButtonDevice7VersionEv
+                0x00019eb0                _ZN12ButtonDevice11DescriptionEv
+                0x00019ec0                _ZN12ButtonDevice9GroupNameEv
+                0x00019ed0                _ZN12ButtonDevice16CalculateOutputsEv
+                0x00019f58                _ZN12ButtonDeviceD2Ev
+                0x00019f58                _ZN12ButtonDeviceD1Ev
+                0x00019f90                _ZN12ButtonDeviceD0Ev
+                0x00019fac                _ZN12ButtonDevice12GetParameterESs
+                0x0001a6b4                _ZN12ButtonDeviceC1Ev
+                0x0001a6b4                _ZN12ButtonDeviceC2Ev
+                0x0001ae84                _ZN12ButtonDevice14CreateInstanceEv
+                0x0001aeac                _Z20PinoutEventTriggeredPvSt4listI14EventParameterSaIS1_EE
+ .text          0x0001af9c     0x2304 ./ADCDevice/ADCDevice.o
+                0x0001af9c                _ZN9ADCDevice4TypeEv
+                0x0001afac                _ZN9ADCDevice7VersionEv
+                0x0001afbc                _ZN9ADCDevice11DescriptionEv
+                0x0001afcc                _ZN9ADCDevice9GroupNameEv
+                0x0001afdc                _ZN9ADCDevice16CalculateOutputsEv
+                0x0001b03c                _ZN9ADCDeviceD1Ev
+                0x0001b03c                _ZN9ADCDeviceD2Ev
+                0x0001b074                _ZN9ADCDeviceD0Ev
+                0x0001b090                _ZN9ADCDevice14EventTriggeredESt4listI14EventParameterSaIS1_EE
+                0x0001b204                _ZN9ADCDevice14ExecuteCommandE7Command
+                0x0001b69c                _ZN9ADCDevice16ReleaseResourcesEv
+                0x0001ba40                _ZN9ADCDevice17WidgetInitializedEv
+                0x0001bde8                _ZN9ADCDevice12GetParameterESs
+                0x0001c4a4                _ZN9ADCDeviceC1Ev
+                0x0001c4a4                _ZN9ADCDeviceC2Ev
+                0x0001d278                _ZN9ADCDevice14CreateInstanceEv
+ .text          0x0001d2a0     0x2400 ./CosmDevice/CosmDevice.o
+                0x0001d2a0                _ZN10CosmDevice4TypeEv
+                0x0001d2b0                _ZN10CosmDevice7VersionEv
+                0x0001d2c0                _ZN10CosmDevice11DescriptionEv
+                0x0001d2d0                _ZN10CosmDevice9GroupNameEv
+                0x0001d2e0                _ZN10CosmDeviceD2Ev
+                0x0001d2e0                _ZN10CosmDeviceD1Ev
+                0x0001d4ac                _ZN10CosmDeviceD0Ev
+                0x0001d4c8                _ZN10CosmDevice12GetParameterESs
+                0x0001dbd0                _ZN10CosmDeviceC2Ev
+                0x0001dbd0                _ZN10CosmDeviceC1Ev
+                0x0001ebe8                _ZN10CosmDevice14CreateInstanceEv
+                0x0001ec10                _ZN10CosmDevice20SendCosmNotificationESsSsSsSs
+                0x0001f098                _ZN10CosmDevice16CalculateOutputsEv
+                0x0001f384                _ZN10CosmDevice12SetParameterESsPv
  .text._ZStplIcSt11char_traitsIcESaIcEESbIT_T0_T1_EPKS3_RKS6_
-                0x0001f0c4       0x80 ./CosmDevice/CosmDevice.o
-                0x0001f0c4                _ZStplIcSt11char_traitsIcESaIcEESbIT_T0_T1_EPKS3_RKS6_
- .text          0x0001f144        0x0 /usr/lib/gcc/arm-linux-gnueabihf/4.6/crtendS.o
- .text          0x0001f144        0x0 /usr/lib/gcc/arm-linux-gnueabihf/4.6/../../../arm-linux-gnueabihf/crtn.o
+                0x0001f6a0       0x80 ./CosmDevice/CosmDevice.o
+                0x0001f6a0                _ZStplIcSt11char_traitsIcESaIcEESbIT_T0_T1_EPKS3_RKS6_
+ .text          0x0001f720     0x2738 ./FeedDevice/FeedDevice.o
+                0x0001f720                _ZN10FeedDevice4TypeEv
+                0x0001f730                _ZN10FeedDevice7VersionEv
+                0x0001f740                _ZN10FeedDevice11DescriptionEv
+                0x0001f750                _ZN10FeedDevice9GroupNameEv
+                0x0001f760                _ZN10FeedDevice12SetParameterESsPv
+                0x0001f764                _ZN10FeedDeviceD2Ev
+                0x0001f764                _ZN10FeedDeviceD1Ev
+                0x0001f838                _ZN10FeedDeviceD0Ev
+                0x0001f854                _ZN10FeedDevice16ReleaseResourcesEv
+                0x0001fbb4                _ZN10FeedDevice16CalculateOutputsEv
+                0x00020114                _ZN10FeedDevice14ExecuteCommandE7Command
+                0x00020510                _ZN10FeedDevice17WidgetInitializedEv
+                0x00020874                _ZN10FeedDevice12GetParameterESs
+                0x00020e78                _ZN10FeedDeviceC1Ev
+                0x00020e78                _ZN10FeedDeviceC2Ev
+                0x00021e30                _ZN10FeedDevice14CreateInstanceEv
+ .text          0x00021e58      0xed0 /usr/lib/gcc/arm-linux-gnueabihf/4.6/libgcc.a(linux-atomic.o)
+                0x00021e58                __sync_fetch_and_add_4
+                0x00021e90                __sync_fetch_and_sub_4
+                0x00021ec8                __sync_fetch_and_or_4
+                0x00021f00                __sync_fetch_and_and_4
+                0x00021f38                __sync_fetch_and_xor_4
+                0x00021f70                __sync_fetch_and_nand_4
+                0x00021fac                __sync_fetch_and_add_2
+                0x0002200c                __sync_fetch_and_sub_2
+                0x0002206c                __sync_fetch_and_or_2
+                0x000220cc                __sync_fetch_and_and_2
+                0x0002212c                __sync_fetch_and_xor_2
+                0x0002218c                __sync_fetch_and_nand_2
+                0x000221f0                __sync_fetch_and_add_1
+                0x0002224c                __sync_fetch_and_sub_1
+                0x000222a8                __sync_fetch_and_or_1
+                0x00022304                __sync_fetch_and_and_1
+                0x00022360                __sync_fetch_and_xor_1
+                0x000223bc                __sync_fetch_and_nand_1
+                0x0002241c                __sync_add_and_fetch_4
+                0x00022454                __sync_sub_and_fetch_4
+                0x0002248c                __sync_or_and_fetch_4
+                0x000224c4                __sync_and_and_fetch_4
+                0x000224fc                __sync_xor_and_fetch_4
+                0x00022534                __sync_nand_and_fetch_4
+                0x00022570                __sync_add_and_fetch_2
+                0x000225d8                __sync_sub_and_fetch_2
+                0x00022640                __sync_or_and_fetch_2
+                0x000226a8                __sync_and_and_fetch_2
+                0x00022710                __sync_xor_and_fetch_2
+                0x00022778                __sync_nand_and_fetch_2
+                0x000227e4                __sync_add_and_fetch_1
+                0x00022848                __sync_sub_and_fetch_1
+                0x000228ac                __sync_or_and_fetch_1
+                0x00022910                __sync_and_and_fetch_1
+                0x00022974                __sync_xor_and_fetch_1
+                0x000229d8                __sync_nand_and_fetch_1
+                0x00022a40                __sync_val_compare_and_swap_4
+                0x00022a88                __sync_val_compare_and_swap_2
+                0x00022af8                __sync_val_compare_and_swap_1
+                0x00022b64                __sync_bool_compare_and_swap_4
+                0x00022b90                __sync_bool_compare_and_swap_2
+                0x00022bac                __sync_bool_compare_and_swap_1
+                0x00022bc8                __sync_synchronize
+                0x00022bdc                __sync_lock_test_and_set_4
+                0x00022c14                __sync_lock_test_and_set_2
+                0x00022c70                __sync_lock_test_and_set_1
+                0x00022cc8                __sync_lock_release_4
+                0x00022ce8                __sync_lock_release_2
+                0x00022d08                __sync_lock_release_1
+ .text          0x00022d28        0x0 /usr/lib/gcc/arm-linux-gnueabihf/4.6/crtendS.o
+ .text          0x00022d28        0x0 /usr/lib/gcc/arm-linux-gnueabihf/4.6/../../../arm-linux-gnueabihf/crtn.o
  *(.gnu.warning)
  *(.glue_7t)
  .glue_7t       0x00000000        0x0 linker stubs
@@ -592,295 +676,311 @@ LOAD /usr/lib/gcc/arm-linux-gnueabihf/4.6/../../../arm-linux-gnueabihf/crtn.o
  *(.v4_bx)
  .v4_bx         0x00000000        0x0 linker stubs
 
-.fini           0x0001f144        0x8
+.fini           0x00022d28        0x8
  *(.fini)
- .fini          0x0001f144        0x4 /usr/lib/gcc/arm-linux-gnueabihf/4.6/../../../arm-linux-gnueabihf/crti.o
-                0x0001f144                _fini
- .fini          0x0001f148        0x4 /usr/lib/gcc/arm-linux-gnueabihf/4.6/../../../arm-linux-gnueabihf/crtn.o
-                0x0001f14c                PROVIDE (__etext, .)
-                0x0001f14c                PROVIDE (_etext, .)
-                0x0001f14c                PROVIDE (etext, .)
+ .fini          0x00022d28        0x4 /usr/lib/gcc/arm-linux-gnueabihf/4.6/../../../arm-linux-gnueabihf/crti.o
+                0x00022d28                _fini
+ .fini          0x00022d2c        0x4 /usr/lib/gcc/arm-linux-gnueabihf/4.6/../../../arm-linux-gnueabihf/crtn.o
+                0x00022d30                PROVIDE (__etext, .)
+                0x00022d30                PROVIDE (_etext, .)
+                0x00022d30                PROVIDE (etext, .)
 
-.rodata         0x0001f14c     0x18a8
+.rodata         0x00022d30     0x193c
  *(.rodata .rodata.* .gnu.linkonce.r.*)
- .rodata        0x0001f14c       0x10 ./TimerDevice/TimerDevice.o
-                0x0001f14c                _ZTS11TimerDevice
+ .rodata        0x00022d30       0x10 ./TimerDevice/TimerDevice.o
+                0x00022d30                _ZTS11TimerDevice
  .rodata.str1.4
-                0x0001f15c      0x223 ./TimerDevice/TimerDevice.o
+                0x00022d40      0x223 ./TimerDevice/TimerDevice.o
                                 0x238 (size before relaxing)
- *fill*         0x0001f37f        0x1 00
- .rodata        0x0001f380       0x10 ./ScreenButton/ScreenButton.o
-                0x0001f380                _ZTS12ScreenButton
+ *fill*         0x00022f63        0x1 00
+ .rodata        0x00022f64       0x10 ./ScreenButton/ScreenButton.o
+                0x00022f64                _ZTS12ScreenButton
  .rodata.str1.4
-                0x0001f390      0x12e ./ScreenButton/ScreenButton.o
+                0x00022f74      0x12e ./ScreenButton/ScreenButton.o
                                 0x164 (size before relaxing)
- *fill*         0x0001f4be        0x2 00
- .rodata        0x0001f4c0        0xc ./Logical/AdnWidget.o
-                0x0001f4c0                _ZTS9AndWidget
+ *fill*         0x000230a2        0x2 00
+ .rodata        0x000230a4        0xc ./Logical/AdnWidget.o
+                0x000230a4                _ZTS9AndWidget
  .rodata.str1.4
-                0x0001f4cc      0x138 ./Logical/AdnWidget.o
+                0x000230b0      0x138 ./Logical/AdnWidget.o
                                 0x170 (size before relaxing)
- .rodata        0x0001f604       0x14 ./Logical/ComparatorWidget.o
-                0x0001f604                _ZTS16ComparatorDevice
+ .rodata        0x000231e8       0x14 ./Logical/ComparatorWidget.o
+                0x000231e8                _ZTS16ComparatorDevice
  .rodata.str1.4
-                0x0001f618      0x119 ./Logical/ComparatorWidget.o
+                0x000231fc      0x119 ./Logical/ComparatorWidget.o
                                 0x16c (size before relaxing)
- *fill*         0x0001f731        0x3 00
- .rodata        0x0001f734       0x14 ./Logical/ConstantWidget.o
-                0x0001f734                _ZTS14ConstantDevice
+ *fill*         0x00023315        0x3 00
+ .rodata        0x00023318       0x14 ./Logical/ConstantWidget.o
+                0x00023318                _ZTS14ConstantDevice
  .rodata.str1.4
-                0x0001f748      0x17b ./Logical/ConstantWidget.o
+                0x0002332c      0x17b ./Logical/ConstantWidget.o
                                 0x1c4 (size before relaxing)
- *fill*         0x0001f8c3        0x1 00
- .rodata        0x0001f8c4       0x10 ./Logical/CounterDevice.o
-                0x0001f8c4                _ZTS13CounterDevice
+ *fill*         0x000234a7        0x1 00
+ .rodata        0x000234a8       0x10 ./Logical/CounterDevice.o
+                0x000234a8                _ZTS13CounterDevice
  .rodata.str1.4
-                0x0001f8d4      0x2f0 ./Logical/CounterDevice.o
+                0x000234b8      0x2f0 ./Logical/CounterDevice.o
                                 0x330 (size before relaxing)
- .rodata        0x0001fbc4       0x10 ./Logical/InverseDevice.o
-                0x0001fbc4                _ZTS13InverseDevice
+ .rodata        0x000237a8       0x10 ./Logical/InverseDevice.o
+                0x000237a8                _ZTS13InverseDevice
  .rodata.str1.4
-                0x0001fbd4       0x9c ./Logical/InverseDevice.o
+                0x000237b8       0x9c ./Logical/InverseDevice.o
                                  0xe4 (size before relaxing)
- .rodata        0x0001fc70        0xc ./Logical/OrDevice.o
-                0x0001fc70                _ZTS8OrDevice
+ .rodata        0x00023854        0xc ./Logical/OrDevice.o
+                0x00023854                _ZTS8OrDevice
  .rodata.str1.4
-                0x0001fc7c       0xb3 ./Logical/OrDevice.o
+                0x00023860       0xb3 ./Logical/OrDevice.o
                                 0x134 (size before relaxing)
- *fill*         0x0001fd2f        0x1 00
- .rodata        0x0001fd30       0x14 ./Logical/RSTriggerDevice.o
-                0x0001fd30                _ZTS15RSTriggerDevice
+ *fill*         0x00023913        0x1 00
+ .rodata        0x00023914       0x14 ./Logical/RSTriggerDevice.o
+                0x00023914                _ZTS15RSTriggerDevice
  .rodata.str1.4
-                0x0001fd44      0x1c3 ./Logical/RSTriggerDevice.o
+                0x00023928      0x1c3 ./Logical/RSTriggerDevice.o
                                 0x1f8 (size before relaxing)
- *fill*         0x0001ff07        0x1 00
- .rodata        0x0001ff08       0x10 ./Logical/SwitchBlock.o
-                0x0001ff08                _ZTS11SwitchBlock
+ *fill*         0x00023aeb        0x1 00
+ .rodata        0x00023aec       0x10 ./Logical/SwitchBlock.o
+                0x00023aec                _ZTS11SwitchBlock
  .rodata.str1.4
-                0x0001ff18       0xaf ./Logical/SwitchBlock.o
+                0x00023afc       0xaf ./Logical/SwitchBlock.o
                                  0xcc (size before relaxing)
- *fill*         0x0001ffc7        0x1 00
- .rodata        0x0001ffc8        0xc ./Logical/XorDevice.o
-                0x0001ffc8                _ZTS9XorDevice
+ *fill*         0x00023bab        0x1 00
+ .rodata        0x00023bac        0xc ./Logical/XorDevice.o
+                0x00023bac                _ZTS9XorDevice
  .rodata.str1.4
-                0x0001ffd4       0xac ./Logical/XorDevice.o
+                0x00023bb8       0xac ./Logical/XorDevice.o
                                 0x114 (size before relaxing)
- .rodata        0x00020080       0x14 ./GPOutputDevice/GPOutputDevice.o
-                0x00020080                _ZTS14GPOutputDevice
+ .rodata        0x00023c64       0x14 ./GPOutputDevice/GPOutputDevice.o
+                0x00023c64                _ZTS14GPOutputDevice
  .rodata.str1.4
-                0x00020094      0x1ef ./GPOutputDevice/GPOutputDevice.o
+                0x00023c78      0x1ef ./GPOutputDevice/GPOutputDevice.o
                                 0x21c (size before relaxing)
- *fill*         0x00020283        0x1 00
- .rodata        0x00020284        0xc ./GPInputDevice/GPIDevice.o
-                0x00020284                _ZTS9GPIDevice
+ *fill*         0x00023e67        0x1 00
+ .rodata        0x00023e68        0xc ./GPInputDevice/GPIDevice.o
+                0x00023e68                _ZTS9GPIDevice
  .rodata.str1.4
-                0x00020290      0x21c ./GPInputDevice/GPIDevice.o
+                0x00023e74      0x21c ./GPInputDevice/GPIDevice.o
                                 0x2d0 (size before relaxing)
  .rodata.str1.4
-                0x000204ac       0x42 ./EntryPoint.o
+                0x00024090       0x42 ./EntryPoint.o
                                  0x44 (size before relaxing)
- *fill*         0x000204ee        0x2 00
- .rodata        0x000204f0       0x10 ./DelayTimer/DelayTimer.o
-                0x000204f0                _ZTS10DelayTimer
+ *fill*         0x000240d2        0x2 00
+ .rodata        0x000240d4       0x10 ./DelayTimer/DelayTimer.o
+                0x000240d4                _ZTS10DelayTimer
  .rodata.str1.4
-                0x00020500       0xa8 ./DelayTimer/DelayTimer.o
+                0x000240e4       0xa8 ./DelayTimer/DelayTimer.o
                                 0x1f8 (size before relaxing)
- .rodata        0x000205a8       0x10 ./ButtonDevice/ButtonDevice.o
-                0x000205a8                _ZTS12ButtonDevice
+ .rodata        0x0002418c       0x10 ./ButtonDevice/ButtonDevice.o
+                0x0002418c                _ZTS12ButtonDevice
  .rodata.str1.4
-                0x000205b8       0x5e ./ButtonDevice/ButtonDevice.o
+                0x0002419c       0x5e ./ButtonDevice/ButtonDevice.o
                                  0xf0 (size before relaxing)
- *fill*         0x00020616        0x2 00
- .rodata        0x00020618        0xc ./ADCDevice/ADCDevice.o
-                0x00020618                _ZTS9ADCDevice
+ *fill*         0x000241fa        0x2 00
+ .rodata        0x000241fc        0xc ./ADCDevice/ADCDevice.o
+                0x000241fc                _ZTS9ADCDevice
  .rodata.str1.4
-                0x00020624      0x12b ./ADCDevice/ADCDevice.o
+                0x00024208      0x12b ./ADCDevice/ADCDevice.o
                                 0x18c (size before relaxing)
- *fill*         0x0002074f        0x1 00
- .rodata        0x00020750       0x10 ./CosmDevice/CosmDevice.o
-                0x00020750                _ZTS10CosmDevice
+ *fill*         0x00024333        0x1 00
+ .rodata        0x00024334       0x10 ./CosmDevice/CosmDevice.o
+                0x00024334                _ZTS10CosmDevice
  .rodata.str1.4
-                0x00020760      0x294 ./CosmDevice/CosmDevice.o
+                0x00024344      0x293 ./CosmDevice/CosmDevice.o
                                 0x2e0 (size before relaxing)
+ *fill*         0x000245d7        0x1 00
+ .rodata        0x000245d8       0x10 ./FeedDevice/FeedDevice.o
+                0x000245d8                _ZTS10FeedDevice
+ .rodata.str1.4
+                0x000245e8       0x84 ./FeedDevice/FeedDevice.o
+                                 0xf4 (size before relaxing)
 
 .rodata1
  *(.rodata1)
 
-.ARM.extab      0x000209f4     0x1ac0
+.ARM.extab      0x0002466c     0x1e18
  *(.ARM.extab* .gnu.linkonce.armextab.*)
- .ARM.extab     0x000209f4      0x168 ./TimerDevice/TimerDevice.o
+ .ARM.extab     0x0002466c      0x168 ./TimerDevice/TimerDevice.o
  .ARM.extab.text._ZN15DeviceParameterD2Ev
-                0x00020b5c        0x0 ./TimerDevice/TimerDevice.o
+                0x000247d4        0x0 ./TimerDevice/TimerDevice.o
  .ARM.extab.text.startup
-                0x00020b5c        0x0 ./TimerDevice/TimerDevice.o
- .ARM.extab     0x00020b5c       0xc8 ./ScreenButton/ScreenButton.o
+                0x000247d4        0x0 ./TimerDevice/TimerDevice.o
+ .ARM.extab     0x000247d4       0xc8 ./ScreenButton/ScreenButton.o
  .ARM.extab.text.startup
-                0x00020c24        0x0 ./ScreenButton/ScreenButton.o
- .ARM.extab     0x00020c24       0xfc ./Logical/AdnWidget.o
+                0x0002489c        0x0 ./ScreenButton/ScreenButton.o
+ .ARM.extab     0x0002489c       0xfc ./Logical/AdnWidget.o
  .ARM.extab.text.startup
-                0x00020d20        0x0 ./Logical/AdnWidget.o
- .ARM.extab     0x00020d20      0x14c ./Logical/ComparatorWidget.o
+                0x00024998        0x0 ./Logical/AdnWidget.o
+ .ARM.extab     0x00024998      0x14c ./Logical/ComparatorWidget.o
  .ARM.extab.text.startup
-                0x00020e6c        0x0 ./Logical/ComparatorWidget.o
- .ARM.extab     0x00020e6c      0x164 ./Logical/ConstantWidget.o
+                0x00024ae4        0x0 ./Logical/ComparatorWidget.o
+ .ARM.extab     0x00024ae4      0x164 ./Logical/ConstantWidget.o
  .ARM.extab.text.startup
-                0x00020fd0        0x0 ./Logical/ConstantWidget.o
- .ARM.extab     0x00020fd0      0x1a0 ./Logical/CounterDevice.o
+                0x00024c48        0x0 ./Logical/ConstantWidget.o
+ .ARM.extab     0x00024c48      0x1a0 ./Logical/CounterDevice.o
  .ARM.extab.text.startup
-                0x00021170        0x0 ./Logical/CounterDevice.o
- .ARM.extab     0x00021170       0xe0 ./Logical/InverseDevice.o
+                0x00024de8        0x0 ./Logical/CounterDevice.o
+ .ARM.extab     0x00024de8       0xe0 ./Logical/InverseDevice.o
  .ARM.extab.text.startup
-                0x00021250        0x0 ./Logical/InverseDevice.o
- .ARM.extab     0x00021250       0xfc ./Logical/OrDevice.o
+                0x00024ec8        0x0 ./Logical/InverseDevice.o
+ .ARM.extab     0x00024ec8       0xfc ./Logical/OrDevice.o
  .ARM.extab.text.startup
-                0x0002134c        0x0 ./Logical/OrDevice.o
- .ARM.extab     0x0002134c       0xac ./Logical/RSTriggerDevice.o
+                0x00024fc4        0x0 ./Logical/OrDevice.o
+ .ARM.extab     0x00024fc4       0xac ./Logical/RSTriggerDevice.o
  .ARM.extab.text.startup
-                0x000213f8        0x0 ./Logical/RSTriggerDevice.o
- .ARM.extab     0x000213f8       0xac ./Logical/SwitchBlock.o
+                0x00025070        0x0 ./Logical/RSTriggerDevice.o
+ .ARM.extab     0x00025070       0xac ./Logical/SwitchBlock.o
  .ARM.extab.text.startup
-                0x000214a4        0x0 ./Logical/SwitchBlock.o
- .ARM.extab     0x000214a4       0x98 ./Logical/XorDevice.o
+                0x0002511c        0x0 ./Logical/SwitchBlock.o
+ .ARM.extab     0x0002511c       0x98 ./Logical/XorDevice.o
  .ARM.extab.text.startup
-                0x0002153c        0x0 ./Logical/XorDevice.o
- .ARM.extab     0x0002153c      0x41c ./GPOutputDevice/GPOutputDevice.o
+                0x000251b4        0x0 ./Logical/XorDevice.o
+ .ARM.extab     0x000251b4      0x41c ./GPOutputDevice/GPOutputDevice.o
  .ARM.extab.text.startup
-                0x00021958        0x0 ./GPOutputDevice/GPOutputDevice.o
- .ARM.extab     0x00021958      0x2c8 ./GPInputDevice/GPIDevice.o
+                0x000255d0        0x0 ./GPOutputDevice/GPOutputDevice.o
+ .ARM.extab     0x000255d0      0x2c8 ./GPInputDevice/GPIDevice.o
  .ARM.extab.text.startup
-                0x00021c20        0x0 ./GPInputDevice/GPIDevice.o
- .ARM.extab     0x00021c20       0xd4 ./EntryPoint.o
+                0x00025898        0x0 ./GPInputDevice/GPIDevice.o
+ .ARM.extab     0x00025898       0xe0 ./EntryPoint.o
  .ARM.extab.text.startup
-                0x00021cf4        0x0 ./EntryPoint.o
- .ARM.extab     0x00021cf4      0x168 ./DelayTimer/DelayTimer.o
+                0x00025978        0x0 ./EntryPoint.o
+ .ARM.extab     0x00025978      0x168 ./DelayTimer/DelayTimer.o
  .ARM.extab.text.startup
-                0x00021e5c        0x0 ./DelayTimer/DelayTimer.o
- .ARM.extab     0x00021e5c      0x128 ./ButtonDevice/ButtonDevice.o
+                0x00025ae0        0x0 ./DelayTimer/DelayTimer.o
+ .ARM.extab     0x00025ae0      0x128 ./ButtonDevice/ButtonDevice.o
  .ARM.extab.text.startup
-                0x00021f84        0x0 ./ButtonDevice/ButtonDevice.o
- .ARM.extab     0x00021f84      0x29c ./ADCDevice/ADCDevice.o
+                0x00025c08        0x0 ./ButtonDevice/ButtonDevice.o
+ .ARM.extab     0x00025c08      0x29c ./ADCDevice/ADCDevice.o
  .ARM.extab.text.startup
-                0x00022220        0x0 ./ADCDevice/ADCDevice.o
- .ARM.extab     0x00022220      0x280 ./CosmDevice/CosmDevice.o
+                0x00025ea4        0x0 ./ADCDevice/ADCDevice.o
+ .ARM.extab     0x00025ea4      0x280 ./CosmDevice/CosmDevice.o
  .ARM.extab.text._ZStplIcSt11char_traitsIcESaIcEESbIT_T0_T1_EPKS3_RKS6_
-                0x000224a0       0x14 ./CosmDevice/CosmDevice.o
+                0x00026124       0x14 ./CosmDevice/CosmDevice.o
  .ARM.extab.text.startup
-                0x000224b4        0x0 ./CosmDevice/CosmDevice.o
-                0x000224b4                PROVIDE (__exidx_start, .)
+                0x00026138        0x0 ./CosmDevice/CosmDevice.o
+ .ARM.extab     0x00026138      0x34c ./FeedDevice/FeedDevice.o
+ .ARM.extab.text.startup
+                0x00026484        0x0 ./FeedDevice/FeedDevice.o
+ .ARM.extab     0x00026484        0x0 /usr/lib/gcc/arm-linux-gnueabihf/4.6/libgcc.a(linux-atomic.o)
+                0x00026484                PROVIDE (__exidx_start, .)
 
-.ARM.exidx      0x000224b4      0x428
+.ARM.exidx      0x00026484      0x478
  *(.ARM.exidx* .gnu.linkonce.armexidx.*)
- .ARM.exidx     0x000224bc       0x48 ./TimerDevice/TimerDevice.o
+ .ARM.exidx     0x0002648c       0x48 ./TimerDevice/TimerDevice.o
                                  0x88 (size before relaxing)
  .ARM.exidx.text._ZN15DeviceParameterD2Ev
-                0x00022504        0x0 ./TimerDevice/TimerDevice.o
+                0x000264d4        0x0 ./TimerDevice/TimerDevice.o
                                   0x8 (size before relaxing)
  .ARM.exidx.text.startup
-                0x000224b4        0x8 ./TimerDevice/TimerDevice.o
- .ARM.exidx     0x00022504       0x30 ./ScreenButton/ScreenButton.o
+                0x00026484        0x8 ./TimerDevice/TimerDevice.o
+ .ARM.exidx     0x000264d4       0x30 ./ScreenButton/ScreenButton.o
                                  0x58 (size before relaxing)
  .ARM.exidx.text.startup
-                0x000224bc        0x0 ./ScreenButton/ScreenButton.o
+                0x0002648c        0x0 ./ScreenButton/ScreenButton.o
                                   0x8 (size before relaxing)
- .ARM.exidx     0x00022534       0x30 ./Logical/AdnWidget.o
+ .ARM.exidx     0x00026504       0x30 ./Logical/AdnWidget.o
                                  0x50 (size before relaxing)
  .ARM.exidx.text.startup
-                0x000224bc        0x0 ./Logical/AdnWidget.o
+                0x0002648c        0x0 ./Logical/AdnWidget.o
                                   0x8 (size before relaxing)
- .ARM.exidx     0x00022564       0x48 ./Logical/ComparatorWidget.o
+ .ARM.exidx     0x00026534       0x48 ./Logical/ComparatorWidget.o
                                  0x68 (size before relaxing)
  .ARM.exidx.text.startup
-                0x000224bc        0x0 ./Logical/ComparatorWidget.o
+                0x0002648c        0x0 ./Logical/ComparatorWidget.o
                                   0x8 (size before relaxing)
- .ARM.exidx     0x000225ac       0x40 ./Logical/ConstantWidget.o
+ .ARM.exidx     0x0002657c       0x40 ./Logical/ConstantWidget.o
                                  0x68 (size before relaxing)
  .ARM.exidx.text.startup
-                0x000224bc        0x0 ./Logical/ConstantWidget.o
+                0x0002648c        0x0 ./Logical/ConstantWidget.o
                                   0x8 (size before relaxing)
- .ARM.exidx     0x000225ec       0x38 ./Logical/CounterDevice.o
+ .ARM.exidx     0x000265bc       0x38 ./Logical/CounterDevice.o
                                  0x58 (size before relaxing)
  .ARM.exidx.text.startup
-                0x000224bc        0x0 ./Logical/CounterDevice.o
+                0x0002648c        0x0 ./Logical/CounterDevice.o
                                   0x8 (size before relaxing)
- .ARM.exidx     0x00022624       0x30 ./Logical/InverseDevice.o
+ .ARM.exidx     0x000265f4       0x30 ./Logical/InverseDevice.o
                                  0x50 (size before relaxing)
  .ARM.exidx.text.startup
-                0x000224bc        0x0 ./Logical/InverseDevice.o
+                0x0002648c        0x0 ./Logical/InverseDevice.o
                                   0x8 (size before relaxing)
- .ARM.exidx     0x00022654       0x30 ./Logical/OrDevice.o
+ .ARM.exidx     0x00026624       0x30 ./Logical/OrDevice.o
                                  0x50 (size before relaxing)
  .ARM.exidx.text.startup
-                0x000224bc        0x0 ./Logical/OrDevice.o
+                0x0002648c        0x0 ./Logical/OrDevice.o
                                   0x8 (size before relaxing)
- .ARM.exidx     0x00022684       0x28 ./Logical/RSTriggerDevice.o
+ .ARM.exidx     0x00026654       0x28 ./Logical/RSTriggerDevice.o
                                  0x48 (size before relaxing)
  .ARM.exidx.text.startup
-                0x000224bc        0x0 ./Logical/RSTriggerDevice.o
+                0x0002648c        0x0 ./Logical/RSTriggerDevice.o
                                   0x8 (size before relaxing)
- .ARM.exidx     0x000226ac       0x28 ./Logical/SwitchBlock.o
+ .ARM.exidx     0x0002667c       0x28 ./Logical/SwitchBlock.o
                                  0x48 (size before relaxing)
  .ARM.exidx.text.startup
-                0x000224bc        0x0 ./Logical/SwitchBlock.o
+                0x0002648c        0x0 ./Logical/SwitchBlock.o
                                   0x8 (size before relaxing)
- .ARM.exidx     0x000226d4       0x28 ./Logical/XorDevice.o
+ .ARM.exidx     0x000266a4       0x28 ./Logical/XorDevice.o
                                  0x48 (size before relaxing)
  .ARM.exidx.text.startup
-                0x000224bc        0x0 ./Logical/XorDevice.o
+                0x0002648c        0x0 ./Logical/XorDevice.o
                                   0x8 (size before relaxing)
- .ARM.exidx     0x000226fc       0x58 ./GPOutputDevice/GPOutputDevice.o
+ .ARM.exidx     0x000266cc       0x58 ./GPOutputDevice/GPOutputDevice.o
                                  0x80 (size before relaxing)
  .ARM.exidx.text.startup
-                0x000224bc        0x0 ./GPOutputDevice/GPOutputDevice.o
+                0x0002648c        0x0 ./GPOutputDevice/GPOutputDevice.o
                                   0x8 (size before relaxing)
- .ARM.exidx     0x00022754       0x58 ./GPInputDevice/GPIDevice.o
+ .ARM.exidx     0x00026724       0x58 ./GPInputDevice/GPIDevice.o
                                  0x78 (size before relaxing)
  .ARM.exidx.text.startup
-                0x000224bc        0x0 ./GPInputDevice/GPIDevice.o
+                0x0002648c        0x0 ./GPInputDevice/GPIDevice.o
                                   0x8 (size before relaxing)
- .ARM.exidx     0x000227ac        0x8 ./EntryPoint.o
+ .ARM.exidx     0x0002677c        0x8 ./EntryPoint.o
  .ARM.exidx.text.startup
-                0x000224bc        0x0 ./EntryPoint.o
+                0x0002648c        0x0 ./EntryPoint.o
                                   0x8 (size before relaxing)
- .ARM.exidx     0x000227b4       0x50 ./DelayTimer/DelayTimer.o
+ .ARM.exidx     0x00026784       0x50 ./DelayTimer/DelayTimer.o
                                  0x78 (size before relaxing)
  .ARM.exidx.text.startup
-                0x000224bc        0x0 ./DelayTimer/DelayTimer.o
+                0x0002648c        0x0 ./DelayTimer/DelayTimer.o
                                   0x8 (size before relaxing)
- .ARM.exidx     0x00022804       0x30 ./ButtonDevice/ButtonDevice.o
+ .ARM.exidx     0x000267d4       0x30 ./ButtonDevice/ButtonDevice.o
                                  0x58 (size before relaxing)
  .ARM.exidx.text.startup
-                0x000224bc        0x0 ./ButtonDevice/ButtonDevice.o
+                0x0002648c        0x0 ./ButtonDevice/ButtonDevice.o
                                   0x8 (size before relaxing)
- .ARM.exidx     0x00022834       0x50 ./ADCDevice/ADCDevice.o
+ .ARM.exidx     0x00026804       0x50 ./ADCDevice/ADCDevice.o
                                  0x70 (size before relaxing)
  .ARM.exidx.text.startup
-                0x000224bc        0x0 ./ADCDevice/ADCDevice.o
+                0x0002648c        0x0 ./ADCDevice/ADCDevice.o
                                   0x8 (size before relaxing)
- .ARM.exidx     0x00022884       0x48 ./CosmDevice/CosmDevice.o
+ .ARM.exidx     0x00026854       0x48 ./CosmDevice/CosmDevice.o
                                  0x60 (size before relaxing)
  .ARM.exidx.text._ZStplIcSt11char_traitsIcESaIcEESbIT_T0_T1_EPKS3_RKS6_
-                0x000228cc       0x10 ./CosmDevice/CosmDevice.o
-                                  0x8 (size before relaxing)
+                0x0002689c        0x8 ./CosmDevice/CosmDevice.o
  .ARM.exidx.text.startup
-                0x000224bc        0x0 ./CosmDevice/CosmDevice.o
+                0x0002648c        0x0 ./CosmDevice/CosmDevice.o
                                   0x8 (size before relaxing)
-                0x000228dc                PROVIDE (__exidx_end, .)
+ .ARM.exidx     0x000268a4       0x50 ./FeedDevice/FeedDevice.o
+                                 0x70 (size before relaxing)
+ .ARM.exidx.text.startup
+                0x0002648c        0x0 ./FeedDevice/FeedDevice.o
+                                  0x8 (size before relaxing)
+ .ARM.exidx     0x000268f4        0x8 /usr/lib/gcc/arm-linux-gnueabihf/4.6/libgcc.a(linux-atomic.o)
+                                0x188 (size before relaxing)
+                0x000268fc                PROVIDE (__exidx_end, .)
 
-.eh_frame_hdr   0x000228dc        0x0
+.eh_frame_hdr   0x000268fc        0x0
  *(.eh_frame_hdr)
  .eh_frame_hdr  0x00000000        0x0 /usr/lib/gcc/arm-linux-gnueabihf/4.6/../../../arm-linux-gnueabihf/crtn.o
 
-.eh_frame       0x000228dc        0x4
+.eh_frame       0x000268fc        0x4
  *(.eh_frame)
- .eh_frame      0x000228dc        0x4 /usr/lib/gcc/arm-linux-gnueabihf/4.6/crtendS.o
+ .eh_frame      0x000268fc        0x4 /usr/lib/gcc/arm-linux-gnueabihf/4.6/crtendS.o
 
 .gcc_except_table
  *(.gcc_except_table .gcc_except_table.*)
 
 .exception_ranges
  *(.exception_ranges .exception_ranges*)
-                0x000228e0                . = (ALIGN (0x8000) - ((0x8000 - .) & 0x7fff))
-                0x0002b000                . = DATA_SEGMENT_ALIGN (0x8000, 0x1000)
+                0x00026900                . = (ALIGN (0x8000) - ((0x8000 - .) & 0x7fff))
+                0x0002f000                . = DATA_SEGMENT_ALIGN (0x8000, 0x1000)
 
 .eh_frame
  *(.eh_frame)
@@ -901,34 +1001,35 @@ LOAD /usr/lib/gcc/arm-linux-gnueabihf/4.6/../../../arm-linux-gnueabihf/crtn.o
 .preinit_array
  *(.preinit_array)
 
-.init_array     0x0002b000       0x4c
+.init_array     0x0002f000       0x50
  *(SORT(.init_array.*) SORT(.ctors.*))
  *(.init_array)
- .init_array    0x0002b000        0x4 /usr/lib/gcc/arm-linux-gnueabihf/4.6/crtbeginS.o
- .init_array    0x0002b004        0x4 ./TimerDevice/TimerDevice.o
- .init_array    0x0002b008        0x4 ./ScreenButton/ScreenButton.o
- .init_array    0x0002b00c        0x4 ./Logical/AdnWidget.o
- .init_array    0x0002b010        0x4 ./Logical/ComparatorWidget.o
- .init_array    0x0002b014        0x4 ./Logical/ConstantWidget.o
- .init_array    0x0002b018        0x4 ./Logical/CounterDevice.o
- .init_array    0x0002b01c        0x4 ./Logical/InverseDevice.o
- .init_array    0x0002b020        0x4 ./Logical/OrDevice.o
- .init_array    0x0002b024        0x4 ./Logical/RSTriggerDevice.o
- .init_array    0x0002b028        0x4 ./Logical/SwitchBlock.o
- .init_array    0x0002b02c        0x4 ./Logical/XorDevice.o
- .init_array    0x0002b030        0x4 ./GPOutputDevice/GPOutputDevice.o
- .init_array    0x0002b034        0x4 ./GPInputDevice/GPIDevice.o
- .init_array    0x0002b038        0x4 ./EntryPoint.o
- .init_array    0x0002b03c        0x4 ./DelayTimer/DelayTimer.o
- .init_array    0x0002b040        0x4 ./ButtonDevice/ButtonDevice.o
- .init_array    0x0002b044        0x4 ./ADCDevice/ADCDevice.o
- .init_array    0x0002b048        0x4 ./CosmDevice/CosmDevice.o
+ .init_array    0x0002f000        0x4 /usr/lib/gcc/arm-linux-gnueabihf/4.6/crtbeginS.o
+ .init_array    0x0002f004        0x4 ./TimerDevice/TimerDevice.o
+ .init_array    0x0002f008        0x4 ./ScreenButton/ScreenButton.o
+ .init_array    0x0002f00c        0x4 ./Logical/AdnWidget.o
+ .init_array    0x0002f010        0x4 ./Logical/ComparatorWidget.o
+ .init_array    0x0002f014        0x4 ./Logical/ConstantWidget.o
+ .init_array    0x0002f018        0x4 ./Logical/CounterDevice.o
+ .init_array    0x0002f01c        0x4 ./Logical/InverseDevice.o
+ .init_array    0x0002f020        0x4 ./Logical/OrDevice.o
+ .init_array    0x0002f024        0x4 ./Logical/RSTriggerDevice.o
+ .init_array    0x0002f028        0x4 ./Logical/SwitchBlock.o
+ .init_array    0x0002f02c        0x4 ./Logical/XorDevice.o
+ .init_array    0x0002f030        0x4 ./GPOutputDevice/GPOutputDevice.o
+ .init_array    0x0002f034        0x4 ./GPInputDevice/GPIDevice.o
+ .init_array    0x0002f038        0x4 ./EntryPoint.o
+ .init_array    0x0002f03c        0x4 ./DelayTimer/DelayTimer.o
+ .init_array    0x0002f040        0x4 ./ButtonDevice/ButtonDevice.o
+ .init_array    0x0002f044        0x4 ./ADCDevice/ADCDevice.o
+ .init_array    0x0002f048        0x4 ./CosmDevice/CosmDevice.o
+ .init_array    0x0002f04c        0x4 ./FeedDevice/FeedDevice.o
  *(EXCLUDE_FILE(*crtend?.o *crtend.o *crtbegin?.o *crtbegin.o) .ctors)
 
-.fini_array     0x0002b04c        0x4
+.fini_array     0x0002f050        0x4
  *(SORT(.fini_array.*) SORT(.dtors.*))
  *(.fini_array)
- .fini_array    0x0002b04c        0x4 /usr/lib/gcc/arm-linux-gnueabihf/4.6/crtbeginS.o
+ .fini_array    0x0002f050        0x4 /usr/lib/gcc/arm-linux-gnueabihf/4.6/crtbeginS.o
  *(EXCLUDE_FILE(*crtend?.o *crtend.o *crtbegin?.o *crtbegin.o) .dtors)
 
 .ctors
@@ -945,154 +1046,161 @@ LOAD /usr/lib/gcc/arm-linux-gnueabihf/4.6/../../../arm-linux-gnueabihf/crtn.o
  *(SORT(.dtors.*))
  *(.dtors)
 
-.jcr            0x0002b050        0x4
+.jcr            0x0002f054        0x4
  *(.jcr)
- .jcr           0x0002b050        0x0 /usr/lib/gcc/arm-linux-gnueabihf/4.6/crtbeginS.o
- .jcr           0x0002b050        0x4 /usr/lib/gcc/arm-linux-gnueabihf/4.6/crtendS.o
+ .jcr           0x0002f054        0x0 /usr/lib/gcc/arm-linux-gnueabihf/4.6/crtbeginS.o
+ .jcr           0x0002f054        0x4 /usr/lib/gcc/arm-linux-gnueabihf/4.6/crtendS.o
 
-.data.rel.ro    0x0002b058      0x7f8
+.data.rel.ro    0x0002f058      0x870
  *(.data.rel.ro.local* .gnu.linkonce.d.rel.ro.local.*)
  *(.data.rel.ro* .gnu.linkonce.d.rel.ro.*)
- .data.rel.ro   0x0002b058       0x78 ./TimerDevice/TimerDevice.o
-                0x0002b058                _ZTI11TimerDevice
-                0x0002b068                _ZTV11TimerDevice
- .data.rel.ro   0x0002b0d0       0x78 ./ScreenButton/ScreenButton.o
-                0x0002b0d0                _ZTI12ScreenButton
-                0x0002b0e0                _ZTV12ScreenButton
- .data.rel.ro   0x0002b148       0x78 ./Logical/AdnWidget.o
-                0x0002b148                _ZTI9AndWidget
-                0x0002b158                _ZTV9AndWidget
- .data.rel.ro   0x0002b1c0       0x78 ./Logical/ComparatorWidget.o
-                0x0002b1c0                _ZTI16ComparatorDevice
-                0x0002b1d0                _ZTV16ComparatorDevice
- .data.rel.ro   0x0002b238       0x78 ./Logical/ConstantWidget.o
-                0x0002b238                _ZTI14ConstantDevice
-                0x0002b248                _ZTV14ConstantDevice
- .data.rel.ro   0x0002b2b0       0x78 ./Logical/CounterDevice.o
-                0x0002b2b0                _ZTI13CounterDevice
-                0x0002b2c0                _ZTV13CounterDevice
- .data.rel.ro   0x0002b328       0x78 ./Logical/InverseDevice.o
-                0x0002b328                _ZTI13InverseDevice
-                0x0002b338                _ZTV13InverseDevice
- .data.rel.ro   0x0002b3a0       0x78 ./Logical/OrDevice.o
-                0x0002b3a0                _ZTI8OrDevice
-                0x0002b3b0                _ZTV8OrDevice
- .data.rel.ro   0x0002b418       0x78 ./Logical/RSTriggerDevice.o
-                0x0002b418                _ZTI15RSTriggerDevice
-                0x0002b428                _ZTV15RSTriggerDevice
- .data.rel.ro   0x0002b490       0x78 ./Logical/SwitchBlock.o
-                0x0002b490                _ZTI11SwitchBlock
-                0x0002b4a0                _ZTV11SwitchBlock
- .data.rel.ro   0x0002b508       0x78 ./Logical/XorDevice.o
-                0x0002b508                _ZTI9XorDevice
-                0x0002b518                _ZTV9XorDevice
- .data.rel.ro   0x0002b580       0x78 ./GPOutputDevice/GPOutputDevice.o
-                0x0002b580                _ZTI14GPOutputDevice
-                0x0002b590                _ZTV14GPOutputDevice
- .data.rel.ro   0x0002b5f8       0x78 ./GPInputDevice/GPIDevice.o
-                0x0002b5f8                _ZTI9GPIDevice
-                0x0002b608                _ZTV9GPIDevice
- .data.rel.ro   0x0002b670       0x78 ./DelayTimer/DelayTimer.o
-                0x0002b670                _ZTI10DelayTimer
-                0x0002b680                _ZTV10DelayTimer
- .data.rel.ro   0x0002b6e8       0x78 ./ButtonDevice/ButtonDevice.o
-                0x0002b6e8                _ZTI12ButtonDevice
-                0x0002b6f8                _ZTV12ButtonDevice
- .data.rel.ro   0x0002b760       0x78 ./ADCDevice/ADCDevice.o
-                0x0002b760                _ZTI9ADCDevice
-                0x0002b770                _ZTV9ADCDevice
- .data.rel.ro   0x0002b7d8       0x78 ./CosmDevice/CosmDevice.o
-                0x0002b7d8                _ZTI10CosmDevice
-                0x0002b7e8                _ZTV10CosmDevice
+ .data.rel.ro   0x0002f058       0x78 ./TimerDevice/TimerDevice.o
+                0x0002f058                _ZTI11TimerDevice
+                0x0002f068                _ZTV11TimerDevice
+ .data.rel.ro   0x0002f0d0       0x78 ./ScreenButton/ScreenButton.o
+                0x0002f0d0                _ZTI12ScreenButton
+                0x0002f0e0                _ZTV12ScreenButton
+ .data.rel.ro   0x0002f148       0x78 ./Logical/AdnWidget.o
+                0x0002f148                _ZTI9AndWidget
+                0x0002f158                _ZTV9AndWidget
+ .data.rel.ro   0x0002f1c0       0x78 ./Logical/ComparatorWidget.o
+                0x0002f1c0                _ZTI16ComparatorDevice
+                0x0002f1d0                _ZTV16ComparatorDevice
+ .data.rel.ro   0x0002f238       0x78 ./Logical/ConstantWidget.o
+                0x0002f238                _ZTI14ConstantDevice
+                0x0002f248                _ZTV14ConstantDevice
+ .data.rel.ro   0x0002f2b0       0x78 ./Logical/CounterDevice.o
+                0x0002f2b0                _ZTI13CounterDevice
+                0x0002f2c0                _ZTV13CounterDevice
+ .data.rel.ro   0x0002f328       0x78 ./Logical/InverseDevice.o
+                0x0002f328                _ZTI13InverseDevice
+                0x0002f338                _ZTV13InverseDevice
+ .data.rel.ro   0x0002f3a0       0x78 ./Logical/OrDevice.o
+                0x0002f3a0                _ZTI8OrDevice
+                0x0002f3b0                _ZTV8OrDevice
+ .data.rel.ro   0x0002f418       0x78 ./Logical/RSTriggerDevice.o
+                0x0002f418                _ZTI15RSTriggerDevice
+                0x0002f428                _ZTV15RSTriggerDevice
+ .data.rel.ro   0x0002f490       0x78 ./Logical/SwitchBlock.o
+                0x0002f490                _ZTI11SwitchBlock
+                0x0002f4a0                _ZTV11SwitchBlock
+ .data.rel.ro   0x0002f508       0x78 ./Logical/XorDevice.o
+                0x0002f508                _ZTI9XorDevice
+                0x0002f518                _ZTV9XorDevice
+ .data.rel.ro   0x0002f580       0x78 ./GPOutputDevice/GPOutputDevice.o
+                0x0002f580                _ZTI14GPOutputDevice
+                0x0002f590                _ZTV14GPOutputDevice
+ .data.rel.ro   0x0002f5f8       0x78 ./GPInputDevice/GPIDevice.o
+                0x0002f5f8                _ZTI9GPIDevice
+                0x0002f608                _ZTV9GPIDevice
+ .data.rel.ro   0x0002f670       0x78 ./DelayTimer/DelayTimer.o
+                0x0002f670                _ZTI10DelayTimer
+                0x0002f680                _ZTV10DelayTimer
+ .data.rel.ro   0x0002f6e8       0x78 ./ButtonDevice/ButtonDevice.o
+                0x0002f6e8                _ZTI12ButtonDevice
+                0x0002f6f8                _ZTV12ButtonDevice
+ .data.rel.ro   0x0002f760       0x78 ./ADCDevice/ADCDevice.o
+                0x0002f760                _ZTI9ADCDevice
+                0x0002f770                _ZTV9ADCDevice
+ .data.rel.ro   0x0002f7d8       0x78 ./CosmDevice/CosmDevice.o
+                0x0002f7d8                _ZTI10CosmDevice
+                0x0002f7e8                _ZTV10CosmDevice
+ .data.rel.ro   0x0002f850       0x78 ./FeedDevice/FeedDevice.o
+                0x0002f850                _ZTI10FeedDevice
+                0x0002f860                _ZTV10FeedDevice
 
-.dynamic        0x0002b850      0x108
+.dynamic        0x0002f8c8      0x108
  *(.dynamic)
- .dynamic       0x0002b850      0x108 /usr/lib/gcc/arm-linux-gnueabihf/4.6/../../../arm-linux-gnueabihf/crti.o
-                0x0002b850                _DYNAMIC
-                0x0002b958                . = DATA_SEGMENT_RELRO_END (., 0x0)
+ .dynamic       0x0002f8c8      0x108 /usr/lib/gcc/arm-linux-gnueabihf/4.6/../../../arm-linux-gnueabihf/crti.o
+                0x0002f8c8                _DYNAMIC
+                0x0002f9d0                . = DATA_SEGMENT_RELRO_END (., 0x0)
 
-.got            0x0002b958      0x248
+.got            0x0002f9d0      0x258
  *(.got.plt)
- .got.plt       0x0002b958      0x1d4 /usr/lib/gcc/arm-linux-gnueabihf/4.6/../../../arm-linux-gnueabihf/crti.o
-                0x0002b958                _GLOBAL_OFFSET_TABLE_
+ .got.plt       0x0002f9d0      0x1e0 /usr/lib/gcc/arm-linux-gnueabihf/4.6/../../../arm-linux-gnueabihf/crti.o
+                0x0002f9d0                _GLOBAL_OFFSET_TABLE_
  *(.igot.plt)
  .igot.plt      0x00000000        0x0 /usr/lib/gcc/arm-linux-gnueabihf/4.6/../../../arm-linux-gnueabihf/crti.o
  *(.got)
- .got           0x0002bb2c       0x74 /usr/lib/gcc/arm-linux-gnueabihf/4.6/../../../arm-linux-gnueabihf/crti.o
+ .got           0x0002fbb0       0x78 /usr/lib/gcc/arm-linux-gnueabihf/4.6/../../../arm-linux-gnueabihf/crti.o
  *(.igot)
 
-.data           0x0002bba0        0x4
-                0x0002bba0                PROVIDE (__data_start, .)
+.data           0x0002fc28        0x4
+                0x0002fc28                PROVIDE (__data_start, .)
  *(.data .data.* .gnu.linkonce.d.*)
- .data          0x0002bba0        0x0 /usr/lib/gcc/arm-linux-gnueabihf/4.6/../../../arm-linux-gnueabihf/crti.o
- .data          0x0002bba0        0x0 /usr/lib/gcc/arm-linux-gnueabihf/4.6/crtbeginS.o
- .data.rel      0x0002bba0        0x4 /usr/lib/gcc/arm-linux-gnueabihf/4.6/crtbeginS.o
-                0x0002bba0                __dso_handle
- .data          0x0002bba4        0x0 ./TimerDevice/TimerDevice.o
- .data          0x0002bba4        0x0 ./ScreenButton/ScreenButton.o
- .data          0x0002bba4        0x0 ./Logical/AdnWidget.o
- .data          0x0002bba4        0x0 ./Logical/ComparatorWidget.o
- .data          0x0002bba4        0x0 ./Logical/ConstantWidget.o
- .data          0x0002bba4        0x0 ./Logical/CounterDevice.o
- .data          0x0002bba4        0x0 ./Logical/InverseDevice.o
- .data          0x0002bba4        0x0 ./Logical/OrDevice.o
- .data          0x0002bba4        0x0 ./Logical/RSTriggerDevice.o
- .data          0x0002bba4        0x0 ./Logical/SwitchBlock.o
- .data          0x0002bba4        0x0 ./Logical/XorDevice.o
- .data          0x0002bba4        0x0 ./GPOutputDevice/GPOutputDevice.o
- .data          0x0002bba4        0x0 ./GPInputDevice/GPIDevice.o
- .data          0x0002bba4        0x0 ./EntryPoint.o
- .data          0x0002bba4        0x0 ./DelayTimer/DelayTimer.o
- .data          0x0002bba4        0x0 ./ButtonDevice/ButtonDevice.o
- .data          0x0002bba4        0x0 ./ADCDevice/ADCDevice.o
- .data          0x0002bba4        0x0 ./CosmDevice/CosmDevice.o
- .data          0x0002bba4        0x0 /usr/lib/gcc/arm-linux-gnueabihf/4.6/crtendS.o
- .data          0x0002bba4        0x0 /usr/lib/gcc/arm-linux-gnueabihf/4.6/../../../arm-linux-gnueabihf/crtn.o
+ .data          0x0002fc28        0x0 /usr/lib/gcc/arm-linux-gnueabihf/4.6/../../../arm-linux-gnueabihf/crti.o
+ .data          0x0002fc28        0x0 /usr/lib/gcc/arm-linux-gnueabihf/4.6/crtbeginS.o
+ .data.rel      0x0002fc28        0x4 /usr/lib/gcc/arm-linux-gnueabihf/4.6/crtbeginS.o
+                0x0002fc28                __dso_handle
+ .data          0x0002fc2c        0x0 ./TimerDevice/TimerDevice.o
+ .data          0x0002fc2c        0x0 ./ScreenButton/ScreenButton.o
+ .data          0x0002fc2c        0x0 ./Logical/AdnWidget.o
+ .data          0x0002fc2c        0x0 ./Logical/ComparatorWidget.o
+ .data          0x0002fc2c        0x0 ./Logical/ConstantWidget.o
+ .data          0x0002fc2c        0x0 ./Logical/CounterDevice.o
+ .data          0x0002fc2c        0x0 ./Logical/InverseDevice.o
+ .data          0x0002fc2c        0x0 ./Logical/OrDevice.o
+ .data          0x0002fc2c        0x0 ./Logical/RSTriggerDevice.o
+ .data          0x0002fc2c        0x0 ./Logical/SwitchBlock.o
+ .data          0x0002fc2c        0x0 ./Logical/XorDevice.o
+ .data          0x0002fc2c        0x0 ./GPOutputDevice/GPOutputDevice.o
+ .data          0x0002fc2c        0x0 ./GPInputDevice/GPIDevice.o
+ .data          0x0002fc2c        0x0 ./EntryPoint.o
+ .data          0x0002fc2c        0x0 ./DelayTimer/DelayTimer.o
+ .data          0x0002fc2c        0x0 ./ButtonDevice/ButtonDevice.o
+ .data          0x0002fc2c        0x0 ./ADCDevice/ADCDevice.o
+ .data          0x0002fc2c        0x0 ./CosmDevice/CosmDevice.o
+ .data          0x0002fc2c        0x0 ./FeedDevice/FeedDevice.o
+ .data          0x0002fc2c        0x0 /usr/lib/gcc/arm-linux-gnueabihf/4.6/libgcc.a(linux-atomic.o)
+ .data          0x0002fc2c        0x0 /usr/lib/gcc/arm-linux-gnueabihf/4.6/crtendS.o
+ .data          0x0002fc2c        0x0 /usr/lib/gcc/arm-linux-gnueabihf/4.6/../../../arm-linux-gnueabihf/crtn.o
 
 .data1
  *(.data1)
-                0x0002bba4                _edata = .
-                0x0002bba4                PROVIDE (edata, .)
-                0x0002bba4                __bss_start = .
-                0x0002bba4                __bss_start__ = .
+                0x0002fc2c                _edata = .
+                0x0002fc2c                PROVIDE (edata, .)
+                0x0002fc2c                __bss_start = .
+                0x0002fc2c                __bss_start__ = .
 
-.bss            0x0002bba4       0x4c
+.bss            0x0002fc2c       0x50
  *(.dynbss)
  .dynbss        0x00000000        0x0 /usr/lib/gcc/arm-linux-gnueabihf/4.6/../../../arm-linux-gnueabihf/crti.o
  *(.bss .bss.* .gnu.linkonce.b.*)
- .bss           0x0002bba4        0x0 /usr/lib/gcc/arm-linux-gnueabihf/4.6/../../../arm-linux-gnueabihf/crti.o
- .bss           0x0002bba4        0x1 /usr/lib/gcc/arm-linux-gnueabihf/4.6/crtbeginS.o
- *fill*         0x0002bba5        0x3 00
- .bss           0x0002bba8        0x4 ./TimerDevice/TimerDevice.o
- .bss           0x0002bbac        0x4 ./ScreenButton/ScreenButton.o
- .bss           0x0002bbb0        0x4 ./Logical/AdnWidget.o
- .bss           0x0002bbb4        0x4 ./Logical/ComparatorWidget.o
- .bss           0x0002bbb8        0x4 ./Logical/ConstantWidget.o
- .bss           0x0002bbbc        0x4 ./Logical/CounterDevice.o
- .bss           0x0002bbc0        0x4 ./Logical/InverseDevice.o
- .bss           0x0002bbc4        0x4 ./Logical/OrDevice.o
- .bss           0x0002bbc8        0x4 ./Logical/RSTriggerDevice.o
- .bss           0x0002bbcc        0x4 ./Logical/SwitchBlock.o
- .bss           0x0002bbd0        0x4 ./Logical/XorDevice.o
- .bss           0x0002bbd4        0x4 ./GPOutputDevice/GPOutputDevice.o
- .bss           0x0002bbd8        0x4 ./GPInputDevice/GPIDevice.o
- .bss           0x0002bbdc        0x4 ./EntryPoint.o
- .bss           0x0002bbe0        0x4 ./DelayTimer/DelayTimer.o
- .bss           0x0002bbe4        0x4 ./ButtonDevice/ButtonDevice.o
- .bss           0x0002bbe8        0x4 ./ADCDevice/ADCDevice.o
- .bss           0x0002bbec        0x4 ./CosmDevice/CosmDevice.o
- .bss           0x0002bbf0        0x0 /usr/lib/gcc/arm-linux-gnueabihf/4.6/crtendS.o
- .bss           0x0002bbf0        0x0 /usr/lib/gcc/arm-linux-gnueabihf/4.6/../../../arm-linux-gnueabihf/crtn.o
+ .bss           0x0002fc2c        0x0 /usr/lib/gcc/arm-linux-gnueabihf/4.6/../../../arm-linux-gnueabihf/crti.o
+ .bss           0x0002fc2c        0x1 /usr/lib/gcc/arm-linux-gnueabihf/4.6/crtbeginS.o
+ *fill*         0x0002fc2d        0x3 00
+ .bss           0x0002fc30        0x4 ./TimerDevice/TimerDevice.o
+ .bss           0x0002fc34        0x4 ./ScreenButton/ScreenButton.o
+ .bss           0x0002fc38        0x4 ./Logical/AdnWidget.o
+ .bss           0x0002fc3c        0x4 ./Logical/ComparatorWidget.o
+ .bss           0x0002fc40        0x4 ./Logical/ConstantWidget.o
+ .bss           0x0002fc44        0x4 ./Logical/CounterDevice.o
+ .bss           0x0002fc48        0x4 ./Logical/InverseDevice.o
+ .bss           0x0002fc4c        0x4 ./Logical/OrDevice.o
+ .bss           0x0002fc50        0x4 ./Logical/RSTriggerDevice.o
+ .bss           0x0002fc54        0x4 ./Logical/SwitchBlock.o
+ .bss           0x0002fc58        0x4 ./Logical/XorDevice.o
+ .bss           0x0002fc5c        0x4 ./GPOutputDevice/GPOutputDevice.o
+ .bss           0x0002fc60        0x4 ./GPInputDevice/GPIDevice.o
+ .bss           0x0002fc64        0x4 ./EntryPoint.o
+ .bss           0x0002fc68        0x4 ./DelayTimer/DelayTimer.o
+ .bss           0x0002fc6c        0x4 ./ButtonDevice/ButtonDevice.o
+ .bss           0x0002fc70        0x4 ./ADCDevice/ADCDevice.o
+ .bss           0x0002fc74        0x4 ./CosmDevice/CosmDevice.o
+ .bss           0x0002fc78        0x4 ./FeedDevice/FeedDevice.o
+ .bss           0x0002fc7c        0x0 /usr/lib/gcc/arm-linux-gnueabihf/4.6/libgcc.a(linux-atomic.o)
+ .bss           0x0002fc7c        0x0 /usr/lib/gcc/arm-linux-gnueabihf/4.6/crtendS.o
+ .bss           0x0002fc7c        0x0 /usr/lib/gcc/arm-linux-gnueabihf/4.6/../../../arm-linux-gnueabihf/crtn.o
  *(COMMON)
-                0x0002bbf0                . = ALIGN ((. != 0x0)?0x4:0x1)
-                0x0002bbf0                _bss_end__ = .
-                0x0002bbf0                __bss_end__ = .
-                0x0002bbf0                . = ALIGN (0x4)
-                0x0002bbf0                . = ALIGN (0x4)
-                0x0002bbf0                __end__ = .
-                0x0002bbf0                _end = .
-                0x0002bbf0                PROVIDE (end, .)
-                0x0002bbf0                . = DATA_SEGMENT_END (.)
+                0x0002fc7c                . = ALIGN ((. != 0x0)?0x4:0x1)
+                0x0002fc7c                _bss_end__ = .
+                0x0002fc7c                __bss_end__ = .
+                0x0002fc7c                . = ALIGN (0x4)
+                0x0002fc7c                . = ALIGN (0x4)
+                0x0002fc7c                __end__ = .
+                0x0002fc7c                _end = .
+                0x0002fc7c                PROVIDE (end, .)
+                0x0002fc7c                . = DATA_SEGMENT_END (.)
 
 .stab
  *(.stab)
@@ -1134,6 +1242,8 @@ LOAD /usr/lib/gcc/arm-linux-gnueabihf/4.6/../../../arm-linux-gnueabihf/crtn.o
  .comment       0x00000000       0x23 ./ButtonDevice/ButtonDevice.o
  .comment       0x00000000       0x23 ./ADCDevice/ADCDevice.o
  .comment       0x00000000       0x23 ./CosmDevice/CosmDevice.o
+ .comment       0x00000000       0x23 ./FeedDevice/FeedDevice.o
+ .comment       0x00000000       0x23 /usr/lib/gcc/arm-linux-gnueabihf/4.6/libgcc.a(linux-atomic.o)
  .comment       0x00000000       0x23 /usr/lib/gcc/arm-linux-gnueabihf/4.6/crtendS.o
 
 .ARM.attributes
@@ -1179,9 +1289,13 @@ LOAD /usr/lib/gcc/arm-linux-gnueabihf/4.6/../../../arm-linux-gnueabihf/crtn.o
  .ARM.attributes
                 0x000003a3       0x31 ./CosmDevice/CosmDevice.o
  .ARM.attributes
-                0x000003d4       0x31 /usr/lib/gcc/arm-linux-gnueabihf/4.6/crtendS.o
+                0x000003d4       0x3a ./FeedDevice/FeedDevice.o
  .ARM.attributes
-                0x00000405       0x31 /usr/lib/gcc/arm-linux-gnueabihf/4.6/../../../arm-linux-gnueabihf/crtn.o
+                0x0000040e       0x31 /usr/lib/gcc/arm-linux-gnueabihf/4.6/libgcc.a(linux-atomic.o)
+ .ARM.attributes
+                0x0000043f       0x31 /usr/lib/gcc/arm-linux-gnueabihf/4.6/crtendS.o
+ .ARM.attributes
+                0x00000470       0x31 /usr/lib/gcc/arm-linux-gnueabihf/4.6/../../../arm-linux-gnueabihf/crtn.o
 
 .debug
  *(.debug)
@@ -1195,7 +1309,7 @@ LOAD /usr/lib/gcc/arm-linux-gnueabihf/4.6/../../../arm-linux-gnueabihf/crtn.o
 .debug_sfnames
  *(.debug_sfnames)
 
-.debug_aranges  0x00000000      0x348
+.debug_aranges  0x00000000      0x378
  *(.debug_aranges)
  .debug_aranges
                 0x00000000       0x30 ./TimerDevice/TimerDevice.o
@@ -1233,11 +1347,13 @@ LOAD /usr/lib/gcc/arm-linux-gnueabihf/4.6/../../../arm-linux-gnueabihf/crtn.o
                 0x000002e0       0x30 ./ADCDevice/ADCDevice.o
  .debug_aranges
                 0x00000310       0x38 ./CosmDevice/CosmDevice.o
+ .debug_aranges
+                0x00000348       0x30 ./FeedDevice/FeedDevice.o
 
 .debug_pubnames
  *(.debug_pubnames)
 
-.debug_info     0x00000000    0xb2353
+.debug_info     0x00000000    0xc2cef
  *(.debug_info .gnu.linkonce.wi.*)
  .debug_info    0x00000000     0xa725 ./TimerDevice/TimerDevice.o
  .debug_info    0x0000a725     0x7ecc ./ScreenButton/ScreenButton.o
@@ -1252,13 +1368,14 @@ LOAD /usr/lib/gcc/arm-linux-gnueabihf/4.6/../../../arm-linux-gnueabihf/crtn.o
  .debug_info    0x00051055     0x5a51 ./Logical/XorDevice.o
  .debug_info    0x00056aa6    0x13894 ./GPOutputDevice/GPOutputDevice.o
  .debug_info    0x0006a33a    0x12499 ./GPInputDevice/GPIDevice.o
- .debug_info    0x0007c7d3     0x3f0f ./EntryPoint.o
- .debug_info    0x000806e2     0xa665 ./DelayTimer/DelayTimer.o
- .debug_info    0x0008ad47     0xa879 ./ButtonDevice/ButtonDevice.o
- .debug_info    0x000955c0    0x11914 ./ADCDevice/ADCDevice.o
- .debug_info    0x000a6ed4     0xb47f ./CosmDevice/CosmDevice.o
+ .debug_info    0x0007c7d3     0x3ff1 ./EntryPoint.o
+ .debug_info    0x000807c4     0xa665 ./DelayTimer/DelayTimer.o
+ .debug_info    0x0008ae29     0xa879 ./ButtonDevice/ButtonDevice.o
+ .debug_info    0x000956a2    0x11914 ./ADCDevice/ADCDevice.o
+ .debug_info    0x000a6fb6     0xb47f ./CosmDevice/CosmDevice.o
+ .debug_info    0x000b2435    0x108ba ./FeedDevice/FeedDevice.o
 
-.debug_abbrev   0x00000000     0xa442
+.debug_abbrev   0x00000000     0xae11
  *(.debug_abbrev)
  .debug_abbrev  0x00000000      0x9a5 ./TimerDevice/TimerDevice.o
  .debug_abbrev  0x000009a5      0x92a ./ScreenButton/ScreenButton.o
@@ -1278,8 +1395,9 @@ LOAD /usr/lib/gcc/arm-linux-gnueabihf/4.6/../../../arm-linux-gnueabihf/crtn.o
  .debug_abbrev  0x0000876d      0x975 ./ButtonDevice/ButtonDevice.o
  .debug_abbrev  0x000090e2      0x9bf ./ADCDevice/ADCDevice.o
  .debug_abbrev  0x00009aa1      0x9a1 ./CosmDevice/CosmDevice.o
+ .debug_abbrev  0x0000a442      0x9cf ./FeedDevice/FeedDevice.o
 
-.debug_line     0x00000000    0x14f4e
+.debug_line     0x00000000    0x16c38
  *(.debug_line)
  .debug_line    0x00000000     0x1251 ./TimerDevice/TimerDevice.o
  .debug_line    0x00001251      0xf13 ./ScreenButton/ScreenButton.o
@@ -1294,13 +1412,14 @@ LOAD /usr/lib/gcc/arm-linux-gnueabihf/4.6/../../../arm-linux-gnueabihf/crtn.o
  .debug_line    0x0000a09f      0xce5 ./Logical/XorDevice.o
  .debug_line    0x0000ad84     0x2308 ./GPOutputDevice/GPOutputDevice.o
  .debug_line    0x0000d08c     0x1ac7 ./GPInputDevice/GPIDevice.o
- .debug_line    0x0000eb53     0x1025 ./EntryPoint.o
- .debug_line    0x0000fb78     0x122d ./DelayTimer/DelayTimer.o
- .debug_line    0x00010da5     0x10e3 ./ButtonDevice/ButtonDevice.o
- .debug_line    0x00011e88     0x1924 ./ADCDevice/ADCDevice.o
- .debug_line    0x000137ac     0x17a2 ./CosmDevice/CosmDevice.o
+ .debug_line    0x0000eb53     0x1062 ./EntryPoint.o
+ .debug_line    0x0000fbb5     0x122d ./DelayTimer/DelayTimer.o
+ .debug_line    0x00010de2     0x10e3 ./ButtonDevice/ButtonDevice.o
+ .debug_line    0x00011ec5     0x1924 ./ADCDevice/ADCDevice.o
+ .debug_line    0x000137e9     0x17a2 ./CosmDevice/CosmDevice.o
+ .debug_line    0x00014f8b     0x1cad ./FeedDevice/FeedDevice.o
 
-.debug_frame    0x00000000     0x1a14
+.debug_frame    0x00000000     0x1c00
  *(.debug_frame)
  .debug_frame   0x00000000      0x214 ./TimerDevice/TimerDevice.o
  .debug_frame   0x00000214      0x15c ./ScreenButton/ScreenButton.o
@@ -1320,47 +1439,50 @@ LOAD /usr/lib/gcc/arm-linux-gnueabihf/4.6/../../../arm-linux-gnueabihf/crtn.o
  .debug_frame   0x00001508      0x168 ./ButtonDevice/ButtonDevice.o
  .debug_frame   0x00001670      0x1e4 ./ADCDevice/ADCDevice.o
  .debug_frame   0x00001854      0x1c0 ./CosmDevice/CosmDevice.o
+ .debug_frame   0x00001a14      0x1ec ./FeedDevice/FeedDevice.o
 
-.debug_str      0x00000000     0xee0a
+.debug_str      0x00000000     0xefc3
  *(.debug_str)
- .debug_str     0x00000000     0x5bd6 ./TimerDevice/TimerDevice.o
-                               0x5fcf (size before relaxing)
- .debug_str     0x00005bd6      0x163 ./ScreenButton/ScreenButton.o
-                               0x4c8f (size before relaxing)
- .debug_str     0x00005d39      0x145 ./Logical/AdnWidget.o
-                               0x3da5 (size before relaxing)
- .debug_str     0x00005e7e      0x2cc ./Logical/ComparatorWidget.o
-                               0x4dff (size before relaxing)
- .debug_str     0x0000614a      0x202 ./Logical/ConstantWidget.o
-                               0x4d2b (size before relaxing)
- .debug_str     0x0000634c      0x1dd ./Logical/CounterDevice.o
-                               0x4d1a (size before relaxing)
- .debug_str     0x00006529      0x135 ./Logical/InverseDevice.o
-                               0x4c65 (size before relaxing)
- .debug_str     0x0000665e       0xfc ./Logical/OrDevice.o
-                               0x3d9a (size before relaxing)
- .debug_str     0x0000675a      0x130 ./Logical/RSTriggerDevice.o
-                               0x49e8 (size before relaxing)
- .debug_str     0x0000688a      0x147 ./Logical/SwitchBlock.o
-                               0x49d7 (size before relaxing)
- .debug_str     0x000069d1       0xe7 ./Logical/XorDevice.o
-                               0x3af5 (size before relaxing)
- .debug_str     0x00006ab8     0x4751 ./GPOutputDevice/GPOutputDevice.o
-                               0x93b0 (size before relaxing)
- .debug_str     0x0000b209      0x83d ./GPInputDevice/GPIDevice.o
-                               0x9976 (size before relaxing)
- .debug_str     0x0000ba46     0x13c6 ./EntryPoint.o
-                               0x246b (size before relaxing)
- .debug_str     0x0000ce0c      0x207 ./DelayTimer/DelayTimer.o
-                               0x5f4e (size before relaxing)
- .debug_str     0x0000d013      0x1f9 ./ButtonDevice/ButtonDevice.o
-                               0x623a (size before relaxing)
- .debug_str     0x0000d20c      0x1cf ./ADCDevice/ADCDevice.o
-                               0x98bc (size before relaxing)
- .debug_str     0x0000d3db     0x1a2f ./CosmDevice/CosmDevice.o
-                               0x65b5 (size before relaxing)
+ .debug_str     0x00000000     0x5bdb ./TimerDevice/TimerDevice.o
+                               0x5fd4 (size before relaxing)
+ .debug_str     0x00005bdb      0x163 ./ScreenButton/ScreenButton.o
+                               0x4c94 (size before relaxing)
+ .debug_str     0x00005d3e      0x145 ./Logical/AdnWidget.o
+                               0x3daa (size before relaxing)
+ .debug_str     0x00005e83      0x2cc ./Logical/ComparatorWidget.o
+                               0x4e04 (size before relaxing)
+ .debug_str     0x0000614f      0x202 ./Logical/ConstantWidget.o
+                               0x4d30 (size before relaxing)
+ .debug_str     0x00006351      0x1dd ./Logical/CounterDevice.o
+                               0x4d1f (size before relaxing)
+ .debug_str     0x0000652e      0x135 ./Logical/InverseDevice.o
+                               0x4c6a (size before relaxing)
+ .debug_str     0x00006663       0xfc ./Logical/OrDevice.o
+                               0x3d9f (size before relaxing)
+ .debug_str     0x0000675f      0x130 ./Logical/RSTriggerDevice.o
+                               0x49ed (size before relaxing)
+ .debug_str     0x0000688f      0x147 ./Logical/SwitchBlock.o
+                               0x49dc (size before relaxing)
+ .debug_str     0x000069d6       0xe7 ./Logical/XorDevice.o
+                               0x3afa (size before relaxing)
+ .debug_str     0x00006abd     0x4751 ./GPOutputDevice/GPOutputDevice.o
+                               0x93b5 (size before relaxing)
+ .debug_str     0x0000b20e      0x83d ./GPInputDevice/GPIDevice.o
+                               0x997b (size before relaxing)
+ .debug_str     0x0000ba4b     0x13cb ./EntryPoint.o
+                               0x2480 (size before relaxing)
+ .debug_str     0x0000ce16      0x207 ./DelayTimer/DelayTimer.o
+                               0x5f53 (size before relaxing)
+ .debug_str     0x0000d01d      0x1f9 ./ButtonDevice/ButtonDevice.o
+                               0x623f (size before relaxing)
+ .debug_str     0x0000d216      0x1cf ./ADCDevice/ADCDevice.o
+                               0x98c1 (size before relaxing)
+ .debug_str     0x0000d3e5     0x1a2f ./CosmDevice/CosmDevice.o
+                               0x65ba (size before relaxing)
+ .debug_str     0x0000ee14      0x1af ./FeedDevice/FeedDevice.o
+                               0x8121 (size before relaxing)
 
-.debug_loc      0x00000000    0x55268
+.debug_loc      0x00000000    0x5e662
  *(.debug_loc)
  .debug_loc     0x00000000     0x4fe4 ./TimerDevice/TimerDevice.o
  .debug_loc     0x00004fe4     0x2a53 ./ScreenButton/ScreenButton.o
@@ -1375,13 +1497,14 @@ LOAD /usr/lib/gcc/arm-linux-gnueabihf/4.6/../../../arm-linux-gnueabihf/crtn.o
  .debug_loc     0x000232eb      0xfb8 ./Logical/XorDevice.o
  .debug_loc     0x000242a3     0xe799 ./GPOutputDevice/GPOutputDevice.o
  .debug_loc     0x00032a3c     0x8641 ./GPInputDevice/GPIDevice.o
- .debug_loc     0x0003b07d      0xaa7 ./EntryPoint.o
- .debug_loc     0x0003bb24     0x4f24 ./DelayTimer/DelayTimer.o
- .debug_loc     0x00040a48     0x3f19 ./ButtonDevice/ButtonDevice.o
- .debug_loc     0x00044961     0x787d ./ADCDevice/ADCDevice.o
- .debug_loc     0x0004c1de     0x908a ./CosmDevice/CosmDevice.o
+ .debug_loc     0x0003b07d      0xb0f ./EntryPoint.o
+ .debug_loc     0x0003bb8c     0x4f24 ./DelayTimer/DelayTimer.o
+ .debug_loc     0x00040ab0     0x3f19 ./ButtonDevice/ButtonDevice.o
+ .debug_loc     0x000449c9     0x787d ./ADCDevice/ADCDevice.o
+ .debug_loc     0x0004c246     0x908a ./CosmDevice/CosmDevice.o
+ .debug_loc     0x000552d0     0x9392 ./FeedDevice/FeedDevice.o
 
-.debug_macinfo  0x00000000   0x12c7b5
+.debug_macinfo  0x00000000   0x13c642
  *(.debug_macinfo)
  .debug_macinfo
                 0x00000000    0x11023 ./TimerDevice/TimerDevice.o
@@ -1410,15 +1533,17 @@ LOAD /usr/lib/gcc/arm-linux-gnueabihf/4.6/../../../arm-linux-gnueabihf/crtn.o
  .debug_macinfo
                 0x000c1111    0x1002c ./GPInputDevice/GPIDevice.o
  .debug_macinfo
-                0x000d113d    0x160cf ./EntryPoint.o
+                0x000d113d    0x160e5 ./EntryPoint.o
  .debug_macinfo
-                0x000e720c    0x1104d ./DelayTimer/DelayTimer.o
+                0x000e7222    0x1104d ./DelayTimer/DelayTimer.o
  .debug_macinfo
-                0x000f8259     0xff5e ./ButtonDevice/ButtonDevice.o
+                0x000f826f     0xff5e ./ButtonDevice/ButtonDevice.o
  .debug_macinfo
-                0x001081b7     0xffc8 ./ADCDevice/ADCDevice.o
+                0x001081cd     0xffc8 ./ADCDevice/ADCDevice.o
  .debug_macinfo
-                0x0011817f    0x14636 ./CosmDevice/CosmDevice.o
+                0x00118195    0x14636 ./CosmDevice/CosmDevice.o
+ .debug_macinfo
+                0x0012c7cb     0xfe77 ./FeedDevice/FeedDevice.o
 
 .debug_weaknames
  *(.debug_weaknames)
@@ -1435,7 +1560,7 @@ LOAD /usr/lib/gcc/arm-linux-gnueabihf/4.6/../../../arm-linux-gnueabihf/crtn.o
 .debug_pubtypes
  *(.debug_pubtypes)
 
-.debug_ranges   0x00000000    0x13090
+.debug_ranges   0x00000000    0x15eb0
  *(.debug_ranges)
  .debug_ranges  0x00000000      0xf30 ./TimerDevice/TimerDevice.o
  .debug_ranges  0x00000f30      0x8f8 ./ScreenButton/ScreenButton.o
@@ -1450,11 +1575,12 @@ LOAD /usr/lib/gcc/arm-linux-gnueabihf/4.6/../../../arm-linux-gnueabihf/crtn.o
  .debug_ranges  0x00006ff0      0x4e0 ./Logical/XorDevice.o
  .debug_ranges  0x000074d0     0x3988 ./GPOutputDevice/GPOutputDevice.o
  .debug_ranges  0x0000ae58     0x2690 ./GPInputDevice/GPIDevice.o
- .debug_ranges  0x0000d4e8      0x340 ./EntryPoint.o
- .debug_ranges  0x0000d828      0xf28 ./DelayTimer/DelayTimer.o
- .debug_ranges  0x0000e750      0xd50 ./ButtonDevice/ButtonDevice.o
- .debug_ranges  0x0000f4a0     0x23a0 ./ADCDevice/ADCDevice.o
- .debug_ranges  0x00011840     0x1850 ./CosmDevice/CosmDevice.o
+ .debug_ranges  0x0000d4e8      0x388 ./EntryPoint.o
+ .debug_ranges  0x0000d870      0xf28 ./DelayTimer/DelayTimer.o
+ .debug_ranges  0x0000e798      0xd50 ./ButtonDevice/ButtonDevice.o
+ .debug_ranges  0x0000f4e8     0x2398 ./ADCDevice/ADCDevice.o
+ .debug_ranges  0x00011880     0x1850 ./CosmDevice/CosmDevice.o
+ .debug_ranges  0x000130d0     0x2de0 ./FeedDevice/FeedDevice.o
 
 .gnu.attributes
  *(.gnu.attributes)

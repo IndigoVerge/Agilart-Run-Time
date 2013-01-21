@@ -39,8 +39,8 @@
 #include "UltraHeatDriver/UltraHeatDriver.h"
 #include "RaspiGPIO/RaspiGPInputDriver.h"
 #include "RaspiGPIO/RaspiGPOutputDriver.h"
-#include "SysFSInputDriver/SysfsInputDriver.h"
-#include "SysFSOutputDriver/SysfsOutputDriver.h"
+#include "SysfsInputDriver/SysfsInputDriver.h"
+#include "SysfsOutputDriver/SysfsOutputDriver.h"
 //#include "ZWaveSwitchDriver/ZWaveSwitchDriver.h"
 #include "FeedSocketDriver/FeedSocketDriver.h"
 
