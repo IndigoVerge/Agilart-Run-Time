@@ -18,6 +18,7 @@ RM := rm -rf
 -include ButtonDevice/subdir.mk
 -include ADCDevice/subdir.mk
 -include CosmDevice/subdir.mk
+-include FeedDevice/subdir.mk
 -include objects.mk
 
 ifneq ($(MAKECMDGOALS),clean)
