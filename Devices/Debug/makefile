@@ -66,7 +66,7 @@ libDevices.so: $(OBJS) $(USER_OBJS) ../../Common/Debug/libCommon.so
 # Other Targets
 clean:
 	-$(RM) $(C++_DEPS)$(C_DEPS)$(CC_DEPS)$(LIBRARIES)$(CPP_DEPS)$(CXX_DEPS)$(C_UPPER_DEPS)
-	-$(RM) "./CosmDevice/CosmDevice.o" "./TimerDevice/TimerDevice.o" "./ScreenButton/ScreenButton.o" "./Logical/AdnWidget.o" "./Logical/ComparatorWidget.o" "./Logical/ConstantWidget.o" "./Logical/CounterDevice.o" "./Logical/InverseDevice.o" "./Logical/OrDevice.o" "./Logical/RSTriggerDevice.o" "./Logical/SwitchBlock.o" "./Logical/XorDevice.o" "./GPOutputDevice/GPOutputDevice.o" "./GPInputDevice/GPIDevice.o" "./EntryPoint.o" "./DelayTimer/DelayTimer.o" 
+	-$(RM) "./CosmDevice/CosmDevice.o" "./TimerDevice/TimerDevice.o" "./ScreenButton/ScreenButton.o" "./Logical/AdnWidget.o" "./Logical/ComparatorWidget.o" "./Logical/ConstantWidget.o" "./Logical/CounterDevice.o" "./Logical/InverseDevice.o" "./Logical/OrDevice.o" "./Logical/RSTriggerDevice.o" "./Logical/SwitchBlock.o" "./Logical/XorDevice.o" "./GPOutputDevice/GPOutputDevice.o" "./GPInputDevice/GPIDevice.o" "./EntryPoint.o" "./DelayTimer/DelayTimer.o" "./FeedDevice/FeedDevice.o"  
 	-$(RM) "./ButtonDevice/ButtonDevice.o" "./ADCDevice/ADCDevice.o"  libDevices.so libDevices.so
 .PHONY: all clean dependents
 .SECONDARY:
